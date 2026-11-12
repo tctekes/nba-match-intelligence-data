@@ -1,0 +1,39 @@
+name: NBA all-games independent box-stat parity audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "tools/task08/independent_core_fields.py"
+      - "tests/test_independent_core_fields.py"
+      - ".github/workflows/independent-core-fields.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nba-independent-box-stat-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run core box-stat mapping tests
+        run: python -B -m unittest discover -s tests -p test_independent_core_fields.py -v
+      - name: Independently verify eight fields for every team-game
+        run: python -B tools/task08/independent_core_fields.py
+      - name: Save audit evidence on success or failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-independent-core-field-parity
+          path: independent_box_fields_report.json
+          retention-days: 14
+          if-no-files-found: warn
