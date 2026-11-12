@@ -1,0 +1,24 @@
+name: NBA independent box-stat schema probe
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "tools/task08/inspect_espn_summary.py"
+      - ".github/workflows/espn-summary-schema.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Inspect one current ESPN team box-score record
+        run: python -B tools/task08/inspect_espn_summary.py
