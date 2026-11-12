@@ -1,0 +1,274 @@
+{
+  "boxscorelab_final_games": 170,
+  "data_through_nba_date": "2026-11-11",
+  "forecast_cutoff_nba_date": "2026-11-11",
+  "generated_at_utc": "2026-11-12T15:02:34.545447+00:00",
+  "independent_days_checked": 23,
+  "independent_final_games": 170,
+  "model_input_definitions": {
+    "drtg": "arithmetic mean over team games of 100*opponent_points/P",
+    "estimated_possessions_per_game": "P = avg_two_teams(FGA + 0.44*FTA - OREB + TOV)",
+    "ortg": "arithmetic mean over team games of 100*team_points/P",
+    "pace": "arithmetic mean over team games of P, overtime inclusive, not per-48 normalized"
+  },
+  "publication_status": "EXPERIMENTAL_CANDIDATE_NOT_PRODUCTION",
+  "quality": {
+    "frozen_python_sha_comparison": "NOT_EXECUTED",
+    "independent_espn_box_stat_field_parity": "NOT_CHECKED",
+    "independent_full_season_score_coverage": "PASS",
+    "model_c_algebra_30_team_parity": "PASS",
+    "official_daily_production_approval": "NO_GO",
+    "original_task08_nine_tests": "NOT_EXECUTED"
+  },
+  "schema_version": "nba-model-c-candidate-v1",
+  "season": "2026-27",
+  "sha256_source_standings": "ff2872ba8e37f600593affc8dbe272dee2248bf30ac7976d33e7a1eec6f99946",
+  "sha256_source_team_games": "c77c09771bf7664fbae7c813d12d89546f1797b41d58a2fe0e1a8548695dbbbb",
+  "source_attribution": "BoxScore Lab (CC BY 4.0), transformed by NBA Match Intelligence; independent final scores checked against ESPN",
+  "source_urls": {
+    "standings": "https://boxscorelab.com/downloads/2026-27-team-standings.csv",
+    "team_games": "https://boxscorelab.com/downloads/2026-27-team-game-results.csv"
+  },
+  "teams": {
+    "ATL": {
+      "drtg": 109.95494884587531,
+      "gp": 12,
+      "losses": 5,
+      "ortg": 112.05643476880171,
+      "pace": 105.56333333333333,
+      "wins": 7
+    },
+    "BKN": {
+      "drtg": 111.64166444793638,
+      "gp": 11,
+      "losses": 8,
+      "ortg": 106.82038232739642,
+      "pace": 103.08727272727273,
+      "wins": 3
+    },
+    "BOS": {
+      "drtg": 104.17309087714649,
+      "gp": 12,
+      "losses": 2,
+      "ortg": 115.28767083624922,
+      "pace": 99.04,
+      "wins": 10
+    },
+    "CHA": {
+      "drtg": 111.93766616150786,
+      "gp": 11,
+      "losses": 7,
+      "ortg": 100.26367889018834,
+      "pace": 98.60545454545455,
+      "wins": 4
+    },
+    "CHI": {
+      "drtg": 121.15951992996638,
+      "gp": 10,
+      "losses": 9,
+      "ortg": 106.69033202507549,
+      "pace": 106.46,
+      "wins": 1
+    },
+    "CLE": {
+      "drtg": 111.47092588734468,
+      "gp": 12,
+      "losses": 6,
+      "ortg": 113.4185583987803,
+      "pace": 102.77166666666666,
+      "wins": 6
+    },
+    "DAL": {
+      "drtg": 107.84111489210024,
+      "gp": 11,
+      "losses": 4,
+      "ortg": 112.40156037862904,
+      "pace": 102.24545454545455,
+      "wins": 7
+    },
+    "DEN": {
+      "drtg": 113.30448974409686,
+      "gp": 10,
+      "losses": 4,
+      "ortg": 114.26515945420165,
+      "pace": 100.03,
+      "wins": 6
+    },
+    "DET": {
+      "drtg": 103.29882045153481,
+      "gp": 10,
+      "losses": 3,
+      "ortg": 111.19613452700271,
+      "pace": 101.252,
+      "wins": 7
+    },
+    "GSW": {
+      "drtg": 109.24815809225709,
+      "gp": 12,
+      "losses": 4,
+      "ortg": 117.14224648480804,
+      "pace": 102.09333333333335,
+      "wins": 8
+    },
+    "HOU": {
+      "drtg": 106.73308735223198,
+      "gp": 12,
+      "losses": 3,
+      "ortg": 115.723545346282,
+      "pace": 99.74166666666667,
+      "wins": 9
+    },
+    "IND": {
+      "drtg": 110.87383903591176,
+      "gp": 12,
+      "losses": 8,
+      "ortg": 108.44918772507678,
+      "pace": 102.75333333333333,
+      "wins": 4
+    },
+    "LAC": {
+      "drtg": 114.20810432221008,
+      "gp": 10,
+      "losses": 8,
+      "ortg": 108.43218443663791,
+      "pace": 103.50399999999999,
+      "wins": 2
+    },
+    "LAL": {
+      "drtg": 111.14606309034929,
+      "gp": 13,
+      "losses": 2,
+      "ortg": 118.81228087367525,
+      "pace": 102.68769230769232,
+      "wins": 11
+    },
+    "MEM": {
+      "drtg": 108.6143412361697,
+      "gp": 11,
+      "losses": 4,
+      "ortg": 114.49457708353198,
+      "pace": 103.03818181818183,
+      "wins": 7
+    },
+    "MIA": {
+      "drtg": 113.20117690625544,
+      "gp": 11,
+      "losses": 6,
+      "ortg": 109.21653375738737,
+      "pace": 106.05272727272727,
+      "wins": 5
+    },
+    "MIL": {
+      "drtg": 119.23638204045983,
+      "gp": 12,
+      "losses": 11,
+      "ortg": 104.65209777263384,
+      "pace": 101.855,
+      "wins": 1
+    },
+    "MIN": {
+      "drtg": 103.11692582828769,
+      "gp": 11,
+      "losses": 3,
+      "ortg": 113.98744076945096,
+      "pace": 103.66545454545454,
+      "wins": 8
+    },
+    "NOP": {
+      "drtg": 117.8662254560305,
+      "gp": 12,
+      "losses": 8,
+      "ortg": 110.25956973247794,
+      "pace": 105.80833333333334,
+      "wins": 4
+    },
+    "NYK": {
+      "drtg": 105.29743334551813,
+      "gp": 11,
+      "losses": 5,
+      "ortg": 112.43493871491832,
+      "pace": 98.17818181818183,
+      "wins": 6
+    },
+    "OKC": {
+      "drtg": 105.3430056107544,
+      "gp": 12,
+      "losses": 4,
+      "ortg": 109.08196710896486,
+      "pace": 101.69333333333333,
+      "wins": 8
+    },
+    "ORL": {
+      "drtg": 112.03264907474914,
+      "gp": 11,
+      "losses": 7,
+      "ortg": 106.7026996553658,
+      "pace": 101.78545454545456,
+      "wins": 4
+    },
+    "PHI": {
+      "drtg": 107.16039293649685,
+      "gp": 12,
+      "losses": 3,
+      "ortg": 107.99888190324323,
+      "pace": 102.11500000000001,
+      "wins": 9
+    },
+    "PHX": {
+      "drtg": 116.45610724292041,
+      "gp": 10,
+      "losses": 6,
+      "ortg": 110.9351528118518,
+      "pace": 101.492,
+      "wins": 4
+    },
+    "POR": {
+      "drtg": 109.49741406862277,
+      "gp": 11,
+      "losses": 3,
+      "ortg": 116.8440424648658,
+      "pace": 102.44545454545455,
+      "wins": 8
+    },
+    "SAC": {
+      "drtg": 117.22897138426757,
+      "gp": 11,
+      "losses": 10,
+      "ortg": 105.01321499215652,
+      "pace": 103.18363636363637,
+      "wins": 1
+    },
+    "SAS": {
+      "drtg": 105.74058477237325,
+      "gp": 12,
+      "losses": 2,
+      "ortg": 116.82203103356096,
+      "pace": 102.23666666666666,
+      "wins": 10
+    },
+    "TOR": {
+      "drtg": 109.46167494715215,
+      "gp": 11,
+      "losses": 6,
+      "ortg": 111.18266283626731,
+      "pace": 102.86,
+      "wins": 5
+    },
+    "UTA": {
+      "drtg": 113.4309704712453,
+      "gp": 12,
+      "losses": 11,
+      "ortg": 102.31809609617851,
+      "pace": 104.18166666666667,
+      "wins": 1
+    },
+    "WAS": {
+      "drtg": 111.26075843305809,
+      "gp": 12,
+      "losses": 8,
+      "ortg": 105.5339374226993,
+      "pace": 101.835,
+      "wins": 4
+    }
+  }
+}

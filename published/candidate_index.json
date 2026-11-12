@@ -1,0 +1,11 @@
+{
+  "data_through_nba_date": "2026-11-11",
+  "generated_at_utc": "2026-11-12T15:02:34.545447+00:00",
+  "json_path": "published/candidates/2026-11-11.7803a2338f3a.json",
+  "json_sha256": "7803a2338f3ad4514e89ab05654eec55baaa81dc86071ef4e4e2a85da3adaafe",
+  "markdown_path": "published/candidates/2026-11-11.7803a2338f3a.md",
+  "production_pointer_must_not_advance": true,
+  "schema_version": "nba-candidate-index-v1",
+  "source_team_games_sha256": "c77c09771bf7664fbae7c813d12d89546f1797b41d58a2fe0e1a8548695dbbbb",
+  "status": "EXPERIMENTAL_CANDIDATE_NOT_PRODUCTION"
+}
