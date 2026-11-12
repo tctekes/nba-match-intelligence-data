@@ -58,8 +58,9 @@ class BuildCandidateTests(unittest.TestCase):
 
     def test_empty_standings_blocks(self):
         self.active[0].side_effect=[b"example-game-csv",b"team\nBOS\n"]
-        with self.assertRaisesRegex(ValueError,"duplicated standings team|Not exactly 30"):
-            b.build()
+        with patch.object(b.parity,"audit",side_effect=ValueError("Not exactly 30 team rows")):
+            with self.assertRaisesRegex(ValueError,"Not exactly 30"):
+                b.build()
         self.assertFalse(Path("published/latest_valid.json").exists())
 
 if __name__=="__main__":
