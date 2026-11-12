@@ -1,0 +1,43 @@
+name: NBA experimental snapshot candidate (manual or code update)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "tools/build_candidate_snapshot.py"
+      - "tests/test_build_candidate_snapshot.py"
+      - ".github/workflows/build-candidate.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nba-candidate-publication
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Mandatory candidate publication safety tests
+        run: python -B -m unittest discover -s tests -p test_build_candidate_snapshot.py -v
+      - name: Build candidate only if full-season results and 30-team metric formulas match
+        run: python -B tools/build_candidate_snapshot.py
+      - name: Commit only candidate data; leave production pointer absent
+        run: |
+          git config user.name "NBA Match Intelligence data publisher"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add published/candidates published/candidate_index.json
+          if git diff --cached --quiet; then
+            echo "No new candidate files to publish"
+          else
+            git commit -m "Publish experimental NBA candidate (NOT PRODUCTION)"
+            git push origin HEAD:main
+          fi
