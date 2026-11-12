@@ -1,0 +1,38 @@
+name: NBA independent full-season coverage gate
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/independent_coverage_probe.py"
+      - "tests/test_independent_coverage_probe.py"
+      - ".github/workflows/independent-coverage.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nba-independent-coverage
+  cancel-in-progress: false
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test independent audit logic
+        run: python -B -m unittest discover -s tests -p test_independent_coverage_probe.py -v
+      - name: Compare BoxScore Lab against independent NBA finals
+        run: python -B tools/independent_coverage_probe.py
+      - name: Save diagnostic report on PASS or FAIL
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-independent-coverage-report
+          path: independent_coverage_report.json
+          retention-days: 7
+          if-no-files-found: warn
