@@ -1,0 +1,29 @@
+name: NBA source freshness preflight (manual)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout public NBA repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Inspect actual source CSV counts (NO PUBLICATION)
+        run: python -B tools/source_freshness_probe.py
+      - name: Preserve preflight evidence, including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-source-preflight
+          path: source_preflight_report.json
+          if-no-files-found: warn
+          retention-days: 7
