@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-11",
+  "frozen_full_model_sha_on_github": "NOT_CHECKED; locally matched",
+  "games": 170,
+  "generation_cutoff": "2026-11-12T17:37:27.488574+00:00",
+  "independent_final_score_check": "PASS (Task08 ESPN daily)",
+  "independent_per_game_box_statistics": "NOT_CHECKED",
+  "json_path": "published/candidates/2026-11-11-task08-d75a7c5aff0a.json",
+  "json_sha256": "d75a7c5aff0ae7119e89a68ac7cc9ec16709f8870f787b9fe57ae70d8e4674ad",
+  "markdown_path": "published/candidates/2026-11-11-task08-d75a7c5aff0a.md",
+  "max_source_aggregate_difference": 4.907474914261911e-05,
+  "model_input_formula_parity": "PASS",
+  "original_task08_regression_tests": "9/9 PASS in workflow",
+  "production_pointer_created": false,
+  "schema_version": "nba-task08-candidate-v1",
+  "source_games_sha256": "c77c09771bf7664fbae7c813d12d89546f1797b41d58a2fe0e1a8548695dbbbb",
+  "status": "EXPERIMENTAL_TASK08_NOT_PRODUCTION",
+  "teams": 30,
+  "validation_gate": "TASK08_PASS"
+}
