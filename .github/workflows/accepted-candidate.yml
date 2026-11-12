@@ -1,0 +1,47 @@
+name: NBA Model C whole-game-exclusion snapshot candidate
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "tools/task08/build_accepted_candidate.py"
+      - "tools/task08/test_accepted_candidate.py"
+      - ".github/workflows/accepted-candidate.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nba-model-c-accepted-candidate
+  cancel-in-progress: false
+
+jobs:
+  accepted:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run Task08 original and exclusion-policy tests
+        working-directory: tools/task08
+        run: |
+          python -B -m unittest -v test_static_snapshot
+          python -B -m unittest -v test_accepted_candidate
+      - name: Validate complete NBA scores and all independent box fields, then exclude full disputed games
+        run: python -B tools/task08/build_accepted_candidate.py
+      - name: Publish accepted-game snapshot as NON-PRODUCTION candidate
+        run: |
+          git config user.name "NBA Match Intelligence validation"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add published/accepted_candidates published/accepted_candidate_index.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Publish verified accepted-game experimental NBA model inputs"
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          fi
