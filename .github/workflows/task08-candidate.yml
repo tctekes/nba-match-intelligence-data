@@ -2,11 +2,6 @@ name: NBA original Task08 suite and cloud snapshot candidate
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - "tools/task08/**"
-      - ".github/workflows/task08-candidate.yml"
 
 permissions:
   contents: write
@@ -38,6 +33,8 @@ jobs:
             echo "No new candidate files"
           else
             git commit -m "Publish Task08-validated experimental candidate (NOT PRODUCTION)"
+            git fetch origin main
+            git rebase origin/main
             git push origin HEAD:main
           fi
       - name: Record publication safety rule
