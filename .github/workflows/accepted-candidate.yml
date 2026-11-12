@@ -2,12 +2,9 @@ name: NBA Model C whole-game-exclusion snapshot candidate
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - "tools/task08/build_accepted_candidate.py"
-      - "tools/task08/test_accepted_candidate.py"
-      - ".github/workflows/accepted-candidate.yml"
+  schedule:
+    # 20:00 Europe/Istanbul; GH cron is UTC and may start with delay.
+    - cron: "0 17 * * *"
 
 permissions:
   contents: write
