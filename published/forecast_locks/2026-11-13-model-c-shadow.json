@@ -1,0 +1,111 @@
+{
+  "schema_version": "nba-locked-shadow-forecast-v1",
+  "status": "LOCKED_PREGAME_SHADOW_NOT_PRODUCTION",
+  "nba_local_date": "2026-11-13",
+  "generated_at_utc": "2026-11-13T18:59:10.756603+00:00",
+  "schedule_reference": "https://www.nba.com/games?date=2026-11-13",
+  "model": "Frozen Model C v0.1",
+  "model_file_sha256": "b6efd52df74f540c3bda711cd37a372e1ae7cbdbda134579c4c43bc7ff1eafef",
+  "parameter_file_sha256": "259b0dcc561c2f0400b04d9b19aba59eef53973ba06075f5db97a73497d1c640",
+  "current_snapshot_path": "published/accepted_candidates/2026-11-12-accepted-5aabf4a8efe0.json",
+  "current_snapshot_sha256": "5aabf4a8efe0c11fe4ec998b9167b1d33eff255a15a5ebbf453889e9a9100db4",
+  "raw_completed_games": 174,
+  "accepted_games": 172,
+  "excluded_games": 2,
+  "source_team_game_csv_sha256": "a9d4be339a8ae56b8a610f4b41b4ed48060b32be498e2e062d0036885106b895",
+  "model_calculation": "python nba_baseline_v01.predict_html invoked for all 9; local frozen source and parameters SHA-256 verified; no refitting",
+  "data_transfer_note": "Team input rates were transcribed from GitHub connector response at full float precision, and count of 30 and total GP=344 checked against index. The remote raw JSON's full content digest was not independently recomputed in this Python session; digest is from published index.",
+  "injury_adjustment": "NONE - model percentages deliberately unadjusted; verify external contextual news separately.",
+  "games": [
+    {
+      "away": "NYK",
+      "home": "IND",
+      "tipoff_utc": "2026-11-14T00:00:00Z",
+      "home_win_probability": 0.2821613156,
+      "expected_home_margin": -7.2558613491,
+      "expected_full_game_total": 222.0709077665,
+      "predicted_winner": "NYK",
+      "win_probability": 0.7178386844
+    },
+    {
+      "away": "MIL",
+      "home": "ORL",
+      "tipoff_utc": "2026-11-14T00:00:00Z",
+      "home_win_probability": 0.741494486,
+      "expected_home_margin": 8.1882073493,
+      "expected_full_game_total": 227.368480527,
+      "predicted_winner": "ORL",
+      "win_probability": 0.741494486
+    },
+    {
+      "away": "CLE",
+      "home": "MIA",
+      "tipoff_utc": "2026-11-14T01:00:00Z",
+      "home_win_probability": 0.4601930687,
+      "expected_home_margin": -1.2399088171,
+      "expected_full_game_total": 236.8290871864,
+      "predicted_winner": "CLE",
+      "win_probability": 0.5398069313
+    },
+    {
+      "away": "ATL",
+      "home": "CHI",
+      "tipoff_utc": "2026-11-14T01:00:00Z",
+      "home_win_probability": 0.2667392495,
+      "expected_home_margin": -7.8577970304,
+      "expected_full_game_total": 239.5043919677,
+      "predicted_winner": "ATL",
+      "win_probability": 0.7332607505
+    },
+    {
+      "away": "MEM",
+      "home": "NOP",
+      "tipoff_utc": "2026-11-14T01:00:00Z",
+      "home_win_probability": 0.392740327,
+      "expected_home_margin": -3.3864604127,
+      "expected_full_game_total": 238.1797596391,
+      "predicted_winner": "MEM",
+      "win_probability": 0.6072596729999999
+    },
+    {
+      "away": "UTA",
+      "home": "HOU",
+      "tipoff_utc": "2026-11-14T01:30:00Z",
+      "home_win_probability": 0.8834022194,
+      "expected_home_margin": 15.7357260337,
+      "expected_full_game_total": 227.4882208889,
+      "predicted_winner": "HOU",
+      "win_probability": 0.8834022194
+    },
+    {
+      "away": "GSW",
+      "home": "SAS",
+      "tipoff_utc": "2026-11-14T02:30:00Z",
+      "home_win_probability": 0.6998096784,
+      "expected_home_margin": 6.5769170921,
+      "expected_full_game_total": 230.5429921306,
+      "predicted_winner": "SAS",
+      "win_probability": 0.6998096784
+    },
+    {
+      "away": "POR",
+      "home": "SAC",
+      "tipoff_utc": "2026-11-14T03:00:00Z",
+      "home_win_probability": 0.2188520649,
+      "expected_home_margin": -9.8869851381,
+      "expected_full_game_total": 231.7351051823,
+      "predicted_winner": "POR",
+      "win_probability": 0.7811479351
+    },
+    {
+      "away": "OKC",
+      "home": "LAC",
+      "tipoff_utc": "2026-11-14T03:30:00Z",
+      "home_win_probability": 0.3351314007,
+      "expected_home_margin": -5.323335424,
+      "expected_full_game_total": 224.4714162245,
+      "predicted_winner": "OKC",
+      "win_probability": 0.6648685993
+    }
+  ]
+}
