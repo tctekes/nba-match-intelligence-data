@@ -7,8 +7,8 @@ on:
     paths:
       - "ops/refresh-request.txt"
   schedule:
-    # 20:00 Europe/Istanbul; GH cron is UTC and may start with delay.
-    - cron: "0 17 * * *"
+    # 20:23 Europe/Istanbul (17:23 UTC); avoid GitHub Actions top-of-hour cron congestion.
+    - cron: "23 17 * * *"
 
 permissions:
   contents: write
