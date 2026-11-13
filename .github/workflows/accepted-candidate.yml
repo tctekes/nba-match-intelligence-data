@@ -2,6 +2,10 @@ name: NBA Model C whole-game-exclusion snapshot candidate
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "ops/refresh-request.txt"
   schedule:
     # 20:00 Europe/Istanbul; GH cron is UTC and may start with delay.
     - cron: "0 17 * * *"
