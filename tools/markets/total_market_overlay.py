@@ -14,8 +14,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
-RULE_VERSION = "nba-ou-main-line-shadow-v0.1"
-DELTA_SELECTION_THRESHOLD = 5.0
+RULE_VERSION = "nba-ou-reviewed-direction-v0.2"
 VALID_STAGE = {"NONE", "GROUP_PLAY", "QUARTERFINAL", "SEMIFINAL", "CHAMPIONSHIP"}
 MARKET_KIND = "FULL_GAME_INCLUDING_OT"
 
@@ -124,7 +123,8 @@ def build_overlay(forecast: dict, market: dict, forecast_raw: bytes) -> dict:
             "market_status": "MARKET_NOT_VERIFIED", "market_kind": None,
             "bookmaker": None, "market_source_url": None, "market_captured_at_utc": None,
             "market_line": None, "over_decimal": None, "under_decimal": None,
-            "delta": None, "raw_direction": None, "selected_direction": "PASS",
+            "delta": None, "raw_direction": None, "selected_direction": None,
+            "analyst_confidence": None, "analyst_rationale": None, "analyst_reviewed_at_utc": None,
         }
         if game_id in quotes:
             q = quotes[game_id]
@@ -143,18 +143,32 @@ def build_overlay(forecast: dict, market: dict, forecast_raw: bytes) -> dict:
                 fail(f"Invalid main-line and/or European decimal price: {game_id}")
             gap = round(model_total - line, 8)
             direction = "OVER" if gap > 0 else "UNDER" if gap < 0 else "NEUTRAL"
-            selected = direction if abs(gap) >= DELTA_SELECTION_THRESHOLD else "PASS"
+            review = q.get("analyst_review")
+            if not isinstance(review, dict):
+                fail(f"Analyst O/U direction and confidence review required: {game_id}")
+            selected = review.get("direction")
+            confidence = review.get("confidence")
+            rationale = review.get("rationale")
+            if selected not in {"OVER", "UNDER"} or confidence not in {"LOW", "MEDIUM", "HIGH"}:
+                fail(f"Missing reviewed OVER/UNDER or LOW/MEDIUM/HIGH confidence: {game_id}")
+            if not isinstance(rationale, str) or len(rationale.strip()) < 30:
+                fail(f"Analyst must provide >=30-character evidence and counterargument: {game_id}")
+            reviewed = timestamp(review.get("reviewed_at_utc"))
+            if reviewed < qt or reviewed >= tip:
+                fail(f"Analyst review must follow captured quote and precede tipoff: {game_id}")
             prediction_row.update(
                 market_status="PRETIP_MAIN_LINE_QUOTED", market_kind=MARKET_KIND,
                 bookmaker=q["bookmaker"], market_source_url=q["source_url"],
                 market_captured_at_utc=q["captured_at_utc"], market_line=line,
                 over_decimal=over, under_decimal=under, delta=gap,
                 raw_direction=direction, selected_direction=selected,
+                analyst_confidence=confidence, analyst_rationale=rationale.strip(),
+                analyst_reviewed_at_utc=review["reviewed_at_utc"],
             )
         rows.append(prediction_row)
     return {
-        "schema_version": "nba-ou-shadow-overlay-v1", "status": "LOCKED_SHADOW_NOT_PRODUCTION",
-        "selection_rule_version": RULE_VERSION, "abs_delta_selection_threshold": DELTA_SELECTION_THRESHOLD,
+        "schema_version": "nba-ou-shadow-overlay-v2", "status": "LOCKED_SHADOW_NOT_PRODUCTION",
+        "selection_rule_version": RULE_VERSION, "confidence_is_calibrated": False,
         "nba_local_date": forecast["nba_local_date"],
         "original_forecast_sha256": hashlib.sha256(forecast_raw).hexdigest(),
         "forecast_generated_at_utc": forecast["generated_at_utc"],
@@ -168,7 +182,7 @@ def build_overlay(forecast: dict, market: dict, forecast_raw: bytes) -> dict:
 
 
 def grade_overlay(overlay: dict, finals: dict) -> dict:
-    if overlay.get("status") != "LOCKED_SHADOW_NOT_PRODUCTION" or overlay.get("schema_version") != "nba-ou-shadow-overlay-v1":
+    if overlay.get("status") != "LOCKED_SHADOW_NOT_PRODUCTION" or overlay.get("schema_version") != "nba-ou-shadow-overlay-v2":
         fail("Expected original locked O/U overlay")
     if overlay.get("nba_local_date") != finals.get("nba_local_date"):
         fail("Retrospective NBA date mismatch")
@@ -176,7 +190,8 @@ def grade_overlay(overlay: dict, finals: dict) -> dict:
     results = unique_fixture_map(finals.get("results"), "game finals")
     if not games or set(games) != set(results):
         fail("Every original fixture needs exactly one verified final result")
-    rows, stats = [], {"win": 0, "loss": 0, "push": 0, "pass": 0, "unverified": 0}
+    rows, stats = [], {"win": 0, "loss": 0, "push": 0, "unverified": 0}
+    confidence_stats = {v: {"win": 0, "loss": 0, "push": 0} for v in ("LOW", "MEDIUM", "HIGH")}
     for id, game in games.items():
         result = results[id]
         if result.get("status") != "FINAL" or type(result.get("overtime_periods")) is not int or result["overtime_periods"] < 0:
@@ -189,8 +204,6 @@ def grade_overlay(overlay: dict, finals: dict) -> dict:
         score = int(a+h)
         if game["market_status"] != "PRETIP_MAIN_LINE_QUOTED":
             grade = "UNVERIFIED"
-        elif game["selected_direction"] == "PASS":
-            grade = "PASS"
         elif score == game["market_line"]:
             grade = "PUSH"
         elif (score > game["market_line"]) == (game["selected_direction"] == "OVER"):
@@ -198,16 +211,27 @@ def grade_overlay(overlay: dict, finals: dict) -> dict:
         else:
             grade = "LOSS"
         stats[grade.lower()] += 1
+        if grade in {"WIN", "LOSS", "PUSH"}:
+            confidence = game.get("analyst_confidence")
+            if confidence not in confidence_stats:
+                fail("Invalid qualitative confidence in the locked overlay")
+            confidence_stats[confidence][grade.lower()] += 1
         rows.append({"away": game["away"], "home": game["home"], "official_total_including_ot": score,
                      "overtime_periods": result["overtime_periods"], "final_source_url": result["source_url"],
                      "locked_line": game["market_line"], "locked_direction": game["selected_direction"],
+                     "model_raw_direction": game.get("raw_direction"),
+                     "qualitative_confidence": game.get("analyst_confidence"),
                      "grade": grade})
     settled = stats["win"]+stats["loss"]
+    for v, counts in confidence_stats.items():
+        n = counts["win"] + counts["loss"]
+        counts["accuracy_excluding_push"] = counts["win"] / n if n else None
     return {
-        "schema_version": "nba-ou-shadow-retro-v1", "status": "POSTGAME_RETROSPECTIVE",
+        "schema_version": "nba-ou-shadow-retro-v2", "status": "POSTGAME_RETROSPECTIVE",
         "nba_local_date": overlay["nba_local_date"], "summary": {
             "selected_wins": stats["win"], "selected_losses": stats["loss"],
-            "selected_pushes": stats["push"], "passed": stats["pass"], "unverified": stats["unverified"],
+            "selected_pushes": stats["push"], "unverified": stats["unverified"],
+            "qualitative_confidence_bins": confidence_stats,
             "selected_accuracy_excluding_push": stats["win"]/settled if settled else None,
             "selection_coverage": (stats["win"]+stats["loss"]+stats["push"])/len(games),
         }, "games": rows,
