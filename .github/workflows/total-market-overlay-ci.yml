@@ -1,0 +1,25 @@
+name: NBA Cup and O-U prospective overlay tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tools/markets/**"
+      - ".github/workflows/total-market-overlay-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-overlay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run prospective market-overlay tests (no external odds fetch)
+        working-directory: tools/markets
+        run: python -B -m unittest -v test_total_market_overlay
