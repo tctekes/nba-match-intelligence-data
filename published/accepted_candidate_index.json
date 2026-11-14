@@ -1,15 +1,15 @@
 {
-  "accepted_games": 172,
-  "data_through_nba_date": "2026-11-12",
+  "accepted_games": 181,
+  "data_through_nba_date": "2026-11-13",
   "excluded_games": 2,
-  "generated_at_utc": "2026-11-13T18:52:28.216175+00:00",
+  "generated_at_utc": "2026-11-14T19:55:32.012973+00:00",
   "independent_eight_box_fields": "PASS_WITH_WHOLE_GAME_EXCLUSIONS",
-  "json_path": "published/accepted_candidates/2026-11-12-accepted-5aabf4a8efe0.json",
-  "json_sha256": "5aabf4a8efe0c11fe4ec998b9167b1d33eff255a15a5ebbf453889e9a9100db4",
-  "md_path": "published/accepted_candidates/2026-11-12-accepted-5aabf4a8efe0.md",
+  "json_path": "published/accepted_candidates/2026-11-13-accepted-320b7eae2cba.json",
+  "json_sha256": "320b7eae2cbaceffba1bc4f43e5cef9ddb8cb33dc4d1f1f41da8093e5a94bd75",
+  "md_path": "published/accepted_candidates/2026-11-13-accepted-320b7eae2cba.md",
   "production_pointer_advanced": false,
-  "raw_completed_games": 174,
+  "raw_completed_games": 183,
   "schema_version": "nba-model-c-accepted-candidate-index-v1",
-  "source_sha256": "a9d4be339a8ae56b8a610f4b41b4ed48060b32be498e2e062d0036885106b895",
+  "source_sha256": "fab08a363243a687a5a8e131bc0a1f273690fb473f59d82a31a7e546e43d85e7",
   "status": "ACCEPTED_GAMES_EXPERIMENTAL_NOT_PRODUCTION"
 }
