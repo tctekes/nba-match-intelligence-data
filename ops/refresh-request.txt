@@ -1,6 +1,6 @@
 NBA Match Intelligence — controlled data refresh request
-Requested for NBA 2026-11-13 pregame analysis.
-Reason: daily cron was not observed at 2026-11-13 21:51 Europe/Istanbul.
-Run type: experimental accepted-game candidate only; ALL tests and full ESPN 8-stat verification required.
-No production pointer update, no model parameter changes.
-Do not proceed with pregame lock if valid data through NBA 2026-11-12 is unavailable.
+Requested for NBA 2026-11-14 pregame analysis; data should include completed NBA-local 2026-11-13 games.
+Reason: scheduled GitHub Actions cron 2026-11-14 17:23 UTC (20:23 Europe/Istanbul) did not produce an event by 19:51 UTC (22:51 local).
+Trigger: safe, path-filtered push to accepted-candidate.yml workflow; perform independent eight-field ESPN audit, whole-game exclusion and all original tests.
+Status: experimental accepted-game candidate ONLY; no model or parameter mutation and no production pointer movement.
+Do not issue pregame lock unless refreshed index is verified and game times are in the future.
