@@ -7,8 +7,10 @@ on:
     paths:
       - "ops/refresh-request.txt"
   schedule:
-    # 20:23 Europe/Istanbul (17:23 UTC); avoid GitHub Actions top-of-hour cron congestion.
+    # Primary 20:23 TSİ, backup 20:53 TSİ; both off top-of-hour.
+    # The backup skips data rebuilding when index already covers the prior NBA date.
     - cron: "23 17 * * *"
+    - cron: "53 17 * * *"
 
 permissions:
   contents: write
@@ -26,14 +28,47 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Skip redundant backup after an already fresh scheduled snapshot
+        id: freshness
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from datetime import datetime, timedelta, timezone
+          refresh = True
+          if os.environ.get("GITHUB_EVENT_NAME") == "schedule":
+              try:
+                  with open("published/accepted_candidate_index.json", encoding="utf-8") as f:
+                      index = json.load(f)
+                  target = (datetime.now(timezone.utc) - timedelta(days=1)).date()
+                  covered = datetime.strptime(index["data_through_nba_date"], "%Y-%m-%d").date()
+                  valid = (index.get("status") == "ACCEPTED_GAMES_EXPERIMENTAL_NOT_PRODUCTION"
+                           and index.get("independent_eight_box_fields") == "PASS_WITH_WHOLE_GAME_EXCLUSIONS"
+                           and index.get("accepted_games", 0) >= 1
+                           and index.get("json_sha256")
+                           and index.get("json_path"))
+                  if valid and covered >= target:
+                      refresh = False
+                      print(f"Fresh candidate already includes NBA date {target}; skip redundant scheduled run")
+              except (OSError, ValueError, KeyError, TypeError) as exc:
+                  print(f"Freshness preflight failed; fail-open to full independent validation: {exc}")
+          else:
+              print("Manual/push refresh: always run full validation")
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              output.write(f"refresh={'true' if refresh else 'false'}\n")
+          PY
       - name: Run Task08 original and exclusion-policy tests
+        if: steps.freshness.outputs.refresh == 'true'
         working-directory: tools/task08
         run: |
           python -B -m unittest -v test_static_snapshot
           python -B -m unittest -v test_accepted_candidate
       - name: Validate complete NBA scores and all independent box fields, then exclude full disputed games
+        if: steps.freshness.outputs.refresh == 'true'
         run: python -B tools/task08/build_accepted_candidate.py
       - name: Publish accepted-game snapshot as NON-PRODUCTION candidate
+        if: steps.freshness.outputs.refresh == 'true'
         run: |
           git config user.name "NBA Match Intelligence validation"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
