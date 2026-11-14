@@ -1,0 +1,35 @@
+{
+  "schema_version": "nba-analyst-lean-append-only-revision-v1",
+  "status": "LOCKED_PRETIP_ANALYST_REVISION_NOT_PRODUCTION",
+  "nba_local_date": "2026-11-14",
+  "recorded_at_utc": "2026-11-14T20:20:28Z",
+  "fixture": {
+    "away": "DAL",
+    "home": "CLE",
+    "tipoff_utc": "2026-11-15T00:30:00Z"
+  },
+  "original_lock_path": "published/forecast_locks/2026-11-14-model-c-analyst-shadow.json",
+  "original_lock_commit": "9ceeb7afa8089b87a0a03d91a7786a964844fb3c",
+  "market_overlay_path": "published/forecast_locks/2026-11-14-nba-ou-shadow-overlay-v2.json",
+  "original_analyst_lean": null,
+  "original_analyst_confidence": "LOW",
+  "revised_analyst_lean": "DAL",
+  "revised_analyst_confidence": "LOW",
+  "rationale": "Newer official 2026-11-14 01:15 PM ET injury report was discovered during additional pre-tip source review: Cleveland Evan Mobley confirmed OUT; Jarrett Allen, Donovan Mitchell, James Harden QUESTIONABLE; Sam Merrill OUT. This substantially weakens baseline confidence in Cleveland's frontcourt and on-ball creation against Dallas, whose season accepted defense is stronger (DRtg 109.28 vs CLE 113.11). However Q does not mean OUT. Dallas Dereck Lively II is OUT and Max Christie DOUBTFUL; if multiple Cleveland questionable creators play, the model's Cleveland favorite remains plausible. Lean DAL is a cautious qualitative contrary opinion, not a changed numerical model forecast.",
+  "counterargument": "Mitchell, Harden and Allen are QUESTIONABLE and could all play; Dallas is also missing Lively, and Cleveland retains home court. Sample size ~12-13 games is small. LOW confidence only.",
+  "supersedes_only": "Prior DAL@CLE independent qualitative ANALYST_LEAN null; other four qualitative leans unchanged",
+  "model_c_modified": false,
+  "model_original_home_win_probability": 0.6638050313708401,
+  "model_original_expected_home_margin": 5.286273802877885,
+  "model_original_full_game_total": 231.39770205332835,
+  "ou_line_and_direction_unchanged": true,
+  "primary_evidence": {
+    "source": "Official NBA Injury Report",
+    "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-14_01_15PM.pdf",
+    "report_as_of_et": "2026-11-14 13:15 ET",
+    "first_reviewed_after_original_lock": true,
+    "original_earlier_report_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-14_01_00PM.pdf",
+    "change": "Cleveland changed from NOT YET SUBMITTED in 13:00 ET report to detailed player statuses in 13:15 ET report; both documents existed before initial lock. Missing check acknowledged."
+  },
+  "interpretation_rule": "For postgame analyst performance, use latest immutable pre-tip analyst opinion, identify this revision explicitly; retain earlier record for audit."
+}
