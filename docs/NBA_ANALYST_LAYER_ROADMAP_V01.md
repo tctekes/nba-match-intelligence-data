@@ -25,7 +25,7 @@ It must keep separate:
 | **P0** | Confirmed OUT + player role/impact | How much of tonight's offense/defense/creation changes? | NBA official injury, DARKO (DPM Off/Def+projected MPG), NBA roles | Web-based expert lookup first; archive verified statuses |
 | **P0** | Matchup of team Four Factors and shot zones | How does A attack B's vulnerabilities? | NBA.com/stats Four Factors, opponent shooting, Synergy play-type | Expert research now; source feasibility before daily auto-ETL |
 | **P0** | NBA Cup + rest/availability | Is this a materially different competition/stakes context? | NBA official schedule/Cup rules, injury reports | Already defined Cup gate in new market protocol; Project instructions must reference |
-| **P0** | Full-game O/U plus analyst qualitative confidence | What's the model relative to actual bookmaker main line and key variance risks? | Existing Model C lock + verifiable European book | **Existing helper currently marks small gaps PASS: update before first real O/U pilot, retain raw direction and add `confidence LOW/MEDIUM/HIGH`** |
+| **P0** | Full-game O/U plus analyst qualitative confidence | What's the model relative to actual bookmaker main line and key variance risks? | Existing Model C lock + verifiable European book | **IMPLEMENTED in v0.2**: verified main-line prices require pretip analyst-reviewed OVER/UNDER, qualitative LOW/MEDIUM/HIGH and evidence; no arbitrary PASS threshold |
 | **P1** | Team DNA Card for all 30 | Which repeatable styles and weaknesses characterize each team? | Official team tracking, PBP Stats, Synergy, Four Factors | Pilot **six teams**, then automate 30 if viable |
 | **P1** | Clutch / lead protection and comeback | Does either team have a robust close-game finishing edge? | NBA clutch + PBP score/time | Need sample sizes, opponent context, shrinkage; avoid premature winner flip |
 | **P1** | Rotation and on/off WOWY | Does replacing an OUT star preserve the relevant style? | PBP Stats on/off, official lineups, DARKO minutes | Query on confirmed injuries only; avoid minutes/source mismatch |
@@ -88,13 +88,18 @@ RISK          Away turnover propensity and home offensive rebounding counterbala
 AUDIT         Frozen model SHA, accepted snapshot SHA, pretip source time
 ```
 
-All quantitative source claims on a real card require actual evidence. If market missing, do not invent lines; O/U direction is unavailable, not PASS. Bookmaker selection and European odds rules from [totals protocol](./NBA_CUP_AND_TOTALS_MARKET_PROTOCOL_V01.md).
+All quantitative source claims on a real card require actual evidence. If market missing, do not invent lines; O/U direction is unavailable, not PASS. Bookmaker selection and European odds rules from [totals protocol](./NBA_CUP_AND_TOTALS_MARKET_PROTOCOL_V02.md).
 
-## Specific existing implementation discrepancy to fix
+## Technical item resolved after the initial plan
 
-Current [`tools/markets/total_market_overlay.py`](../tools/markets/total_market_overlay.py) version chooses `PASS` for `abs(model_total - main_market_line) < 5`. User explicitly **does not want PASS cards** when a verified main line exists; user expects **OVER/UNDER and LOW/MEDIUM/HIGH qualitative confidence**. The earlier tested code is correct against its old spec, but **does not satisfy the user’s current preference**.
+The previous `tools/markets/total_market_overlay.py` v0.1 selected `PASS` when model/market gap was <5 points. On **2026-11-14** that was replaced with the **v0.2 analyst-review schema** (`nba-ou-shadow-overlay-v2`) and [revised O/U protocol](./NBA_CUP_AND_TOTALS_MARKET_PROTOCOL_V02.md):
 
-Change only the overlay **selection/presentation layer**, not frozen Model C: always expose raw directional signal when delta != 0, place `analyst_selected_direction` and `qualitative_confidence` in a separately analyst-reviewed field, require uncertainty for near-equality. At exact equality `delta==0`, no mathematical directional preference; analyst can explicitly choose a contextual lean with explanation, otherwise mark `DIRECTION_UNDETERMINED`, not a fabricated favorite. All new selection rules versioned; prior pregame locks remain untouched.
+- Valid bookmaker main-line quote requires a **pretip NBA analyst-reviewed OVER/UNDER** choice, `LOW/MEDIUM/HIGH` confidence, dated rationale and counterargument; never auto-PASS on a small gap.
+- `raw_direction` from frozen model stays separately recorded; analyst may disagree if source-grounded.
+- Missing verified bookmaker quote is `MARKET_NOT_VERIFIED` with no pick (not a forced/pretend direction).
+- `LOW/MEDIUM/HIGH` are **qualitative**, not statistically calibrated probabilities. Postgame WIN/LOSS/PUSH and confidence-bin stats are supported by the new test suite.
+- A prior-date pretip O/U lock was **not** created retroactively. The real dated market ingest/analyst review integration remains to be piloted.
+- Original frozen Model C, previous winner locks and snapshots remain unchanged.
 
 ## Developer guardrails
 
