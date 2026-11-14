@@ -38,12 +38,18 @@ def sample():
              "is_main_line": True, "bookmaker": "Example European book",
              "source_url": "https://example.org/den-nop",
              "captured_at_utc": "2026-11-14T19:00:00Z",
-             "line": 233.5, "over_decimal": 1.92, "under_decimal": 1.94},
+             "line": 233.5, "over_decimal": 1.92, "under_decimal": 1.94,
+             "analyst_review": {"direction": "OVER", "confidence": "MEDIUM",
+               "rationale": "Model total exceeds the quote, with real uncertainty from both teams' shooting variance.",
+               "reviewed_at_utc": "2026-11-14T19:01:00Z"}},
             {"away": "DAL", "home": "CLE", "market_kind": "FULL_GAME_INCLUDING_OT",
              "is_main_line": True, "bookmaker": "Example European book",
              "source_url": "https://example.org/dal-cle",
              "captured_at_utc": "2026-11-14T19:00:00Z",
-             "line": 232.5, "over_decimal": 1.91, "under_decimal": 1.93},
+             "line": 232.5, "over_decimal": 1.91, "under_decimal": 1.93,
+             "analyst_review": {"direction": "UNDER", "confidence": "LOW",
+               "rationale": "The model is only slightly below the line and no robust matchup edge is verified.",
+               "reviewed_at_utc": "2026-11-14T19:01:00Z"}},
         ],
     }
     return forecast, market
@@ -66,41 +72,46 @@ def finals():
 
 
 class TotalsOverlayTests(unittest.TestCase):
-    def test_main_line_is_selected_and_small_gap_passes(self):
+    def test_small_gap_always_has_reviewed_direction_not_pass(self):
         f, m = sample()
         o = build_overlay(f, m, lock(f))
+        self.assertEqual(o["schema_version"], "nba-ou-shadow-overlay-v2")
         self.assertEqual(o["games"][0]["selected_direction"], "OVER")
         self.assertEqual(o["games"][0]["delta"], 7.0)
         self.assertEqual(o["games"][1]["raw_direction"], "UNDER")
-        self.assertEqual(o["games"][1]["selected_direction"], "PASS")
+        self.assertEqual(o["games"][1]["selected_direction"], "UNDER")
+        self.assertEqual(o["games"][1]["analyst_confidence"], "LOW")
+        self.assertFalse(o["confidence_is_calibrated"])
         self.assertTrue(o["original_model_outputs_unchanged"])
         self.assertEqual(o["model_file_sha256"], "a"*64)
         self.assertEqual(len(o["original_forecast_sha256"]), 64)
 
-    def test_grade_including_ot_with_pass(self):
+    def test_grade_including_overtime_and_confidence(self):
         f, m = sample()
         o = build_overlay(f, m, lock(f))
         r = grade_overlay(o, finals())
-        self.assertEqual([x["grade"] for x in r["games"]], ["WIN", "PASS"])
+        self.assertEqual(r["schema_version"], "nba-ou-shadow-retro-v2")
+        self.assertEqual([x["grade"] for x in r["games"]], ["WIN", "WIN"])
         self.assertEqual(r["summary"]["selected_accuracy_excluding_push"], 1)
-        self.assertEqual(r["summary"]["selection_coverage"], .5)
+        self.assertEqual(r["summary"]["selection_coverage"], 1)
+        self.assertEqual(r["summary"]["qualitative_confidence_bins"]["MEDIUM"]["win"], 1)
+        self.assertEqual(r["summary"]["qualitative_confidence_bins"]["LOW"]["win"], 1)
 
     def test_push_for_integer_line(self):
         f, m = sample()
         m["quotes"][0]["line"] = 240.0
-        o = build_overlay(f, m, lock(f))
-        # 240.5 model total -> gap 0.5 -> PASS, so require model delta>=5
         f["games"][0]["expected_full_game_total"] = 246.0
         o = build_overlay(f, m, lock(f))
         r = grade_overlay(o, finals())
         self.assertEqual(r["games"][0]["grade"], "PUSH")
         self.assertEqual(r["summary"]["selected_pushes"], 1)
 
-    def test_absent_quote_is_verifiably_ungraded(self):
+    def test_absent_quote_is_unverified_not_fake_pass(self):
         f, m = sample()
         m["quotes"].pop()
         o = build_overlay(f, m, lock(f))
         self.assertEqual(o["games"][1]["market_status"], "MARKET_NOT_VERIFIED")
+        self.assertIsNone(o["games"][1]["selected_direction"])
         r = grade_overlay(o, finals())
         self.assertEqual(r["games"][1]["grade"], "UNVERIFIED")
 
@@ -149,6 +160,39 @@ class TotalsOverlayTests(unittest.TestCase):
         m["cup_context"].pop()
         with self.assertRaisesRegex(ValueError, "Cup context must cover"):
             build_overlay(f, m, lock(f))
+
+    def test_missing_review_or_invalid_confidence_rejected(self):
+        f, m = sample()
+        del m["quotes"][0]["analyst_review"]
+        with self.assertRaisesRegex(ValueError, "review required"):
+            build_overlay(f, m, lock(f))
+        f, m = sample()
+        m["quotes"][0]["analyst_review"]["confidence"] = "CERTAIN"
+        with self.assertRaisesRegex(ValueError, "confidence"):
+            build_overlay(f, m, lock(f))
+
+    def test_review_has_to_be_after_quote_and_before_tip(self):
+        f, m = sample()
+        m["quotes"][0]["analyst_review"]["reviewed_at_utc"] = "2026-11-14T18:00:00Z"
+        with self.assertRaisesRegex(ValueError, "review must follow"):
+            build_overlay(f, m, lock(f))
+        f, m = sample()
+        m["quotes"][0]["analyst_review"]["reviewed_at_utc"] = "2026-11-15T00:00:00Z"
+        with self.assertRaisesRegex(ValueError, "review must follow"):
+            build_overlay(f, m, lock(f))
+
+    def test_analyst_can_disagree_with_raw_direction_and_zero_gap(self):
+        f, m = sample()
+        m["quotes"][0]["analyst_review"]["direction"] = "UNDER"
+        o = build_overlay(f, m, lock(f))
+        self.assertEqual(o["games"][0]["raw_direction"], "OVER")
+        self.assertEqual(o["games"][0]["selected_direction"], "UNDER")
+        self.assertEqual(grade_overlay(o, finals())["games"][0]["grade"], "LOSS")
+        f, m = sample()
+        f["games"][0]["expected_full_game_total"] = 233.5
+        o = build_overlay(f, m, lock(f))
+        self.assertEqual(o["games"][0]["raw_direction"], "NEUTRAL")
+        self.assertEqual(o["games"][0]["selected_direction"], "OVER")
 
 
 if __name__ == "__main__":
