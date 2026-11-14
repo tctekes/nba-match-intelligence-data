@@ -1,0 +1,141 @@
+{
+  "schema_version": "nba-locked-shadow-forecast-v1",
+  "status": "LOCKED_PREGAME_SHADOW_NOT_PRODUCTION",
+  "nba_local_date": "2026-11-14",
+  "generated_at_utc": "2026-11-14T20:06:54.375435+00:00",
+  "analyst_reviewed_at_utc": "2026-11-14T20:14:16Z",
+  "schedule_reference": "https://www.nba.com/games?date=2026-11-14",
+  "cup_context_checked_at_utc": "2026-11-14T20:14:16Z",
+  "all_games_nba_cup": false,
+  "cup_stage": "NONE",
+  "cup_source_url": "https://www.nba.com/news/emirates-nba-cup-key-dates-schedule",
+  "model": "Frozen Model C v0.1",
+  "model_file_sha256": "b6efd52df74f540c3bda711cd37a372e1ae7cbdbda134579c4c43bc7ff1eafef",
+  "parameter_file_sha256": "259b0dcc561c2f0400b04d9b19aba59eef53973ba06075f5db97a73497d1c640",
+  "current_snapshot_path": "published/accepted_candidates/2026-11-13-accepted-320b7eae2cba.json",
+  "current_snapshot_sha256": "320b7eae2cbaceffba1bc4f43e5cef9ddb8cb33dc4d1f1f41da8093e5a94bd75",
+  "raw_completed_games": 183,
+  "accepted_games": 181,
+  "excluded_games": 2,
+  "verified_team_count": 30,
+  "accepted_gp_sum": 362,
+  "independent_box_team_rows_checked": 366,
+  "independent_eight_box_fields": "PASS_WITH_WHOLE_GAME_EXCLUSIONS",
+  "model_calculation": "Real Python 3.13 frozen baseline.predict_html called on 30-team accepted-snapshot full-precision rates before consulting bookmaker markets. NO parameter modifications; all neutral=false based on NBA arena schedule.",
+  "data_transfer_note": "Exact 30-team numerical rates from the GitHub-connector-read verified accepted candidate JSON were transferred into this session's Python inference run. SHA of canonical remote JSON independently verified; local inference input fields passed all available runtime gates.",
+  "injury_report_reference": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-14_01_00PM.pdf",
+  "injury_report_reported_at_utc": "2026-11-14T18:00:00Z",
+  "injury_report_latest_status_note": "1PM ET official injury PDF; some reports not submitted, and statuses may change before tipoff. No uncertain player treated as confirmed out.",
+  "injury_adjustment": "NONE_TO_FROZEN_MODEL_C",
+  "historical_predictions_recreated": false,
+  "qualitative_confidence_is_calibrated": false,
+  "games": [
+    {
+      "away": "DEN",
+      "home": "NOP",
+      "tipoff_utc": "2026-11-15T00:00:00Z",
+      "home_win_probability": 0.307595925139235,
+      "expected_home_margin": -6.3048783077896315,
+      "expected_full_game_total": 240.95759081801995,
+      "predicted_winner": "DEN",
+      "win_probability": 0.6924040748607649,
+      "analyst_lean": {
+        "team": "DEN",
+        "confidence": "MEDIUM",
+        "rationale": "Denver's offense meets New Orleans' weak season defensive efficiency. New Orleans lists Trey Murphy III and Dejounte Murray OUT, and is on a back-to-back after losing to Memphis; Denver won their prior two meetings this season.",
+        "counterargument": "Pelicans play faster, draw many free throws and Denver's perimeter defense can surrender threes; two H2H games are a very small sample.",
+        "evidence_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-14_01_00PM.pdf",
+          "https://basketball.realgm.com/nba/preview/2026-11-14/Denver-at-New-Orleans/530742",
+          "https://www.nba.com/nuggets/news/nuggets-conclude-road-trip-pelicans"
+        ],
+        "reviewed_at_utc": "2026-11-14T20:14:16Z"
+      }
+    },
+    {
+      "away": "DAL",
+      "home": "CLE",
+      "tipoff_utc": "2026-11-15T00:30:00Z",
+      "home_win_probability": 0.6638050313708401,
+      "expected_home_margin": 5.286273802877885,
+      "expected_full_game_total": 231.39770205332835,
+      "predicted_winner": "CLE",
+      "win_probability": 0.6638050313708401,
+      "analyst_lean": {
+        "team": null,
+        "confidence": "LOW",
+        "rationale": "Cleveland's high three-point attempt volume and higher current ORtg support home upside, but the Cavaliers played Miami on Friday and their game-specific official injury submission was still missing in the reviewed report. Dallas's defense has performed better in the accepted sample.",
+        "counterargument": "Dereck Lively II is confirmed OUT, Max Christie DOUBTFUL, and Cleveland has home court. These give reasons not to infer a Dallas win from the competing defensive/availability evidence.",
+        "evidence_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-14_01_00PM.pdf",
+          "https://basketball.realgm.com/nba/preview/2026-11-14/Dallas-at-Cleveland/530743"
+        ],
+        "reviewed_at_utc": "2026-11-14T20:14:16Z"
+      }
+    },
+    {
+      "away": "DET",
+      "home": "MIA",
+      "tipoff_utc": "2026-11-15T01:00:00Z",
+      "home_win_probability": 0.3537643758730643,
+      "expected_home_margin": -4.682004864454099,
+      "expected_full_game_total": 230.7287106566565,
+      "predicted_winner": "DET",
+      "win_probability": 0.6462356241269357,
+      "analyst_lean": {
+        "team": "MIA",
+        "confidence": "LOW",
+        "rationale": "CONDITIONAL contrarian lean: Detroit's Jalen Duren is confirmed OUT, weakening the interior/rebounding rotation, while Miami lists Giannis Antetokounmpo PROBABLE and has Bam Adebayo. Their paint pressure is a plausible opponent-specific challenge to the average-strength baseline.",
+        "counterargument": "Giannis is PROBABLE, not confirmed active; Detroit has a much stronger current-season defense, already beat Miami this season, and Miami is on a back-to-back.",
+        "evidence_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-14_01_00PM.pdf",
+          "https://basketball.realgm.com/nba/preview/2026-11-14/Detroit-at-Miami/530744"
+        ],
+        "reviewed_at_utc": "2026-11-14T20:14:16Z"
+      }
+    },
+    {
+      "away": "BKN",
+      "home": "MEM",
+      "tipoff_utc": "2026-11-15T01:00:00Z",
+      "home_win_probability": 0.765186494998003,
+      "expected_home_margin": 9.179551179776933,
+      "expected_full_game_total": 228.65522887065688,
+      "predicted_winner": "MEM",
+      "win_probability": 0.765186494998003,
+      "analyst_lean": {
+        "team": "MEM",
+        "confidence": "MEDIUM",
+        "rationale": "Memphis has a much stronger accepted-sample offense and defense; season-preview team boxes show roughly 39 percent Memphis three-point accuracy versus high Brooklyn turnover volume. This is a meaningful shooting/possession matchup advantage.",
+        "counterargument": "Memphis played on November 13 and its game-specific official injury report was not yet submitted at review; Brooklyn could benefit from tired legs and three-point variance.",
+        "evidence_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-14_01_00PM.pdf",
+          "https://basketball.realgm.com/nba/preview/2026-11-14/Brooklyn-at-Memphis/530745"
+        ],
+        "reviewed_at_utc": "2026-11-14T20:14:16Z"
+      }
+    },
+    {
+      "away": "CHI",
+      "home": "MIN",
+      "tipoff_utc": "2026-11-15T01:00:00Z",
+      "home_win_probability": 0.8937848790598655,
+      "expected_home_margin": 16.551230276937943,
+      "expected_full_game_total": 235.24956498951425,
+      "predicted_winner": "MIN",
+      "win_probability": 0.8937848790598655,
+      "analyst_lean": {
+        "team": "MIN",
+        "confidence": "MEDIUM",
+        "rationale": "Minnesota's accepted-sample defense (DRtg about 101.9) meets Chicago's very poor defense (DRtg about 119.2), and Chicago had to play overtime the previous night. The Wolves' defensive/rebounding identity remains a concrete advantage.",
+        "counterargument": "Anthony Edwards and Donte DiVincenzo are confirmed OUT. Edwards was a +5.3 DPM / +5.4 offensive DPM player in a dated DARKO profile; Chicago may exploit missing shot creation and high-variance perimeter scoring. Norman Powell, Nic Claxton, and Jalen Smith are QUESTIONABLE, not confirmed OUT.",
+        "evidence_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-14_01_00PM.pdf",
+          "https://www.darko.app/player/1630162?asof=2026-11-08",
+          "https://basketball.realgm.com/nba/preview/2026-11-14/Chicago-at-Minnesota/530746"
+        ],
+        "reviewed_at_utc": "2026-11-14T20:14:16Z"
+      }
+    }
+  ]
+}
