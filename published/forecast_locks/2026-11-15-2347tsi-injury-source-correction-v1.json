@@ -1,0 +1,67 @@
+{
+  "schema_version": "nba-analyst-evidence-append-only-revision-v1",
+  "status": "LOCKED_PRETIP_EVIDENCE_CORRECTION_NOT_PRODUCTION",
+  "nba_local_date": "2026-11-15",
+  "recorded_at_utc": "2026-11-15T20:47:49Z",
+  "original_forecast_path": "published/forecast_locks/2026-11-15-eight-games-model-c-analyst-shadow.json",
+  "original_forecast_commit": "15cab11b0af67dd170eab21403184c6e24f4aa41",
+  "primary_new_official_report": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-15_02_30PM.pdf",
+  "original_report": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-15_01_15PM.pdf",
+  "source_quality_note": "Source textual page continuation for Collin Sexton and Adou Thiero lacks repeated team name; independently corroborated Lakers affiliation by named game-specific team listing (ReadTheGame) and checked against newer official report. This corrects mistaken PHX assignment in original pretip source note.",
+  "corrections": [
+    {
+      "fixture": "LAL@PHX",
+      "tipoff_utc": "2026-11-15T21:00:00Z",
+      "kind": "TEAM_ASSOCIATION_AND_STATUS",
+      "original_error": "Collin Sexton and Adou Thiero were incorrectly attributed to Phoenix Suns and called QUESTIONABLE in original injury-status annotation.",
+      "corrected": [
+        {
+          "team": "LAL",
+          "player": "Collin Sexton",
+          "status": "AVAILABLE"
+        },
+        {
+          "team": "LAL",
+          "player": "Adou Thiero",
+          "status": "AVAILABLE"
+        },
+        {
+          "team": "LAL",
+          "player": "Bronny James",
+          "status": "AVAILABLE"
+        }
+      ],
+      "unchanged": [
+        {
+          "team": "LAL",
+          "player": "Austin Reaves",
+          "status": "OUT"
+        },
+        {
+          "team": "PHX",
+          "player": "Mark Williams",
+          "status": "OUT"
+        }
+      ],
+      "analyst_lean_unchanged": "LAL",
+      "confidence_unchanged": "LOW"
+    },
+    {
+      "fixture": "HOU@WAS",
+      "tipoff_utc": "2026-11-16T00:00:00Z",
+      "kind": "LATEST_STATUS_CHANGE",
+      "correction": {
+        "team": "WAS",
+        "player": "Bub Carrington",
+        "old_status": "QUESTIONABLE",
+        "new_status": "AVAILABLE"
+      },
+      "analyst_lean_unchanged": "HOU",
+      "confidence_unchanged": "MEDIUM"
+    }
+  ],
+  "other_injury_statuses_may_change_pretip": true,
+  "model_c_numerical_outputs_unchanged": true,
+  "market_status_unverified_unchanged": true,
+  "note": "No outcome information was used. Record is an append-only pretip source correction, not postgame revision. Original record retained for audit."
+}
