@@ -1,0 +1,391 @@
+{
+  "schema_version": "nba-shadow-postgame-retrospective-v1",
+  "status": "POSTGAME_APPEND_ONLY_SHADOW_NOT_PRODUCTION",
+  "nba_local_date": "2026-11-14",
+  "turkey_results_date": "2026-11-15",
+  "audited_at_utc": "2026-11-15T11:25:25Z",
+  "original_forecast": {
+    "path": "published/forecast_locks/2026-11-14-model-c-analyst-shadow.json",
+    "commit": "9ceeb7afa8089b87a0a03d91a7786a964844fb3c",
+    "generated_at_utc": "2026-11-14T20:06:54.375435+00:00",
+    "model": "Frozen Model C v0.1",
+    "model_file_sha256": "b6efd52df74f540c3bda711cd37a372e1ae7cbdbda134579c4c43bc7ff1eafef",
+    "parameter_file_sha256": "259b0dcc561c2f0400b04d9b19aba59eef53973ba06075f5db97a73497d1c640",
+    "snapshot_path": "published/accepted_candidates/2026-11-13-accepted-320b7eae2cba.json",
+    "snapshot_sha256": "320b7eae2cbaceffba1bc4f43e5cef9ddb8cb33dc4d1f1f41da8093e5a94bd75"
+  },
+  "market_overlay": {
+    "path": "published/forecast_locks/2026-11-14-nba-ou-shadow-overlay-v2.json",
+    "commit": "2eb3702e3ec20e70f36b761752b830ca1b4eb5cf",
+    "market_captured_at_utc": "2026-11-14T20:15:40Z",
+    "analyst_reviewed_at_utc": "2026-11-14T20:16:27Z",
+    "original_forecast_sha256": "eea864b553219c011a860c7b23f246ef87247e0493eb4993489f8272060ab28f",
+    "source_url": "https://1xbet.mobi/tr/line/basketball/13589-nba",
+    "quality_caution": "All five 1xBet-branded mirror main 'Toplam' OVER/UNDER quotes observed twice via dated public web search extracts showing 'Uzatmalar Dahil' (including OT). Direct browser reopen failed with cache miss/stale build, so these are captured point-in-time index readings, NOT guarantees of immediately executable or currently unchanged prices. Lines cross-checked against independent NBA market aggregates. Exact original 3-decimal prices are retained; display may round to 2 decimals."
+  },
+  "analyst_revision": {
+    "path": "published/forecast_locks/2026-11-14-2320tsi-cle-analyst-lean-revision.json",
+    "commit": "3fe173331f31fd02dacfced79a75299ce6e42592",
+    "recorded_at_utc": "2026-11-14T20:20:28Z",
+    "fixture": "DAL@CLE",
+    "revised_lean": "DAL"
+  },
+  "sources": {
+    "official_scoreboard": "https://www.nba.com/schedule",
+    "independent_scoreboard": "https://basketball.realgm.com/schedules/2026-11-14/NBA",
+    "den": "https://www.nba.com/game/den-vs-nop-0022600231",
+    "dal": "https://www.cbssports.com/nba/gametracker/NBA_20261114_DAL%40CLE/",
+    "det": "https://www.nba.com/heat/news/coups-takeaways-antetokounmpo-adebayo-size-too-much-detroit-cunningham",
+    "bkn": "https://www.cbssports.com/nba/gametracker/recap/NBA_20261114_BKN%40MEM/",
+    "chi": "https://www.cbssports.com/nba/gametracker/recap/NBA_20261114_CHI%40MIN/"
+  },
+  "quality_notes": [
+    "Read all three original pretip GitHub files BEFORE inspecting game outcomes.",
+    "Independent final-score agreement: official NBA schedule and RealGM 2026-11-14 regular-season listing, 5/5.",
+    "Overtime: 0/5, official 4-quarter score breakdowns and FINAL (not Final/OT) labels. Full-game scoring unchanged.",
+    "No independent per-team eight-box-field audit was redone for postgame stats; use only corroborated game-report facts.",
+    "Pretip market source in locked artifact was a search extract from 1xBet-branded mirror; direct bookmaker URL re-open failed. Its authentic dated pretip bookmaker quote was NOT independently established, so strict official O/U coverage=0 and official win rate is N/A. Preserve locked numbers and show separately labelled provisional mechanical grades 2W-3L, not accepted official performance.",
+    "The pretip DAL@CLE analyst lean was changed via a separate append-only injury report revision. Use latest pretip revision for analyst scoring; never overwrite original or model.",
+    "Five games were ordinary regular-season, no NBA Cup. All games were over by the audit cutoff; no new pregame forecasts were created."
+  ],
+  "summary": {
+    "model_c": {
+      "n": 5,
+      "winner_correct": 3,
+      "winner_accuracy": 0.6,
+      "home_win_brier": 0.295850316830387,
+      "home_margin_mae": 13.69250637018952,
+      "full_game_total_including_ot_mae": 15.085102845378497,
+      "mean_signed_total_actual_minus_expected": 3.402240522364815,
+      "mean_signed_margin_actual_minus_expected": 1.993965582530194
+    },
+    "analyst_winner": {
+      "n": 5,
+      "correct": 3,
+      "accuracy": 0.6,
+      "by_confidence": {
+        "MEDIUM": {
+          "n": 3,
+          "win": 2,
+          "loss": 1,
+          "push": 0
+        },
+        "LOW": {
+          "n": 2,
+          "win": 1,
+          "loss": 1,
+          "push": 0
+        }
+      },
+      "disagree_games": [
+        {
+          "fixture": "DAL@CLE",
+          "model_winner": "CLE",
+          "analyst_lean": "DAL",
+          "analyst_correct": false
+        },
+        {
+          "fixture": "DET@MIA",
+          "model_winner": "DET",
+          "analyst_lean": "MIA",
+          "analyst_correct": true
+        }
+      ]
+    },
+    "over_under": {
+      "official_status": "N_A_MARKET_QUOTE_AUTHENTICITY_NOT_INDEPENDENTLY_VERIFIED",
+      "eligible_official_n": 0,
+      "official_coverage": 0,
+      "locked_quote_n": 5,
+      "provisional_only": {
+        "n": 5,
+        "selected_wins": 2,
+        "selected_losses": 3,
+        "selected_pushes": 0,
+        "selected_win_rate_excluding_push": 0.4,
+        "model_raw_direction_wins": 3,
+        "by_confidence": {
+          "MEDIUM": {
+            "n": 1,
+            "win": 0,
+            "loss": 1,
+            "push": 0
+          },
+          "LOW": {
+            "n": 4,
+            "win": 2,
+            "loss": 2,
+            "push": 0
+          }
+        }
+      }
+    }
+  },
+  "games": [
+    {
+      "away": "DEN",
+      "home": "NOP",
+      "fixture": "DEN@NOP",
+      "tipoff_utc": "2026-11-15T00:00:00Z",
+      "final": {
+        "status": "FINAL",
+        "away_score": 116,
+        "home_score": 108,
+        "overtime_periods": 0,
+        "actual_home_margin": -8,
+        "actual_total_including_ot": 224,
+        "actual_winner": "DEN",
+        "source_urls": [
+          "https://www.nba.com/schedule",
+          "https://basketball.realgm.com/schedules/2026-11-14/NBA"
+        ]
+      },
+      "model": {
+        "predicted_winner": "DEN",
+        "winner_probability": 0.6924040748607649,
+        "home_win_probability": 0.307595925139235,
+        "expected_home_margin": -6.3048783077896315,
+        "expected_full_game_total": 240.95759081801995,
+        "winner_correct": true,
+        "home_win_brier": 0.09461525316226187,
+        "home_margin_absolute_error": 1.6951216922103685,
+        "full_game_total_absolute_error": 16.957590818019952
+      },
+      "analyst_winner": {
+        "lean": "DEN",
+        "qualitative_confidence": "MEDIUM",
+        "correct": true,
+        "revision_path": null
+      },
+      "market": {
+        "source_provenance": "SEARCH_EXTRACT_ONLY_DIRECT_BOOKMAKER_REOPEN_FAILED",
+        "strict_official_eligible": false,
+        "locked_main_line": 234.5,
+        "over_decimal": 1.956,
+        "under_decimal": 1.905,
+        "selected_direction": "OVER",
+        "selected_confidence": "MEDIUM",
+        "raw_model_direction": "OVER",
+        "provisional_selected_grade": "LOSS",
+        "provisional_raw_grade": "LOSS",
+        "grade_is_official": false
+      },
+      "cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      }
+    },
+    {
+      "away": "DAL",
+      "home": "CLE",
+      "fixture": "DAL@CLE",
+      "tipoff_utc": "2026-11-15T00:30:00Z",
+      "final": {
+        "status": "FINAL",
+        "away_score": 117,
+        "home_score": 127,
+        "overtime_periods": 0,
+        "actual_home_margin": 10,
+        "actual_total_including_ot": 244,
+        "actual_winner": "CLE",
+        "source_urls": [
+          "https://www.nba.com/schedule",
+          "https://basketball.realgm.com/schedules/2026-11-14/NBA"
+        ]
+      },
+      "model": {
+        "predicted_winner": "CLE",
+        "winner_probability": 0.6638050313708401,
+        "home_win_probability": 0.6638050313708401,
+        "expected_home_margin": 5.286273802877885,
+        "expected_full_game_total": 231.39770205332835,
+        "winner_correct": true,
+        "home_win_brier": 0.11302705693156179,
+        "home_margin_absolute_error": 4.713726197122115,
+        "full_game_total_absolute_error": 12.602297946671655
+      },
+      "analyst_winner": {
+        "lean": "DAL",
+        "qualitative_confidence": "LOW",
+        "correct": false,
+        "revision_path": "published/forecast_locks/2026-11-14-2320tsi-cle-analyst-lean-revision.json"
+      },
+      "market": {
+        "source_provenance": "SEARCH_EXTRACT_ONLY_DIRECT_BOOKMAKER_REOPEN_FAILED",
+        "strict_official_eligible": false,
+        "locked_main_line": 231.5,
+        "over_decimal": 1.93,
+        "under_decimal": 1.93,
+        "selected_direction": "UNDER",
+        "selected_confidence": "LOW",
+        "raw_model_direction": "UNDER",
+        "provisional_selected_grade": "LOSS",
+        "provisional_raw_grade": "LOSS",
+        "grade_is_official": false
+      },
+      "cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      }
+    },
+    {
+      "away": "DET",
+      "home": "MIA",
+      "fixture": "DET@MIA",
+      "tipoff_utc": "2026-11-15T01:00:00Z",
+      "final": {
+        "status": "FINAL",
+        "away_score": 117,
+        "home_score": 137,
+        "overtime_periods": 0,
+        "actual_home_margin": 20,
+        "actual_total_including_ot": 254,
+        "actual_winner": "MIA",
+        "source_urls": [
+          "https://www.nba.com/schedule",
+          "https://basketball.realgm.com/schedules/2026-11-14/NBA"
+        ]
+      },
+      "model": {
+        "predicted_winner": "DET",
+        "winner_probability": 0.6462356241269357,
+        "home_win_probability": 0.3537643758730643,
+        "expected_home_margin": -4.682004864454099,
+        "expected_full_game_total": 230.7287106566565,
+        "winner_correct": false,
+        "home_win_brier": 0.4176204818907301,
+        "home_margin_absolute_error": 24.6820048644541,
+        "full_game_total_absolute_error": 23.27128934334351
+      },
+      "analyst_winner": {
+        "lean": "MIA",
+        "qualitative_confidence": "LOW",
+        "correct": true,
+        "revision_path": null
+      },
+      "market": {
+        "source_provenance": "SEARCH_EXTRACT_ONLY_DIRECT_BOOKMAKER_REOPEN_FAILED",
+        "strict_official_eligible": false,
+        "locked_main_line": 228.5,
+        "over_decimal": 1.905,
+        "under_decimal": 1.956,
+        "selected_direction": "OVER",
+        "selected_confidence": "LOW",
+        "raw_model_direction": "OVER",
+        "provisional_selected_grade": "WIN",
+        "provisional_raw_grade": "WIN",
+        "grade_is_official": false
+      },
+      "cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      }
+    },
+    {
+      "away": "BKN",
+      "home": "MEM",
+      "fixture": "BKN@MEM",
+      "tipoff_utc": "2026-11-15T01:00:00Z",
+      "final": {
+        "status": "FINAL",
+        "away_score": 110,
+        "home_score": 129,
+        "overtime_periods": 0,
+        "actual_home_margin": 19,
+        "actual_total_including_ot": 239,
+        "actual_winner": "MEM",
+        "source_urls": [
+          "https://www.nba.com/schedule",
+          "https://basketball.realgm.com/schedules/2026-11-14/NBA"
+        ]
+      },
+      "model": {
+        "predicted_winner": "MEM",
+        "winner_probability": 0.765186494998003,
+        "home_win_probability": 0.765186494998003,
+        "expected_home_margin": 9.179551179776933,
+        "expected_full_game_total": 228.65522887065688,
+        "winner_correct": true,
+        "home_win_brier": 0.055137382131322896,
+        "home_margin_absolute_error": 9.820448820223067,
+        "full_game_total_absolute_error": 10.344771129343115
+      },
+      "analyst_winner": {
+        "lean": "MEM",
+        "qualitative_confidence": "MEDIUM",
+        "correct": true,
+        "revision_path": null
+      },
+      "market": {
+        "source_provenance": "SEARCH_EXTRACT_ONLY_DIRECT_BOOKMAKER_REOPEN_FAILED",
+        "strict_official_eligible": false,
+        "locked_main_line": 228.5,
+        "over_decimal": 1.956,
+        "under_decimal": 1.905,
+        "selected_direction": "UNDER",
+        "selected_confidence": "LOW",
+        "raw_model_direction": "OVER",
+        "provisional_selected_grade": "LOSS",
+        "provisional_raw_grade": "WIN",
+        "grade_is_official": false
+      },
+      "cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      }
+    },
+    {
+      "away": "CHI",
+      "home": "MIN",
+      "fixture": "CHI@MIN",
+      "tipoff_utc": "2026-11-15T01:00:00Z",
+      "final": {
+        "status": "FINAL",
+        "away_score": 117,
+        "home_score": 106,
+        "overtime_periods": 0,
+        "actual_home_margin": -11,
+        "actual_total_including_ot": 223,
+        "actual_winner": "CHI",
+        "source_urls": [
+          "https://www.nba.com/schedule",
+          "https://basketball.realgm.com/schedules/2026-11-14/NBA"
+        ]
+      },
+      "model": {
+        "predicted_winner": "MIN",
+        "winner_probability": 0.8937848790598655,
+        "home_win_probability": 0.8937848790598655,
+        "expected_home_margin": 16.551230276937943,
+        "expected_full_game_total": 235.24956498951425,
+        "winner_correct": false,
+        "home_win_brier": 0.7988514100360583,
+        "home_margin_absolute_error": 27.551230276937943,
+        "full_game_total_absolute_error": 12.249564989514255
+      },
+      "analyst_winner": {
+        "lean": "MIN",
+        "qualitative_confidence": "MEDIUM",
+        "correct": false,
+        "revision_path": null
+      },
+      "market": {
+        "source_provenance": "SEARCH_EXTRACT_ONLY_DIRECT_BOOKMAKER_REOPEN_FAILED",
+        "strict_official_eligible": false,
+        "locked_main_line": 235.5,
+        "over_decimal": 1.977,
+        "under_decimal": 1.885,
+        "selected_direction": "UNDER",
+        "selected_confidence": "LOW",
+        "raw_model_direction": "UNDER",
+        "provisional_selected_grade": "WIN",
+        "provisional_raw_grade": "WIN",
+        "grade_is_official": false
+      },
+      "cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      }
+    }
+  ]
+}
