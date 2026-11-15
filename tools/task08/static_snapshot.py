@@ -56,7 +56,7 @@ def reconstruct(game_text,standing_text):
     return dict(teams=table,scores=scores,latest=max(k[0] for k in scores),games=len(scores),standings_max_abs_difference=max(diffs))
 
 def coverage(data,documents,cutoff):
-    expected={}; today=cutoff.astimezone(NY).date(); seen=set(); incomplete=[]
+    expected={}; today=cutoff.astimezone(NY).date(); last_closed=today-dt.timedelta(days=1); seen=set(); incomplete=[]
     for day,doc in sorted(documents.items()):
         assert isinstance(doc.get('events'),list) and doc.get('leagues'),'Invalid reference'
         calendar=doc['leagues'][0].get('calendar')
@@ -82,12 +82,14 @@ def coverage(data,documents,cutoff):
                 incomplete.append(e['id'])
     assert not incomplete,'Partial NBA day'
     start=dt.date(2026,10,1)
-    needed={(start+dt.timedelta(days=i)).isoformat() for i in range((today-start).days+1)}
+    # Today's NBA slate may already have finals while upstream box CSV is lagging.
+    # Audit every complete day through yesterday only, never force same-day finals.
+    needed={(start+dt.timedelta(days=i)).isoformat() for i in range((last_closed-start).days+1)}
     assert set(documents)==needed,'Full-season daily reference coverage missing'
     assert set(expected)==set(data['scores']),'Completed-game universe mismatch'
     assert (today-dt.date.fromisoformat(data['latest'])).days<=2,'Stale source'
     # Same-day finals lack reliable completion timestamps; conservatively reject.
-    assert data['latest']<today.isoformat(),'Current NBA date cannot be certified closed'
+    assert data['latest']<=last_closed.isoformat(),'Current NBA date cannot be certified closed'
     return len(expected)
 
 def render(payload):
