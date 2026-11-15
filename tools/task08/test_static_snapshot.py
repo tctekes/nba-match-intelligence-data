@@ -14,7 +14,7 @@ def fixture():
             games.append(r);standings.append(dict(season=s.SEASON,team=team,games=1,wins=int(points>allowed),losses=int(points<allowed),off_rating_est=points,def_rating_est=allowed,pace=100))
         events.append(dict(id=str(i),date='2026-11-10T23:00:00Z',season={'type':2},status={'type':{'completed':True,'name':'STATUS_FINAL'}},competitions=[{'competitors':[{'team':{'abbreviation':a},'score':'100'},{'team':{'abbreviation':b},'score':'90'}]}]))
     start=dt.date(2026,10,1); cutoff=dt.datetime(2026,11,11,15,tzinfo=dt.timezone.utc)
-    docs={(start+dt.timedelta(days=i)).isoformat():{'events':[],'leagues':[{'calendar':[]}]} for i in range(42)}
+    docs={(start+dt.timedelta(days=i)).isoformat():{'events':[],'leagues':[{'calendar':[]}]} for i in range(41)}
     docs['2026-11-10']['events']=events
     return games,standings,docs,cutoff
 
@@ -30,8 +30,13 @@ class Gate(unittest.TestCase):
         self.g.append(self.g[0])
         with self.assertRaises(ValueError):self.data()
     def test_stale(self):
-        for day in ('2026-11-12','2026-11-13','2026-11-14'):self.docs[day]={'events':[],'leagues':[{'calendar':[]}]}
+        for day in ('2026-11-11','2026-11-12','2026-11-13'):self.docs[day]={'events':[],'leagues':[{'calendar':[]}]}
         with self.assertRaisesRegex(AssertionError,'Stale'):s.coverage(self.data(),self.docs,self.cutoff+dt.timedelta(days=3))
+    def test_reject_current_day_reference(self):
+        # Cutoff is 2026-11-11 NY; only calendar days through Nov 10 are closed.
+        self.docs['2026-11-11']={'events':[],'leagues':[{'calendar':[]}]}
+        with self.assertRaisesRegex(AssertionError,'Full-season daily reference coverage missing'):
+            s.coverage(self.data(),self.docs,self.cutoff)
     def test_missing_completed_game(self):
         d=self.data();d['scores'].pop(next(iter(d['scores'])))
         with self.assertRaisesRegex(AssertionError,'Missing completed'):s.coverage(d,self.docs,self.cutoff)
