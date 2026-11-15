@@ -54,6 +54,8 @@ def acquire(url, *, limit=3_000_000):
 def capture():
     """Capture sources in one temporary directory; no cached or fake receipts."""
     new_york_date = dt.datetime.now(dt.timezone.utc).astimezone(ZoneInfo("America/New_York")).date()
+    # Never demand today's in-progress NBA slate from a completed-game CSV.
+    last_closed_nba_date = new_york_date - dt.timedelta(days=1)
     if not dt.date(2026,10,20) <= new_york_date < dt.date(2027,4,15):
         raise ValueError("Outside 2026-27 data-collection window")
     folder = Path(tempfile.mkdtemp(prefix="nba_task08_"))
@@ -64,7 +66,7 @@ def capture():
         ("downloads.txt", DOWNLOADS),
     ]
     start = dt.date(2026,10,1)
-    for day_offset in range((new_york_date-start).days+1):
+    for day_offset in range((last_closed_nba_date-start).days+1):
         day = start + dt.timedelta(days=day_offset)
         url = SCORE+"?"+urllib.parse.urlencode({
             "dates":day.strftime("%Y%m%d"),
