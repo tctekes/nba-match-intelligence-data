@@ -1,6 +1,8 @@
 NBA Match Intelligence — controlled data refresh request
-Requested for NBA 2026-11-14 pregame analysis; data should include completed NBA-local 2026-11-13 games.
-Reason: scheduled GitHub Actions cron 2026-11-14 17:23 UTC (20:23 Europe/Istanbul) did not produce an event by 19:51 UTC (22:51 local).
-Trigger: safe, path-filtered push to accepted-candidate.yml workflow; perform independent eight-field ESPN audit, whole-game exclusion and all original tests.
-Status: experimental accepted-game candidate ONLY; no model or parameter mutation and no production pointer movement.
-Do not issue pregame lock unless refreshed index is verified and game times are in the future.
+Requested date (Europe/Istanbul): 2026-11-15, after 20:53 TSİ backup schedule.
+Target candidate data: NBA-local games completed through 2026-11-14 inclusive.
+Reason: 2026-11-15 daily schedules absent at 23:26 TSİ; index still ends NBA-local 2026-11-13.
+Only change this ops trigger file to invoke the established path-filtered push workflow.
+Require all Task08 tests, independent eight-field ESPN validation, and whole-game exclusion.
+Publish experimental accepted-game candidate only; NEVER touch frozen Model C, parameter files, production pointer or pretip locks.
+Do not forecast games that have already tipped; verify new candidate index/hash and remaining fixture starts before any pregame locks.
