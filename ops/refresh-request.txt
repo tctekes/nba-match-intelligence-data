@@ -7,3 +7,8 @@ Require all Task08 tests, independent eight-field ESPN validation, and whole-gam
 Publish experimental accepted-game candidate only; NEVER touch frozen Model C, parameter files, production pointer or pretip locks.
 Do not forecast games that have already tipped; verify new candidate index/hash and remaining fixture starts before any pregame locks.
 Recovery attempt 2: 2026-11-15, following audited fix to exclude current incomplete NBA-local date from reference-day coverage. Previous Actions run 43758451415 failed on ESPN event 401909985 (2026-11-15), while requested closed date is 2026-11-14. Re-run all gates; no data shortcuts.
+
+Recovery request: 2026-11-16, after both 20:23 and 20:53 TSİ schedules, and no 2026-11-15 accepted snapshot visible at 23:51 TSİ.
+Target completed NBA-local data date: 2026-11-15 inclusive (do not include 2026-11-16 incomplete games).
+One controlled attempt for 2026-11-16 only. Build the full independently validated snapshot using existing Task08 tests and whole-game exclusion policy; SHADOW candidate only. Never touch frozen Model C, params, accepted production pointer, existing pretip forecasts or retro locks.
+After action finishes, check accepted index JSON path, raw SHA-256, 30 teams, 2*GP and 8 fields before beginning only not-yet-tipped 2026-11-16 NBA slate forecasts. No relaxation on any failure.
