@@ -1,0 +1,525 @@
+{
+  "schema_version": "nba-locked-shadow-forecast-v1",
+  "status": "LOCKED_PREGAME_SHADOW_NOT_PRODUCTION",
+  "nba_local_date": "2026-11-16",
+  "generated_at_utc": "2026-11-16T20:56:47Z",
+  "analyst_reviewed_at_utc": "2026-11-16T20:58:52Z",
+  "schedule_reference": "https://www.nba.com/schedule?cal=November",
+  "nba_cup_schedule_reference": "https://www.nba.com/news/emirates-nba-cup-key-dates-schedule",
+  "all_games_nba_cup": false,
+  "model": "Frozen Model C v0.1",
+  "model_file_sha256": "b6efd52df74f540c3bda711cd37a372e1ae7cbdbda134579c4c43bc7ff1eafef",
+  "parameter_file_sha256": "259b0dcc561c2f0400b04d9b19aba59eef53973ba06075f5db97a73497d1c640",
+  "current_snapshot_path": "published/accepted_candidates/2026-11-15-accepted-cdb31d297c6b.json",
+  "current_snapshot_sha256": "cdb31d297c6bf476dfa2a72779d49b3d4a389b47120f8f68f551d5c39ed44b8a",
+  "data_through_nba_date": "2026-11-15",
+  "raw_completed_games": 197,
+  "accepted_games": 196,
+  "excluded_games": 1,
+  "verified_team_count": 30,
+  "accepted_gp_sum": 392,
+  "independent_box_team_rows_checked": 394,
+  "independent_eight_box_fields": "PASS_WITH_WHOLE_GAME_EXCLUSIONS",
+  "actions_run_id": 43954504301,
+  "actions_conclusion": "success",
+  "recovery_trigger_commit": "4d889eb05d85c7e315cf6a92ba25160cda9f44d1",
+  "model_calculation": "Real Python 3.13 original SHA-verified nba_baseline_v01.py predict_html with unmodified frozen params; 8 self-tests passed. Exact 30-team full precision accepted-snapshot n/ORtg/DRtg/Pace values transferred from GitHub connector read, all 30 verified, GP 392, and derived previous_league from prior_for_2026_27. No odds consulted before calculation.",
+  "data_transfer_note": "GitHub raw accepted JSON SHA-256 verified in independent JS against accepted index. Python runtime uses complete 30-team rates reproduced from same verified JSON, no missing or fabricated rates, neutral=false for NBA arena fixtures.",
+  "injury_source_primary": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-16_01_15PM.pdf",
+  "injury_source_followup": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-16_02_00PM.pdf",
+  "injury_source_quality": "Official NBA PDF text accessible via web-indexed excerpts; PDF screenshot cache-miss, so image-level audit was unavailable. Names matched against explicit team-level sections/independent roster pages. Some report statuses may change before tipoff. UNKNOWN/QUESTIONABLE not treated as OUT.",
+  "analyst_policy": "Separate uncalibrated LOW/MEDIUM/HIGH qualitative lean, abstains allowed; no changes to model probabilities from player availability. Pregame evidence and counterarguments recorded before tip.",
+  "market_policy_note": "Awaiting independent directly traceable named-bookmaker pretip main full game including OT same-line Over/Under decimal quote and UTC capture. No quote or analyst O/U direction generated in primary forecast. Eligible later market quote must be an additional append-only pretip artifact, not overwrite this.",
+  "games": [
+    {
+      "away": "ORL",
+      "home": "BOS",
+      "tipoff_utc": "2026-11-17T00:00:00Z",
+      "home_win_probability": 0.8326138893203492,
+      "expected_home_margin": 12.466012557867248,
+      "expected_full_game_total": 220.34380838098284,
+      "predicted_winner": "BOS",
+      "win_probability": 0.8326138893203492,
+      "is_nba_cup": false,
+      "cup_stage": "NONE",
+      "cup_group": null,
+      "cup_source_url": "https://www.nba.com/news/emirates-nba-cup-key-dates-schedule",
+      "cup_checked_at_utc": "2026-11-16T20:58:52Z",
+      "analyst_lean": {
+        "team": "BOS",
+        "confidence": "MEDIUM",
+        "rationale": "Orlando 12 accepted games ORtg 106.78 meets Boston 13 games DRtg 103.59; Celtics ORtg 116.78 also materially exceeds Magic DRtg 111.00. Paolo Banchero OUT makes Orlando's offensive self-creation a genuine pretip risk.",
+        "counterargument": "Boston Neemias Queta QUESTIONABLE; Orlando still has Franz Wagner and Desmond Bane creation. Potential replacement minutes not independently validated and 12-13 GP is early-season sampling.",
+        "injury_statuses_as_of_report": [
+          [
+            "ORL",
+            "Paolo Banchero",
+            "OUT"
+          ],
+          [
+            "ORL",
+            "Jonathan Isaac",
+            "OUT"
+          ],
+          [
+            "BOS",
+            "Neemias Queta",
+            "QUESTIONABLE"
+          ]
+        ],
+        "evidence_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-16_01_15PM.pdf",
+          "https://hoopmetrics.app/games/orlando-magic-vs-boston-celtics-2026-11-16"
+        ],
+        "reviewed_at_utc": "2026-11-16T20:58:52Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_kind": null,
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "bookmaker": null,
+      "market_source_url": null,
+      "market_captured_at_utc": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "CHI",
+      "home": "CLE",
+      "tipoff_utc": "2026-11-17T00:00:00Z",
+      "home_win_probability": 0.8038064574388364,
+      "expected_home_margin": 10.958451322934838,
+      "expected_full_game_total": 240.2408412984125,
+      "predicted_winner": "CLE",
+      "win_probability": 0.8038064574388364,
+      "is_nba_cup": false,
+      "cup_stage": "NONE",
+      "cup_group": null,
+      "cup_source_url": "https://www.nba.com/news/emirates-nba-cup-key-dates-schedule",
+      "cup_checked_at_utc": "2026-11-16T20:58:52Z",
+      "analyst_lean": {
+        "team": "CLE",
+        "confidence": "MEDIUM",
+        "rationale": "Cleveland 14 GP ORtg 114.80 faces Chicago 12 GP DRtg 117.63 and the Bulls' fast 107.31 possessions average; Cleveland two-way team ratings are stronger than Chicago's 107.00 ORtg. Home court supports the frozen favorite.",
+        "counterargument": "Evan Mobley confirmed OUT, both Jaylon Tyson and Peyton Watson QUESTIONABLE. Bulls unexpectedly beat Minnesota on Nov15, but that single result is not a new calibrated strength claim; high 3PA volatility is relevant.",
+        "injury_statuses_as_of_report": [
+          [
+            "CLE",
+            "Evan Mobley",
+            "OUT"
+          ],
+          [
+            "CLE",
+            "Sam Merrill",
+            "OUT"
+          ],
+          [
+            "CLE",
+            "Jaylon Tyson",
+            "QUESTIONABLE"
+          ],
+          [
+            "CLE",
+            "Peyton Watson",
+            "QUESTIONABLE"
+          ],
+          [
+            "CHI",
+            "Jalen Smith",
+            "QUESTIONABLE"
+          ]
+        ],
+        "evidence_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-16_01_15PM.pdf",
+          "https://www.readthegame.com/today?date=2026-11-16&season=2026-27"
+        ],
+        "reviewed_at_utc": "2026-11-16T20:58:52Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_kind": null,
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "bookmaker": null,
+      "market_source_url": null,
+      "market_captured_at_utc": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "MEM",
+      "home": "WAS",
+      "tipoff_utc": "2026-11-17T00:00:00Z",
+      "home_win_probability": 0.25531451343056893,
+      "expected_home_margin": -8.31809256329172,
+      "expected_full_game_total": 235.61049057000335,
+      "predicted_winner": "MEM",
+      "win_probability": 0.744685486569431,
+      "is_nba_cup": false,
+      "cup_stage": "NONE",
+      "cup_group": null,
+      "cup_source_url": "https://www.nba.com/news/emirates-nba-cup-key-dates-schedule",
+      "cup_checked_at_utc": "2026-11-16T20:58:52Z",
+      "analyst_lean": {
+        "team": "MEM",
+        "confidence": "MEDIUM",
+        "rationale": "Memphis 13 GP ORtg 116.90/DRtg 108.26 versus Washington 13 GP ORtg 108.09/DRtg 117.02 makes a substantial two-sided matchup. Washington's defense is the primary vulnerability.",
+        "counterargument": "Memphis absences include Ty Jerome, Scotty Pippen Jr, GG Jackson and Isaiah Stewart OUT in the newer report; Zach Edey was QUESTIONABLE in the morning report. No verified replacement-minute model, and Washington may exploit Memphis guard/frontcourt depth.",
+        "injury_statuses_as_of_report": [
+          [
+            "MEM",
+            "Ty Jerome",
+            "OUT"
+          ],
+          [
+            "MEM",
+            "Scotty Pippen Jr.",
+            "OUT"
+          ],
+          [
+            "MEM",
+            "GG Jackson",
+            "OUT"
+          ],
+          [
+            "MEM",
+            "Isaiah Stewart",
+            "OUT"
+          ],
+          [
+            "MEM",
+            "Zach Edey",
+            "QUESTIONABLE"
+          ]
+        ],
+        "evidence_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-16_01_15PM.pdf",
+          "https://www.propvig.com/nba"
+        ],
+        "reviewed_at_utc": "2026-11-16T20:58:52Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_kind": null,
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "bookmaker": null,
+      "market_source_url": null,
+      "market_captured_at_utc": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "PHI",
+      "home": "BKN",
+      "tipoff_utc": "2026-11-17T00:30:00Z",
+      "home_win_probability": 0.33411467615143825,
+      "expected_home_margin": -5.358819290474586,
+      "expected_full_game_total": 224.23084215182607,
+      "predicted_winner": "PHI",
+      "win_probability": 0.6658853238485618,
+      "is_nba_cup": false,
+      "cup_stage": "NONE",
+      "cup_group": null,
+      "cup_source_url": "https://www.nba.com/news/emirates-nba-cup-key-dates-schedule",
+      "cup_checked_at_utc": "2026-11-16T20:58:52Z",
+      "analyst_lean": {
+        "team": null,
+        "confidence": "LOW",
+        "rationale": "Philadelphia 14 GP DRtg 108.54 beats Brooklyn 12 GP DRtg 113.18 and PHI offense 110.54 beats Brooklyn 107.17; model sees PHI ~66.59% favorite.",
+        "counterargument": "Philadelphia LeBron James definitively OUT, Joel Embiid QUESTIONABLE, and they played Indiana on Sunday (back-to-back). Crucial offensive/rebounding creation role and minute replacement unverified; the evidence does not independently establish a directional winner, so analyst abstains.",
+        "injury_statuses_as_of_report": [
+          [
+            "PHI",
+            "LeBron James",
+            "OUT"
+          ],
+          [
+            "PHI",
+            "Joel Embiid",
+            "QUESTIONABLE"
+          ],
+          [
+            "PHI",
+            "Dominick Barlow",
+            "OUT"
+          ],
+          [
+            "PHI",
+            "Adem Bona",
+            "OUT"
+          ]
+        ],
+        "evidence_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-16_02_00PM.pdf",
+          "https://www.inquirer.com/sixers/lebron-james-out-nets-injury-report-joel-embiid-20261116.html"
+        ],
+        "reviewed_at_utc": "2026-11-16T20:58:52Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_kind": null,
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "bookmaker": null,
+      "market_source_url": null,
+      "market_captured_at_utc": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "HOU",
+      "home": "MIA",
+      "tipoff_utc": "2026-11-17T00:30:00Z",
+      "home_win_probability": 0.35969700825224116,
+      "expected_home_margin": -4.481108247572867,
+      "expected_full_game_total": 234.26719523289123,
+      "predicted_winner": "HOU",
+      "win_probability": 0.6403029917477588,
+      "is_nba_cup": false,
+      "cup_stage": "NONE",
+      "cup_group": null,
+      "cup_source_url": "https://www.nba.com/news/emirates-nba-cup-key-dates-schedule",
+      "cup_checked_at_utc": "2026-11-16T20:58:52Z",
+      "analyst_lean": {
+        "team": null,
+        "confidence": "LOW",
+        "rationale": "Houston's 14 GP ORtg 118.58 and DRtg 108.41 versus Miami 13 GP ORtg 112.73 and DRtg 113.71 support the frozen away favorite at 64.03%.",
+        "counterargument": "Houston played Washington Sunday and is on second night of a back-to-back; Steven Adams, Clint Capela and Marcus Smart are OUT, Amen Thompson QUESTIONABLE. Miami with Bam Adebayo/Giannis Antetokounmpo has plausible frontcourt mismatch and longer rest; role-based evidence insufficient to select a confident side.",
+        "injury_statuses_as_of_report": [
+          [
+            "HOU",
+            "Steven Adams",
+            "OUT"
+          ],
+          [
+            "HOU",
+            "Clint Capela",
+            "OUT"
+          ],
+          [
+            "HOU",
+            "Marcus Smart",
+            "OUT"
+          ],
+          [
+            "HOU",
+            "Amen Thompson",
+            "QUESTIONABLE"
+          ],
+          [
+            "MIA",
+            "Nikola Jovic",
+            "QUESTIONABLE"
+          ],
+          [
+            "MIA",
+            "Pelle Larsson",
+            "DOUBTFUL"
+          ],
+          [
+            "MIA",
+            "Klay Thompson",
+            "AVAILABLE"
+          ]
+        ],
+        "evidence_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-16_02_00PM.pdf",
+          "https://www.readthegame.com/game/0022600249"
+        ],
+        "reviewed_at_utc": "2026-11-16T20:58:52Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_kind": null,
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "bookmaker": null,
+      "market_source_url": null,
+      "market_captured_at_utc": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "GSW",
+      "home": "NOP",
+      "tipoff_utc": "2026-11-17T01:00:00Z",
+      "home_win_probability": 0.3180065054649417,
+      "expected_home_margin": -5.928516773414148,
+      "expected_full_game_total": 236.8577944775881,
+      "predicted_winner": "GSW",
+      "win_probability": 0.6819934945350583,
+      "is_nba_cup": false,
+      "cup_stage": "NONE",
+      "cup_group": null,
+      "cup_source_url": "https://www.nba.com/news/emirates-nba-cup-key-dates-schedule",
+      "cup_checked_at_utc": "2026-11-16T20:58:52Z",
+      "analyst_lean": {
+        "team": null,
+        "confidence": "LOW",
+        "rationale": "Frozen season sample favors Golden State 68.20%, as Warriors DRtg 110.17 compares to Pelicans 118.41 and Warriors ORtg 114.57 versus New Orleans 109.30.",
+        "counterargument": "Stephen Curry, Jimmy Butler III, Moses Moody and Kristaps Porzingis OUT for GSW; Trey Murphy III and Dejounte Murray OUT for NOP. Warriors offensive role substitution and Pelicans' available Zion Williamson/Derik Queen/Jeremiah Fears make the net impact ambiguous. No robust player-minute replacement exposure was verified.",
+        "injury_statuses_as_of_report": [
+          [
+            "GSW",
+            "Stephen Curry",
+            "OUT"
+          ],
+          [
+            "GSW",
+            "Jimmy Butler III",
+            "OUT"
+          ],
+          [
+            "GSW",
+            "Moses Moody",
+            "OUT"
+          ],
+          [
+            "GSW",
+            "Kristaps Porzingis",
+            "OUT"
+          ],
+          [
+            "GSW",
+            "Gui Santos",
+            "QUESTIONABLE"
+          ],
+          [
+            "NOP",
+            "Trey Murphy III",
+            "OUT"
+          ],
+          [
+            "NOP",
+            "Dejounte Murray",
+            "OUT"
+          ]
+        ],
+        "evidence_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-16_01_15PM.pdf",
+          "https://www.propvig.com/nbagame/GSW-NOP"
+        ],
+        "reviewed_at_utc": "2026-11-16T20:58:52Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_kind": null,
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "bookmaker": null,
+      "market_source_url": null,
+      "market_captured_at_utc": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "POR",
+      "home": "MIN",
+      "tipoff_utc": "2026-11-17T01:00:00Z",
+      "home_win_probability": 0.6541986520186173,
+      "expected_home_margin": 4.9540784303023555,
+      "expected_full_game_total": 228.27955349024032,
+      "predicted_winner": "MIN",
+      "win_probability": 0.6541986520186173,
+      "is_nba_cup": false,
+      "cup_stage": "NONE",
+      "cup_group": null,
+      "cup_source_url": "https://www.nba.com/news/emirates-nba-cup-key-dates-schedule",
+      "cup_checked_at_utc": "2026-11-16T20:58:52Z",
+      "analyst_lean": {
+        "team": "MIN",
+        "confidence": "LOW",
+        "rationale": "Minnesota 13 GP DRtg 102.58 is significantly better than Portland 12 GP DRtg 109.17; Wolves' home court and defense sustain the narrow 65.42% baseline.",
+        "counterargument": "Anthony Edwards and Donte DiVincenzo are confirmed OUT, while Portland misses Ja Morant and Shaedon Sharpe (both confirmed OUT). Minnesota lost unexpectedly to Chicago; however that's one realized outcome not a proven persistent issue. The uncertain replacements weaken analyst confidence.",
+        "injury_statuses_as_of_report": [
+          [
+            "MIN",
+            "Anthony Edwards",
+            "OUT"
+          ],
+          [
+            "MIN",
+            "Donte DiVincenzo",
+            "OUT"
+          ],
+          [
+            "POR",
+            "Ja Morant",
+            "OUT"
+          ],
+          [
+            "POR",
+            "Shaedon Sharpe",
+            "OUT"
+          ]
+        ],
+        "evidence_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-16_01_15PM.pdf",
+          "https://www.propvig.com/nbagame/POR-MIN"
+        ],
+        "reviewed_at_utc": "2026-11-16T20:58:52Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_kind": null,
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "bookmaker": null,
+      "market_source_url": null,
+      "market_captured_at_utc": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "PHX",
+      "home": "DEN",
+      "tipoff_utc": "2026-11-17T02:00:00Z",
+      "home_win_probability": 0.6883331408809279,
+      "expected_home_margin": 6.156891261272583,
+      "expected_full_game_total": 232.15585526033445,
+      "predicted_winner": "DEN",
+      "win_probability": 0.6883331408809279,
+      "is_nba_cup": false,
+      "cup_stage": "NONE",
+      "cup_group": null,
+      "cup_source_url": "https://www.nba.com/news/emirates-nba-cup-key-dates-schedule",
+      "cup_checked_at_utc": "2026-11-16T20:58:52Z",
+      "analyst_lean": {
+        "team": "DEN",
+        "confidence": "MEDIUM",
+        "rationale": "Denver's 11 GP ORtg 114.18 is competitive against Phoenix's 12 GP DRtg 115.36 and Nuggets are home. Phoenix lost to Lakers on Sunday and plays second game of a back-to-back; Denver's official pretip team note reports winning their earlier meeting 127-120.",
+        "counterargument": "Denver 11 GP defense is DRtg 112.59 (not elite), Phoenix has perimeter shot variance, and Suns official game-specific report was not yet submitted in morning edition. Mark Williams is reported OUT by dated independent injury source; his current status should not be assigned as official until reported.",
+        "injury_statuses_as_of_report": [
+          [
+            "DEN",
+            "Julian Strawther",
+            "OUT"
+          ],
+          [
+            "PHX",
+            "Mark Williams",
+            "OUT (INDEPENDENT SOURCE; NBA REPORT PREVIOUSLY NOT SUBMITTED)"
+          ]
+        ],
+        "evidence_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-16_01_15PM.pdf",
+          "https://www.nba.com/nuggets/news/nuggets-host-suns-monday",
+          "https://www.teamrankings.com/nba/matchup/suns-nuggets-2026-11-16/injuries"
+        ],
+        "reviewed_at_utc": "2026-11-16T20:58:52Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_kind": null,
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "bookmaker": null,
+      "market_source_url": null,
+      "market_captured_at_utc": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    }
+  ]
+}
