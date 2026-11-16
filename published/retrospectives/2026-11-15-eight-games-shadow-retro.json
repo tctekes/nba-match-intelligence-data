@@ -1,0 +1,436 @@
+{
+  "schema_version": "nba-shadow-postgame-retrospective-v1",
+  "status": "POSTGAME_APPEND_ONLY_SHADOW_NOT_PRODUCTION",
+  "nba_local_date": "2026-11-15",
+  "reviewed_at_utc": "2026-11-16T07:09:17Z",
+  "forecast_path": "published/forecast_locks/2026-11-15-eight-games-model-c-analyst-shadow.json",
+  "market_path": "published/forecast_locks/2026-11-15-nba-ou-market-unverified-overlay-v2.json",
+  "pretip_correction_path": "published/forecast_locks/2026-11-15-2347tsi-injury-source-correction-v1.json",
+  "original_snapshot_path": "published/accepted_candidates/2026-11-14-accepted-d66848107276.json",
+  "original_snapshot_sha256": "d66848107276304def5e287b548cd5b972768fff17c7778cd54f7380c36c10da",
+  "original_frozen_code_sha256": "b6efd52df74f540c3bda711cd37a372e1ae7cbdbda134579c4c43bc7ff1eafef",
+  "original_frozen_parameter_sha256": "259b0dcc561c2f0400b04d9b19aba59eef53973ba06075f5db97a73497d1c640",
+  "original_forecast_generated_at_utc": "2026-11-15T20:40:26Z",
+  "original_analyst_reviewed_at_utc": "2026-11-15T20:42:45Z",
+  "source_verification": {
+    "method": "Eight full-game finals cross-checked across date-scoped independent score lists: CraftedNBA, LandOfBasketball and 4Basketball; NYK@TOR OT additionally official NBA linescore. Team-official results confirm multiple fixtures. No game score reconstructed from postgame odds.",
+    "urls": [
+      "https://craftednba.com/scores?game=0022600136",
+      "https://www.landofbasketball.com/results/2026_2027_nov_scores.htm",
+      "https://www.4basketball.com/scores/nba/"
+    ],
+    "ot_verification_url": "https://www.nba.com/game/nyk-vs-tor-0022600241",
+    "team_official_urls": [
+      "https://www.nba.com/spurs/",
+      "https://www.nba.com/wizards/",
+      "https://www.nba.com/thunder/"
+    ]
+  },
+  "metrics": {
+    "n": 8,
+    "model_c": {
+      "winner_correct": 8,
+      "winner_accuracy": 1,
+      "home_win_brier": 0.08346347275634232,
+      "margin_mae": 8.857012966724815,
+      "full_game_total_including_ot_mae": 12.603850438977524,
+      "signed_total_actual_minus_expected": 3.295095992060574
+    },
+    "analyst": {
+      "locked_selections": 7,
+      "correct": 7,
+      "abstain_count": 1,
+      "contrarian_count": 0,
+      "by_confidence": {
+        "LOW": {
+          "n": 3,
+          "correct": 3
+        },
+        "MEDIUM": {
+          "n": 4,
+          "correct": 4
+        }
+      },
+      "incremental_value_evaluable": false
+    },
+    "market": {
+      "official_ou_graded": 0,
+      "coverage": 0,
+      "grade": "N/A",
+      "reason": "All eight pretip locked O/U records were MARKET_NOT_VERIFIED, null lines and null directions"
+    },
+    "overtime_games": 1,
+    "excluded_prestarted": {
+      "fixture": "IND@PHI",
+      "reason": "Already started when pregame lock created, no forecast"
+    }
+  },
+  "games": [
+    {
+      "fixture": "LAL@PHX",
+      "away": "LAL",
+      "home": "PHX",
+      "tipoff_utc": "2026-11-15T21:00:00Z",
+      "final_status": "FINAL",
+      "away_score": 131,
+      "home_score": 123,
+      "overtime_periods": 0,
+      "actual_winner": "LAL",
+      "actual_home_margin": -8,
+      "actual_full_game_total_including_ot": 254,
+      "model_c": {
+        "predicted_winner": "LAL",
+        "win_probability": 0.6113576529397666,
+        "home_win_probability": 0.3886423470602333,
+        "expected_home_margin": -3.5202285596703575,
+        "expected_full_game_total": 233.07735673249826,
+        "winner_correct": true,
+        "home_win_brier": 0.15104287392848684,
+        "margin_abs_error": 4.4797714403296425,
+        "total_abs_error": 20.92264326750174
+      },
+      "analyst": {
+        "lean": "LAL",
+        "confidence": "LOW",
+        "classification": "AGREES_WITH_MODEL",
+        "correct": true
+      },
+      "nba_cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "main_line": null,
+        "selected_direction": null,
+        "official_grade": "N/A"
+      }
+    },
+    {
+      "fixture": "CHA@LAC",
+      "away": "CHA",
+      "home": "LAC",
+      "tipoff_utc": "2026-11-15T21:30:00Z",
+      "final_status": "FINAL",
+      "away_score": 105,
+      "home_score": 113,
+      "overtime_periods": 0,
+      "actual_winner": "LAC",
+      "actual_home_margin": 8,
+      "actual_full_game_total_including_ot": 218,
+      "model_c": {
+        "predicted_winner": "LAC",
+        "win_probability": 0.6157408416703257,
+        "home_win_probability": 0.6157408416703257,
+        "expected_home_margin": 3.6638770649413077,
+        "expected_full_game_total": 222.52698656520275,
+        "winner_correct": true,
+        "home_win_brier": 0.1476551007602297,
+        "margin_abs_error": 4.336122935058692,
+        "total_abs_error": 4.526986565202748
+      },
+      "analyst": {
+        "lean": "LAC",
+        "confidence": "LOW",
+        "classification": "AGREES_WITH_MODEL",
+        "correct": true
+      },
+      "nba_cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "main_line": null,
+        "selected_direction": null,
+        "official_grade": "N/A"
+      }
+    },
+    {
+      "fixture": "SAS@UTA",
+      "away": "SAS",
+      "home": "UTA",
+      "tipoff_utc": "2026-11-15T22:00:00Z",
+      "final_status": "FINAL",
+      "away_score": 110,
+      "home_score": 102,
+      "overtime_periods": 0,
+      "actual_winner": "SAS",
+      "actual_home_margin": -8,
+      "actual_full_game_total_including_ot": 212,
+      "model_c": {
+        "predicted_winner": "SAS",
+        "win_probability": 0.8726986423423309,
+        "home_win_probability": 0.12730135765766915,
+        "expected_home_margin": -14.958538478573942,
+        "expected_full_game_total": 230.20963084159897,
+        "winner_correct": true,
+        "home_win_brier": 0.0162056356614858,
+        "margin_abs_error": 6.958538478573942,
+        "total_abs_error": 18.209630841598965
+      },
+      "analyst": {
+        "lean": "SAS",
+        "confidence": "MEDIUM",
+        "classification": "AGREES_WITH_MODEL",
+        "correct": true
+      },
+      "nba_cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "main_line": null,
+        "selected_direction": null,
+        "official_grade": "N/A"
+      }
+    },
+    {
+      "fixture": "DAL@BOS",
+      "away": "DAL",
+      "home": "BOS",
+      "tipoff_utc": "2026-11-15T23:00:00Z",
+      "final_status": "FINAL",
+      "away_score": 94,
+      "home_score": 131,
+      "overtime_periods": 0,
+      "actual_winner": "BOS",
+      "actual_home_margin": 37,
+      "actual_full_game_total_including_ot": 225,
+      "model_c": {
+        "predicted_winner": "BOS",
+        "win_probability": 0.814644397480219,
+        "home_win_probability": 0.814644397480219,
+        "expected_home_margin": 11.504087909610039,
+        "expected_full_game_total": 222.80463345396484,
+        "winner_correct": true,
+        "home_win_brier": 0.03435669938547105,
+        "margin_abs_error": 25.49591209038996,
+        "total_abs_error": 2.19536654603516
+      },
+      "analyst": {
+        "lean": "BOS",
+        "confidence": "MEDIUM",
+        "classification": "AGREES_WITH_MODEL",
+        "correct": true
+      },
+      "nba_cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "main_line": null,
+        "selected_direction": null,
+        "official_grade": "N/A"
+      }
+    },
+    {
+      "fixture": "NYK@TOR",
+      "away": "NYK",
+      "home": "TOR",
+      "tipoff_utc": "2026-11-15T23:00:00Z",
+      "final_status": "FINAL_OT",
+      "away_score": 112,
+      "home_score": 108,
+      "overtime_periods": 1,
+      "actual_winner": "NYK",
+      "actual_home_margin": -4,
+      "actual_full_game_total_including_ot": 220,
+      "model_c": {
+        "predicted_winner": "NYK",
+        "win_probability": 0.5626227273178167,
+        "home_win_probability": 0.4373772726821833,
+        "expected_home_margin": -1.9567230137371765,
+        "expected_full_game_total": 221.45689482062355,
+        "winner_correct": true,
+        "home_win_brier": 0.1912988786589049,
+        "margin_abs_error": 2.0432769862628235,
+        "total_abs_error": 1.4568948206235461
+      },
+      "analyst": {
+        "lean": null,
+        "confidence": "LOW",
+        "classification": "ABSTAIN",
+        "correct": null
+      },
+      "nba_cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "main_line": null,
+        "selected_direction": null,
+        "official_grade": "N/A"
+      }
+    },
+    {
+      "fixture": "HOU@WAS",
+      "away": "HOU",
+      "home": "WAS",
+      "tipoff_utc": "2026-11-16T00:00:00Z",
+      "final_status": "FINAL",
+      "away_score": 147,
+      "home_score": 119,
+      "overtime_periods": 0,
+      "actual_winner": "HOU",
+      "actual_home_margin": -28,
+      "actual_full_game_total_including_ot": 266,
+      "model_c": {
+        "predicted_winner": "HOU",
+        "win_probability": 0.8129085570120077,
+        "home_win_probability": 0.18709144298799232,
+        "expected_home_margin": -11.415081007863726,
+        "expected_full_game_total": 229.23790920106214,
+        "winner_correct": true,
+        "home_win_brier": 0.03500320803932918,
+        "margin_abs_error": 16.584918992136274,
+        "total_abs_error": 36.76209079893786
+      },
+      "analyst": {
+        "lean": "HOU",
+        "confidence": "MEDIUM",
+        "classification": "AGREES_WITH_MODEL",
+        "correct": true
+      },
+      "nba_cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "main_line": null,
+        "selected_direction": null,
+        "official_grade": "N/A"
+      }
+    },
+    {
+      "fixture": "ATL@MIL",
+      "away": "ATL",
+      "home": "MIL",
+      "tipoff_utc": "2026-11-16T01:00:00Z",
+      "final_status": "FINAL",
+      "away_score": 113,
+      "home_score": 106,
+      "overtime_periods": 0,
+      "actual_winner": "ATL",
+      "actual_home_margin": -7,
+      "actual_full_game_total_including_ot": 219,
+      "model_c": {
+        "predicted_winner": "ATL",
+        "win_probability": 0.7469276266289246,
+        "home_win_probability": 0.2530723733710754,
+        "expected_home_margin": -8.409994642115581,
+        "expected_full_game_total": 232.04150556024254,
+        "winner_correct": true,
+        "home_win_brier": 0.064045626163669,
+        "margin_abs_error": 1.4099946421155813,
+        "total_abs_error": 13.041505560242541
+      },
+      "analyst": {
+        "lean": "ATL",
+        "confidence": "MEDIUM",
+        "classification": "AGREES_WITH_MODEL",
+        "correct": true
+      },
+      "nba_cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "main_line": null,
+        "selected_direction": null,
+        "official_grade": "N/A"
+      }
+    },
+    {
+      "fixture": "OKC@SAC",
+      "away": "OKC",
+      "home": "SAC",
+      "tipoff_utc": "2026-11-16T02:00:00Z",
+      "final_status": "FINAL",
+      "away_score": 125,
+      "home_score": 103,
+      "overtime_periods": 0,
+      "actual_winner": "OKC",
+      "actual_home_margin": -22,
+      "actual_full_game_total_including_ot": 228,
+      "model_c": {
+        "predicted_winner": "OKC",
+        "win_probability": 0.832370171350198,
+        "home_win_probability": 0.16762982864980205,
+        "expected_home_margin": -12.452431831068395,
+        "expected_full_game_total": 224.28431488832237,
+        "winner_correct": true,
+        "home_win_brier": 0.028099759453161996,
+        "margin_abs_error": 9.547568168931605,
+        "total_abs_error": 3.7156851116776295
+      },
+      "analyst": {
+        "lean": "OKC",
+        "confidence": "LOW",
+        "classification": "AGREES_WITH_MODEL",
+        "correct": true
+      },
+      "nba_cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "main_line": null,
+        "selected_direction": null,
+        "official_grade": "N/A"
+      }
+    }
+  ],
+  "market_provenance_note": "Full-game O/U status was pretip MARKET_NOT_VERIFIED for all fixtures; neither after-the-fact odds nor search snippets enter official selection stats.",
+  "methodology": "Pretip knowledge/matchup hypotheses vs final observations separate. A win or margin miss alone is not a verified systematic error. No postgame pretip locks created; no Model C coefficient changes.",
+  "discussion": [
+    {
+      "fixture": "HOU@WAS",
+      "type": "LARGE_TOTAL_ERROR",
+      "prematch": "HOU offensive/defensive strength ahead of WAS, but exact shooting performance unknowable",
+      "observed": "HOU 147, WAS 119; 266 total vs frozen 229.24; HOU 52/90 FG (57.8%), 15/33 three (45.5%) and 40 assists; rebounds 55-36 in AP narrative",
+      "alternative_explanations": "Realized shooting efficiency, matchup defense, lineup combinations or ordinary variance; single game cannot isolate causal contribution",
+      "assessment": "OBSERVED_DEVIATION_HYPOTHESIS_NOT_PROVEN",
+      "source": "https://qa.img.cbssports.com/nba/gametracker/recap/NBA_20261115_HOU%40WAS/"
+    },
+    {
+      "fixture": "DAL@BOS",
+      "type": "LARGE_MARGIN_ERROR",
+      "prematch": "BOS favored 81.46%; +11.50 home margin predicted, Dallas second night of back-to-back known pretip",
+      "observed": "BOS 131 DAL 94, +37 home margin; BOS first quarter 42-9; BOS 23/55 from three, DAL 14/41",
+      "alternative_explanations": "Shotmaking, Dallas poor start, travel/rest, matchup effects, bench rotation, random variance. Not separable from this one game.",
+      "assessment": "OBSERVED_DEVIATION_HYPOTHESIS_NOT_PROVEN",
+      "source": "https://www.cbssports.com/nba/gametracker/recap/NBA_20261115_DAL%40BOS/"
+    },
+    {
+      "fixture": "NYK@TOR",
+      "type": "OVERTIME_TOTAL_CAVEAT",
+      "prematch": "Model NYK 56.26%, margin -1.96 and total 221.46 incl OT; analyst abstained on winner due close game and Toronto uncertainty",
+      "observed": "NYK 112 TOR 108 after one OT; 95-95 regulation, 17-13 OT; actual total 220, 1.46 below model",
+      "alternative_explanations": "Near-perfect numerical total was conditional on a 30-point OT being played. Do not infer model accurately forecast an OT or regulation scoring.",
+      "assessment": "OBSERVED_DEVIATION_HYPOTHESIS_NOT_PROVEN",
+      "source": "https://www.nba.com/game/nyk-vs-tor-0022600241"
+    },
+    {
+      "fixture": "ATL@MIL",
+      "type": "WINNER_CORRECT_DESPITE_HIGH_IN_GAME_RISK",
+      "prematch": "ATL stronger accepted ORtg/DRtg, lean ATL MEDIUM; intra-game swings not predicted",
+      "observed": "MIL led by 22 in second quarter, ATL recovered and won 113-106",
+      "alternative_explanations": "Single-game lead/turnover/shooting sequences; winner accuracy does not mean match course was confidently predicted",
+      "assessment": "DESCRIPTIVE_ONLY",
+      "source": "https://www.cbssports.com/nba/gametracker/recap/NBA_20261115_ATL%40MIL/"
+    }
+  ],
+  "injury_audit": {
+    "original_pretip_source_correction": "published/forecast_locks/2026-11-15-2347tsi-injury-source-correction-v1.json",
+    "corrected_lal_players_attribution": true,
+    "corrected_bub_carrington_status": true,
+    "caveat": "No full final injury/rotation parity audit of all players performed; avoid retrospective presumption that every Q became OUT."
+  }
+}
