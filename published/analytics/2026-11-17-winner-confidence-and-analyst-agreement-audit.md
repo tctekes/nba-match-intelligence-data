@@ -60,7 +60,9 @@ The 60–<70% bin realized 8 wins vs 8.53 expected, a difference of only -0.53 w
 | No formal analyst lock (Nov 13) | 3 | 2 | 66.7% |
 | **All** | **13** | **8** | **61.5%** |
 
-The 5 analyst-agreed matches averaged about **65.24%** model probability (expected 3.26 wins), with 4 actual wins. This difference is far too small to establish that analyst agreement improves calibration. Analyst and model share some information; their agreement is not independent evidence.
+The 5 analyst-agreed matches averaged about **65.24%** model probability (expected 3.26 wins), with 4 actual wins. This difference is far too small to establish that analyst agreement improves calibration.
+
+**Agreement strength nuance:** Of those 5 matching analyst leans, 3 were tagged **LOW** confidence (3/3 winners) and 2 were tagged **MEDIUM** (1/2 winners). There were **0 HIGH** confidence agreements in this probability bin. Matching directions are not the same thing as strong analyst endorsement. A stricter *MEDIUM-or-HIGH agreement* screen is therefore **1/2**, with no valid statistical inference. Analyst and model share some information; their agreement is not independent evidence.
 
 **Audit exception (do not backfill or overwrite original):** For Nov 14 DAL@CLE, pregame lock `analyst_lean.team` is null (no directional lean), but the Nov 14 retrospective JSON labels the analyst lean as DAL. This audit uses the *pregame* lock: **ABSTAIN**. The discrepancy needs separate provenance correction before any analyst performance metric based on retro-only labels.
 
