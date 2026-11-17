@@ -1,0 +1,477 @@
+{
+  "schema_version": "nba-shadow-postgame-retrospective-v1",
+  "status": "POSTGAME_APPEND_ONLY_SHADOW_NOT_PRODUCTION",
+  "nba_local_date": "2026-11-16",
+  "retro_created_at_utc": "2026-11-17T10:11:35Z",
+  "original_forecast_path": "published/forecast_locks/2026-11-16-eight-games-model-c-analyst-shadow.json",
+  "original_forecast_commit": "a4ed90de5897ec4d5b5dde629553cf58ccfb483a",
+  "original_forecast_generated_at_utc": "2026-11-16T20:56:47Z",
+  "original_analyst_review_at_utc": "2026-11-16T20:58:52Z",
+  "original_model_file_sha256": "b6efd52df74f540c3bda711cd37a372e1ae7cbdbda134579c4c43bc7ff1eafef",
+  "original_parameter_file_sha256": "259b0dcc561c2f0400b04d9b19aba59eef53973ba06075f5db97a73497d1c640",
+  "original_snapshot_path": "published/accepted_candidates/2026-11-15-accepted-cdb31d297c6b.json",
+  "original_snapshot_sha256": "cdb31d297c6bf476dfa2a72779d49b3d4a389b47120f8f68f551d5c39ed44b8a",
+  "source_audit": {
+    "official_final_score_source": "https://www.nba.com/schedule/2026",
+    "independent_final_scores": [
+      "https://basketball.realgm.com/schedules/2026-11-16/NBA",
+      "https://www.landofbasketball.com/results/2026_2027_nov_scores.htm"
+    ],
+    "ot_check": "All eight final pages show regulation 4Q score and FINAL rather than FINAL/OT. 0 overtimes, team-local 2026-11-16.",
+    "game_evidence_urls": {
+      "nba_schedule": "https://www.nba.com/schedule/2026",
+      "realgm_schedule": "https://basketball.realgm.com/schedules/2026-11-16/NBA",
+      "landofbasketball": "https://www.landofbasketball.com/results/2026_2027_nov_scores.htm",
+      "magic": "https://www.nba.com/game/orl-vs-bos-0022600245",
+      "boston_team": "https://www.nba.com/celtics/news/game-recap-keys-20261116",
+      "cavaliers": "https://www.nba.com/game/0022600246",
+      "memphis": "https://www.nba.com/game/mem-vs-was-0022600247",
+      "philadelphia": "https://www.nba.com/game/phi-vs-bkn-0022600248",
+      "miami": "https://www.cbssports.com/nba/gametracker/recap/NBA_20261116_HOU%40MIA/",
+      "warriors": "https://www.nba.com/game/gsw-vs-nop-0022600251",
+      "warriors_analysis": "https://qa.img.cbssports.com/nba/gametracker/recap/NBA_20261116_GS%40NO/",
+      "denver": "https://www.cbssports.com/nba/gametracker/recap/NBA_20261116_PHO%40DEN/"
+    },
+    "score_source_independent_agreement": "8/8"
+  },
+  "market_source_candidate_path": "published/context_notes/2026-11-16-pretip-ou-source-candidates-not-verified.json",
+  "market_source_quality": "MARKET_CANDIDATE_UNVERIFIED_NOT_FOR_OFFICIAL_RETRO",
+  "metrics": {
+    "fixtures_locked": 8,
+    "cup_games": 0,
+    "overtime_games": 0,
+    "model_c": {
+      "correct": 4,
+      "accuracy": 0.5,
+      "home_win_brier": 0.29713000566874276,
+      "home_minus_away_margin_mae": 13.430385904140419,
+      "full_game_total_including_ot_mae": 15.16095529450157,
+      "mean_signed_total_actual_minus_expected": -0.4982976077848562,
+      "predicted_winner_expected_successes": 5.711819436359541
+    },
+    "analyst_winner": {
+      "picks": 5,
+      "correct": 3,
+      "incorrect": 2,
+      "abstentions": 3,
+      "by_confidence": {},
+      "contrarian_picks": 0,
+      "agree_picks": 5,
+      "abstention_model_wins": 1,
+      "abstention_model_losses": 2,
+      "incremental_value_identified": false
+    },
+    "full_game_ou": {
+      "official_grade": "N/A",
+      "verified_pregame_markets": 0,
+      "coverage": 0,
+      "reason": "Pregame named-book quotes/odds were candidate research receipts, no independently verified and pretip locked O/U direction. No retrospective market reconstruction."
+    }
+  },
+  "games": [
+    {
+      "fixture": "ORL@BOS",
+      "away": "ORL",
+      "home": "BOS",
+      "tipoff_utc": "2026-11-17T00:00:00Z",
+      "final": {
+        "status": "FINAL",
+        "away_score": 115,
+        "home_score": 105,
+        "overtime_periods": 0,
+        "actual_winner": "ORL",
+        "actual_home_margin": -10,
+        "actual_total_including_ot": 220
+      },
+      "model_c": {
+        "predicted_winner": "BOS",
+        "winner_probability": 0.8326138893203492,
+        "home_win_probability": 0.8326138893203492,
+        "expected_home_margin": 12.466012557867248,
+        "expected_full_game_total": 220.34380838098284,
+        "winner_correct": false,
+        "home_win_brier": 0.6932458886891587,
+        "home_margin_absolute_error": 22.46601255786725,
+        "full_game_total_absolute_error": 0.3438083809828356
+      },
+      "analyst_winner": {
+        "lean": "BOS",
+        "qualitative_confidence": "MEDIUM",
+        "decision": "AGREE",
+        "correct": false,
+        "pregame_rationale": "Orlando 12 accepted games ORtg 106.78 meets Boston 13 games DRtg 103.59; Celtics ORtg 116.78 also materially exceeds Magic DRtg 111.00. Paolo Banchero OUT makes Orlando's offensive self-creation a genuine pretip risk.",
+        "pregame_counterargument": "Boston Neemias Queta QUESTIONABLE; Orlando still has Franz Wagner and Desmond Bane creation. Potential replacement minutes not independently validated and 12-13 GP is early-season sampling."
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "verified_main_line": null,
+        "selected_direction": null,
+        "official_grade": "N/A"
+      },
+      "cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      }
+    },
+    {
+      "fixture": "CHI@CLE",
+      "away": "CHI",
+      "home": "CLE",
+      "tipoff_utc": "2026-11-17T00:00:00Z",
+      "final": {
+        "status": "FINAL",
+        "away_score": 115,
+        "home_score": 126,
+        "overtime_periods": 0,
+        "actual_winner": "CLE",
+        "actual_home_margin": 11,
+        "actual_total_including_ot": 241
+      },
+      "model_c": {
+        "predicted_winner": "CLE",
+        "winner_probability": 0.8038064574388364,
+        "home_win_probability": 0.8038064574388364,
+        "expected_home_margin": 10.958451322934838,
+        "expected_full_game_total": 240.2408412984125,
+        "winner_correct": true,
+        "home_win_brier": 0.038491906142699116,
+        "home_margin_absolute_error": 0.041548677065161854,
+        "full_game_total_absolute_error": 0.759158701587495
+      },
+      "analyst_winner": {
+        "lean": "CLE",
+        "qualitative_confidence": "MEDIUM",
+        "decision": "AGREE",
+        "correct": true,
+        "pregame_rationale": "Cleveland 14 GP ORtg 114.80 faces Chicago 12 GP DRtg 117.63 and the Bulls' fast 107.31 possessions average; Cleveland two-way team ratings are stronger than Chicago's 107.00 ORtg. Home court supports the frozen favorite.",
+        "pregame_counterargument": "Evan Mobley confirmed OUT, both Jaylon Tyson and Peyton Watson QUESTIONABLE. Bulls unexpectedly beat Minnesota on Nov15, but that single result is not a new calibrated strength claim; high 3PA volatility is relevant."
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "verified_main_line": null,
+        "selected_direction": null,
+        "official_grade": "N/A"
+      },
+      "cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      }
+    },
+    {
+      "fixture": "MEM@WAS",
+      "away": "MEM",
+      "home": "WAS",
+      "tipoff_utc": "2026-11-17T00:00:00Z",
+      "final": {
+        "status": "FINAL",
+        "away_score": 136,
+        "home_score": 120,
+        "overtime_periods": 0,
+        "actual_winner": "MEM",
+        "actual_home_margin": -16,
+        "actual_total_including_ot": 256
+      },
+      "model_c": {
+        "predicted_winner": "MEM",
+        "winner_probability": 0.744685486569431,
+        "home_win_probability": 0.25531451343056893,
+        "expected_home_margin": -8.31809256329172,
+        "expected_full_game_total": 235.61049057000335,
+        "winner_correct": true,
+        "home_win_brier": 0.06518550076828816,
+        "home_margin_absolute_error": 7.681907436708279,
+        "full_game_total_absolute_error": 20.38950942999665
+      },
+      "analyst_winner": {
+        "lean": "MEM",
+        "qualitative_confidence": "MEDIUM",
+        "decision": "AGREE",
+        "correct": true,
+        "pregame_rationale": "Memphis 13 GP ORtg 116.90/DRtg 108.26 versus Washington 13 GP ORtg 108.09/DRtg 117.02 makes a substantial two-sided matchup. Washington's defense is the primary vulnerability.",
+        "pregame_counterargument": "Memphis absences include Ty Jerome, Scotty Pippen Jr, GG Jackson and Isaiah Stewart OUT in the newer report; Zach Edey was QUESTIONABLE in the morning report. No verified replacement-minute model, and Washington may exploit Memphis guard/frontcourt depth."
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "verified_main_line": null,
+        "selected_direction": null,
+        "official_grade": "N/A"
+      },
+      "cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      }
+    },
+    {
+      "fixture": "PHI@BKN",
+      "away": "PHI",
+      "home": "BKN",
+      "tipoff_utc": "2026-11-17T00:30:00Z",
+      "final": {
+        "status": "FINAL",
+        "away_score": 135,
+        "home_score": 123,
+        "overtime_periods": 0,
+        "actual_winner": "PHI",
+        "actual_home_margin": -12,
+        "actual_total_including_ot": 258
+      },
+      "model_c": {
+        "predicted_winner": "PHI",
+        "winner_probability": 0.6658853238485618,
+        "home_win_probability": 0.33411467615143825,
+        "expected_home_margin": -5.358819290474586,
+        "expected_full_game_total": 224.23084215182607,
+        "winner_correct": true,
+        "home_win_brier": 0.11163261681978046,
+        "home_margin_absolute_error": 6.641180709525414,
+        "full_game_total_absolute_error": 33.76915784817393
+      },
+      "analyst_winner": {
+        "lean": null,
+        "qualitative_confidence": "LOW",
+        "decision": "ABSTAIN",
+        "correct": null,
+        "pregame_rationale": "Philadelphia 14 GP DRtg 108.54 beats Brooklyn 12 GP DRtg 113.18 and PHI offense 110.54 beats Brooklyn 107.17; model sees PHI ~66.59% favorite.",
+        "pregame_counterargument": "Philadelphia LeBron James definitively OUT, Joel Embiid QUESTIONABLE, and they played Indiana on Sunday (back-to-back). Crucial offensive/rebounding creation role and minute replacement unverified; the evidence does not independently establish a directional winner, so analyst abstains."
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "verified_main_line": null,
+        "selected_direction": null,
+        "official_grade": "N/A"
+      },
+      "cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      }
+    },
+    {
+      "fixture": "HOU@MIA",
+      "away": "HOU",
+      "home": "MIA",
+      "tipoff_utc": "2026-11-17T00:30:00Z",
+      "final": {
+        "status": "FINAL",
+        "away_score": 110,
+        "home_score": 128,
+        "overtime_periods": 0,
+        "actual_winner": "MIA",
+        "actual_home_margin": 18,
+        "actual_total_including_ot": 238
+      },
+      "model_c": {
+        "predicted_winner": "HOU",
+        "winner_probability": 0.6403029917477588,
+        "home_win_probability": 0.35969700825224116,
+        "expected_home_margin": -4.481108247572867,
+        "expected_full_game_total": 234.26719523289123,
+        "winner_correct": false,
+        "home_win_brier": 0.40998792124113054,
+        "home_margin_absolute_error": 22.481108247572866,
+        "full_game_total_absolute_error": 3.7328047671087745
+      },
+      "analyst_winner": {
+        "lean": null,
+        "qualitative_confidence": "LOW",
+        "decision": "ABSTAIN",
+        "correct": null,
+        "pregame_rationale": "Houston's 14 GP ORtg 118.58 and DRtg 108.41 versus Miami 13 GP ORtg 112.73 and DRtg 113.71 support the frozen away favorite at 64.03%.",
+        "pregame_counterargument": "Houston played Washington Sunday and is on second night of a back-to-back; Steven Adams, Clint Capela and Marcus Smart are OUT, Amen Thompson QUESTIONABLE. Miami with Bam Adebayo/Giannis Antetokounmpo has plausible frontcourt mismatch and longer rest; role-based evidence insufficient to select a confident side."
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "verified_main_line": null,
+        "selected_direction": null,
+        "official_grade": "N/A"
+      },
+      "cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      }
+    },
+    {
+      "fixture": "GSW@NOP",
+      "away": "GSW",
+      "home": "NOP",
+      "tipoff_utc": "2026-11-17T01:00:00Z",
+      "final": {
+        "status": "FINAL",
+        "away_score": 94,
+        "home_score": 115,
+        "overtime_periods": 0,
+        "actual_winner": "NOP",
+        "actual_home_margin": 21,
+        "actual_total_including_ot": 209
+      },
+      "model_c": {
+        "predicted_winner": "GSW",
+        "winner_probability": 0.6819934945350583,
+        "home_win_probability": 0.3180065054649417,
+        "expected_home_margin": -5.928516773414148,
+        "expected_full_game_total": 236.8577944775881,
+        "winner_correct": false,
+        "home_win_brier": 0.4651151265881406,
+        "home_margin_absolute_error": 26.92851677341415,
+        "full_game_total_absolute_error": 27.8577944775881
+      },
+      "analyst_winner": {
+        "lean": null,
+        "qualitative_confidence": "LOW",
+        "decision": "ABSTAIN",
+        "correct": null,
+        "pregame_rationale": "Frozen season sample favors Golden State 68.20%, as Warriors DRtg 110.17 compares to Pelicans 118.41 and Warriors ORtg 114.57 versus New Orleans 109.30.",
+        "pregame_counterargument": "Stephen Curry, Jimmy Butler III, Moses Moody and Kristaps Porzingis OUT for GSW; Trey Murphy III and Dejounte Murray OUT for NOP. Warriors offensive role substitution and Pelicans' available Zion Williamson/Derik Queen/Jeremiah Fears make the net impact ambiguous. No robust player-minute replacement exposure was verified."
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "verified_main_line": null,
+        "selected_direction": null,
+        "official_grade": "N/A"
+      },
+      "cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      }
+    },
+    {
+      "fixture": "POR@MIN",
+      "away": "POR",
+      "home": "MIN",
+      "tipoff_utc": "2026-11-17T01:00:00Z",
+      "final": {
+        "status": "FINAL",
+        "away_score": 98,
+        "home_score": 106,
+        "overtime_periods": 0,
+        "actual_winner": "MIN",
+        "actual_home_margin": 8,
+        "actual_total_including_ot": 204
+      },
+      "model_c": {
+        "predicted_winner": "MIN",
+        "winner_probability": 0.6541986520186173,
+        "home_win_probability": 0.6541986520186173,
+        "expected_home_margin": 4.9540784303023555,
+        "expected_full_game_total": 228.27955349024032,
+        "winner_correct": true,
+        "home_win_brier": 0.11957857226574135,
+        "home_margin_absolute_error": 3.0459215696976445,
+        "full_game_total_absolute_error": 24.279553490240318
+      },
+      "analyst_winner": {
+        "lean": "MIN",
+        "qualitative_confidence": "LOW",
+        "decision": "AGREE",
+        "correct": true,
+        "pregame_rationale": "Minnesota 13 GP DRtg 102.58 is significantly better than Portland 12 GP DRtg 109.17; Wolves' home court and defense sustain the narrow 65.42% baseline.",
+        "pregame_counterargument": "Anthony Edwards and Donte DiVincenzo are confirmed OUT, while Portland misses Ja Morant and Shaedon Sharpe (both confirmed OUT). Minnesota lost unexpectedly to Chicago; however that's one realized outcome not a proven persistent issue. The uncertain replacements weaken analyst confidence."
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "verified_main_line": null,
+        "selected_direction": null,
+        "official_grade": "N/A"
+      },
+      "cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      }
+    },
+    {
+      "fixture": "PHX@DEN",
+      "away": "PHX",
+      "home": "DEN",
+      "tipoff_utc": "2026-11-17T02:00:00Z",
+      "final": {
+        "status": "FINAL",
+        "away_score": 117,
+        "home_score": 105,
+        "overtime_periods": 0,
+        "actual_winner": "PHX",
+        "actual_home_margin": -12,
+        "actual_total_including_ot": 222
+      },
+      "model_c": {
+        "predicted_winner": "DEN",
+        "winner_probability": 0.6883331408809279,
+        "home_win_probability": 0.6883331408809279,
+        "expected_home_margin": 6.156891261272583,
+        "expected_full_game_total": 232.15585526033445,
+        "winner_correct": false,
+        "home_win_brier": 0.47380251283500335,
+        "home_margin_absolute_error": 18.156891261272584,
+        "full_game_total_absolute_error": 10.155855260334448
+      },
+      "analyst_winner": {
+        "lean": "DEN",
+        "qualitative_confidence": "MEDIUM",
+        "decision": "AGREE",
+        "correct": false,
+        "pregame_rationale": "Denver's 11 GP ORtg 114.18 is competitive against Phoenix's 12 GP DRtg 115.36 and Nuggets are home. Phoenix lost to Lakers on Sunday and plays second game of a back-to-back; Denver's official pretip team note reports winning their earlier meeting 127-120.",
+        "pregame_counterargument": "Denver 11 GP defense is DRtg 112.59 (not elite), Phoenix has perimeter shot variance, and Suns official game-specific report was not yet submitted in morning edition. Mark Williams is reported OUT by dated independent injury source; his current status should not be assigned as official until reported."
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "verified_main_line": null,
+        "selected_direction": null,
+        "official_grade": "N/A"
+      },
+      "cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      }
+    }
+  ],
+  "selective_research": [
+    {
+      "fixture": "GSW@NOP",
+      "pregame_known": "GSW model 68.20% favorite, Curry/Butler/Moody/Porzingis OUT. Analyst deliberately ABSTAIN because star and creator replacement minutes not verified; NOP also missing Murphy/Murray.",
+      "postgame_observed": "GSW lost 94-115; first quarter 11-35. Warriors shot 11/46 3P (23.9%); New Orleans Fears triple-double, Bey 23 points. Total 209 vs model 236.86; home margin +21 vs model -5.93.",
+      "competing_explanations": "Availability-mediated shot creation, opponent execution, shooting variance and rotations are plausible; their separate causal effects cannot be established from one game.",
+      "classification": "OBSERVATION_PLUS_UNTESTED_HYPOTHESES",
+      "source_urls": [
+        "https://www.nba.com/game/gsw-vs-nop-0022600251",
+        "https://qa.img.cbssports.com/nba/gametracker/recap/NBA_20261116_GS%40NO/"
+      ]
+    },
+    {
+      "fixture": "ORL@BOS",
+      "pregame_known": "BOS model favorite 83.26%, analyst BOS MEDIUM, Magic Banchero OUT; analyst noted Wagner/Bane capable of creating offense. Boston had played Dallas on Nov15 but back-to-back impact not explicitly made central in locked lean.",
+      "postgame_observed": "Orlando won 115-105; scored 40 points in Q4, including Bane 15 Q4 points; 54-32 points in paint, 20-7 fastbreak; Boston first home loss.",
+      "competing_explanations": "Magic paint drives, Boston back-to-back, missing Banchero despite stronger replacements, shooting/game-state variance. Can describe observed differences but cannot isolate pretip predictive value without larger as-of sample.",
+      "classification": "OBSERVATION_PLUS_UNTESTED_HYPOTHESES",
+      "source_urls": [
+        "https://www.nba.com/game/orl-vs-bos-0022600245",
+        "https://www.nba.com/celtics/news/game-recap-keys-20261116"
+      ]
+    },
+    {
+      "fixture": "PHX@DEN",
+      "pregame_known": "DEN model 68.83%, analyst DEN MEDIUM; Phoenix on back-to-back from Lakers loss, Denver home. Analyst countercase mentioned Phoenix perimeter shooting and non-elite Denver defense.",
+      "postgame_observed": "Phoenix won 117-105, +12 away; Phoenix rebounds 60-42, second-chance points 22-11, Suns bench 42-19; Denver 17 turnovers. Large realized rebounding advantage contradicted simplistic expected fatigue mechanism.",
+      "competing_explanations": "Rebounding, rotation depth, shooting and possessions. Rebound edge was not established as a pretip expectation; avoid treating as predictable due hindsight.",
+      "classification": "OBSERVATION_PLUS_UNTESTED_HYPOTHESES",
+      "source_urls": [
+        "https://www.cbssports.com/nba/gametracker/recap/NBA_20261116_PHO%40DEN/"
+      ]
+    },
+    {
+      "fixture": "PHI@BKN",
+      "pregame_known": "PHI model 66.59%, analyst ABSTAIN due LeBron OUT, Joel Embiid QUESTIONABLE and PHI back-to-back. No pretip certainty on final lineup or replacement minutes.",
+      "postgame_observed": "Philadelphia won 135-123. Joel Embiid scored 37 and Jaylen Brown scored 31. Model total 224.23 vs 258 actual (33.77 error), largest total miss.",
+      "competing_explanations": "Embiid playing rather than missing, realized scoring efficiencies and matchup. Q was not OUT at prediction time. Do not declare abstention wrong because model winner was correct.",
+      "classification": "OBSERVATION_PLUS_UNTESTED_HYPOTHESES",
+      "source_urls": [
+        "https://www.nba.com/game/phi-vs-bkn-0022600248"
+      ]
+    }
+  ],
+  "audit_notes": [
+    "Pregame lock read before searching 2026-11-16 game outcomes; all game-forecast timestamps are before respective tipoffs.",
+    "Model C parameters and probability/total/margin outputs reproduced exactly from the original pretip lock; no postgame refit and no retroactively invented picks.",
+    "Official pretip O/U grade N/A, as no analyst-reviewed market selections with verified bookmaker main line were locked. Indexed candidate quotes not used to reconstruct bets.",
+    "Analyst winner performance 3/5 (MEDIUM 2/4, LOW 1/1), not 4/5; original 3 abstentions preserved. No contrarian selection, so incremental value cannot be directly estimated.",
+    "Pregame missing players and statuses are preserved as originally recorded; no hindsight rewriting Q into OUT or active without fresh evidence.",
+    "One night is insufficient for permanent model blind-spot or excess confidence diagnosis; the source evidence and alternative mechanisms are tracked as hypotheses."
+  ]
+}
