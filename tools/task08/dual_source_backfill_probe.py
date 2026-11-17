@@ -42,7 +42,10 @@ NBA_TO_CORE = {
 }
 
 def api_bytes(url):
-    return espn_fields.shared.get_bytes(url)
+    try:
+        return espn_fields.shared.get_bytes(url)
+    except Exception as exc:
+        raise RuntimeError("HTTP fetch failed for "+url.split("?")[0]+": "+str(exc)) from exc
 
 def api_json(url):
     raw = api_bytes(url)
