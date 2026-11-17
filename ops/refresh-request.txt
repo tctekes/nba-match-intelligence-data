@@ -12,3 +12,8 @@ Recovery request: 2026-11-16, after both 20:23 and 20:53 TSİ schedules, and no 
 Target completed NBA-local data date: 2026-11-15 inclusive (do not include 2026-11-16 incomplete games).
 One controlled attempt for 2026-11-16 only. Build the full independently validated snapshot using existing Task08 tests and whole-game exclusion policy; SHADOW candidate only. Never touch frozen Model C, params, accepted production pointer, existing pretip forecasts or retro locks.
 After action finishes, check accepted index JSON path, raw SHA-256, 30 teams, 2*GP and 8 fields before beginning only not-yet-tipped 2026-11-16 NBA slate forecasts. No relaxation on any failure.
+
+Recovery request: 2026-11-17, after primary 20:23 TSİ and backup 20:53 TSİ elapsed, index still data through 2026-11-15 at 23:03 TSİ.
+Target fully closed NBA-local date: 2026-11-16 inclusive; never include any of 2026-11-17 partly complete fixtures.
+One controlled retry for date 2026-11-17, path-filtered push via ops/refresh-request.txt only. Existing Task08 original tests, independent eight box fields, whole-game rejection mandatory. SHADOW NON-PRODUCTION. Never change frozen Model C code/parameters, production pointer, prior pregame first-view locks or retrospectives.
+Check actual new Actions run, logs and resulting accepted candidate index/data raw SHA-256 and 30 teams / 2xGP before future-tipoff forecasting; on fail NO-GO and log technical cause without any data repair shortcuts.
