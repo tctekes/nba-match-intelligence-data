@@ -1,0 +1,96 @@
+{
+  "schema_version": "nba-analyst-first-view-pre-model-v1",
+  "status": "IMMUTABLE_PRE_MODEL_INDEPENDENT_ANALYST_INITIAL_SHADOW",
+  "nba_local_date": "2026-11-17",
+  "observations_as_of_utc": "2026-11-17T20:03:51Z",
+  "model_c_probabilities_not_consulted": true,
+  "model_c_margins_not_consulted": true,
+  "model_c_totals_not_consulted": true,
+  "initial_opinions_qualitative_only": true,
+  "all_fixtures_in_regular_season_not_cup": true,
+  "official_injury_report_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-17_02_00PM.pdf",
+  "injury_provenance_note": "Official 2PM injury PDF text parsed; screenshot fetch failed cache. Team association checked via explicit header; no interpretation of QUESTIONABLE as OUT, current POR NOT YET SUBMITTED is not equivalent to full availability.",
+  "scouting_policy": "Deep dive targets one or two matchup-specific mechanisms; pregame evidence and counterarguments separate; no fabricated player impacts/minutes. Preserve this file even if post-model analyst differs. No Model C inference yet.",
+  "games": [
+    {
+      "fixture": "NYK@TOR",
+      "tipoff_utc": "2026-11-18T00:30:00Z",
+      "initial_lean": "NYK",
+      "confidence": "LOW",
+      "research_question": "Can Toronto repeat its 15 Nov paint advantage while protecting a lead against New York's Brunson/Towns two-man closing actions?",
+      "mechanism": "Towns rebounding and Brunson's late-game ball-screen creation give NYK a plausible late-possession answer, even if Toronto can put mobile finishers into the paint; Toronto struggled to contain Knicks' late comeback on the immediately preceding meeting.",
+      "independent_evidence": "15 Nov NYK win 112-108 in OT after 13-point Q4 deficit; Towns 28/17, Brunson 28, Barnes 30. Toronto's Barnes now QUESTIONABLE due illness, not confirmed OUT. Opponent scouting specifically notes Toronto attacking NYK paint and Knicks pick-and-roll coverage questions.",
+      "counterargument": "Toronto previously built a significant lead and found efficient downhill/paint routes with Barnes and other forwards; if Barnes plays and Toronto sustains point-of-attack pressure, previous NYK clutch finish may not repeat.",
+      "role_or_rotation_uncertainty": "Scottie Barnes QUESTIONABLE; availability at pretip unknown.",
+      "sources": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-17_02_00PM.pdf",
+        "https://www.nba.com/game/nyk-vs-tor-0022600241",
+        "https://www.postingandtoasting.com/knicks-game-previews/91299/game-preview-knicks-at-raptors-november-17-2026"
+      ]
+    },
+    {
+      "fixture": "DET@SAS",
+      "tipoff_utc": "2026-11-18T01:00:00Z",
+      "initial_lean": "SAS",
+      "confidence": "MEDIUM",
+      "research_question": "Can depleted Detroit frontcourt/spacing keep Wembanyama from anchoring help at the rim while maintaining its usual offensive rebounds?",
+      "mechanism": "With Duren OUT and Robinson OUT, Detroit loses a key interior finisher/rebounder and perimeter threat. Wembanyama can protect the rim/help on drives while Spurs' offensive creation via Fox/Castle/Harper pressures Detroit replacements.",
+      "independent_evidence": "Official 2pm ET report names DET Duren, Holland, Isaiah Joe, Duncan Robinson OUT; San Antonio Tobias Harris OUT. Detroit preview projects Cade, Jenkins, Ausar, Collins and Paul Reed against Fox, Harper, Castle, Vassell and Wembanyama. Wembanyama's cited seasonal shot-blocking and interior scoring support this as a targeted matchup, not generic team ORtg.",
+      "counterargument": "Cade/Ausar pressure, Collins/Paul Reed activity and Spurs' potential fouling/turnovers could offset Detroit's absent center; actual replacement minutes uncertain.",
+      "role_or_rotation_uncertainty": "John Collins/Paul Reed frontcourt minute split unverified; no individual on/off or DARKO impacts validated.",
+      "sources": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-17_02_00PM.pdf",
+        "https://www.detroitbadboys.com/detroit-pistons-game-day/51536/pistons-vs-spurs-preview-no-duncan-or-duren-others-must-step-up",
+        "https://www.nbcsports.com/nba/news/pistons-vs-spurs-predictions-odds-recent-stats-trends-and-best-bets-for-november-17"
+      ]
+    },
+    {
+      "fixture": "POR@MIN",
+      "tipoff_utc": "2026-11-18T01:00:00Z",
+      "initial_lean": "MIN",
+      "confidence": "LOW",
+      "research_question": "Will MIN's wing-depth and Gobert interior defense reproduce Monday's win, or can POR adjust to Terrence Shannon's exceptional scoring in an immediate same-arena rematch?",
+      "mechanism": "Both coaches have immediate film and no travel. Minnesota can still play through Gobert's rim defense and improved wing self-creation by Shannon, but losing Anthony Edwards/DiVincenzo/Kuminga reduces offensive insulation and the fresh 34-point Shannon outing may be non-repeatable.",
+      "independent_evidence": "16 Nov Wolves won 106-98 despite Edwards absence; Shannon posted career-high 34 and Deni Avdija scored 27; former Minnesota assistant Micah Nori coaches Portland and knows Wolves concepts. Latest official Minnesota report lists Edwards, DiVincenzo, Kuminga, Clark OUT. Portland current 17 Nov official report NOT YET SUBMITTED.",
+      "counterargument": "Portland coaching adjustment and Avdija attacking the absence of Minnesota wings may matter; cannot assume yesterday's singular 34-point scorer repeats or that Portland absences carry forward without fresh report.",
+      "role_or_rotation_uncertainty": "Portland current report not submitted; exclude unverified same-day POR OUT tags. Minnesota key wing absences confirmed.",
+      "sources": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-17_02_00PM.pdf",
+        "https://www.nba.com/game/por-vs-min-0022600250",
+        "https://www.reuters.com/sports/basketball/terrence-shannon-jr-wolves-look-overwhelm-blazers-again--flm-2026-11-17/"
+      ]
+    },
+    {
+      "fixture": "UTA@LAC",
+      "tipoff_utc": "2026-11-18T03:30:00Z",
+      "initial_lean": "LAC",
+      "confidence": "MEDIUM",
+      "research_question": "Will Utah's young guard-led offense create enough rim pressure against Brook Lopez while lacking its entire primary scoring/spacing frontcourt?",
+      "mechanism": "Utah Markkanen, Jaren Jackson Jr and Nurkic OUT takes away key frontcourt spacing, shot blocking and size. Clippers can use Darius Garland's pick-and-roll with stretch big Lopez, whose shooting pulls thin Jazz interior helpers out; Jazz relies on Keyonte George and Darryn Peterson perimeter creation.",
+      "independent_evidence": "Official 2PM ET injury sheet confirms Utah three frontcourt OUT; Clippers Brandon Ingram and Bradley Beal OUT as well. Team preview documents Garland and Lopez roles, young Keyonte George/Peterson guard usage, and possible Utah Mo Bamba lineup.",
+      "counterargument": "Clippers remain without two substantial scorers and are a weak finishing/rotation team; Utah perimeter creation and Bamba's size can keep matchup competitive. No validated matchup possessions or player-on/off numbers.",
+      "role_or_rotation_uncertainty": "Rotations young and unstable; reported projected lineups are not confirmed starts.",
+      "sources": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-17_02_00PM.pdf",
+        "https://213hoops.com/clippers-vs-jazz-preview-taking-on-the-worst-in-the-west/",
+        "https://www.si.com/nba/jazz/onsi/utah-jazz-vs-la-clippers-injury-report-who-s-trending-to-miss-game"
+      ]
+    },
+    {
+      "fixture": "CHA@LAL",
+      "tipoff_utc": "2026-11-18T04:00:00Z",
+      "initial_lean": "LAL",
+      "confidence": "MEDIUM",
+      "research_question": "Can Charlotte's long/active wings force Luka into passes and punish Kessler's absence with interior activity, or does the Lakers' Luka-centered half-court creation still dominate?",
+      "mechanism": "Luka's high-volume ball-screen scoring and playmaking anchor Lakers even without Reaves; Charlotte has no Kon Knueppel or Schroder and weaker continuity, while Miller/White/Reid can challenge Lakers supporting defenders and send aggressive help at Luka. Walker Kessler OUT matters for rim deterrence.",
+      "independent_evidence": "Lakers on eight-game streak, Luka ~39 pts/game per dated NBA preview. Official Lakers 2PM ET report confirms Reaves and Walker Kessler OUT, Grimes AVAILABLE; Hornets Kon Knueppel and Dennis Schroder OUT; Charlotte preview highlights Miller return, Coby White and Naz Reid.",
+      "counterargument": "Reaves absence concentrates on-ball creation; trapping Luka may expose LAL other ball-handlers. Kessler absence gives Charlotte paths to attack paint; Miller's return increases perimeter shot variance.",
+      "role_or_rotation_uncertainty": "Projected Charlotte starting five is not a confirmed lineup; Reaves and Kessler are confirmed OUT.",
+      "sources": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-17_02_00PM.pdf",
+        "https://www.nba.com/game/cha-vs-lal-0022600256",
+        "https://www.covers.com/nba/hornets-vs-lakers-prediction-picks-odds-nov-17-2026"
+      ]
+    }
+  ]
+}
