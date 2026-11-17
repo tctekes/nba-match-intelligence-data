@@ -1,0 +1,29 @@
+name: Experimental official-NBA vs ESPN source lag probe
+
+on:
+  push:
+    branches:
+      - experiment/official-nba-espn-backfill-probe-20261117
+    paths:
+      - "tools/task08/dual_source_backfill_probe.py"
+      - "tools/task08/test_dual_source_backfill_probe.py"
+      - ".github/workflows/dual-source-backfill-probe.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test strict dual-source reconciliation without network
+        working-directory: tools/task08
+        run: python -B -m unittest -v test_dual_source_backfill_probe
+      - name: Probe 2026-11-16 source lag with official NBA and independent ESPN
+        run: python -B tools/task08/dual_source_backfill_probe.py --day 2026-11-16
