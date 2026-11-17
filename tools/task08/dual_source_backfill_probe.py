@@ -160,6 +160,9 @@ def probe(day):
         bsl.add(k)
     board,board_sha=api_json(ESPN_SCOREBOARD+"?dates="+requested.strftime("%Y%m%d")+"&seasontype=2&limit=100")
     finals=espn_finals(board,day)
+    # Check official NBA box-score CDN reachability before asking for its season schedule.
+    if day == "2026-11-16":
+        api_json(NBA_BOX.format(game_id="0022600245"))
     schedule,schedule_sha=api_json(NBA_SCHEDULE)
     nba=scheduled_nba_games(schedule,day)
     if set(finals)!=set(nba):
