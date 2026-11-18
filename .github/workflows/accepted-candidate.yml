@@ -68,6 +68,28 @@ jobs:
       - name: Validate complete NBA scores and all independent box fields, then exclude full disputed games
         if: steps.freshness.outputs.refresh == 'true'
         run: python -B tools/task08/build_accepted_candidate.py
+      - name: Verify immutable candidate, SHA-256 and cross-source lineage
+        if: steps.freshness.outputs.refresh == 'true'
+        run: |
+          python - <<'PY'
+          import hashlib, json, pathlib
+          index=json.loads(pathlib.Path("published/accepted_candidate_index.json").read_text())
+          raw=pathlib.Path(index["json_path"]).read_bytes()
+          snap=json.loads(raw)
+          assert hashlib.sha256(raw).hexdigest()==index["json_sha256"]
+          assert len(snap["teams"])==30
+          assert sum(int(x["n"]) for x in snap["teams"].values())==2*index["accepted_games"]
+          assert index["raw_completed_games"]==index["accepted_games"]+index["excluded_games"]
+          assert index["raw_completed_games"]==index["bsl_completed_games"]+index["fallback_completed_games"]
+          assert snap["fallback_completed_games"]==index["fallback_completed_games"]
+          if index["fallback_completed_games"]:
+              hashes=snap["data_provenance"]["fallback"]["fallback_source_shas"]
+              assert len(hashes)==2 and all(len(x)==64 for x in hashes.values())
+              assert "team TOV" in index["source_verification_scope"]
+          assert index["status"]=="ACCEPTED_GAMES_EXPERIMENTAL_NOT_PRODUCTION"
+          assert index["production_pointer_advanced"] is False
+          print("PASS: full source universe, SHA-256, 30 teams, accepted GP, fallback receipts")
+          PY
       - name: Publish accepted-game snapshot as NON-PRODUCTION candidate
         if: steps.freshness.outputs.refresh == 'true'
         run: |
