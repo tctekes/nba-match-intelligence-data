@@ -159,7 +159,7 @@ def execute():
     # entire-game alternative rows; old BSL-only standings parity stays intact.
     scores=dict(parsed["scores"])
     for k,pair in fallback_groups.items():
-        scores[k]={r["team"]:float(r["points"]) for r in pair}
+        scores[validation.key(k[0],*k[1])]={r["team"]:float(r["points"]) for r in pair}
     combined=dict(parsed,scores=scores,latest=max(k[0] for k in scores),games=len(scores))
     count=validation.coverage(combined,documents,cutoff)
     if count!=len(groups) or count!=len(ids):
