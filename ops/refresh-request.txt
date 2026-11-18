@@ -20,3 +20,5 @@ Check actual new Actions run, logs and resulting accepted candidate index/data r
 
 Architectural multi-source recovery acceptance test — 2026-11-18 (Europe/Istanbul).
 Re-test closed 2026-11-17 NBA date inclusive with new generic BSL+ESPN release/NBA Stats whole-game fallback layer. This is a ROOT-CAUSE fix validation, not a one-game manual patch. Entire-game exclusions, ESPN scoreboard and live box checks, 30 team and raw/accepted reconciliation must pass. Existing BSL standings parity remains mandatory for its own source rows; never promote production pointer or change frozen Model C/old pregame locks.
+
+2026-11-18 architectural recovery integration acceptance replay: Task08 coverage key adapter fixed (flat date,team,team vs nested date,pair). Validate entire recovered ESPN scoreboard universe and NBA Stats per-game conflicts, then publish only if every gate passes. Do not revise baseline Model C, model parameters, or previous forecast locks.
