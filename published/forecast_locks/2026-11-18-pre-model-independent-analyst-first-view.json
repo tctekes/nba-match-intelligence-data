@@ -1,0 +1,495 @@
+{
+  "schema_version": "nba-analyst-independent-first-view-v1",
+  "status": "PRETIP_SHADOW_IMMUTABLE_INITIAL_ANALYST_VIEW",
+  "nba_local_date": "2026-11-18",
+  "created_at_utc": "2026-11-18T17:29:42.928Z",
+  "model_c_predictions_not_viewed": true,
+  "model_c_probability_margin_total_not_consulted": true,
+  "market_odds_not_used_in_independent_selection": true,
+  "game_count": 12,
+  "fixture_source": "https://www.nba.com/games?date=2026-11-18",
+  "cup_status": "ALL_REGULAR_SEASON_NOT_CUP",
+  "cup_verified_source": "https://www.nba.com/news/2026-27-nba-regular-season-schedule",
+  "injury_primary_utc_edition": "2026-11-18T14:15:00Z",
+  "injury_primary_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_09_15AM.pdf",
+  "injury_qa": "Official NBA report extracted team headers checked; PDF screenshot request failed cache. Do not attribute page-continuation statuses to prior team without explicit team confirmation. NOT YET SUBMITTED is missing information, never a clean bill of health. Verify after updated official report before final analyst lock.",
+  "scouting_method": "Every matchup investigated from basketball identity/roles/matchup and dated evidence before revealing frozen C output. Neither same-team ORtg/DRtg nor numerical Model C is evidence for first lean. Contradictory evidence retained, abstention legitimate.",
+  "games": [
+    {
+      "fixture": "MIL@MIA",
+      "away": "MIL",
+      "home": "MIA",
+      "tipoff_utc": "2026-11-19T00:00:00Z",
+      "initial_analyst_lean": "MIA",
+      "qualitative_confidence": "MEDIUM",
+      "key_basketball_question": "How will the Bucks contain their former franchise star Giannis playing alongside Bam in Miami's paint attack?",
+      "pre_tip_basketball_evidence": "Giannis plays first game against former Milwaukee team; Miami big pair Giannis/Bam with Bam PROBABLE. Milwaukee 1-13, Miami 8-6. Miami recently beat Houston using the frontcourt. Primary mechanism is rim pressure/help decisions and weak-side coverage, not just records.",
+      "pregame_mechanism_hypothesis": "How will the Bucks contain their former franchise star Giannis playing alongside Bam in Miami's paint attack?",
+      "counterargument": "Adebayo PROBABLE rather than guaranteed; emotional first reunion is not itself measurable motivation; Milwaukee can try packing the paint and force Miami outside jumpers.",
+      "injury_or_rotation_uncertainty": [
+        [
+          "MIA",
+          "Bam Adebayo",
+          "PROBABLE"
+        ],
+        [
+          "MIA",
+          "Nikola Jovic",
+          "PROBABLE"
+        ],
+        [
+          "MIL",
+          "Ousmane Dieng",
+          "OUT"
+        ]
+      ],
+      "evidence_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_09_15AM.pdf",
+        "https://www.nba.com/game/0022600260",
+        "https://www.si.com/nba/heat/onsi/giannis-faces-former-team-on-vice-city-night-injuries-odds-how-to-watch-starters-01m7kkbcscez"
+      ]
+    },
+    {
+      "fixture": "HOU@IND",
+      "away": "HOU",
+      "home": "IND",
+      "tipoff_utc": "2026-11-19T00:00:00Z",
+      "initial_analyst_lean": "HOU",
+      "qualitative_confidence": "MEDIUM",
+      "key_basketball_question": "Who runs Indiana's half-court offense without Haliburton if Andrew Nembhard also misses, and can Houston turn that into pressure?",
+      "pre_tip_basketball_evidence": "Haliburton OUT, Nembhard QUESTIONABLE, McConnell PROBABLE, Sheppard OUT; potential huge ball-handler substitution. Houston is on third road game in four days and Amen Thompson QUESTIONABLE, so evaluate rest against likely Indiana creation deficit. Indiana center Ivica Zubac gets 23.2 mpg in Reuters preview; Rockets can test pace/rebound choices.",
+      "pregame_mechanism_hypothesis": "Who runs Indiana's half-court offense without Haliburton if Andrew Nembhard also misses, and can Houston turn that into pressure?",
+      "counterargument": "Houston's road fatigue and Amen's uncertain perimeter defensive role may be decisive; Nembhard could play; McConnell supplies playmaking if active.",
+      "injury_or_rotation_uncertainty": [
+        [
+          "IND",
+          "Tyrese Haliburton",
+          "OUT"
+        ],
+        [
+          "IND",
+          "Andrew Nembhard",
+          "QUESTIONABLE"
+        ],
+        [
+          "IND",
+          "T.J. McConnell",
+          "PROBABLE"
+        ],
+        [
+          "HOU",
+          "Amen Thompson",
+          "QUESTIONABLE"
+        ],
+        [
+          "HOU",
+          "Clint Capela",
+          "OUT"
+        ]
+      ],
+      "evidence_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_09_15AM.pdf",
+        "https://www.reuters.com/sports/basketball/road-weary-rockets-chasing-bounce-back-effort-vs-pacers--flm-2026-11-17/"
+      ]
+    },
+    {
+      "fixture": "MEM@CLE",
+      "away": "MEM",
+      "home": "CLE",
+      "tipoff_utc": "2026-11-19T00:00:00Z",
+      "initial_analyst_lean": null,
+      "qualitative_confidence": "LOW",
+      "key_basketball_question": "Can Cleveland contain Memphis's diversified creation and defensive rebounding without Evan Mobley, while Donovan Mitchell attacks Memphis guards?",
+      "pre_tip_basketball_evidence": "Memphis road record 7-0 entering tonight; CLE Mobley OUT, Tyson DOUBTFUL, Merrill and Watson QUESTIONABLE. Donovan Mitchell just scored 39 vs Bulls; Memphis reserve guards Jerome and Pippen OUT. This is two competing on-ball/interior mechanisms.",
+      "pregame_mechanism_hypothesis": "Can Cleveland contain Memphis's diversified creation and defensive rebounding without Evan Mobley, while Donovan Mitchell attacks Memphis guards?",
+      "counterargument": "Memphis 7-0 away is small sample; Cleveland is 6-2 at home and Mitchell's usage can overcome frontcourt weakness. Memphis's guard replacements unverified.",
+      "injury_or_rotation_uncertainty": [
+        [
+          "CLE",
+          "Evan Mobley",
+          "OUT"
+        ],
+        [
+          "CLE",
+          "Jaylon Tyson",
+          "DOUBTFUL"
+        ],
+        [
+          "CLE",
+          "Sam Merrill",
+          "QUESTIONABLE"
+        ],
+        [
+          "CLE",
+          "Peyton Watson",
+          "QUESTIONABLE"
+        ],
+        [
+          "MEM",
+          "Ty Jerome",
+          "OUT"
+        ],
+        [
+          "MEM",
+          "Scotty Pippen Jr.",
+          "OUT"
+        ]
+      ],
+      "evidence_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_09_15AM.pdf",
+        "https://www.nba.com/cavaliers/news/preview-memcle-261118",
+        "https://basketball.realgm.com/nba/preview/2026-11-18/Memphis-at-Cleveland/530769"
+      ]
+    },
+    {
+      "fixture": "PHI@ORL",
+      "away": "PHI",
+      "home": "ORL",
+      "tipoff_utc": "2026-11-19T00:00:00Z",
+      "initial_analyst_lean": "PHI",
+      "qualitative_confidence": "LOW",
+      "key_basketball_question": "With Jaylen Brown out, can Embiid/LeBron half-court creation exploit Orlando's missing Banchero/Isaac while Orlando responds with Wagner/Bane?",
+      "pre_tip_basketball_evidence": "76ers 12-3 after Embiid's 37 vs Brooklyn; Jaylen Brown OUT. Orlando Banchero and Isaac OUT; Franz Wagner generates ~24 pts and 8 assists over recent 13 GP, Bane ~19 PPG, so Magic have genuine alternative creators even without Paolo. Two very different positional absences.",
+      "pregame_mechanism_hypothesis": "With Jaylen Brown out, can Embiid/LeBron half-court creation exploit Orlando's missing Banchero/Isaac while Orlando responds with Wagner/Bane?",
+      "counterargument": "Orlando beat Boston without Banchero and has home game; Wagner/Bane high-minutes initiation versus PHI perimeter; without Brown, PHI wing scoring changes. No validated replacement on/off minutes.",
+      "injury_or_rotation_uncertainty": [
+        [
+          "PHI",
+          "Jaylen Brown",
+          "OUT"
+        ],
+        [
+          "PHI",
+          "Dominick Barlow",
+          "OUT"
+        ],
+        [
+          "PHI",
+          "Adem Bona",
+          "OUT"
+        ],
+        [
+          "ORL",
+          "Paolo Banchero",
+          "OUT"
+        ],
+        [
+          "ORL",
+          "Jonathan Isaac",
+          "OUT"
+        ]
+      ],
+      "evidence_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_09_15AM.pdf",
+        "https://www.nba.com/sixers/news/sixers-at-magic-game-preview-injury-report-and-how-to-watch-11-18-2026",
+        "https://basketball.realgm.com/nba/preview/2026-11-18/Philadelphia-at-Orlando/530772"
+      ]
+    },
+    {
+      "fixture": "CHI@BKN",
+      "away": "CHI",
+      "home": "BKN",
+      "tipoff_utc": "2026-11-19T00:30:00Z",
+      "initial_analyst_lean": "BKN",
+      "qualitative_confidence": "LOW",
+      "key_basketball_question": "Can Brooklyn use outside spacing and offensive rebounding to punish Chicago's thin wings, or will the Bulls' fast pace create enough live-ball opportunities?",
+      "pre_tip_basketball_evidence": "Both 3-10; Chicago rookie Caleb Wilson OUT with fractured hand and Patrick Williams PROBABLE. Nets perimeter spacing and 31.6% offensive rebound share over 13 games highlighted by matchup page; Chicago's recent surge heavily depended on shooting spikes.",
+      "pregame_mechanism_hypothesis": "Can Brooklyn use outside spacing and offensive rebounding to punish Chicago's thin wings, or will the Bulls' fast pace create enough live-ball opportunities?",
+      "counterargument": "Brooklyn also struggles to finish possessions and is 3-10. A single hot game from an available Chicago shooter or turnover-driven transition flips this narrow matchup.",
+      "injury_or_rotation_uncertainty": [
+        [
+          "CHI",
+          "Caleb Wilson",
+          "OUT"
+        ],
+        [
+          "CHI",
+          "Patrick Williams",
+          "PROBABLE"
+        ],
+        [
+          "BKN",
+          "Tyler Bilodeau",
+          "OUT (TWO-WAY)"
+        ]
+      ],
+      "evidence_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_09_15AM.pdf",
+        "https://nbastat.io/game-report/pregame-chi-at-bkn-2026-11-18-0022600262",
+        "https://www.readthegame.com/game/0022600262"
+      ]
+    },
+    {
+      "fixture": "WAS@TOR",
+      "away": "WAS",
+      "home": "TOR",
+      "tipoff_utc": "2026-11-19T00:30:00Z",
+      "initial_analyst_lean": "TOR",
+      "qualitative_confidence": "LOW",
+      "key_basketball_question": "Will Toronto's physical wings and downhill attack force Washington into half-court offense and weak defensive transitions?",
+      "pre_tip_basketball_evidence": "Washington had lost eight straight by ~16.7 points average in team preview. Raptors had recently held Knicks close before giving up late; Toronto's healthy/actual core unverified because latest official TOR report NOT YET SUBMITTED. Prefer matchup defensive continuity, not blindly assume Scottie Barnes active.",
+      "pregame_mechanism_hypothesis": "Will Toronto's physical wings and downhill attack force Washington into half-court offense and weak defensive transitions?",
+      "counterargument": "Toronto injury report not submitted: do not assert Barnes available. Washington rookie AJ Dybantsa creation could break down TOR wings, especially if TOR missing key defenders.",
+      "injury_or_rotation_uncertainty": [
+        [
+          "TOR",
+          "TEAM_INJURY_REPORT",
+          "NOT YET SUBMITTED"
+        ],
+        [
+          "WAS",
+          "Justin Champagnie",
+          "OUT"
+        ],
+        [
+          "WAS",
+          "Tristan Vukcevic",
+          "OUT"
+        ]
+      ],
+      "evidence_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_09_15AM.pdf",
+        "https://www.bulletsforever.com/washington-wizards-preview/74173/wizards-vs-raptors-preview-washington-looks-to-end-skid-in-toronto"
+      ]
+    },
+    {
+      "fixture": "ATL@OKC",
+      "away": "ATL",
+      "home": "OKC",
+      "tipoff_utc": "2026-11-19T01:00:00Z",
+      "initial_analyst_lean": "OKC",
+      "qualitative_confidence": "LOW",
+      "key_basketball_question": "Can OKC organize point-of-attack resistance and rim help around SGA when Holmgren, Jalen Williams and Wallace are OUT, against Jalen Johnson and Dyson Daniels attacks?",
+      "pre_tip_basketball_evidence": "OKC Chet Holmgren, Jalen Williams, Cason Wallace OUT; Atlanta CJ McCollum, Jock Landale and several big/wing reserves OUT. SGA creation survives but OKC's usual help/rim deterrence reduced. Recent wing Clifford reportedly 18 minutes in four OKC games; insufficient proof of full replacement quality.",
+      "pregame_mechanism_hypothesis": "Can OKC organize point-of-attack resistance and rim help around SGA when Holmgren, Jalen Williams and Wallace are OUT, against Jalen Johnson and Dyson Daniels attacks?",
+      "counterargument": "Atlanta's Johnson/Daniels could punish undermanned OKC frontcourt, and McCollum absence does not automatically erase all guard creation; avoid treating OKC's record as enough.",
+      "injury_or_rotation_uncertainty": [
+        [
+          "OKC",
+          "Chet Holmgren",
+          "OUT"
+        ],
+        [
+          "OKC",
+          "Jalen Williams",
+          "OUT"
+        ],
+        [
+          "OKC",
+          "Cason Wallace",
+          "OUT"
+        ],
+        [
+          "OKC",
+          "Jaylin Williams",
+          "QUESTIONABLE"
+        ],
+        [
+          "ATL",
+          "CJ McCollum",
+          "OUT"
+        ],
+        [
+          "ATL",
+          "Jock Landale",
+          "OUT"
+        ]
+      ],
+      "evidence_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_09_15AM.pdf",
+        "https://www.nba.com/game/0022600265?cp1=web&cp2=schedule&cp3=%7Bcp_3%7D&cp4=%7Bcp_4%7D&howToWatch=false&partnerRef=Thunder",
+        "https://sports.yahoo.com/articles/full-injury-report-wednesdays-hawks-140122458.html"
+      ]
+    },
+    {
+      "fixture": "DET@NOP",
+      "away": "DET",
+      "home": "NOP",
+      "tipoff_utc": "2026-11-19T01:00:00Z",
+      "initial_analyst_lean": null,
+      "qualitative_confidence": "LOW",
+      "key_basketball_question": "Can Cade and Ausar sustain Detroit's offensive rebounding/inside attacks on a second-night road game without Duren, against Zion/Queen without Murphy and Murray?",
+      "pre_tip_basketball_evidence": "Detroit won in SAS after trailing by 14, Cade 27 and Ausar 14pts/12ast/9reb, Collins/Reed filled rotation. Now fourth road-game stretch and back-to-back; NOP just beat Curry-less Warriors, Zion/Queen/Bey supplying scoring, Murphy and Murray OUT. Crucially DET official same-day injury report NOT YET SUBMITTED, so prior-night outs cannot be promoted to confirmed today.",
+      "pregame_mechanism_hypothesis": "Can Cade and Ausar sustain Detroit's offensive rebounding/inside attacks on a second-night road game without Duren, against Zion/Queen without Murphy and Murray?",
+      "counterargument": "Pelicans lack major spacing/creation with Murphy and Dejounte out, and Detroit has more reliable Cade-led control even on road. Rest plus interior matchup yields plausible NOP advantage but no honest directional certainty.",
+      "injury_or_rotation_uncertainty": [
+        [
+          "DET",
+          "TEAM_INJURY_REPORT",
+          "NOT YET SUBMITTED"
+        ],
+        [
+          "NOP",
+          "Trey Murphy III",
+          "OUT"
+        ],
+        [
+          "NOP",
+          "Dejounte Murray",
+          "OUT"
+        ],
+        [
+          "NOP",
+          "Bennedict Mathurin",
+          "OUT"
+        ]
+      ],
+      "evidence_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_09_15AM.pdf",
+        "https://www.reuters.com/sports/basketball/pistons-face-pelicans-aiming-build-signature-win--flm-2026-11-18/",
+        "https://www.nba.com/pelicans/news/pelicans-vs-pistons-injury-report-game-preview-11-18-2026"
+      ]
+    },
+    {
+      "fixture": "GSW@DAL",
+      "away": "GSW",
+      "home": "DAL",
+      "tipoff_utc": "2026-11-19T01:00:00Z",
+      "initial_analyst_lean": "DAL",
+      "qualitative_confidence": "MEDIUM",
+      "key_basketball_question": "Can Curry/Butler-less Golden State make enough off-ball gravity to crack a Flagg/Irving Dallas lineup after GSW's road loss, with Draymond uncertain?",
+      "pre_tip_basketball_evidence": "Warriors official team preview confirms Curry, Butler, Moody, Porzingis and Brandon Williams OUT; Draymond QUESTIONABLE. GSW scored only 94 vs Pelicans Monday. Mavericks with Cooper Flagg, Kyrie Irving and improved creator distribution have route to seize halfcourt possessions, though Lively OUT.",
+      "pregame_mechanism_hypothesis": "Can Curry/Butler-less Golden State make enough off-ball gravity to crack a Flagg/Irving Dallas lineup after GSW's road loss, with Draymond uncertain?",
+      "counterargument": "Dallas half-court defense with Lively missing can be vulnerable to Podziemski/Melton transition and spacing; Draymond could play and facilitate; Warriors last 94-point game alone is not repeatable evidence.",
+      "injury_or_rotation_uncertainty": [
+        [
+          "GSW",
+          "Stephen Curry",
+          "OUT"
+        ],
+        [
+          "GSW",
+          "Jimmy Butler III",
+          "OUT"
+        ],
+        [
+          "GSW",
+          "Draymond Green",
+          "QUESTIONABLE"
+        ],
+        [
+          "GSW",
+          "Moses Moody",
+          "OUT"
+        ],
+        [
+          "DAL",
+          "Dereck Lively II",
+          "OUT"
+        ],
+        [
+          "DAL",
+          "Max Christie",
+          "QUESTIONABLE"
+        ]
+      ],
+      "evidence_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_09_15AM.pdf",
+        "https://www.nba.com/warriors/news/gameday-preview-20261118",
+        "https://nba.statz.ai/nba/games/dallas-mavericks-vs-golden-state-warriors-2026-11-18/preview/lineups"
+      ]
+    },
+    {
+      "fixture": "BOS@DEN",
+      "away": "BOS",
+      "home": "DEN",
+      "tipoff_utc": "2026-11-19T02:30:00Z",
+      "initial_analyst_lean": "DEN",
+      "qualitative_confidence": "LOW",
+      "key_basketball_question": "How does Boston defend Jokic's hub-and-spoke interior handoffs and cuts with Queta/Cenac center rotation, while Tatum/White counter from perimeter?",
+      "pre_tip_basketball_evidence": "Denver Jokic plays 36.6 mpg; Denver paint scoring 49.5 per game. Boston Queta expected to return, rookie Cenac had recent defense minutes vs Orlando. Boston on 3 games/4 nights; Jokic can punish inexperienced deep drop and force corner coverage decisions.",
+      "pregame_mechanism_hypothesis": "How does Boston defend Jokic's hub-and-spoke interior handoffs and cuts with Queta/Cenac center rotation, while Tatum/White counter from perimeter?",
+      "counterargument": "Boston 11-3, strong road form and Tatum/White pick-and-roll isolation can target Denver's guard defense; Queta return may address interior mismatch. Individual lineup-impact estimates not verified.",
+      "injury_or_rotation_uncertainty": [
+        [
+          "BOS",
+          "FIRST_TEAM_OFFICIAL_REPORT",
+          "NO_REGULAR_STAR_OUT_SHOWN_09_15AM"
+        ],
+        [
+          "DEN",
+          "Julian Strawther",
+          "OUT"
+        ]
+      ],
+      "evidence_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_09_15AM.pdf",
+        "https://www.nba.com/game/0022600266?cp1=%7Bcp_1%7D&cp2=Game&cp3=%7Bcp_3%7D&cp4=%7Bcp_4%7D&howToWatch=false&partnerRef=Yahoo",
+        "https://abcnews.com/Sports/wireStory/boston-takes-road-win-streak-matchup-denver-138201499"
+      ]
+    },
+    {
+      "fixture": "UTA@LAL",
+      "away": "UTA",
+      "home": "LAL",
+      "tipoff_utc": "2026-11-19T03:00:00Z",
+      "initial_analyst_lean": "LAL",
+      "qualitative_confidence": "MEDIUM",
+      "key_basketball_question": "Can Luka manage back-to-back overtime fatigue and Utah's sudden Sensabaugh shot-making without compromising point-of-attack defense?",
+      "pre_tip_basketball_evidence": "Lakers won ninth straight vs Hornets in OT Tuesday, now back-to-back. Utah snapped 12-game skid with 132-107 win vs Clippers and Sensabaugh scored 40 with 8 threes. LAL's Luka usage and home halfcourt creation sustain edge but game minutes/fatigue matter.",
+      "pregame_mechanism_hypothesis": "Can Luka manage back-to-back overtime fatigue and Utah's sudden Sensabaugh shot-making without compromising point-of-attack defense?",
+      "counterargument": "Big Sensabaugh scoring is unlikely to be a stable guarantee yet shows real spacing threat; Lakers fatigue after OT and player status NOT YET SUBMITTED in morning NBA report. Do not confidently state Reaves/Kessler status for today.",
+      "injury_or_rotation_uncertainty": [
+        [
+          "UTA",
+          "TEAM_INJURY_REPORT",
+          "NOT YET SUBMITTED"
+        ],
+        [
+          "LAL",
+          "TEAM_INJURY_REPORT",
+          "NOT YET SUBMITTED"
+        ]
+      ],
+      "evidence_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_09_15AM.pdf",
+        "https://www.reuters.com/sports/basketball/fresh-off-epic-rally-red-hot-lakers-look-jolt-jazz--flm-2026-11-18/",
+        "https://www.silverscreenandroll.com/lakers-game-previews/129098/lakers-vs-jazz-discussion-injury-report-how-to-watch-tv-stream-start-time-luka-doncic-austin-reaves"
+      ]
+    },
+    {
+      "fixture": "PHX@SAC",
+      "away": "PHX",
+      "home": "SAC",
+      "tipoff_utc": "2026-11-19T03:00:00Z",
+      "initial_analyst_lean": "PHX",
+      "qualitative_confidence": "MEDIUM",
+      "key_basketball_question": "Can Booker's two-level creation punish Sacramento perimeter containment while Suns survive with Oso Ighodaro instead of Mark Williams against Sabonis?",
+      "pre_tip_basketball_evidence": "Booker 24.5 points/5.4 assists over 13 GP and Phoenix won in Denver despite no Mark Williams. Sacramento 1-12; Maxime Raynaud OUT, Ben Simmons OUT, Achiuwa and De'Andre Hunter QUESTIONABLE. If SAC's interior depth lacking, Booker and Jalen Green guards may force rotations.",
+      "pregame_mechanism_hypothesis": "Can Booker's two-level creation punish Sacramento perimeter containment while Suns survive with Oso Ighodaro instead of Mark Williams against Sabonis?",
+      "counterargument": "Phoenix missing Mark Williams, and Sabonis offensive glass/hub play could dominate lighter Suns bigs; Sacramento Hunter/Achiuwa could return. Projected lineups are not confirmed.",
+      "injury_or_rotation_uncertainty": [
+        [
+          "PHX",
+          "Mark Williams",
+          "OUT"
+        ],
+        [
+          "SAC",
+          "Maxime Raynaud",
+          "OUT"
+        ],
+        [
+          "SAC",
+          "Ben Simmons",
+          "OUT"
+        ],
+        [
+          "SAC",
+          "Precious Achiuwa",
+          "QUESTIONABLE"
+        ],
+        [
+          "SAC",
+          "De'Andre Hunter",
+          "QUESTIONABLE"
+        ]
+      ],
+      "evidence_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_09_15AM.pdf",
+        "https://basketball.realgm.com/nba/preview/2026-11-18/Phoenix-at-Sacramento/530780",
+        "https://statz.ai/nba/games/sacramento-kings-vs-phoenix-suns-2026-11-18/preview/lineups"
+      ]
+    }
+  ]
+}
