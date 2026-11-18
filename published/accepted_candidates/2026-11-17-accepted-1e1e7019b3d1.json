@@ -1,0 +1,366 @@
+{
+  "accepted_games": 208,
+  "bsl_completed_games": 197,
+  "core_fields_verified_per_team": 8,
+  "data_provenance": {
+    "boxscorelab_games_sha256": "b2cf7285abba5c3c755bedaa0febe1a871556ce579b16be0fb924af9bf80bb03",
+    "boxscorelab_standings_sha256": "fafd1555011ba47509a9af3cdd6f1e9646534e02a0f7e75c7050018ee0ae2ef4",
+    "fallback": {
+      "fallback_games": [
+        {
+          "date": "2026-11-16",
+          "espn_game_id": "401909997",
+          "teams": [
+            "BKN",
+            "PHI"
+          ]
+        },
+        {
+          "date": "2026-11-16",
+          "espn_game_id": "401909994",
+          "teams": [
+            "BOS",
+            "ORL"
+          ]
+        },
+        {
+          "date": "2026-11-16",
+          "espn_game_id": "401909995",
+          "teams": [
+            "CHI",
+            "CLE"
+          ]
+        },
+        {
+          "date": "2026-11-16",
+          "espn_game_id": "401910001",
+          "teams": [
+            "DEN",
+            "PHX"
+          ]
+        },
+        {
+          "date": "2026-11-16",
+          "espn_game_id": "401910000",
+          "teams": [
+            "GSW",
+            "NOP"
+          ]
+        },
+        {
+          "date": "2026-11-16",
+          "espn_game_id": "401909998",
+          "teams": [
+            "HOU",
+            "MIA"
+          ]
+        },
+        {
+          "date": "2026-11-16",
+          "espn_game_id": "401909996",
+          "teams": [
+            "MEM",
+            "WAS"
+          ]
+        },
+        {
+          "date": "2026-11-16",
+          "espn_game_id": "401909999",
+          "teams": [
+            "MIN",
+            "POR"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "espn_game_id": "401910005",
+          "teams": [
+            "CHA",
+            "LAL"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "espn_game_id": "401910004",
+          "teams": [
+            "DET",
+            "SAS"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "espn_game_id": "401910006",
+          "teams": [
+            "LAC",
+            "UTA"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "espn_game_id": "401910003",
+          "teams": [
+            "MIN",
+            "POR"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "espn_game_id": "401910002",
+          "teams": [
+            "NYK",
+            "TOR"
+          ]
+        }
+      ],
+      "fallback_source_shas": {
+        "espn_release_sha256": "902ed8fdb707f56a29d555ba5fe9a5ae97ba335a7d299b6f676f7be9d9449f58",
+        "nba_stats_release_sha256": "654b06a629676485802a917d443b5c37fd05e484478353873aa750a5199a213d"
+      },
+      "partial_turnover_independence": "NBA player TOV independently checked; ESPN team TOV verified by decomposition and live ESPN, but no independent NBA team TOV in source release",
+      "recovered": 13,
+      "source": "ESPN released team box + independently published NBA Stats team box"
+    },
+    "fallback_limitations": "ESPN team turnovers verified against ESPN live, while player turnovers and seven other inputs are independently checked against NBA Stats release",
+    "independent_checks": "ESPN completed game dates, scores and eight live team box fields",
+    "source": "BoxScore Lab (CC BY 4.0) plus independently cross-checked complete-game release fallback"
+  },
+  "data_through_nba_date": "2026-11-17",
+  "excluded_game_receipts": [
+    {
+      "date": "2026-10-30",
+      "espn_game_id": "401909277",
+      "mismatches": {
+        "CHA": {
+          "turnovers": {
+            "bsl": 12,
+            "espn": 13
+          }
+        }
+      },
+      "teams": [
+        "CHA",
+        "WAS"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "espn_game_id": "401910000",
+      "mismatches": {
+        "GSW": {
+          "player_turnovers": {
+            "espn": 15,
+            "nba_stats": 16
+          },
+          "total_turnovers_decomposition": {
+            "espn_total": 16,
+            "player": 15,
+            "team": 0
+          }
+        }
+      },
+      "nba_stats_game_id": "0022600251",
+      "teams": [
+        "GSW",
+        "NOP"
+      ]
+    }
+  ],
+  "excluded_games": 2,
+  "fallback_completed_games": 13,
+  "generated_at_utc": "2026-11-18T17:13:03.339373+00:00",
+  "independent_box_team_rows_checked": 420,
+  "metric_definitions": {
+    "drtg": "arithmetic mean of per-game 100*opp_points/P",
+    "gp": "accepted games per team",
+    "ortg": "arithmetic mean of per-game 100*points/P",
+    "pace": "arithmetic mean full-game P including OT",
+    "possessions": "P=0.5*sum_for_2_teams(FGA+0.44*FTA-OREB+TOV)"
+  },
+  "model": "Frozen Model C v0.1 (no parameter changes)",
+  "publication_status": "ACCEPTED_GAMES_EXPERIMENTAL_NOT_PRODUCTION",
+  "raw_completed_games": 210,
+  "schema_version": "nba-model-c-accepted-candidate-v1",
+  "season": "2026-27",
+  "teams": {
+    "ATL": {
+      "drtg": 108.9914925747211,
+      "n": 14,
+      "ortg": 110.77849206200783,
+      "pace": 106.44428571428573
+    },
+    "BKN": {
+      "drtg": 114.62437059893122,
+      "n": 13,
+      "ortg": 108.16833919665336,
+      "pace": 102.72461538461538
+    },
+    "BOS": {
+      "drtg": 104.51376717691507,
+      "n": 14,
+      "ortg": 116.03446091498044,
+      "pace": 98.89142857142853
+    },
+    "CHA": {
+      "drtg": 112.59928815070741,
+      "n": 13,
+      "ortg": 102.68074975067773,
+      "pace": 99.15692307692308
+    },
+    "CHI": {
+      "drtg": 117.36670202770281,
+      "n": 13,
+      "ortg": 106.79405256573895,
+      "pace": 107.54000000000002
+    },
+    "CLE": {
+      "drtg": 112.68815819778057,
+      "n": 15,
+      "ortg": 114.76334246620144,
+      "pace": 102.99733333333334
+    },
+    "DAL": {
+      "drtg": 112.20617210056594,
+      "n": 14,
+      "ortg": 109.74867200581848,
+      "pace": 102.14285714285712
+    },
+    "DEN": {
+      "drtg": 113.04008163036504,
+      "n": 12,
+      "ortg": 113.48341359285911,
+      "pace": 100.15666666666668
+    },
+    "DET": {
+      "drtg": 106.32099098652832,
+      "n": 13,
+      "ortg": 112.15898545109214,
+      "pace": 102.19538461538461
+    },
+    "GSW": {
+      "drtg": 110.16800354630467,
+      "n": 13,
+      "ortg": 114.57440805262111,
+      "pace": 102.04615384615386
+    },
+    "HOU": {
+      "drtg": 109.83265743237232,
+      "n": 15,
+      "ortg": 118.11398923992978,
+      "pace": 99.71066666666667
+    },
+    "IND": {
+      "drtg": 111.30112032794965,
+      "n": 14,
+      "ortg": 108.8759066767535,
+      "pace": 102.81857142857142
+    },
+    "LAC": {
+      "drtg": 114.99254298837295,
+      "n": 13,
+      "ortg": 109.29074968412881,
+      "pace": 102.46000000000001
+    },
+    "LAL": {
+      "drtg": 111.2435178631302,
+      "n": 15,
+      "ortg": 118.64155452844439,
+      "pace": 103.11599999999999
+    },
+    "MEM": {
+      "drtg": 108.75909428698245,
+      "n": 14,
+      "ortg": 117.87416162143221,
+      "pace": 103.27571428571432
+    },
+    "MIA": {
+      "drtg": 113.55278992348292,
+      "n": 14,
+      "ortg": 113.95106358186597,
+      "pace": 104.97571428571428
+    },
+    "MIL": {
+      "drtg": 117.51047208968733,
+      "n": 14,
+      "ortg": 103.96281390116337,
+      "pace": 101.97142857142858
+    },
+    "MIN": {
+      "drtg": 101.78293443297531,
+      "n": 15,
+      "ortg": 112.08554921325594,
+      "pace": 104.15066666666667
+    },
+    "NOP": {
+      "drtg": 118.4114453877424,
+      "n": 14,
+      "ortg": 109.30494185073518,
+      "pace": 105.80428571428571
+    },
+    "NYK": {
+      "drtg": 105.74315150961866,
+      "n": 14,
+      "ortg": 112.22193794169246,
+      "pace": 98.27142857142857
+    },
+    "OKC": {
+      "drtg": 105.40055005289578,
+      "n": 14,
+      "ortg": 110.05963286903888,
+      "pace": 101.76285714285714
+    },
+    "ORL": {
+      "drtg": 110.638200604236,
+      "n": 13,
+      "ortg": 107.52638937225427,
+      "pace": 101.36769230769231
+    },
+    "PHI": {
+      "drtg": 109.31633559765238,
+      "n": 15,
+      "ortg": 111.96358529898048,
+      "pace": 101.97466666666665
+    },
+    "PHX": {
+      "drtg": 114.62961417303623,
+      "n": 13,
+      "ortg": 111.12343456702598,
+      "pace": 101.52461538461537
+    },
+    "POR": {
+      "drtg": 107.99371239050708,
+      "n": 14,
+      "ortg": 114.06229316532499,
+      "pace": 102.73857142857146
+    },
+    "SAC": {
+      "drtg": 117.62875359356418,
+      "n": 13,
+      "ortg": 104.66389585417832,
+      "pace": 103.03538461538461
+    },
+    "SAS": {
+      "drtg": 104.63383145421375,
+      "n": 15,
+      "ortg": 115.70506599550349,
+      "pace": 101.284
+    },
+    "TOR": {
+      "drtg": 111.58754141537561,
+      "n": 14,
+      "ortg": 111.1358509684576,
+      "pace": 101.62714285714286
+    },
+    "UTA": {
+      "drtg": 114.13862894090883,
+      "n": 15,
+      "ortg": 105.92124091708884,
+      "pace": 102.83333333333334
+    },
+    "WAS": {
+      "drtg": 117.98798813118783,
+      "n": 14,
+      "ortg": 108.60214613833783,
+      "pace": 103.41142857142857
+    }
+  }
+}
