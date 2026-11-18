@@ -128,10 +128,10 @@ def one_fallback(gameid,espn_pair,official_lookup):
 
 def restore_missing(bsl_groups,espn_finals):
     """Only ESPN-confirmed completed games absent from BSL are eligible."""
-    missing=set(espn_finals)-set(bsl_groups)
-    if not missing:return {},{},{"recovered":0,"source":"BoxScore Lab complete","fallback_source_shas":{}}
     if set(bsl_groups)-set(espn_finals):
         raise ValueError("Unexplained BSL-only game(s); no alternate-source merge")
+    missing=set(espn_finals)-set(bsl_groups)
+    if not missing:return {},{},{"recovered":0,"source":"BoxScore Lab complete","fallback_source_shas":{}}
     espn_rows,sha_espn=source_csv(ESPN_RELEASE)
     official_rows,sha_nba=source_csv(NBA_RELEASE)
     espn=source_index(espn_rows,"game_id","season","2027","season_type","2")
