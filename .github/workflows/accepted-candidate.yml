@@ -85,7 +85,7 @@ jobs:
           if index["fallback_completed_games"]:
               hashes=snap["data_provenance"]["fallback"]["fallback_source_shas"]
               assert len(hashes)==2 and all(len(x)==64 for x in hashes.values())
-              assert "team TOV" in index["source_verification_scope"]
+              assert "team-turnover" in index["source_verification_scope"]
           assert index["status"]=="ACCEPTED_GAMES_EXPERIMENTAL_NOT_PRODUCTION"
           assert index["production_pointer_advanced"] is False
           print("PASS: full source universe, SHA-256, 30 teams, accepted GP, fallback receipts")
