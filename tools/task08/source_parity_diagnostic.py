@@ -8,6 +8,7 @@ base="https://github.com/sportsdataverse/sportsdataverse-data/releases/download/
 nba=get(base+"nba_stats_team_boxscores/team_boxscores_2027.csv")
 esp=get(base+"espn_nba_team_boxscores/team_box_2027.csv")
 bsl=get("https://boxscorelab.com/downloads/2026-27-team-game-results.csv")
+def norm(x):return {"GS":"GSW","NY":"NYK","NO":"NOP","SA":"SAS","WSH":"WAS","UTAH":"UTA"}.get(x,x)
 fields={
  "FGM":("field_goals_made","field_goals_made","field_goals_made"),
  "FGA":("field_goals_attempted","field_goals_attempted","field_goal_attempts"),
@@ -16,7 +17,7 @@ fields={
  "FTM":("free_throws_made","free_throws_made","free_throws_made"),
  "FTA":("free_throws_attempted","free_throws_attempted","free_throw_attempts"),
  "OREB":("rebounds_offensive","offensive_rebounds","offensive_rebounds"),
- "TOV":("turnovers","total_turnovers","turnovers")
+ "TOV_PLAYER":("turnovers","turnovers","turnovers")
 }
 nbag=collections.defaultdict(list)
 for r in nba:
@@ -29,18 +30,18 @@ for r in bsl:bslg[(r["game_date"],tuple(sorted((r["team"],r["opponent"]))))].app
 matcher=collections.defaultdict(list)
 for game_id,pair in nbag.items():
  if len(pair)!=2:continue
- key=tuple(sorted((r["team_tricode"],int(r["points"])) for r in pair))
+ key=tuple(sorted((norm(r["team_tricode"]),int(r["points"])) for r in pair))
  matcher[key].append((game_id,pair))
 stats=collections.Counter();differences=collections.Counter(); examples=[]
 for gid,rows in espng.items():
  if len(rows)!=2:continue
- ky=tuple(sorted((r["team_abbreviation"],int(r["team_score"])) for r in rows))
+ ky=tuple(sorted((norm(r["team_abbreviation"]),int(r["team_score"])) for r in rows))
  choices=matcher[ky]
  if len(choices)!=1:stats["unmatched_or_ambiguous"]+=1;continue
  stats["joined"]+=1
  nid,nrows=choices[0]
- N={r["team_tricode"]:r for r in nrows}
- E={r["team_abbreviation"]:r for r in rows}
+ N={norm(r["team_tricode"]):r for r in nrows}
+ E={norm(r["team_abbreviation"]):r for r in rows}
  day=rows[0]["game_date"];bk=(day,tuple(sorted(E)))
  B={r["team"]:r for r in bslg.get(bk,[])}
  if B:stats["also_bsl"]+=1
@@ -55,6 +56,10 @@ for gid,rows in espng.items():
     z=int(B[team][bf])
     if z!=y:differences["BSL_vs_ESPN_"+label]+=1
     if z!=x:differences["BSL_vs_NBA_"+label]+=1
+ for team in E:
+  nturn=int(N[team]["turnovers"]);player=int(E[team]["turnovers"]);tturn=int(E[team]["team_turnovers"]);total=int(E[team]["total_turnovers"])
+  if total!=player+tturn:differences["ESPN_total_turnovers_not_decomposable"]+=1
+  if nturn+tturn!=total:differences["NBA_player_plus_ESPN_team_TOV_not_total"]+=1
  stats["day_"+day]+=1
 print(json.dumps({"nba_games":len(nbag),"espn_games":len(espng),"bsl_games":len(bslg),
  "stats":stats,"differences":differences,"examples":examples},indent=2))
