@@ -135,6 +135,21 @@ def validate_receipts(folder, cutoff):
     return files
 
 
+def complete_source_score_universe(original_scores, fallback_groups):
+    """Convert (date,(teamA,teamB)) back to original Task08 (date,teamA,teamB).
+
+    This explicit adapter prevents silent mismatches between source-pair keys
+    and the frozen original Task08 ESPN scoreboard coverage validator.
+    """
+    scores=dict(original_scores)
+    for k,pair in fallback_groups.items():
+        flat=validation.key(k[0],*k[1])
+        if flat in scores:raise ValueError("Fallback would overwrite existing game")
+        model.validate_pair(pair)
+        scores[flat]={r["team"]:float(r["points"]) for r in pair}
+    return scores
+
+
 def execute():
     folder=capture.capture()
     cutoff=dt.datetime.now(dt.timezone.utc)
@@ -157,9 +172,7 @@ def execute():
     groups={**bsl_groups,**fallback_groups}
     # The full-season independent scoreboard universe includes validated
     # entire-game alternative rows; old BSL-only standings parity stays intact.
-    scores=dict(parsed["scores"])
-    for k,pair in fallback_groups.items():
-        scores[validation.key(k[0],*k[1])]={r["team"]:float(r["points"]) for r in pair}
+    scores=complete_source_score_universe(parsed["scores"],fallback_groups)
     combined=dict(parsed,scores=scores,latest=max(k[0] for k in scores),games=len(scores))
     count=validation.coverage(combined,documents,cutoff)
     if count!=len(groups) or count!=len(ids):
