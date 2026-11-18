@@ -57,6 +57,22 @@ class AcceptedTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"lacks"):
             c.accepted_aggregates(p,excluded)
 
+    def test_secondary_source_flat_coverage_key(self):
+        a,b=one_game("2026-11-16","BOS","ORL")
+        result=c.complete_source_score_universe({},
+            {("2026-11-16",("BOS","ORL")):[a,b]})
+        self.assertEqual(set(result),{("2026-11-16","BOS","ORL")})
+        self.assertEqual(result[("2026-11-16","BOS","ORL")],
+                         {"BOS":100.0,"ORL":90.0})
+
+    def test_secondary_source_cannot_overwrite_bsl_primary(self):
+        a,b=one_game("2026-11-16","BOS","ORL")
+        key=("2026-11-16",("BOS","ORL"))
+        with self.assertRaisesRegex(ValueError,"overwrite"):
+            c.complete_source_score_universe(
+                {("2026-11-16","BOS","ORL"):{"BOS":100,"ORL":90}},
+                {key:[a,b]})
+
     def test_summary_one_team_conflict_excludes_game(self):
         a,b=one_game("2026-11-11","BOS","NYK")
         k=("2026-11-11",("BOS","NYK"))
