@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - "tools/task08/source_fallback_diagnostic.py"
+      - "tools/task08/source_parity_diagnostic.py"
   workflow_dispatch:
 permissions:
   contents: read
@@ -17,4 +18,6 @@ jobs:
         with:
           python-version: "3.12"
       - name: Probe source freshness and independent NBA Stats fields (read-only)
-        run: python -B tools/task08/source_fallback_diagnostic.py
+        run: |
+          python -B tools/task08/source_fallback_diagnostic.py
+          python -B tools/task08/source_parity_diagnostic.py
