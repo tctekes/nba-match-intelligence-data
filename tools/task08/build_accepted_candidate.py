@@ -31,6 +31,7 @@ import cloud_capture_candidate as capture
 import independent_core_fields as independent
 import static_snapshot as validation
 import nba_baseline_v01 as model
+import multi_source_recovery as recovery
 
 ROOT_OUT=ROOT/"published"
 LIMIT_EXCLUSIONS=12
@@ -144,17 +145,42 @@ def execute():
         raise ValueError("All-game published-standings parity fails")
     documents={dt.datetime.strptime(n[:8],"%Y%m%d").date().isoformat():json.loads(v)
                for n,v in files.items() if re.fullmatch(r"\d{8}\.json",n)}
-    count=validation.coverage(parsed,documents,cutoff)
-    groups=groups_of_pairs(validation.rows(files["games.txt"].decode("utf-8-sig")))
-    if count!=len(groups) or count!=parsed["games"]:
-        raise ValueError("Full-game universe discrepancy")
+    # Validate the original BSL file against its own published 30-team
+    # standings. NEVER rewrite raw BSL rows to hide a delayed source.
+    bsl_groups=groups_of_pairs(validation.rows(files["games.txt"].decode("utf-8-sig")))
+    if len(bsl_groups)!=parsed["games"]:
+        raise ValueError("Original BSL pair count mismatch")
     ids=independent_ids(documents)
+    fallback_groups,source_disagreements,recovery_info=recovery.restore_missing(bsl_groups,ids)
+    if set(fallback_groups)&set(bsl_groups):
+        raise ValueError("Fallback attempted to replace existing BSL game")
+    groups={**bsl_groups,**fallback_groups}
+    # The full-season independent scoreboard universe includes validated
+    # entire-game alternative rows; old BSL-only standings parity stays intact.
+    scores=dict(parsed["scores"])
+    for k,pair in fallback_groups.items():
+        scores[k]={r["team"]:float(r["points"]) for r in pair}
+    combined=dict(parsed,scores=scores,latest=max(k[0] for k in scores),games=len(scores))
+    count=validation.coverage(combined,documents,cutoff)
+    if count!=len(groups) or count!=len(ids):
+        raise ValueError("Full completed-game universe discrepancy")
+    # ESPN live box still verifies EVERY game and its historical core inputs.
     excluded,rows_checked=compare_full_box_stats(groups,ids)
-    if rows_checked!=2*count:raise ValueError("Incomplete independent box audit")
+    if rows_checked!=2*count:raise ValueError("Incomplete ESPN live box audit")
+    # An independent official NBA Stats conflict for an alternative-source
+    # game quarantines BOTH sides, even when ESPN release and ESPN live agree.
+    for k,rec in source_disagreements.items():
+        if k in excluded:
+            excluded[k]["mismatches"]["official_nba_stats"]=rec["mismatches"]
+        else:
+            excluded[k]=rec
+    if len(excluded)>LIMIT_EXCLUSIONS or len(excluded)>max(1,int(count*LIMIT_RATIO)):
+        raise ValueError("Whole-game quarantine exceeds conservative safety limit")
+
     accepted,total=accepted_aggregates(groups,excluded)
     if total+len(excluded)!=count:
         raise ValueError("Accepted plus excluded games mismatch")
-    through=parsed["latest"]
+    through=combined["latest"]
     current_nba_day=cutoff.astimezone(ZoneInfo("America/New_York")).date()
     if not 0<(current_nba_day-dt.date.fromisoformat(through)).days<=2:
         raise ValueError("Stale NBA input")
@@ -173,14 +199,18 @@ def execute():
        "core_fields_verified_per_team":8,
        "data_provenance":{"boxscorelab_games_sha256":hashlib.sha256(files["games.txt"]).hexdigest(),
                           "boxscorelab_standings_sha256":hashlib.sha256(files["standings.txt"]).hexdigest(),
-                          "source":"BoxScore Lab (CC BY 4.0)",
-                          "independent_checks":"ESPN completed game dates, scores and eight team box fields"},
+                          "source":"BoxScore Lab (CC BY 4.0) plus independently cross-checked complete-game release fallback",
+                          "independent_checks":"ESPN completed game dates, scores and eight live team box fields",
+                          "fallback":recovery_info,
+                          "fallback_limitations":"ESPN team turnovers verified against ESPN live, while player turnovers and seven other inputs are independently checked against NBA Stats release"},
        "metric_definitions":{"gp":"accepted games per team",
                              "ortg":"arithmetic mean of per-game 100*points/P",
                              "drtg":"arithmetic mean of per-game 100*opp_points/P",
                              "pace":"arithmetic mean full-game P including OT",
                              "possessions":"P=0.5*sum_for_2_teams(FGA+0.44*FTA-OREB+TOV)"},
        "excluded_game_receipts":serial_exclusions,
+       "fallback_completed_games":len(fallback_groups),
+       "bsl_completed_games":len(bsl_groups),
        "teams":{t:accepted[t] for t in sorted(accepted)},
     }
     output=json.dumps(entry,sort_keys=True,indent=2,ensure_ascii=False,allow_nan=False)+"\n"
@@ -224,6 +254,9 @@ def execute():
       "accepted_games":total,
       "excluded_games":len(excluded),
       "independent_eight_box_fields":"PASS_WITH_WHOLE_GAME_EXCLUSIONS",
+      "source_verification_scope":"BSL uses full ESPN 8-field independent parity; fallback checks 7 full NBA Stats fields + player turnover component, ESPN live checks all 8; ESPN team-turnover component not independently reverified",
+      "fallback_completed_games":len(fallback_groups),
+      "bsl_completed_games":len(bsl_groups),
       "json_path":str(fjson.relative_to(ROOT)),
       "md_path":str(fmd.relative_to(ROOT)),
       "json_sha256":digest,
