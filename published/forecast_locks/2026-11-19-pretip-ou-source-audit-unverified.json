@@ -1,0 +1,120 @@
+{
+  "schema_version": "nba-ou-pregame-source-audit-v1",
+  "status": "NO_OFFICIAL_MARKET_QUOTES_VERIFIED_PRETIP",
+  "nba_local_date": "2026-11-19",
+  "audit_at_utc": "2026-11-19T19:17:49.825Z",
+  "model_path": "published/forecast_locks/2026-11-19-four-games-model-c-frozen-shadow.json",
+  "model_commit": "52a214a2989727c37120164934880914b2fdee53",
+  "model_shas": {
+    "code": "b6efd52df74f540c3bda711cd37a372e1ae7cbdbda134579c4c43bc7ff1eafef",
+    "params": "259b0dcc561c2f0400b04d9b19aba59eef53973ba06075f5db97a73497d1c640",
+    "snapshot": "fef5b8784747841a24bd15cb80ccd61716753850bad3473dbeb411f2938f6b30"
+  },
+  "sources_attempted": [
+    "https://www.statsinsider.com.au/news/grizzlies-vs-warriors-prediction-and-nba-tips-20-november-2026",
+    "https://www.statsinsider.com.au/news/bucks-vs-trail-blazers-prediction-and-nba-tips-20-november-2026",
+    "https://www.statsinsider.com.au/news/timberwolves-vs-knicks-prediction-and-nba-tips-20-november-2026",
+    "https://www.pokerstars.fr/en/sports/basketball/7522/nba/10547864/new-york-knicks-minnesota-timberwolves/36330629/",
+    "https://oddsbunch.com/en/sports/basketball?date=2026-11-20&market=totals&view=grid"
+  ],
+  "authenticated_api_status": "HoopsAPI / The Odds API keys not connected, so no authenticated API access.",
+  "direct_reopen_status": "All relevant indexed bookmaker/aggregator price pages failed direct reopen with cache miss. Other directly reopened candidate source bucketsandspreads.com returned a stale June/August page, not November 19 odds.",
+  "verified_main_bookmaker_quotes": 0,
+  "locked_ou_directions": 0,
+  "retro_ou_coverage": 0,
+  "rule": "A search result quote candidate is not proof of current executable named-bookmaker same-line full-game incl OT price. Do not count missing sources as PASS or create hindsight O/U.",
+  "games": [
+    {
+      "fixture": "GSW@MEM",
+      "tipoff_utc": "2026-11-20T01:00:00Z",
+      "model_total_including_ot": 232.15726285905944,
+      "market_status": "MARKET_NOT_VERIFIED",
+      "official_bookmaker": null,
+      "official_main_full_game_including_ot_line": null,
+      "official_over_decimal": null,
+      "official_under_decimal": null,
+      "official_quote_utc": null,
+      "official_source_url": null,
+      "official_analyst_ou_direction": null,
+      "official_analyst_ou_confidence": null,
+      "official_retro_eligible": false,
+      "candidate_unverified": {
+        "source": "https://www.statsinsider.com.au/news/grizzlies-vs-warriors-prediction-and-nba-tips-20-november-2026",
+        "attributed_bookmaker": "Bet365",
+        "indexed_main_line": 225.5,
+        "indexed_over_decimal": 1.91,
+        "indexed_under_decimal": 1.91,
+        "source_issue": "Search index contains both same-line sides and provider, but direct article reopen yielded cache miss; no authenticated executable sportsbook receipt or source timestamp."
+      }
+    },
+    {
+      "fixture": "POR@MIL",
+      "tipoff_utc": "2026-11-20T01:00:00Z",
+      "model_total_including_ot": 228.58908975468236,
+      "market_status": "MARKET_NOT_VERIFIED",
+      "official_bookmaker": null,
+      "official_main_full_game_including_ot_line": null,
+      "official_over_decimal": null,
+      "official_under_decimal": null,
+      "official_quote_utc": null,
+      "official_source_url": null,
+      "official_analyst_ou_direction": null,
+      "official_analyst_ou_confidence": null,
+      "official_retro_eligible": false,
+      "candidate_unverified": {
+        "source": "https://www.statsinsider.com.au/news/bucks-vs-trail-blazers-prediction-and-nba-tips-20-november-2026",
+        "attributed_bookmaker": "Bet365",
+        "indexed_main_line": 228.5,
+        "indexed_over_decimal": 1.91,
+        "indexed_under_decimal": 1.91,
+        "source_issue": "Direct aggregator article reopening failed cache miss. Different bookmakers' current lines diverge, e.g. PokerStars source index showed 225.5. No verified Bet365 current quote."
+      }
+    },
+    {
+      "fixture": "NYK@MIN",
+      "tipoff_utc": "2026-11-20T01:00:00Z",
+      "model_total_including_ot": 219.0075571877584,
+      "market_status": "MARKET_NOT_VERIFIED",
+      "official_bookmaker": null,
+      "official_main_full_game_including_ot_line": null,
+      "official_over_decimal": null,
+      "official_under_decimal": null,
+      "official_quote_utc": null,
+      "official_source_url": null,
+      "official_analyst_ou_direction": null,
+      "official_analyst_ou_confidence": null,
+      "official_retro_eligible": false,
+      "candidate_unverified": {
+        "source": "https://www.statsinsider.com.au/news/timberwolves-vs-knicks-prediction-and-nba-tips-20-november-2026",
+        "attributed_bookmaker": "Bet365",
+        "indexed_main_line": 215.5,
+        "indexed_over_decimal": 1.91,
+        "indexed_under_decimal": 1.91,
+        "source_issue": "Indexed provider-specified quote was not independently reopened, so source time and real current pretip price are unverified."
+      }
+    },
+    {
+      "fixture": "LAC@SAS",
+      "tipoff_utc": "2026-11-20T01:00:00Z",
+      "model_total_including_ot": 227.63018179705458,
+      "market_status": "MARKET_NOT_VERIFIED",
+      "official_bookmaker": null,
+      "official_main_full_game_including_ot_line": null,
+      "official_over_decimal": null,
+      "official_under_decimal": null,
+      "official_quote_utc": null,
+      "official_source_url": null,
+      "official_analyst_ou_direction": null,
+      "official_analyst_ou_confidence": null,
+      "official_retro_eligible": false,
+      "candidate_unverified": {
+        "source": "https://oddsbunch.com/en/sports/basketball?date=2026-11-20&market=totals&view=grid",
+        "attributed_bookmaker": null,
+        "indexed_main_line": null,
+        "indexed_over_decimal": null,
+        "indexed_under_decimal": null,
+        "source_issue": "Indexed comparison matrix showed plausible 225.5 and multiple bookmaker columns but row alignment ambiguous; direct page cache missed, cannot assert same bookmaker/line pair or provenance."
+      }
+    }
+  ]
+}
