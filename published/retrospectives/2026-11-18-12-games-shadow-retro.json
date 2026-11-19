@@ -1,0 +1,607 @@
+{
+  "schema_version": "nba-shadow-postgame-retrospective-v2",
+  "status": "APPEND_ONLY_POSTGAME_SHADOW_NOT_PRODUCTION",
+  "nba_local_date": "2026-11-18",
+  "created_at_utc": "2026-11-19T19:07:43.683Z",
+  "locks": {
+    "first": {
+      "path": "published/forecast_locks/2026-11-18-pre-model-independent-analyst-first-view.json",
+      "at": "2026-11-18T17:29:42.928Z",
+      "commit": "e43a7f3ec6238a52ab64be247d7df7e27b0ddd4f"
+    },
+    "model": {
+      "path": "published/forecast_locks/2026-11-18-frozen-model-c-baseline-shadow.json",
+      "at": "2026-11-18T17:34:52.381Z",
+      "commit": "873c986a78d93d7a6ba67159b6d0a3353ed7bd6f"
+    },
+    "analyst": {
+      "path": "published/forecast_locks/2026-11-18-independent-analyst-reviewed-final-shadow.json",
+      "at": "2026-11-18T17:39:51.981Z",
+      "commit": "d3997032a4411753563d36b582d49db633a8918c"
+    },
+    "market": {
+      "path": "published/forecast_locks/2026-11-18-nba-ou-fail-closed-market-audit-v1.json",
+      "at": "2026-11-18T17:42:00.951Z",
+      "commit": "8bb100cefb146e71e302070ebedcf7e39fcd9cfc"
+    }
+  },
+  "input_sha": {
+    "model_code": "b6efd52df74f540c3bda711cd37a372e1ae7cbdbda134579c4c43bc7ff1eafef",
+    "params": "259b0dcc561c2f0400b04d9b19aba59eef53973ba06075f5db97a73497d1c640",
+    "snapshot": "5e7d896690dade079cea3178d1867a40ebffa889fee9a248c37b8d12bbd84ac8"
+  },
+  "score_sources": {
+    "official_schedule": "https://www.nba.com/games?date=2026-11-18",
+    "independent_score_sources": [
+      "https://www.probetrics.com/nba/2026-11-18",
+      "https://deepmetricanalytics.com/nba/schedule?date=2026-11-18",
+      "https://nbaflare.com/schedule"
+    ],
+    "match_scouting": [
+      "https://www.nba.com/game/gsw-vs-dal-0022600267",
+      "https://www.nba.com/mavs/news/flagg-popped-in-33-points-as-mavs-snap-three-game-losing-streak-with-116-94-victory-over-warriors",
+      "https://www.nba.com/celtics/news/game-recap-keys-20261118",
+      "https://www.nba.com/nuggets/news/nuggets-17-point-deficit-celtics",
+      "https://www.slcdunk.com/utah-jazz-game-coverage/70821/utah-jazz-vs-los-angeles-lakers-recap-and-final-score"
+    ]
+  },
+  "metrics": {
+    "model_c": {
+      "n": 12,
+      "correct": 5,
+      "accuracy": 0.4166666666666667,
+      "home_win_brier": 0.31023347728255474,
+      "home_margin_mae": 13.036250116662119,
+      "full_game_total_mae": 14.799768471146942,
+      "mean_signed_total_error": -2.8111059177790594,
+      "sum_expected_winning_picks": 8.247805814577626
+    },
+    "analyst": {
+      "first_view_record_n": 12,
+      "final_picks": 10,
+      "correct": 6,
+      "abstains": 2,
+      "confidence": {
+        "MEDIUM": {
+          "n": 4,
+          "win": 3,
+          "loss": 1
+        },
+        "LOW": {
+          "n": 6,
+          "win": 3,
+          "loss": 3
+        }
+      },
+      "contrarians": [
+        {
+          "fixture": "GSW@DAL",
+          "correct": true
+        },
+        {
+          "fixture": "BOS@DEN",
+          "correct": true
+        }
+      ],
+      "first_and_final_changes": [
+        "GSW@DAL"
+      ]
+    },
+    "market": {
+      "eligible": 0,
+      "grade": "N/A",
+      "reason": "No official pretip full-game including OT bookmaker quotes + reviewed direction locked for any of 12."
+    },
+    "nba_cup_games": 0
+  },
+  "games": [
+    {
+      "fixture": "MIL@MIA",
+      "tipoff_utc": "2026-11-19T00:00:00Z",
+      "final": {
+        "away_score": 130,
+        "home_score": 137,
+        "winner": "MIA",
+        "home_margin": 7,
+        "full_game_total_including_ot": 267,
+        "status": "FINAL",
+        "ot_status": "No OT suffix in the consulted final scoreboard; full-game final totals used"
+      },
+      "model_c": {
+        "predicted_winner": "MIA",
+        "winner_probability": 0.8199114243847891,
+        "home_win_probability": 0.8199114243847891,
+        "expected_home_margin": 11.778169920898609,
+        "expected_full_game_total": 234.3044627351882,
+        "correct": true,
+        "home_win_brier": 0.03243189506711552,
+        "home_margin_abs_error": 4.778169920898609,
+        "total_abs_error": 32.695537264811804,
+        "total_actual_minus_expected": 32.695537264811804
+      },
+      "analyst": {
+        "initial_lean": "MIA",
+        "initial_confidence": "MEDIUM",
+        "final_lean": "MIA",
+        "final_confidence": "MEDIUM",
+        "correct": true,
+        "initial_model_agreement": "AGREES",
+        "pregame_mechanism": "Confirmed Giannis vs former team in Miami and likely Bam frontcourt creates paint pressure and help-rotation dilemmas for Milwaukee; very weak opponent season context supports but does not define matchup. Do not count sentiment as a measurable upset/motivation coefficient.",
+        "pregame_counterargument": "Bam merely PROBABLE, and Bucks could reduce rim access with packed paint forcing three-point variance; no verified player substitution on/off exposures."
+      },
+      "ou": {
+        "market_verified": false,
+        "pregame_direction": null,
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "HOU@IND",
+      "tipoff_utc": "2026-11-19T00:00:00Z",
+      "final": {
+        "away_score": 119,
+        "home_score": 104,
+        "winner": "HOU",
+        "home_margin": -15,
+        "full_game_total_including_ot": 223,
+        "status": "FINAL",
+        "ot_status": "No OT suffix in the consulted final scoreboard; full-game final totals used"
+      },
+      "model_c": {
+        "predicted_winner": "HOU",
+        "winner_probability": 0.7296553628069357,
+        "home_win_probability": 0.27034463719306434,
+        "expected_home_margin": -7.7151685103985335,
+        "expected_full_game_total": 227.83838838798667,
+        "correct": true,
+        "home_win_brier": 0.07308622285904959,
+        "home_margin_abs_error": 7.2848314896014665,
+        "total_abs_error": 4.838388387986669,
+        "total_actual_minus_expected": -4.838388387986669
+      },
+      "analyst": {
+        "initial_lean": "HOU",
+        "initial_confidence": "MEDIUM",
+        "final_lean": "HOU",
+        "final_confidence": "MEDIUM",
+        "correct": true,
+        "initial_model_agreement": "AGREES",
+        "pregame_mechanism": "Without Haliburton and with Nembhard QUESTIONABLE, Indiana's ball-screen initiation may be thin; McConnell PROBABLE is a partial replacement. Houston's guard/wing defenders can attack that weakness and create advantage from stalled possessions.",
+        "pregame_counterargument": "Houston third road game in four days and Amen Thompson QUESTIONABLE, possibly reducing its pressure defense; Indiana Zubac and McConnell can alleviate some absence effects."
+      },
+      "ou": {
+        "market_verified": false,
+        "pregame_direction": null,
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "MEM@CLE",
+      "tipoff_utc": "2026-11-19T00:00:00Z",
+      "final": {
+        "away_score": 124,
+        "home_score": 121,
+        "winner": "MEM",
+        "home_margin": -3,
+        "full_game_total_including_ot": 245,
+        "status": "FINAL",
+        "ot_status": "No OT suffix in the consulted final scoreboard; full-game final totals used"
+      },
+      "model_c": {
+        "predicted_winner": "CLE",
+        "winner_probability": 0.5621892511873616,
+        "home_win_probability": 0.5621892511873616,
+        "expected_home_margin": 1.9430364360705858,
+        "expected_full_game_total": 237.19293621666324,
+        "correct": false,
+        "home_win_brier": 0.3160567541506064,
+        "home_margin_abs_error": 4.943036436070586,
+        "total_abs_error": 7.807063783336758,
+        "total_actual_minus_expected": 7.807063783336758
+      },
+      "analyst": {
+        "initial_lean": null,
+        "initial_confidence": "LOW",
+        "final_lean": null,
+        "final_confidence": "LOW",
+        "correct": null,
+        "initial_model_agreement": "INITIAL_ABSTAIN",
+        "pregame_mechanism": "No defensible independent winner: Mitchell's attacking/creation and Cleveland's home court versus Memphis guard depth and opportunity to attack Mobley-less interior are roughly opposing, non-calibrated role factors.",
+        "pregame_counterargument": "Model only slightly favors CLE 56.22%; this is not evidence to choose CLE. Memphis away streak 7-0 is a small sample, no replacement-minutes model."
+      },
+      "ou": {
+        "market_verified": false,
+        "pregame_direction": null,
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "PHI@ORL",
+      "tipoff_utc": "2026-11-19T00:00:00Z",
+      "final": {
+        "away_score": 121,
+        "home_score": 116,
+        "winner": "PHI",
+        "home_margin": -5,
+        "full_game_total_including_ot": 237,
+        "status": "FINAL",
+        "ot_status": "No OT suffix in the consulted final scoreboard; full-game final totals used"
+      },
+      "model_c": {
+        "predicted_winner": "PHI",
+        "winner_probability": 0.5204478463140232,
+        "home_win_probability": 0.47955215368597687,
+        "expected_home_margin": -0.6359175453505168,
+        "expected_full_game_total": 223.96929403255817,
+        "correct": true,
+        "home_win_brier": 0.22997026810485877,
+        "home_margin_abs_error": 4.364082454649483,
+        "total_abs_error": 13.030705967441833,
+        "total_actual_minus_expected": 13.030705967441833
+      },
+      "analyst": {
+        "initial_lean": "PHI",
+        "initial_confidence": "LOW",
+        "final_lean": "PHI",
+        "final_confidence": "LOW",
+        "correct": true,
+        "initial_model_agreement": "AGREES",
+        "pregame_mechanism": "Embiid's inside-out creation if available and LeBron's distribution are plausible ways to stress Orlando without Isaac and Banchero; but first-view advantage was conditional, not derived from model's thin 52.04%.",
+        "pregame_counterargument": "Jaylen Brown definitely OUT and Orlando Wagner+Bane can initiate against depleted Philly wings; model essentially even and Embiid current activity not established by absence from OUT list alone."
+      },
+      "ou": {
+        "market_verified": false,
+        "pregame_direction": null,
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "CHI@BKN",
+      "tipoff_utc": "2026-11-19T00:30:00Z",
+      "final": {
+        "away_score": 137,
+        "home_score": 107,
+        "winner": "CHI",
+        "home_margin": -30,
+        "full_game_total_including_ot": 244,
+        "status": "FINAL",
+        "ot_status": "No OT suffix in the consulted final scoreboard; full-game final totals used"
+      },
+      "model_c": {
+        "predicted_winner": "BKN",
+        "winner_probability": 0.5723904042895374,
+        "home_win_probability": 0.5723904042895374,
+        "expected_home_margin": 2.265971048380466,
+        "expected_full_game_total": 234.51070470065585,
+        "correct": false,
+        "home_win_brier": 0.32763077492274,
+        "home_margin_abs_error": 32.265971048380464,
+        "total_abs_error": 9.48929529934415,
+        "total_actual_minus_expected": 9.48929529934415
+      },
+      "analyst": {
+        "initial_lean": "BKN",
+        "initial_confidence": "LOW",
+        "final_lean": "BKN",
+        "final_confidence": "LOW",
+        "correct": false,
+        "initial_model_agreement": "AGREES",
+        "pregame_mechanism": "Brooklyn's offensive-glass and floor-spacing options against Chicago's wing shortage (Caleb Wilson OUT) matter more than both teams' poor records, while Bulls transition must still be contained.",
+        "pregame_counterargument": "Both are 3-10 and Nets' advantage remains fragile; Bulls' pace/live-ball forced turnovers could negate home board edge. No verified starters/spacing possessions."
+      },
+      "ou": {
+        "market_verified": false,
+        "pregame_direction": null,
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "WAS@TOR",
+      "tipoff_utc": "2026-11-19T00:30:00Z",
+      "final": {
+        "away_score": 103,
+        "home_score": 99,
+        "winner": "WAS",
+        "home_margin": -4,
+        "full_game_total_including_ot": 202,
+        "status": "FINAL",
+        "ot_status": "No OT suffix in the consulted final scoreboard; full-game final totals used"
+      },
+      "model_c": {
+        "predicted_winner": "TOR",
+        "winner_probability": 0.8091477544625698,
+        "home_win_probability": 0.8091477544625698,
+        "expected_home_margin": 11.224398775485522,
+        "expected_full_game_total": 231.80566457963945,
+        "correct": false,
+        "home_win_brier": 0.6547200885518192,
+        "home_margin_abs_error": 15.224398775485522,
+        "total_abs_error": 29.805664579639455,
+        "total_actual_minus_expected": -29.805664579639455
+      },
+      "analyst": {
+        "initial_lean": "TOR",
+        "initial_confidence": "LOW",
+        "final_lean": "TOR",
+        "final_confidence": "LOW",
+        "correct": false,
+        "initial_model_agreement": "AGREES",
+        "pregame_mechanism": "Toronto's expected physical wing/paint defense targets Washington's recent half-court execution and defensive transition problems; those opponent-specific mechanisms existed before the model's strong 80.91% endorsement.",
+        "pregame_counterargument": "Toronto official injury report had NOT YET SUBMITTED at morning capture; do not assume Barnes or other defenders fully available. Washington AJ Dybantsa can create shot variance."
+      },
+      "ou": {
+        "market_verified": false,
+        "pregame_direction": null,
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "ATL@OKC",
+      "tipoff_utc": "2026-11-19T01:00:00Z",
+      "final": {
+        "away_score": 117,
+        "home_score": 112,
+        "winner": "ATL",
+        "home_margin": -5,
+        "full_game_total_including_ot": 229,
+        "status": "FINAL",
+        "ot_status": "No OT suffix in the consulted final scoreboard; full-game final totals used"
+      },
+      "model_c": {
+        "predicted_winner": "OKC",
+        "winner_probability": 0.6949351659844311,
+        "home_win_probability": 0.6949351659844311,
+        "expected_home_margin": 6.397437137257437,
+        "expected_full_game_total": 225.52770323291404,
+        "correct": false,
+        "home_win_brier": 0.48293488492180875,
+        "home_margin_abs_error": 11.397437137257437,
+        "total_abs_error": 3.4722967670859646,
+        "total_actual_minus_expected": 3.4722967670859646
+      },
+      "analyst": {
+        "initial_lean": "OKC",
+        "initial_confidence": "LOW",
+        "final_lean": "OKC",
+        "final_confidence": "LOW",
+        "correct": false,
+        "initial_model_agreement": "AGREES",
+        "pregame_mechanism": "SGA remains high-end half-court shot creator while Atlanta is missing CJ McCollum and multiple rotation bigs; OKC can pressure Hawks ballhandling even without three important defenders if available wings hold up.",
+        "pregame_counterargument": "OKC Chet Holmgren/Jalen Williams/Cason Wallace OUT and Jaylin Williams QUESTIONABLE; Jalen Johnson/Dyson Daniels can attack altered rim-help geometry, so no high confidence."
+      },
+      "ou": {
+        "market_verified": false,
+        "pregame_direction": null,
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "DET@NOP",
+      "tipoff_utc": "2026-11-19T01:00:00Z",
+      "final": {
+        "away_score": 122,
+        "home_score": 109,
+        "winner": "DET",
+        "home_margin": -13,
+        "full_game_total_including_ot": 231,
+        "status": "FINAL",
+        "ot_status": "No OT suffix in the consulted final scoreboard; full-game final totals used"
+      },
+      "model_c": {
+        "predicted_winner": "DET",
+        "winner_probability": 0.7771314387593098,
+        "home_win_probability": 0.22286856124069027,
+        "expected_home_margin": -9.705611208304372,
+        "expected_full_game_total": 232.32381944554803,
+        "correct": true,
+        "home_win_brier": 0.049670395589495306,
+        "home_margin_abs_error": 3.294388791695628,
+        "total_abs_error": 1.3238194455480254,
+        "total_actual_minus_expected": -1.3238194455480254
+      },
+      "analyst": {
+        "initial_lean": null,
+        "initial_confidence": "LOW",
+        "final_lean": null,
+        "final_confidence": "LOW",
+        "correct": null,
+        "initial_model_agreement": "INITIAL_ABSTAIN",
+        "pregame_mechanism": "Model Detroit 77.71% reflects historic accepted team efficiency, but current matchup has Cade/Ausar creation versus rested Zion/Queen/Missi inside attacks on Detroit road back-to-back; first-view abstention remains because causal extent of Duren absence and exact current rotation cannot be substantiated. There is no defensible forced contrarian selection.",
+        "pregame_counterargument": "Detroit already beat strong SAS without Duren, showing potential Collins/Reed replacement competence; NOP Murphy/Murray OUT damages its own spacing. Detroit official game-specific report not yet submitted on checked edition; later secondary source says Duren OUT but timestamp/official reconciliation incomplete."
+      },
+      "ou": {
+        "market_verified": false,
+        "pregame_direction": null,
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "GSW@DAL",
+      "tipoff_utc": "2026-11-19T01:00:00Z",
+      "final": {
+        "away_score": 94,
+        "home_score": 116,
+        "winner": "DAL",
+        "home_margin": 22,
+        "full_game_total_including_ot": 210,
+        "status": "FINAL",
+        "ot_status": "No OT suffix in the consulted final scoreboard; full-game final totals used"
+      },
+      "model_c": {
+        "predicted_winner": "GSW",
+        "winner_probability": 0.5917267188258992,
+        "home_win_probability": 0.40827328117410083,
+        "expected_home_margin": -2.8837090784270414,
+        "expected_full_game_total": 228.2368238779931,
+        "correct": false,
+        "home_win_brier": 0.3501405097724648,
+        "home_margin_abs_error": 24.883709078427042,
+        "total_abs_error": 18.23682387799309,
+        "total_actual_minus_expected": -18.23682387799309
+      },
+      "analyst": {
+        "initial_lean": "DAL",
+        "initial_confidence": "MEDIUM",
+        "final_lean": "DAL",
+        "final_confidence": "LOW",
+        "correct": true,
+        "initial_model_agreement": "DISAGREES",
+        "pregame_mechanism": "TRUE CONTRARIAN relative to frozen Model C GSW 59.17%. Independent first view backed DAL on Flagg/Kyrie half-court creation, while GSW Curry and Butler OUT removes independent pressure relief and Draymond QUESTIONABLE. GSW last 85 and 94 scoring games observed pretip, though neither proves future scoring.",
+        "pregame_counterargument": "Dallas has lost three and Kyrie/Flagg have own half-court limitations, Dereck Lively II OUT affects rim defense, and GSW Podziemski/Melton could overperform; lower first-view MEDIUM confidence to LOW after explicit review, not a new model percentage."
+      },
+      "ou": {
+        "market_verified": false,
+        "pregame_direction": null,
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "BOS@DEN",
+      "tipoff_utc": "2026-11-19T02:30:00Z",
+      "final": {
+        "away_score": 101,
+        "home_score": 105,
+        "winner": "DEN",
+        "home_margin": 4,
+        "full_game_total_including_ot": 206,
+        "status": "FINAL",
+        "ot_status": "No OT suffix in the consulted final scoreboard; full-game final totals used"
+      },
+      "model_c": {
+        "predicted_winner": "BOS",
+        "winner_probability": 0.6305145117211848,
+        "home_win_probability": 0.3694854882788153,
+        "expected_home_margin": -4.152766208394903,
+        "expected_full_game_total": 226.9144142870339,
+        "correct": false,
+        "home_win_brier": 0.39754854949100404,
+        "home_margin_abs_error": 8.152766208394903,
+        "total_abs_error": 20.914414287033907,
+        "total_actual_minus_expected": -20.914414287033907
+      },
+      "analyst": {
+        "initial_lean": "DEN",
+        "initial_confidence": "LOW",
+        "final_lean": "DEN",
+        "final_confidence": "LOW",
+        "correct": true,
+        "initial_model_agreement": "DISAGREES",
+        "pregame_mechanism": "TRUE CONTRARIAN relative to frozen Model C BOS 63.05%. Jokic's high-minute pass/scoring hub tests Boston's Queta/Cenac center choices and 3 games in 4 nights load; Denver home court matters particularly if switching protection is limited.",
+        "pregame_counterargument": "Boston is 11-3, Tatum/White can attack Denver backcourt and Queta is expected back (official team preview), weakening the original mismatch concern. No evidence strong enough for MEDIUM/HIGH or model coefficient adjustment."
+      },
+      "ou": {
+        "market_verified": false,
+        "pregame_direction": null,
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "UTA@LAL",
+      "tipoff_utc": "2026-11-19T03:00:00Z",
+      "final": {
+        "away_score": 109,
+        "home_score": 97,
+        "winner": "UTA",
+        "home_margin": -12,
+        "full_game_total_including_ot": 206,
+        "status": "FINAL",
+        "ot_status": "No OT suffix in the consulted final scoreboard; full-game final totals used"
+      },
+      "model_c": {
+        "predicted_winner": "LAL",
+        "winner_probability": 0.8456136489505437,
+        "home_win_probability": 0.8456136489505437,
+        "expected_home_margin": 13.214606603289894,
+        "expected_full_game_total": 236.54613575535487,
+        "correct": false,
+        "home_win_brier": 0.7150624432914533,
+        "home_margin_abs_error": 25.214606603289894,
+        "total_abs_error": 30.546135755354868,
+        "total_actual_minus_expected": -30.546135755354868
+      },
+      "analyst": {
+        "initial_lean": "LAL",
+        "initial_confidence": "MEDIUM",
+        "final_lean": "LAL",
+        "final_confidence": "MEDIUM",
+        "correct": false,
+        "initial_model_agreement": "AGREES",
+        "pregame_mechanism": "Luka-centered half-court shot creation and home environment give LAL clear matchup edge over Jazz; rotation needs to manage back-to-back fatigue after Tuesday OT.",
+        "pregame_counterargument": "Lakers on OT back-to-back, Jazz Sensabaugh just scored 40 and eight threes vs Clippers; one hot game is not a stable expectation but reveals potential Utah wing shotmaking. Official morning reports for both teams NOT YET SUBMITTED."
+      },
+      "ou": {
+        "market_verified": false,
+        "pregame_direction": null,
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "PHX@SAC",
+      "tipoff_utc": "2026-11-19T03:00:00Z",
+      "final": {
+        "away_score": 128,
+        "home_score": 107,
+        "winner": "PHX",
+        "home_margin": -21,
+        "full_game_total_including_ot": 235,
+        "status": "FINAL",
+        "ot_status": "No OT suffix in the consulted final scoreboard; full-game final totals used"
+      },
+      "model_c": {
+        "predicted_winner": "PHX",
+        "winner_probability": 0.6941422868910425,
+        "home_win_probability": 0.30585771310895754,
+        "expected_home_margin": -6.368396544205617,
+        "expected_full_game_total": 229.5629237618132,
+        "correct": true,
+        "home_win_brier": 0.09354894066824138,
+        "home_margin_abs_error": 14.631603455794384,
+        "total_abs_error": 5.4370762381867905,
+        "total_actual_minus_expected": 5.4370762381867905
+      },
+      "analyst": {
+        "initial_lean": "PHX",
+        "initial_confidence": "MEDIUM",
+        "final_lean": "PHX",
+        "final_confidence": "MEDIUM",
+        "correct": true,
+        "initial_model_agreement": "AGREES",
+        "pregame_mechanism": "Booker's inside/outside and Jalen Green's downhill creation challenge Sacramento's young guard help coverage; Sacramento Raynaud OUT and shaky frontcourt depth could amplify Suns pressure.",
+        "pregame_counterargument": "PHX Mark Williams OUT and Sacramento Sabonis can exploit rebounding; Achiuwa/Hunter QUESTIONABLE could return. Projected starting fives not official."
+      },
+      "ou": {
+        "market_verified": false,
+        "pregame_direction": null,
+        "grade": "N/A"
+      }
+    }
+  ],
+  "interpretation": [
+    {
+      "fixture": "GSW@DAL",
+      "pregame": "Both Curry and Butler OUT, independent analyst DAL LOW while C GSW 59.17%. This is a genuinely pretip contrarian pick.",
+      "postgame": "Dallas 116-94; Cooper Flagg 33 pts, Dallas early lead. Supports decision direction but no isolated causal impact of missing GSW creators verified."
+    },
+    {
+      "fixture": "BOS@DEN",
+      "pregame": "Independent Denver LOW based on Jokic vs Celtics center choices, home, Celtics schedule; model Boston 63.05%.",
+      "postgame": "Denver 105-101 after trailing by 17; Jokic 24/9a/8r, Murray late shotmaking, DeRozan late scoring; Queta 17/10 was strong defense/rebounding, so pretip claimed center fragility was not decisively demonstrated. Critical distinction between correct direction and correct mechanism."
+    },
+    {
+      "fixture": "UTA@LAL",
+      "pregame": "Model Lakers 84.56%, analyst Lakers MEDIUM; late OT back-to-back risk and Jazz perimeter shooting noted.",
+      "postgame": "Utah 109-97. Lakers lost; Utah Mo Bamba grabbed 16 rebounds. Do not infer generic fatigue coefficient from one loss."
+    },
+    {
+      "fixture": "CHI@BKN",
+      "pregame": "Model and analyst Brooklyn LOW, disputed strength; expectation BKN +2.27 margin.",
+      "postgame": "Chicago won 137-107 (Brooklyn home margin -30), 32.27 margin abs error. No pretip evidence of this blowout: shooting/pace turnover explanations must be verified rather than invented."
+    },
+    {
+      "fixture": "MIL@MIA",
+      "pregame": "MIA model 81.99 and analyst MEDIUM; Giannis/Bam frontcourt advantage hypothesis.",
+      "postgame": "Miami 137 Milwaukee 130, game total 267 versus frozen 234.30 (32.70 total error). Win selection correct but total model substantial miss."
+    }
+  ],
+  "governance": "No post-hoc pregame picks, no extrapolated market, no changes to model C coefficients or original append-only locks, analyst winrate on 10 actual picks not on 12 games. The 2/2 contrarian result is not statistically sufficient to quantify skill. All final game totals include regulation+OT if any."
+}
