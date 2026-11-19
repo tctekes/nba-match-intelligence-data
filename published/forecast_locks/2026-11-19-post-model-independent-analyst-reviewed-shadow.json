@@ -1,0 +1,189 @@
+{
+  "schema_version": "nba-analyst-reviewed-shadow-v2",
+  "status": "APPEND_ONLY_PRETIP_FINAL_ANALYST_REVIEW_SHADOW",
+  "nba_local_date": "2026-11-19",
+  "reviewed_at_utc": "2026-11-19T19:16:19.553Z",
+  "first_view_path": "published/forecast_locks/2026-11-19-pre-model-independent-analyst-first-view.json",
+  "first_view_commit": "358853e7b021030567234220c6ebc8e387adfbfd",
+  "first_view_at_utc": "2026-11-19T19:09:59.233Z",
+  "model_path": "published/forecast_locks/2026-11-19-four-games-model-c-frozen-shadow.json",
+  "model_commit": "52a214a2989727c37120164934880914b2fdee53",
+  "model_calculation_at_utc": "2026-11-19T19:14:10.726194+00:00",
+  "model_lock_at_utc": "2026-11-19T19:14:57.080Z",
+  "source_snapshot_sha256": "fef5b8784747841a24bd15cb80ccd61716753850bad3473dbeb411f2938f6b30",
+  "model_file_sha256": "b6efd52df74f540c3bda711cd37a372e1ae7cbdbda134579c4c43bc7ff1eafef",
+  "param_file_sha256": "259b0dcc561c2f0400b04d9b19aba59eef53973ba06075f5db97a73497d1c640",
+  "all_model_numbers_unchanged": true,
+  "official_injury_report": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-19_12_00PM.pdf",
+  "first_view_confidence_changes": [
+    {
+      "fixture": "GSW@MEM",
+      "was": "MEDIUM",
+      "now": "LOW"
+    }
+  ],
+  "quality_note": "Official PDF text parsed by game/team rows; web PDF screenshot failed cache. Current GSW/MEM and MIL game reports NOT YET SUBMITTED at 12pm ET; no claims from those rows interpreted as confirmed available; club preview/secondary evidence for likely outs clearly distinct. All initial analyst positions preserved and no math probability modified.",
+  "market_note": "No official full-game OT Over/Under quote authenticated yet. Separate append-only pretip market lock required if quote becomes available.",
+  "games": [
+    {
+      "fixture": "GSW@MEM",
+      "away": "GSW",
+      "home": "MEM",
+      "tipoff_utc": "2026-11-20T01:00:00Z",
+      "is_nba_cup": false,
+      "model": {
+        "predicted_winner": "MEM",
+        "winner_probability": 0.6307588252991394,
+        "home_win_probability": 0.6307588252991394,
+        "expected_home_margin": 4.160916357857907,
+        "expected_full_game_total_including_ot": 232.15726285905944
+      },
+      "initial": {
+        "lean": "MEM",
+        "confidence": "MEDIUM",
+        "key_mechanism": "Warriors scored 94 in Dallas without Curry/Butler and had difficulty entering advantages; Memphis's physical defensive possessions and ability to run from disrupted initiations could magnify creator absence. The earlier 111-108 MEM win after a late 17-0 run is opponent-specific evidence of comeback/pressure potential, not automatically repeatable clutch skill.",
+        "counterargument": "Both squads played Nov18 (back-to-back), and Memphis just conceded 124 to Cleveland and has unsettled guard rotation; if GSW's alternative handlers/Draymond stabilize spacing, the Memphis edge is less assured. Memphis's and GSW's official 12pm injury reports NOT YET SUBMITTED, so game-specific OUT isn't fully certified."
+      },
+      "final": {
+        "lean": "MEM",
+        "confidence": "LOW",
+        "model_vs_initial": "AGREES",
+        "changed_from_first_view": true,
+        "rationale": "Retain Memphis side based on the *known before model* Warriors' lack of Curry/Butler half-court creation and opponent's documented 17-0 endgame run in first meeting, but lower initial MEDIUM confidence to LOW after model comparison because both teams are on back-to-back and this game's official 12pm GSW/MEM reports NOT YET SUBMITTED. Secondary injury indicators are not an authenticated current NBA sheet.",
+        "counterargument": "Memphis allowed 124 vs CLE last game, Jerome and Pippen roles unsettled; GSW Podziemski/Melton/Green could create through alternate actions. A single 94-point GSW loss or previous late-run is not a repeatable law.",
+        "reviewed_at_utc": "2026-11-19T19:16:19.553Z"
+      },
+      "market": {
+        "market_status": "MARKET_NOT_VERIFIED",
+        "bookmaker": null,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "market_source_url": null,
+        "market_captured_at_utc": null,
+        "analyst_ou_direction": null,
+        "analyst_ou_confidence": null
+      }
+    },
+    {
+      "fixture": "POR@MIL",
+      "away": "POR",
+      "home": "MIL",
+      "tipoff_utc": "2026-11-20T01:00:00Z",
+      "is_nba_cup": false,
+      "model": {
+        "predicted_winner": "POR",
+        "winner_probability": 0.7756141546273928,
+        "home_win_probability": 0.22438584537260717,
+        "expected_home_margin": -9.637702690224483,
+        "expected_full_game_total_including_ot": 228.58908975468236
+      },
+      "initial": {
+        "lean": "POR",
+        "confidence": "LOW",
+        "key_mechanism": "Milwaukee lost 137-130 to Miami yesterday, with documented fragile point-of-attack defense; Portland can run high ball screens through Lillard, use Holiday as secondary organizer, and attempt to leverage Milwaukee transition/guard breakdowns. A game on rest advantage versus MIL's back-to-back favors executing set offense but must be conditional on current creators.",
+        "counterargument": "Deni Avdija and Toumani Camara both QUESTIONABLE, with Sharpe, Ja Morant, Robert Williams III OUT; their absence could erase Portland's advantage in driving, wing defense and boards. Bucks injury submission not yet filed in official noon ET report; do not invent absence status."
+      },
+      "final": {
+        "lean": "POR",
+        "confidence": "LOW",
+        "model_vs_initial": "AGREES",
+        "changed_from_first_view": false,
+        "rationale": "Portland Lillard/Holiday creation against Milwaukee's fragile guard shell and Bucks back-to-back supports away choice, but this is not independent evidence strong enough to match Model C's 77.56% confidence. Avdija and Camara both QUESTIONABLE and the exact availability of POR creators/wing defenders is a genuine fork.",
+        "counterargument": "If Avdija and Camara sit, Portland primary creation and guard/wing defense lose capacity; Bucks fresh players could exploit. MIL team noon official report NOT YET SUBMITTED despite day-after game, plus later secondary Rollins OUT unconfirmed at noon.",
+        "reviewed_at_utc": "2026-11-19T19:16:19.553Z"
+      },
+      "market": {
+        "market_status": "MARKET_NOT_VERIFIED",
+        "bookmaker": null,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "market_source_url": null,
+        "market_captured_at_utc": null,
+        "analyst_ou_direction": null,
+        "analyst_ou_confidence": null
+      }
+    },
+    {
+      "fixture": "NYK@MIN",
+      "away": "NYK",
+      "home": "MIN",
+      "tipoff_utc": "2026-11-20T01:00:00Z",
+      "is_nba_cup": false,
+      "model": {
+        "predicted_winner": "MIN",
+        "winner_probability": 0.5899455932089646,
+        "home_win_probability": 0.5899455932089646,
+        "expected_home_margin": 2.8264582558569877,
+        "expected_full_game_total_including_ot": 219.0075571877584
+      },
+      "initial": {
+        "lean": "MIN",
+        "confidence": "LOW",
+        "key_mechanism": "Wolves have performed 8-3 without Edwards according to current official NBA matchup preview, using Gobert as defensive anchor. Knicks' Brunson/Towns are strong shot creators but can be made to take more perimeter shots if Minnesota's guards stay attached; Wolves home defensive consistency is an opponent-specific case rather than bare record alone.",
+        "counterargument": "Towns (former MIN center) can pull Gobert away from the rim and Brunson controls late-clock decisions; Minnesota also misses DiVincenzo/Jaylen Clark and can be vulnerable at point-of-attack without Edwards. NYK injury report hadn't appeared in noon official edition."
+      },
+      "final": {
+        "lean": "MIN",
+        "confidence": "LOW",
+        "model_vs_initial": "AGREES",
+        "changed_from_first_view": false,
+        "rationale": "Gobert-protected paint and Wolves' demonstrated competent structure without Edwards gives a viable home defensive route against Brunson/Towns late-clock creation; model's narrow MIN 58.99% is consistent but not used to invent a higher qualitative certainty.",
+        "counterargument": "Towns' perimeter spacing can drag Gobert from the rim; Brunson's pick-and-roll scoring and Minnesota's missing Edwards/DiVincenzo make a Knicks away win very plausible.",
+        "reviewed_at_utc": "2026-11-19T19:16:19.553Z"
+      },
+      "market": {
+        "market_status": "MARKET_NOT_VERIFIED",
+        "bookmaker": null,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "market_source_url": null,
+        "market_captured_at_utc": null,
+        "analyst_ou_direction": null,
+        "analyst_ou_confidence": null
+      }
+    },
+    {
+      "fixture": "LAC@SAS",
+      "away": "LAC",
+      "home": "SAS",
+      "tipoff_utc": "2026-11-20T01:00:00Z",
+      "is_nba_cup": false,
+      "model": {
+        "predicted_winner": "SAS",
+        "winner_probability": 0.8310783106783284,
+        "home_win_probability": 0.8310783106783284,
+        "expected_home_margin": 12.380707335304269,
+        "expected_full_game_total_including_ot": 227.63018179705458
+      },
+      "initial": {
+        "lean": "SAS",
+        "confidence": "MEDIUM",
+        "key_mechanism": "Wembanyama's paint protection creates poor finishing routes for Clippers who have lost both Beal and Ingram. Spurs Fox/Castle/Vassell can place Garland in screen actions. Clippers are winless on road in five attempts and Utah recently scored 132 vs their defense; those samples corroborate but do not prove matchup mechanism.",
+        "counterargument": "Brook Lopez can space to three-point range and pull Wembanyama away from the rim, while Garland's navigation and Rui Hachimura screening could create genuine pressure. Spurs Dylan Harper OUT after hip issue and Tobias Harris OUT; don't assume SAS intact backcourt."
+      },
+      "final": {
+        "lean": "SAS",
+        "confidence": "MEDIUM",
+        "model_vs_initial": "AGREES",
+        "changed_from_first_view": false,
+        "rationale": "Wembanyama paint defense plus Fox/Castle spacing creates targeted matchups vs Clippers's Lopez/Garland; Beal and Ingram confirmed OUT by explicit official team rows. Spurs have wide variety of available creators despite Harper OUT. This was a genuine pre-model edge before C's 83.11% figure.",
+        "counterargument": "Brook Lopez' three-point shooting can pull Wembanyama from paint and Darius Garland can exploit switching; Spurs Harper and Harris OUT reduce depth. High model probability doesn't translate into HIGH analyst confidence by itself.",
+        "reviewed_at_utc": "2026-11-19T19:16:19.553Z"
+      },
+      "market": {
+        "market_status": "MARKET_NOT_VERIFIED",
+        "bookmaker": null,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "market_source_url": null,
+        "market_captured_at_utc": null,
+        "analyst_ou_direction": null,
+        "analyst_ou_confidence": null
+      }
+    }
+  ]
+}
