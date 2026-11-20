@@ -1,0 +1,710 @@
+{
+  "schema_version": "nba-independent-analyst-reviewed-v2",
+  "status": "APPEND_ONLY_PRETIP_INDEPENDENT_ANALYST_POST_MODEL_REVIEW",
+  "nba_local_date": "2026-11-20",
+  "reviewed_at_utc": "2026-11-20T19:41:08.085Z",
+  "initial_first_view_path": "published/forecast_locks/2026-11-20-pre-model-independent-analyst-first-view-v1.json",
+  "initial_first_view_commit": "a1d38926022a69bbd65553a39ec0445271e27c8e",
+  "initial_utc": "2026-11-20T19:37:07.706Z",
+  "model_path": "published/forecast_locks/2026-11-20-nine-cup-games-frozen-model-c-shadow-v1.json",
+  "model_commit": "561d792047a73459ecf219adafe14edffc0514b6",
+  "model_calculated_at_utc": "2026-11-20T19:40:01.190733+00:00",
+  "model_locked_at_utc": "2026-11-20T19:40:20.195Z",
+  "model_sha256": "b6efd52df74f540c3bda711cd37a372e1ae7cbdbda134579c4c43bc7ff1eafef",
+  "param_sha256": "259b0dcc561c2f0400b04d9b19aba59eef53973ba06075f5db97a73497d1c640",
+  "snapshot_raw_sha256": "228913b0a099c2444c573b80f7e36b76e590ee402ad240c71249ea5cf58e98f5",
+  "model_c_numbers_unchanged": true,
+  "all_first_views_untouched": true,
+  "analyst_counts": {
+    "agree": 7,
+    "disagree": 1,
+    "initial_abstain": 1,
+    "change_count": 0
+  },
+  "cup_warning": "NBA CUP GECESİ — grup galibiyeti ve sayı farkı için ekstra direnç/motivasyon görülebilir; güçlü favorilerde bile bağlama dikkat. Never change model C math or automatic upset coefficient.",
+  "injury_primary_pdf": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-20_01_00PM.pdf",
+  "injury_qa": "Official PDF parsed as source text but screenshot tool returned cache miss; page continuation ambiguous labels not treated as independent players without another explicit team record. All statuses as of 1PM ET only; any late status change requires a separate pretip addendum, never rewrite original.",
+  "market_info": "Unverified, no official pretip same-line bookmaker paired O/U quote; separate pretip market audit to follow without backfilling when uncertain.",
+  "games": [
+    {
+      "fixture": "CHA@ATL",
+      "away": "CHA",
+      "home": "ATL",
+      "tipoff_utc": "2026-11-21T00:00:00Z",
+      "nba_cup": {
+        "is_cup": true,
+        "stage": "GROUP_PLAY",
+        "group": "East C"
+      },
+      "frozen_model_c": {
+        "predicted_winner": "ATL",
+        "winner_probability": 0.7053468810545257,
+        "home_win_probability": 0.7053468810545257,
+        "expected_home_minus_away_margin": 6.782829943502759,
+        "expected_full_game_ot_included_total": 224.54661160046064
+      },
+      "first_independent_analyst": {
+        "initial_lean": "ATL",
+        "initial_confidence": "MEDIUM",
+        "initial_question": "Can Jalen Johnson and Dyson Daniels drive Charlotte's thin wing perimeter before Brandon Miller/Coby White can stabilize its half-court offense?",
+        "source_first_view_file": "published/forecast_locks/2026-11-20-pre-model-independent-analyst-first-view-v1.json"
+      },
+      "final_analyst": {
+        "lean": "ATL",
+        "confidence": "MEDIUM",
+        "model_vs_initial": "AGREES",
+        "changed_from_initial": false,
+        "reviewed_at_utc": "2026-11-20T19:41:08.085Z",
+        "basketball_mechanism": "Hornets Kon Knueppel and Schroder OUT means fewer trustworthy off-ball threes and initiation options; Atlanta's Johnson/Daniels rim-entry pressure may create defensive rotations and transition even without CJ McCollum. This opponent-specific claim was written before knowing ATL's 70.53% Model C.",
+        "pretip_counterargument": "Atlanta's McCollum OUT and Kingston Flemings QUESTIONABLE. Charlotte Miller/White/Naz Reid can attack Hawks perimeter help and free throw line. Cup point differential motivation might sustain minutes on both teams, not a new probability.",
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-20_01_00PM.pdf",
+          "https://www.reuters.com/sports/basketball/rising-hawks-meet-slumping-hornets-nba-cup-group-clash--flm-2026-11-20/",
+          "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced"
+        ],
+        "injury_snapshot": [
+          {
+            "team": "CHA",
+            "player": "Kon Knueppel",
+            "status": "OUT"
+          },
+          {
+            "team": "CHA",
+            "player": "Dennis Schroder",
+            "status": "OUT"
+          },
+          {
+            "team": "CHA",
+            "player": "Grayson Allen",
+            "status": "OUT"
+          },
+          {
+            "team": "ATL",
+            "player": "CJ McCollum",
+            "status": "OUT"
+          },
+          {
+            "team": "ATL",
+            "player": "Kingston Flemings",
+            "status": "QUESTIONABLE"
+          }
+        ]
+      },
+      "market": {
+        "market_status": "MARKET_NOT_VERIFIED",
+        "bookmaker": null,
+        "main_full_game_including_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "source_url": null,
+        "utc_captured_at": null,
+        "analyst_direction": null,
+        "qualitative_confidence": null
+      }
+    },
+    {
+      "fixture": "IND@CLE",
+      "away": "IND",
+      "home": "CLE",
+      "tipoff_utc": "2026-11-21T00:30:00Z",
+      "nba_cup": {
+        "is_cup": true,
+        "stage": "GROUP_PLAY",
+        "group": "East B"
+      },
+      "frozen_model_c": {
+        "predicted_winner": "CLE",
+        "winner_probability": 0.7485104649017585,
+        "home_win_probability": 0.7485104649017585,
+        "expected_home_minus_away_margin": 8.475197359574292,
+        "expected_full_game_ot_included_total": 233.10801398894577
+      },
+      "first_independent_analyst": {
+        "initial_lean": "CLE",
+        "initial_confidence": "LOW",
+        "initial_question": "Can Cleveland's Mitchell/Harden halfcourt ball screens overwhelm an Indiana offense without Haliburton and perhaps Nembhard, despite Mobley being out?",
+        "source_first_view_file": "published/forecast_locks/2026-11-20-pre-model-independent-analyst-first-view-v1.json"
+      },
+      "final_analyst": {
+        "lean": "CLE",
+        "confidence": "LOW",
+        "model_vs_initial": "AGREES",
+        "changed_from_initial": false,
+        "reviewed_at_utc": "2026-11-20T19:41:08.085Z",
+        "basketball_mechanism": "Harden/Mitchell pick-and-roll initiation targeting Indiana's Nembhard uncertain and Haliburton OUT is more compelling than Cleveland's raw 74.85% model probability, but Cleveland missing Mobley/Tyson keeps match complex.",
+        "pretip_counterargument": "Pacers have McConnell probable and Zubac as interior outlet; CLE Mobley/Tyson OUT, Peyton Watson Q, so Mitchell/Harden defensive workload or foul pressure could undermine advantage.",
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-20_01_00PM.pdf",
+          "https://www.nba.com/pacers/news/preview-pacers-cavaliers-261120",
+          "https://www.fearthesword.com/cavs-injury-report/54727/cavs-vs-pacers-how-to-watch-odds-and-injury-report"
+        ],
+        "injury_snapshot": [
+          {
+            "team": "IND",
+            "player": "Tyrese Haliburton",
+            "status": "OUT"
+          },
+          {
+            "team": "IND",
+            "player": "Andrew Nembhard",
+            "status": "QUESTIONABLE"
+          },
+          {
+            "team": "IND",
+            "player": "T.J. McConnell",
+            "status": "PROBABLE"
+          },
+          {
+            "team": "CLE",
+            "player": "Evan Mobley",
+            "status": "OUT"
+          },
+          {
+            "team": "CLE",
+            "player": "Jaylon Tyson",
+            "status": "OUT"
+          },
+          {
+            "team": "CLE",
+            "player": "Peyton Watson",
+            "status": "QUESTIONABLE"
+          }
+        ]
+      },
+      "market": {
+        "market_status": "MARKET_NOT_VERIFIED",
+        "bookmaker": null,
+        "main_full_game_including_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "source_url": null,
+        "utc_captured_at": null,
+        "analyst_direction": null,
+        "qualitative_confidence": null
+      }
+    },
+    {
+      "fixture": "ORL@BKN",
+      "away": "ORL",
+      "home": "BKN",
+      "tipoff_utc": "2026-11-21T00:30:00Z",
+      "nba_cup": {
+        "is_cup": true,
+        "stage": "GROUP_PLAY",
+        "group": "East A"
+      },
+      "frozen_model_c": {
+        "predicted_winner": "ORL",
+        "winner_probability": 0.6248151319947921,
+        "home_win_probability": 0.37518486800520784,
+        "expected_home_minus_away_margin": -3.963260139314295,
+        "expected_full_game_ot_included_total": 225.0006139750342
+      },
+      "first_independent_analyst": {
+        "initial_lean": "ORL",
+        "initial_confidence": "MEDIUM",
+        "initial_question": "Can Franz Wagner and Desmond Bane keep Orlando's spread pick-and-roll flowing without Banchero and Isaac against Brooklyn's offense/defense tradeoff?",
+        "source_first_view_file": "published/forecast_locks/2026-11-20-pre-model-independent-analyst-first-view-v1.json"
+      },
+      "final_analyst": {
+        "lean": "ORL",
+        "confidence": "MEDIUM",
+        "model_vs_initial": "AGREES",
+        "changed_from_initial": false,
+        "reviewed_at_utc": "2026-11-20T19:41:08.085Z",
+        "basketball_mechanism": "Bane's nine straight games with ≥3 made threes and Wagner's strong recent creation can stress Nets' weakpoint closeouts/paint help even absent Banchero; Orlando can work two primary actions without Paolo.",
+        "pretip_counterargument": "Nets' Julius Randle/Moe Wagner interior combinations and offensive rebounding could punish Orlando Isaac OUT. Nets are not zero-offense and Banchero absence reduces Magic free throw ceiling.",
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-20_01_00PM.pdf",
+          "https://www.nba.com/magic/news/orlando-magic-brooklyn-nets-game-preview-injury-report-20261120",
+          "https://qa.img.cbssports.com/nba/gametracker/preview/NBA_20261120_ORL%40BKN/"
+        ],
+        "injury_snapshot": [
+          {
+            "team": "ORL",
+            "player": "Paolo Banchero",
+            "status": "OUT"
+          },
+          {
+            "team": "ORL",
+            "player": "Jonathan Isaac",
+            "status": "OUT"
+          },
+          {
+            "team": "BKN",
+            "player": "Grant Nelson",
+            "status": "OUT"
+          }
+        ]
+      },
+      "market": {
+        "market_status": "MARKET_NOT_VERIFIED",
+        "bookmaker": null,
+        "main_full_game_including_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "source_url": null,
+        "utc_captured_at": null,
+        "analyst_direction": null,
+        "qualitative_confidence": null
+      }
+    },
+    {
+      "fixture": "TOR@DET",
+      "away": "TOR",
+      "home": "DET",
+      "tipoff_utc": "2026-11-21T00:30:00Z",
+      "nba_cup": {
+        "is_cup": true,
+        "stage": "GROUP_PLAY",
+        "group": "East A"
+      },
+      "frozen_model_c": {
+        "predicted_winner": "DET",
+        "winner_probability": 0.7200728062459775,
+        "home_win_probability": 0.7200728062459775,
+        "expected_home_minus_away_margin": 7.341779057960079,
+        "expected_full_game_ot_included_total": 222.66971610117284
+      },
+      "first_independent_analyst": {
+        "initial_lean": "DET",
+        "initial_confidence": "LOW",
+        "initial_question": "Can Detroit sustain Cade/Ausar penetration with Duren and Robinson OUT against Toronto's Barnes/Poeltl size, while missing starter pieces of its own?",
+        "source_first_view_file": "published/forecast_locks/2026-11-20-pre-model-independent-analyst-first-view-v1.json"
+      },
+      "final_analyst": {
+        "lean": "DET",
+        "confidence": "LOW",
+        "model_vs_initial": "AGREES",
+        "changed_from_initial": false,
+        "reviewed_at_utc": "2026-11-20T19:41:08.085Z",
+        "basketball_mechanism": "Toronto Barrett and Leonard OUT limits wing isolation and second-side spacing against Cade's and Ausar's pressure defense. Detroit's frontcourt backups Collins/Paul Reed can make switches work, contingent on Cade PROBABLE actually playing.",
+        "pretip_counterargument": "Detroit Duren/Duncan Robinson OUT, Ron Holland DOUBTFUL and Cade PROBABLE. Barnes/Quickley/Poeltl can attack DET's undersized/replacement center. Both teams' current exact rotation minute shares unverified.",
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-20_01_00PM.pdf",
+          "https://www.detroitbadboys.com/detroit-pistons-game-day/51567/pistons-vs-raptors-preview-2nd-nba-cup-game",
+          "https://www.nba.com/news/emirates-nba-cup-2026-east-group-a-preview"
+        ],
+        "injury_snapshot": [
+          {
+            "team": "TOR",
+            "player": "RJ Barrett",
+            "status": "OUT"
+          },
+          {
+            "team": "TOR",
+            "player": "Kawhi Leonard",
+            "status": "OUT"
+          },
+          {
+            "team": "TOR",
+            "player": "Collin Murray-Boyles",
+            "status": "OUT"
+          },
+          {
+            "team": "DET",
+            "player": "Cade Cunningham",
+            "status": "PROBABLE"
+          },
+          {
+            "team": "DET",
+            "player": "Jalen Duren",
+            "status": "OUT"
+          },
+          {
+            "team": "DET",
+            "player": "Duncan Robinson",
+            "status": "OUT"
+          },
+          {
+            "team": "DET",
+            "player": "Ron Holland II",
+            "status": "DOUBTFUL"
+          }
+        ]
+      },
+      "market": {
+        "market_status": "MARKET_NOT_VERIFIED",
+        "bookmaker": null,
+        "main_full_game_including_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "source_url": null,
+        "utc_captured_at": null,
+        "analyst_direction": null,
+        "qualitative_confidence": null
+      }
+    },
+    {
+      "fixture": "WAS@CHI",
+      "away": "WAS",
+      "home": "CHI",
+      "tipoff_utc": "2026-11-21T01:00:00Z",
+      "nba_cup": {
+        "is_cup": true,
+        "stage": "GROUP_PLAY",
+        "group": "East C"
+      },
+      "frozen_model_c": {
+        "predicted_winner": "CHI",
+        "winner_probability": 0.6439191551133047,
+        "home_win_probability": 0.6439191551133047,
+        "expected_home_minus_away_margin": 4.603384849202701,
+        "expected_full_game_ot_included_total": 239.62157197804024
+      },
+      "first_independent_analyst": {
+        "initial_lean": null,
+        "initial_confidence": "LOW",
+        "initial_question": "Will Chicago's fastest-pace offensive transition overwhelm Washington's halfcourt defense, or can Washington's Dybantsa creation and foul drawing exploit Chicago's broken point-of-attack?",
+        "source_first_view_file": "published/forecast_locks/2026-11-20-pre-model-independent-analyst-first-view-v1.json"
+      },
+      "final_analyst": {
+        "lean": null,
+        "confidence": "LOW",
+        "model_vs_initial": "INITIAL_ABSTAIN",
+        "changed_from_initial": false,
+        "reviewed_at_utc": "2026-11-20T19:41:08.085Z",
+        "basketball_mechanism": "Retain independent first-view abstention: Model C favors Chicago 64.39% off team averages, but game-specific battle between Bulls high tempo and Washington halfcourt attacking has symmetric pathways and unreliable wing/center availability. Washington beat Bulls earlier and cannot be ignored.",
+        "pretip_counterargument": "Chicago home and transition pressure may beat a weak Wizards defensive shell; AJ Dybantsa and Washington's free throw pressure may instead punish Bulls. No pretip independent extra factor strong enough to choose winner.",
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-20_01_00PM.pdf",
+          "https://hoopsgraph.com/games/0022600047",
+          "https://puttingupnumbers.com/nba/games/2026-11-20/was-at-chi/"
+        ],
+        "injury_snapshot": [
+          {
+            "team": "CHI",
+            "player": "Caleb Wilson",
+            "status": "OUT"
+          },
+          {
+            "team": "WAS",
+            "player": "Justin Champagnie",
+            "status": "OUT"
+          },
+          {
+            "team": "WAS",
+            "player": "Tristan Vukcevic",
+            "status": "OUT"
+          }
+        ]
+      },
+      "market": {
+        "market_status": "MARKET_NOT_VERIFIED",
+        "bookmaker": null,
+        "main_full_game_including_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "source_url": null,
+        "utc_captured_at": null,
+        "analyst_direction": null,
+        "qualitative_confidence": null
+      }
+    },
+    {
+      "fixture": "NOP@OKC",
+      "away": "NOP",
+      "home": "OKC",
+      "tipoff_utc": "2026-11-21T01:00:00Z",
+      "nba_cup": {
+        "is_cup": true,
+        "stage": "GROUP_PLAY",
+        "group": "West B"
+      },
+      "frozen_model_c": {
+        "predicted_winner": "OKC",
+        "winner_probability": 0.844845915182907,
+        "home_win_probability": 0.844845915182907,
+        "expected_home_minus_away_margin": 13.169002893838268,
+        "expected_full_game_ot_included_total": 229.16787776415597
+      },
+      "first_independent_analyst": {
+        "initial_lean": "OKC",
+        "initial_confidence": "LOW",
+        "initial_question": "With Holmgren, Jalen Williams, and Cason Wallace OUT, can SGA/Hartenstein control Zion's rim force without needing all their normal weakside defensive coverage?",
+        "source_first_view_file": "published/forecast_locks/2026-11-20-pre-model-independent-analyst-first-view-v1.json"
+      },
+      "final_analyst": {
+        "lean": "OKC",
+        "confidence": "LOW",
+        "model_vs_initial": "AGREES",
+        "changed_from_initial": false,
+        "reviewed_at_utc": "2026-11-20T19:41:08.085Z",
+        "basketball_mechanism": "SGA shot creation and Hartenstein's rim / short-roll support allow OKC to crowd Zion; NOP Murphy QUESTIONABLE and Dejounte OUT weaken perimeter punishment of compact help.",
+        "pretip_counterargument": "OKC Chet, Jalen Williams, Cason Wallace OUT, Caruso Q; missing defensive roles are major, Zion/Missi can force team fouls, Murphy may play. Model's 84.48% is baseline not independent high-confidence analyst probability.",
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-20_01_00PM.pdf",
+          "https://www.nba.com/pelicans/news/nba-cup-group-stage-preview-pelicans-at-thunder-11-20-2026",
+          "https://www.nba.com/pelicans/news/pelicans-vs-thunder-injury-report-game-preview-11-20-2026"
+        ],
+        "injury_snapshot": [
+          {
+            "team": "NOP",
+            "player": "Trey Murphy III",
+            "status": "QUESTIONABLE"
+          },
+          {
+            "team": "NOP",
+            "player": "Dejounte Murray",
+            "status": "OUT"
+          },
+          {
+            "team": "NOP",
+            "player": "Bennedict Mathurin",
+            "status": "OUT"
+          },
+          {
+            "team": "OKC",
+            "player": "Chet Holmgren",
+            "status": "OUT"
+          },
+          {
+            "team": "OKC",
+            "player": "Jalen Williams",
+            "status": "OUT"
+          },
+          {
+            "team": "OKC",
+            "player": "Cason Wallace",
+            "status": "OUT"
+          },
+          {
+            "team": "OKC",
+            "player": "Alex Caruso",
+            "status": "QUESTIONABLE"
+          }
+        ]
+      },
+      "market": {
+        "market_status": "MARKET_NOT_VERIFIED",
+        "bookmaker": null,
+        "main_full_game_including_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "source_url": null,
+        "utc_captured_at": null,
+        "analyst_direction": null,
+        "qualitative_confidence": null
+      }
+    },
+    {
+      "fixture": "PHX@UTA",
+      "away": "PHX",
+      "home": "UTA",
+      "tipoff_utc": "2026-11-21T02:30:00Z",
+      "nba_cup": {
+        "is_cup": true,
+        "stage": "GROUP_PLAY",
+        "group": "West A"
+      },
+      "frozen_model_c": {
+        "predicted_winner": "PHX",
+        "winner_probability": 0.6233110934538756,
+        "home_win_probability": 0.3766889065461244,
+        "expected_home_minus_away_margin": -3.913444362518999,
+        "expected_full_game_ot_included_total": 229.335408887203
+      },
+      "first_independent_analyst": {
+        "initial_lean": "PHX",
+        "initial_confidence": "MEDIUM",
+        "initial_question": "Can Booker's midrange and Green's drives overcome Utah's healthy young-guard perimeter production while both sides are undersized in the frontcourt?",
+        "source_first_view_file": "published/forecast_locks/2026-11-20-pre-model-independent-analyst-first-view-v1.json"
+      },
+      "final_analyst": {
+        "lean": "PHX",
+        "confidence": "MEDIUM",
+        "model_vs_initial": "AGREES",
+        "changed_from_initial": false,
+        "reviewed_at_utc": "2026-11-20T19:41:08.085Z",
+        "basketball_mechanism": "Booker and Green's ball-screen penetration can pick at Jazz lacking Markkanen, JJJ and Nurkic. Utah can still throw Sensabaugh/Bamba at matchup, but established Suns initiators are stronger.",
+        "pretip_counterargument": "Suns Mark Williams OUT and Utah's defensive rebounding path is real because Phoenix reported last in defensive rebounding %. Jazz beat Lakers recently; not enough to conclude they can repeat shooting but caution necessary.",
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-20_01_00PM.pdf",
+          "https://www.nba.com/jazz/news/preview-utah-jazz-return-home-to-host-phoenix-suns-in-nba-cup-action",
+          "https://www.nba.com/suns/news/11-20-2026-suns-vs-jazz-game-preview"
+        ],
+        "injury_snapshot": [
+          {
+            "team": "UTA",
+            "player": "Lauri Markkanen",
+            "status": "OUT"
+          },
+          {
+            "team": "UTA",
+            "player": "Jaren Jackson Jr.",
+            "status": "OUT"
+          },
+          {
+            "team": "UTA",
+            "player": "Jusuf Nurkic",
+            "status": "OUT"
+          },
+          {
+            "team": "PHX",
+            "player": "Mark Williams",
+            "status": "OUT"
+          }
+        ]
+      },
+      "market": {
+        "market_status": "MARKET_NOT_VERIFIED",
+        "bookmaker": null,
+        "main_full_game_including_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "source_url": null,
+        "utc_captured_at": null,
+        "analyst_direction": null,
+        "qualitative_confidence": null
+      }
+    },
+    {
+      "fixture": "HOU@DEN",
+      "away": "HOU",
+      "home": "DEN",
+      "tipoff_utc": "2026-11-21T03:00:00Z",
+      "nba_cup": {
+        "is_cup": true,
+        "stage": "GROUP_PLAY",
+        "group": "West A"
+      },
+      "frozen_model_c": {
+        "predicted_winner": "HOU",
+        "winner_probability": 0.5658754861951575,
+        "home_win_probability": 0.4341245138048425,
+        "expected_home_minus_away_margin": -2.059523536172305,
+        "expected_full_game_ot_included_total": 230.66971792329835
+      },
+      "first_independent_analyst": {
+        "initial_lean": "DEN",
+        "initial_confidence": "LOW",
+        "initial_question": "Can Houston's exceptional offensive-glass pressure offset Jokic and Murray halfcourt orchestration if Sengun/Adams are unavailable with Capela OUT?",
+        "source_first_view_file": "published/forecast_locks/2026-11-20-pre-model-independent-analyst-first-view-v1.json"
+      },
+      "final_analyst": {
+        "lean": "DEN",
+        "confidence": "LOW",
+        "model_vs_initial": "DISAGREES",
+        "changed_from_initial": false,
+        "reviewed_at_utc": "2026-11-20T19:41:08.085Z",
+        "basketball_mechanism": "Genuine pretip contrarian: Frozen Model C narrowly HOU 56.59%, whereas matchup-specific pre-model thought is DEN because Sengun and Adams QUESTIONABLE plus Capela OUT exposes Jokic post passing and Murray attacks. If both centers play, this view becomes substantially weaker; no numeric probability inserted.",
+        "pretip_counterargument": "Houston leads league offensive rebound production, Denver near-bottom defensive rebound %, and Durant/Amen provide additional shot creation. Even if one center absent, extra Rockets possessions may win a slower game. Sengun/Adams availability is not settled; LOW confidence only.",
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-20_01_00PM.pdf",
+          "https://www.reuters.com/sports/basketball/rockets-face-tough-test-nuggets-with-alperen-senguns-status-uncertain--flm-2026-11-20/",
+          "https://keelstats.com/news/1017/rockets-bring-nbas-top-offensive-rebounding-to-denver-on-friday",
+          "https://www.nba.com/news/starting-5-november-20-2026"
+        ],
+        "injury_snapshot": [
+          {
+            "team": "HOU",
+            "player": "Alperen Sengun",
+            "status": "QUESTIONABLE"
+          },
+          {
+            "team": "HOU",
+            "player": "Steven Adams",
+            "status": "QUESTIONABLE"
+          },
+          {
+            "team": "HOU",
+            "player": "Clint Capela",
+            "status": "OUT"
+          },
+          {
+            "team": "DEN",
+            "player": "Julian Strawther",
+            "status": "OUT"
+          }
+        ]
+      },
+      "market": {
+        "market_status": "MARKET_NOT_VERIFIED",
+        "bookmaker": null,
+        "main_full_game_including_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "source_url": null,
+        "utc_captured_at": null,
+        "analyst_direction": null,
+        "qualitative_confidence": null
+      }
+    },
+    {
+      "fixture": "SAC@LAL",
+      "away": "SAC",
+      "home": "LAL",
+      "tipoff_utc": "2026-11-21T03:00:00Z",
+      "nba_cup": {
+        "is_cup": true,
+        "stage": "GROUP_PLAY",
+        "group": "West C"
+      },
+      "frozen_model_c": {
+        "predicted_winner": "LAL",
+        "winner_probability": 0.8847159873722987,
+        "home_win_probability": 0.8847159873722987,
+        "expected_home_minus_away_margin": 15.835325221794395,
+        "expected_full_game_ot_included_total": 235.35327249401846
+      },
+      "first_independent_analyst": {
+        "initial_lean": "LAL",
+        "initial_confidence": "MEDIUM",
+        "initial_question": "Can Luka consistently collapse Sacramento's point-of-attack defense while defending Sabonis' rebounding passes, and avoid Tuesday's nine turnover collapse?",
+        "source_first_view_file": "published/forecast_locks/2026-11-20-pre-model-independent-analyst-first-view-v1.json"
+      },
+      "final_analyst": {
+        "lean": "LAL",
+        "confidence": "MEDIUM",
+        "model_vs_initial": "AGREES",
+        "changed_from_initial": false,
+        "reviewed_at_utc": "2026-11-20T19:41:08.085Z",
+        "basketball_mechanism": "Luka's high-frequency pick-and-roll against Sacramento guard coverages and earlier 40-point win plus Kings thin backup frontcourt favor LAL; this pre-existed C's large 88.47% and Cup motivation applies to both.",
+        "pretip_counterargument": "Utah exposed LAL turnover dependence and held them to 97; Reaves OUT remains real, and Sabonis offensive glass / Acuff driving and Hunter QUESTIONABLE can narrow expected margin. Avoid treating LAL strong baseline as guaranteed.",
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-20_01_00PM.pdf",
+          "https://www.sportsmole.co.uk/basketball/la-lakers/preview/sacramento-kings-vs-los-angeles-lakers-player-props-injury-report-and-prediction--nba-cup_609365.html",
+          "https://www.silverscreenandroll.com/lakers-game-previews/129215/lakers-vs-kings-discussion-injury-report-how-to-watch-tv-stream-start-time-luka-doncic-austin-reaves"
+        ],
+        "injury_snapshot": [
+          {
+            "team": "SAC",
+            "player": "Maxime Raynaud",
+            "status": "OUT"
+          },
+          {
+            "team": "SAC",
+            "player": "Ben Simmons",
+            "status": "OUT"
+          },
+          {
+            "team": "SAC",
+            "player": "Precious Achiuwa",
+            "status": "DOUBTFUL"
+          },
+          {
+            "team": "SAC",
+            "player": "De'Andre Hunter",
+            "status": "QUESTIONABLE"
+          },
+          {
+            "team": "LAL",
+            "player": "Austin Reaves",
+            "status": "OUT"
+          }
+        ]
+      },
+      "market": {
+        "market_status": "MARKET_NOT_VERIFIED",
+        "bookmaker": null,
+        "main_full_game_including_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "source_url": null,
+        "utc_captured_at": null,
+        "analyst_direction": null,
+        "qualitative_confidence": null
+      }
+    }
+  ]
+}
