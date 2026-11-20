@@ -1,0 +1,374 @@
+{
+  "schema_version": "nba-shadow-postgame-retrospective-v2",
+  "status": "POSTGAME_APPEND_ONLY_SHADOW_NOT_PRODUCTION",
+  "nba_local_date": "2026-11-19",
+  "created_at_utc": "2026-11-20T15:56:57.580Z",
+  "source_locks": {
+    "first_view": {
+      "path": "published/forecast_locks/2026-11-19-pre-model-independent-analyst-first-view.json",
+      "commit": "358853e7b021030567234220c6ebc8e387adfbfd",
+      "at": "2026-11-19T19:09:59.233Z"
+    },
+    "frozen_model": {
+      "path": "published/forecast_locks/2026-11-19-four-games-model-c-frozen-shadow.json",
+      "commit": "52a214a2989727c37120164934880914b2fdee53",
+      "at": "2026-11-19T19:14:57.080Z"
+    },
+    "final_analyst": {
+      "path": "published/forecast_locks/2026-11-19-post-model-independent-analyst-reviewed-shadow.json",
+      "commit": "f0e5a0f0b94098265829396b3b288f4512a43fdf",
+      "at": "2026-11-19T19:16:19.553Z"
+    },
+    "ou_source_audit": {
+      "path": "published/forecast_locks/2026-11-19-pretip-ou-source-audit-unverified.json",
+      "commit": "f179bb75c9a5e28ae0d6c95f3aa48cafd14afbd8",
+      "at": "2026-11-19T19:17:49.825Z"
+    }
+  },
+  "original_frozen_model_sha": "b6efd52df74f540c3bda711cd37a372e1ae7cbdbda134579c4c43bc7ff1eafef",
+  "original_frozen_params_sha": "259b0dcc561c2f0400b04d9b19aba59eef53973ba06075f5db97a73497d1c640",
+  "original_accepted_snapshot_path": "published/accepted_candidates/2026-11-18-accepted-fef5b8784747.json",
+  "original_accepted_snapshot_sha": "fef5b8784747841a24bd15cb80ccd61716753850bad3473dbeb411f2938f6b30",
+  "score_source_audit": {
+    "nba_schedule": "https://www.nba.com/games?date=2026-11-19",
+    "independent_sources": [
+      "https://www.landofbasketball.com/results/2026_2027_nov_scores.htm",
+      "https://www.americanbball.com/games/season/81/2026-27?page=1",
+      "https://www.fleaflicker.com/nba/scores?season=2026"
+    ],
+    "method": "NBA official four game summary pages and indexed NBA team box scores (quarters = 4, all FINAL), independently corroborated with listed final score aggregation. Direct page reopen sometimes cache missed; web-indexed official page snippets and independent sources agreed 4/4. No OCR."
+  },
+  "metrics": {
+    "count": 4,
+    "model_c": {
+      "correct": 3,
+      "accuracy": 0.75,
+      "brier_home_win": 0.14081459819200387,
+      "margin_home_minus_away_mae": 7.602136635769717,
+      "full_game_including_ot_total_mae": 10.986387123770228,
+      "mean_signed_total_error": -2.0960228996386974,
+      "expected_number_winning_picks": 2.827396883813825
+    },
+    "analyst": {
+      "first_picks": 4,
+      "first_correct": 3,
+      "final_picks": 4,
+      "final_correct": 3,
+      "final_abstentions": 0,
+      "final_confidence_bins": {
+        "LOW": {
+          "picked": 3,
+          "correct": 2,
+          "incorrect": 1
+        },
+        "MEDIUM": {
+          "picked": 1,
+          "correct": 1,
+          "incorrect": 0
+        }
+      },
+      "initial_confidence_bins": {
+        "MEDIUM": {
+          "picked": 2,
+          "correct": 2,
+          "incorrect": 0
+        },
+        "LOW": {
+          "picked": 2,
+          "correct": 1,
+          "incorrect": 1
+        }
+      },
+      "contrarian_picks": 0,
+      "confidence_changes": [
+        {
+          "fixture": "GSW@MEM",
+          "from": "MEDIUM",
+          "to": "LOW"
+        }
+      ],
+      "independent_incremental_hit_value_proven": false
+    },
+    "ou": {
+      "graded": "N/A",
+      "verified_market_count": 0,
+      "eligible_pregame_selections": 0,
+      "reason": "No authenticated, timestamped pretip bookmaker main full-game incl. OT same-line O/U decimal odds and analyst direction; only unverified indexed candidates existed."
+    },
+    "cup": 0,
+    "overtime_games": 0
+  },
+  "games": [
+    {
+      "fixture": "GSW@MEM",
+      "nba_game_id": "0022600270",
+      "away": "GSW",
+      "home": "MEM",
+      "tipoff_utc": "2026-11-20T01:00:00Z",
+      "is_nba_cup": false,
+      "final": {
+        "status": "FINAL",
+        "away_score": 98,
+        "home_score": 126,
+        "overtime_periods": 0,
+        "home_minus_away_margin": 28,
+        "full_game_total_including_ot": 224,
+        "winner": "MEM"
+      },
+      "official_result_source": "https://www.nba.com/game/gsw-vs-mem-0022600270",
+      "official_box_source": "https://www.nba.com/warriors/game/0022600270-warriors-vs-grizzlies-memphis-tn-11-19-2026/box-score",
+      "independent_result_source": "https://www.landofbasketball.com/results/2026_2027_nov_scores.htm",
+      "model_c": {
+        "winner": "MEM",
+        "winner_probability": 0.6307588252991394,
+        "home_win_probability": 0.6307588252991394,
+        "expected_home_minus_away_margin": 4.160916357857907,
+        "expected_full_game_total_including_ot": 232.15726285905944,
+        "winner_correct": true,
+        "home_win_brier": 0.13633904509447145,
+        "margin_abs_error": 23.839083642142093,
+        "total_abs_error": 8.157262859059443,
+        "signed_total_actual_minus_expected": -8.157262859059443
+      },
+      "analyst_first": {
+        "winner": "MEM",
+        "confidence": "MEDIUM",
+        "key_question": "Can Memphis punish Golden State's Curry/Butler-less half-court initiation on a second consecutive road night while protecting its own depleted ball handlers?",
+        "pregame_mechanism": "Warriors scored 94 in Dallas without Curry/Butler and had difficulty entering advantages; Memphis's physical defensive possessions and ability to run from disrupted initiations could magnify creator absence. The earlier 111-108 MEM win after a late 17-0 run is opponent-specific evidence of comeback/pressure potential, not automatically repeatable clutch skill.",
+        "pregame_counterargument": "Both squads played Nov18 (back-to-back), and Memphis just conceded 124 to Cleveland and has unsettled guard rotation; if GSW's alternative handlers/Draymond stabilize spacing, the Memphis edge is less assured. Memphis's and GSW's official 12pm injury reports NOT YET SUBMITTED, so game-specific OUT isn't fully certified."
+      },
+      "analyst_final": {
+        "winner": "MEM",
+        "confidence": "LOW",
+        "correct": true,
+        "agreement_with_model": "AGREES",
+        "changed_since_initial": true,
+        "pregame_rationale": "Retain Memphis side based on the *known before model* Warriors' lack of Curry/Butler half-court creation and opponent's documented 17-0 endgame run in first meeting, but lower initial MEDIUM confidence to LOW after model comparison because both teams are on back-to-back and this game's official 12pm GSW/MEM reports NOT YET SUBMITTED. Secondary injury indicators are not an authenticated current NBA sheet.",
+        "pregame_counterargument": "Memphis allowed 124 vs CLE last game, Jerome and Pippen roles unsettled; GSW Podziemski/Melton/Green could create through alternate actions. A single 94-point GSW loss or previous late-run is not a repeatable law."
+      },
+      "ou": {
+        "status": "MARKET_NOT_VERIFIED",
+        "valid_locked_bookmaker_quote": false,
+        "locked_reviewed_direction": null,
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "POR@MIL",
+      "nba_game_id": "0022600271",
+      "away": "POR",
+      "home": "MIL",
+      "tipoff_utc": "2026-11-20T01:00:00Z",
+      "is_nba_cup": false,
+      "final": {
+        "status": "FINAL",
+        "away_score": 124,
+        "home_score": 114,
+        "overtime_periods": 0,
+        "home_minus_away_margin": -10,
+        "full_game_total_including_ot": 238,
+        "winner": "POR"
+      },
+      "official_result_source": "https://www.nba.com/game/por-vs-mil-0022600271",
+      "official_box_source": "https://www.nba.com/blazers/game/0022600271-blazers-vs-bucks-milwaukee-wi-11-19-2026/box-score",
+      "independent_result_source": "https://www.americanbball.com/games/season/81/2026-27?page=1",
+      "model_c": {
+        "winner": "POR",
+        "winner_probability": 0.7756141546273928,
+        "home_win_probability": 0.22438584537260717,
+        "expected_home_minus_away_margin": -9.637702690224483,
+        "expected_full_game_total_including_ot": 228.58908975468236,
+        "winner_correct": true,
+        "home_win_brier": 0.050349007603579576,
+        "margin_abs_error": 0.3622973097755171,
+        "total_abs_error": 9.410910245317638,
+        "signed_total_actual_minus_expected": 9.410910245317638
+      },
+      "analyst_first": {
+        "winner": "POR",
+        "confidence": "LOW",
+        "key_question": "Can Lillard/Jrue control the creation and tempo without Avdija/Camara if the questionable Blazers do not play, against a Bucks defense on the second night of a back-to-back?",
+        "pregame_mechanism": "Milwaukee lost 137-130 to Miami yesterday, with documented fragile point-of-attack defense; Portland can run high ball screens through Lillard, use Holiday as secondary organizer, and attempt to leverage Milwaukee transition/guard breakdowns. A game on rest advantage versus MIL's back-to-back favors executing set offense but must be conditional on current creators.",
+        "pregame_counterargument": "Deni Avdija and Toumani Camara both QUESTIONABLE, with Sharpe, Ja Morant, Robert Williams III OUT; their absence could erase Portland's advantage in driving, wing defense and boards. Bucks injury submission not yet filed in official noon ET report; do not invent absence status."
+      },
+      "analyst_final": {
+        "winner": "POR",
+        "confidence": "LOW",
+        "correct": true,
+        "agreement_with_model": "AGREES",
+        "changed_since_initial": false,
+        "pregame_rationale": "Portland Lillard/Holiday creation against Milwaukee's fragile guard shell and Bucks back-to-back supports away choice, but this is not independent evidence strong enough to match Model C's 77.56% confidence. Avdija and Camara both QUESTIONABLE and the exact availability of POR creators/wing defenders is a genuine fork.",
+        "pregame_counterargument": "If Avdija and Camara sit, Portland primary creation and guard/wing defense lose capacity; Bucks fresh players could exploit. MIL team noon official report NOT YET SUBMITTED despite day-after game, plus later secondary Rollins OUT unconfirmed at noon."
+      },
+      "ou": {
+        "status": "MARKET_NOT_VERIFIED",
+        "valid_locked_bookmaker_quote": false,
+        "locked_reviewed_direction": null,
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "NYK@MIN",
+      "nba_game_id": "0022600272",
+      "away": "NYK",
+      "home": "MIN",
+      "tipoff_utc": "2026-11-20T01:00:00Z",
+      "is_nba_cup": false,
+      "final": {
+        "status": "FINAL",
+        "away_score": 102,
+        "home_score": 99,
+        "overtime_periods": 0,
+        "home_minus_away_margin": -3,
+        "full_game_total_including_ot": 201,
+        "winner": "NYK"
+      },
+      "official_result_source": "https://www.nba.com/game/nyk-vs-min-0022600272",
+      "official_box_source": "https://www.nba.com/knicks/game/0022600272-knicks-vs-timberwolves-minneapolis-mn-11-19-2026",
+      "independent_result_source": "https://www.fleaflicker.com/nba/scores?season=2026",
+      "model_c": {
+        "winner": "MIN",
+        "winner_probability": 0.5899455932089646,
+        "home_win_probability": 0.5899455932089646,
+        "expected_home_minus_away_margin": 2.8264582558569877,
+        "expected_full_game_total_including_ot": 219.0075571877584,
+        "winner_correct": false,
+        "home_win_brier": 0.3480358029466771,
+        "margin_abs_error": 5.826458255856988,
+        "total_abs_error": 18.007557187758408,
+        "signed_total_actual_minus_expected": -18.007557187758408
+      },
+      "analyst_first": {
+        "winner": "MIN",
+        "confidence": "LOW",
+        "key_question": "Does Minnesota's Gobert-led rim shell and Minnesota wing-point defense contain Brunson/Towns two-man actions despite Anthony Edwards being OUT?",
+        "pregame_mechanism": "Wolves have performed 8-3 without Edwards according to current official NBA matchup preview, using Gobert as defensive anchor. Knicks' Brunson/Towns are strong shot creators but can be made to take more perimeter shots if Minnesota's guards stay attached; Wolves home defensive consistency is an opponent-specific case rather than bare record alone.",
+        "pregame_counterargument": "Towns (former MIN center) can pull Gobert away from the rim and Brunson controls late-clock decisions; Minnesota also misses DiVincenzo/Jaylen Clark and can be vulnerable at point-of-attack without Edwards. NYK injury report hadn't appeared in noon official edition."
+      },
+      "analyst_final": {
+        "winner": "MIN",
+        "confidence": "LOW",
+        "correct": false,
+        "agreement_with_model": "AGREES",
+        "changed_since_initial": false,
+        "pregame_rationale": "Gobert-protected paint and Wolves' demonstrated competent structure without Edwards gives a viable home defensive route against Brunson/Towns late-clock creation; model's narrow MIN 58.99% is consistent but not used to invent a higher qualitative certainty.",
+        "pregame_counterargument": "Towns' perimeter spacing can drag Gobert from the rim; Brunson's pick-and-roll scoring and Minnesota's missing Edwards/DiVincenzo make a Knicks away win very plausible."
+      },
+      "ou": {
+        "status": "MARKET_NOT_VERIFIED",
+        "valid_locked_bookmaker_quote": false,
+        "locked_reviewed_direction": null,
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "LAC@SAS",
+      "nba_game_id": "0022600273",
+      "away": "LAC",
+      "home": "SAS",
+      "tipoff_utc": "2026-11-20T01:00:00Z",
+      "is_nba_cup": false,
+      "final": {
+        "status": "FINAL",
+        "away_score": 112,
+        "home_score": 124,
+        "overtime_periods": 0,
+        "home_minus_away_margin": 12,
+        "full_game_total_including_ot": 236,
+        "winner": "SAS"
+      },
+      "official_result_source": "https://www.nba.com/game/lac-vs-sas-0022600273",
+      "official_box_source": "https://www.nba.com/spurs/game/0022600273-clippers-vs-spurs-san-antonio-tx-11-19-2026/box-score",
+      "independent_result_source": "https://www.landofbasketball.com/results/2026_2027_nov_scores.htm",
+      "model_c": {
+        "winner": "SAS",
+        "winner_probability": 0.8310783106783284,
+        "home_win_probability": 0.8310783106783284,
+        "expected_home_minus_away_margin": 12.380707335304269,
+        "expected_full_game_total_including_ot": 227.63018179705458,
+        "winner_correct": true,
+        "home_win_brier": 0.028534537123287348,
+        "margin_abs_error": 0.3807073353042689,
+        "total_abs_error": 8.369818202945424,
+        "signed_total_actual_minus_expected": 8.369818202945424
+      },
+      "analyst_first": {
+        "winner": "SAS",
+        "confidence": "MEDIUM",
+        "key_question": "Can Wembanyama's rim deterrence and Spurs' Fox/Castle attacking spacing overwhelm Clippers' Garland/Lopez high pick-and-roll without Beal/Ingram wing shot creation?",
+        "pregame_mechanism": "Wembanyama's paint protection creates poor finishing routes for Clippers who have lost both Beal and Ingram. Spurs Fox/Castle/Vassell can place Garland in screen actions. Clippers are winless on road in five attempts and Utah recently scored 132 vs their defense; those samples corroborate but do not prove matchup mechanism.",
+        "pregame_counterargument": "Brook Lopez can space to three-point range and pull Wembanyama away from the rim, while Garland's navigation and Rui Hachimura screening could create genuine pressure. Spurs Dylan Harper OUT after hip issue and Tobias Harris OUT; don't assume SAS intact backcourt."
+      },
+      "analyst_final": {
+        "winner": "SAS",
+        "confidence": "MEDIUM",
+        "correct": true,
+        "agreement_with_model": "AGREES",
+        "changed_since_initial": false,
+        "pregame_rationale": "Wembanyama paint defense plus Fox/Castle spacing creates targeted matchups vs Clippers's Lopez/Garland; Beal and Ingram confirmed OUT by explicit official team rows. Spurs have wide variety of available creators despite Harper OUT. This was a genuine pre-model edge before C's 83.11% figure.",
+        "pregame_counterargument": "Brook Lopez' three-point shooting can pull Wembanyama from paint and Darius Garland can exploit switching; Spurs Harper and Harris OUT reduce depth. High model probability doesn't translate into HIGH analyst confidence by itself."
+      },
+      "ou": {
+        "status": "MARKET_NOT_VERIFIED",
+        "valid_locked_bookmaker_quote": false,
+        "locked_reviewed_direction": null,
+        "grade": "N/A"
+      }
+    }
+  ],
+  "matchup_research": [
+    {
+      "fixture": "GSW@MEM",
+      "pregame_hypothesis": "GSW Curry/Butler absent in secondary preview; half-court creation difficult on road back-to-back, though same-day noon official GSW/MEM injury report NOT YET SUBMITTED. First-view MEM MEDIUM, final MEM LOW after uncertainty review.",
+      "result": "Memphis 126-98; margin +28 instead of predicted +4.16. Warriors 5/29 (17.2%) three-pointers vs Memphis 15/35 (42.9%). Warriors had 20 assists vs Memphis 34. Final score total 224 vs frozen 232.16.",
+      "mechanism_test": "Shots, ball movement and scoring align directionally with a depleted Warriors offense, but shooting variance, fatigue, rotational roles and direct Curry effect cannot be causally isolated. An unexpectedly large win is a margin-model miss, not a loss on winner selection.",
+      "counter_evidence": "Warriors center Charles Bassey posted 16 points and 13 rebounds, showing some functional role substitution. Memphis's +30 three-point margin alone explains a large portion of realized separation without establishing the pregame expected gap.",
+      "urls": [
+        "https://www.nba.com/warriors/news/gameday-recap-20261119",
+        "https://www.nba.com/warriors/game/0022600270-warriors-vs-grizzlies-memphis-tn-11-19-2026/box-score"
+      ]
+    },
+    {
+      "fixture": "NYK@MIN",
+      "pregame_hypothesis": "MIN LOW by both Model C and analyst, relying on Gobert rim shell despite missing Edwards; explicit counterargument warned Towns can move Gobert out and Brunson can produce late offense.",
+      "result": "Knicks 102-99; Towns 22 points/12 rebounds, 17 in first half; Brunson 21 points/7 assists. NYK surrendered much of a 19-point lead, scored none in final 3:26, still won when Minnesota missed late shots. Actual total 201 vs model 219.01.",
+      "mechanism_test": "Knicks Towns production fits pretip *counterargument*, but a 3-point margin and Minnesota closing misses do not prove a general matchup mismatch or that Towns' spacing uniquely caused the outcome.",
+      "counter_evidence": "Minnesota cut a 19-point deficit despite core absences; Knicks went scoreless final 3:26, so offense was not dominant throughout. Intrinsic shooting variance matters to low-total miss.",
+      "urls": [
+        "https://www.nba.com/game/nyk-vs-min-0022600272",
+        "https://www.cbsnews.com/minnesota/news/knicks-timberwolves-karl-anthony-towns-nov-19-2026/"
+      ]
+    },
+    {
+      "fixture": "POR@MIL",
+      "pregame_hypothesis": "POR LOW with Lillard/Holiday guard action versus MIL point-of-attack defense; Avdija/Camara QUESTIONABLE created major conditional threat.",
+      "result": "Portland 124-114, expected away margin +9.64 vs actual +10. Damian Lillard 33, Jrue Holiday 22, Scoot Henderson 27; Camara 18 and played; Avdija DND with left-foot issue.",
+      "mechanism_test": "Experienced guard creation and secondary replacement scoring (Henderson) were decisive observed mechanisms, and margin match was exceptionally close. Specific Avdija absence partly materialized while Camara played; do not rewrite original QUESTIONABLE as known OUT/IN.",
+      "counter_evidence": "20 lead changes/8 ties, so the +10 final wasn't a uniformly one-sided 10-point advantage.",
+      "urls": [
+        "https://www.nba.com/game/por-vs-mil-0022600271",
+        "https://www.nba.com/blazers/game/0022600271-blazers-vs-bucks-milwaukee-wi-11-19-2026/box-score"
+      ]
+    },
+    {
+      "fixture": "LAC@SAS",
+      "pregame_hypothesis": "SAS MEDIUM with Wembanyama paint deterrence and Fox/Castle creation vs LAC Lopez/Garland actions and Beal/Ingram OUT; explicit counterargument noted Lopez pulling Wembanyama from paint via 3s.",
+      "result": "Spurs 124-112; model home margin +12.38 vs actual +12. Wembanyama 32/11, Castle 21 points and 12 assists. Lopez 23 points, 5/7 three-pointers; Garland also 23. LAC 17/42 3P.",
+      "mechanism_test": "Wembanyama/Castle roles strongly observable; counterargument Lopez' perimeter shooting also *actually occurred*. Two-sided pretip mechanism means correct selection while opposition's viable route showed up. Not all points caused by Wembanyama defense.",
+      "counter_evidence": "17 made Clippers threes show that opponent spacing was productive; Spurs still had sufficient creation and coverage to win.",
+      "urls": [
+        "https://www.nba.com/game/lac-vs-sas-0022600273",
+        "https://www.nba.com/game/lac-vs-sas-0022600273/blueprint"
+      ]
+    }
+  ],
+  "audit_notes": [
+    "All original pretip records read BEFORE postgame outcomes searched and scored. All pretip timestamps preceded the four 2026-11-20T01:00Z tipoffs.",
+    "Original independent initial lean and final lean all agree with frozen model winners; therefore 3/4 analyst correct does not demonstrate incremental predictive accuracy.",
+    "Memphis initial confidence MEDIUM was changed to LOW in timestamped, separate pretip final review; grade final LOW only, keep initial MEDIUM intact.",
+    "Source provenance: GSW/MEM noon official reports NOT YET SUBMITTED when first analyst lock was made, even though subsequent box evidence confirms absence; don't convert later knowledge into earlier confirmed reports.",
+    "POR Camara played and Avdija did not, but before tip both remained QUESTIONABLE in the locked first-view. Correct choice does not justify claiming either status was known beforehand.",
+    "O/U indexed source candidates were not official locked quotes or selections; 0/4 eligible. No late odds retrospectively inserted.",
+    "Four-game 3/4 with Brier 0.1408 does not establish calibration, model parameter structural weakness, or independent analyst gain; no coefficients fitted or production pointer changed."
+  ]
+}
