@@ -17,6 +17,9 @@ import re
 import subprocess
 import sys
 import tempfile
+import time
+import ssl
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -25,6 +28,8 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import static_snapshot as snapshot
+sys.path.insert(0, str(ROOT / "tools"))
+import independent_coverage_probe as resilient
 
 BOX = "https://boxscorelab.com/downloads/"
 STANDINGS = BOX + "2026-27-team-standings.csv"
@@ -41,14 +46,26 @@ def acquire(url, *, limit=3_000_000):
         "User-Agent": "NBA-Match-Intelligence-Independent-Task08-Check/1.0",
         "Accept": "*/*",
     })
-    with urllib.request.urlopen(req, timeout=40) as response:
-        code = response.status
-        raw = response.read(limit + 1)
-        if code != 200:
-            raise ValueError("Upstream HTTP %s from %s" % (code, url))
-        if not raw or len(raw) > limit:
-            raise ValueError("Empty or oversized upstream response: " + url)
-        return raw, code
+    # The same bounded transport retry policy as the independent ESPN audit.
+    # Do NOT retry malformed content and do NOT create any receipt until valid.
+    for attempt in range(resilient.MAX_ACQUISITION_ATTEMPTS):
+        try:
+            with urllib.request.urlopen(req, timeout=40) as response:
+                code = response.status
+                raw = response.read(limit + 1)
+                if code != 200:
+                    raise ValueError("Upstream HTTP %s from %s" % (code, url))
+                if not raw or len(raw) > limit:
+                    raise ValueError("Empty or oversized upstream response: " + url)
+                return raw, code
+        except (urllib.error.URLError, ConnectionError, TimeoutError, ssl.SSLError) as exc:
+            if not resilient._transient_transport_error(exc) or attempt == resilient.MAX_ACQUISITION_ATTEMPTS-1:
+                raise
+            delay=min(8.0,2.0**attempt)
+            print("Transient raw-source transport error; retry %d/%d in %.1fs (%s)" %
+                  (attempt+2,resilient.MAX_ACQUISITION_ATTEMPTS,delay,type(exc).__name__),flush=True)
+            time.sleep(delay)
+    raise AssertionError("Unreachable raw acquisition retry path")
 
 
 def capture():
