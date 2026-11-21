@@ -1,0 +1,256 @@
+{
+  "schema_version": "nba-analyst-independent-first-view-v1",
+  "status": "IMMUTABLE_BEFORE_MODEL_PRETIP_SHADOW_FIRST_VIEW",
+  "nba_local_date": "2026-11-21",
+  "created_at_utc": "2026-11-21T18:17:08.901Z",
+  "nba_fixture_count": 6,
+  "pregame_eligible_count": 5,
+  "already_started_excluded": [
+    {
+      "fixture": "MIL@PHI",
+      "tipoff_utc": "2026-11-21T18:00:00Z",
+      "exclusion": "Started at 21:00 TSİ before analysis, never issue a pregame prediction now."
+    }
+  ],
+  "all_eligible_games_cup": false,
+  "cup_source": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced",
+  "fixture_source": "https://www.nba.com/games?date=2026-11-21",
+  "injury_report_official_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-21_12_30PM.pdf",
+  "injury_report_edition": "2026-11-21 12:30 ET",
+  "injury_pdf_qa": "Official text extracted; PDF screenshot tool cache missed. Row continuation clearly labeled NYK; MEM page continuation team row ambiguous, labelled SOURCE_PDF_CONTINUATION_VERIFY_TEAM and not promoted to fully verified personal status. NOP NOT YET SUBMITTED is unknown not healthy.",
+  "no_model_c_probabilities_margins_or_totals_consulted": true,
+  "no_market_used_for_selection": true,
+  "initial_analyst_policy": "Matchup-specific current injury roles, shot creation, defensive matchup and rest plus counterargument. No analyst percentages or fake Model C outputs. Uncertainty/abstention is legitimate.",
+  "games": [
+    {
+      "fixture": "POR@NYK",
+      "away": "POR",
+      "home": "NYK",
+      "tipoff_utc": "2026-11-22T00:30:00Z",
+      "is_nba_cup": false,
+      "cup_stage": "NONE",
+      "cup_group": null,
+      "initial_analyst_lean": null,
+      "qualitative_confidence": "LOW",
+      "pregame_key_question": "Can Brunson create enough high-quality late-clock offense without a healthy Towns and OG Anunoby against Portland's Lillard/Scoot shotmaking?",
+      "pregame_mechanism": "New York held Minnesota to 99 and won 102–99, showing halfcourt defense and Brunson control. Portland Lillard 33, Scoot Henderson 27, Holiday 22 in the Milwaukee win, providing real independent initiation if Avdija sits. New York Towns QUESTIONABLE illness, Anunoby DOUBTFUL calf; Portland Avdija QUESTIONABLE foot. The alternating missing-creator and wing-defense cases create an honest pretip abstention.",
+      "opposing_evidence": "Knicks home and Brunson's late-game actions can target POR weak perimeter coverage, but if Towns and OG are limited while Avdija returns Portland has several ways to reverse the matchup. Portland is also on a long road stretch, not fresh.",
+      "injury_statuses": [
+        {
+          "team": "POR",
+          "player": "Deni Avdija",
+          "status": "QUESTIONABLE"
+        },
+        {
+          "team": "POR",
+          "player": "Ja Morant",
+          "status": "OUT"
+        },
+        {
+          "team": "POR",
+          "player": "Shaedon Sharpe",
+          "status": "OUT"
+        },
+        {
+          "team": "NYK",
+          "player": "Karl-Anthony Towns",
+          "status": "QUESTIONABLE"
+        },
+        {
+          "team": "NYK",
+          "player": "OG Anunoby",
+          "status": "DOUBTFUL"
+        },
+        {
+          "team": "NYK",
+          "player": "Jordan Clarkson",
+          "status": "OUT"
+        }
+      ],
+      "source_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-21_12_30PM.pdf",
+        "https://www.nba.com/game/nyk-vs-por-0022600275",
+        "https://www.blazersedge.com/trail-blazers-injury-report/118709/portland-trail-blazers-deni-avdija-injury-report-new-york-knicks-nba-news-robert-williams-ja-morant"
+      ]
+    },
+    {
+      "fixture": "LAC@DAL",
+      "away": "LAC",
+      "home": "DAL",
+      "tipoff_utc": "2026-11-22T01:00:00Z",
+      "is_nba_cup": false,
+      "cup_stage": "NONE",
+      "cup_group": null,
+      "initial_analyst_lean": "DAL",
+      "qualitative_confidence": "MEDIUM",
+      "pregame_key_question": "Can Cooper Flagg and Kyrie Irving attack Garland's pick-and-roll defense enough to win even with Lively out against a Clippers team without Ingram and Beal?",
+      "pregame_mechanism": "Dallas Flagg delivered 33 and team won 116–94 over a depleted Warriors squad, breaking a three-game slide; Mavericks 6–2 at home entering game. Clippers 4–10 and have zero road wins in current preview; Garland and Brook Lopez scored 23 each against Spurs but Brandon Ingram and Bradley Beal OUT undermine creation depth. DAL Flagg/Irving secondary penetration plus defensive help opportunities is opponent-specific edge, not just records.",
+      "opposing_evidence": "Clippers Garland/Lopez 2-man game can exploit the absent Lively rim defense, and P.J. Washington QUESTIONABLE reduces DAL weak-side rebounding/defense. GSW without Curry/Butler may overstate how good Dallas's last win was.",
+      "injury_statuses": [
+        {
+          "team": "LAC",
+          "player": "Brandon Ingram",
+          "status": "OUT"
+        },
+        {
+          "team": "LAC",
+          "player": "Bradley Beal",
+          "status": "OUT"
+        },
+        {
+          "team": "LAC",
+          "player": "Jordan Miller",
+          "status": "OUT"
+        },
+        {
+          "team": "DAL",
+          "player": "Dereck Lively II",
+          "status": "OUT"
+        },
+        {
+          "team": "DAL",
+          "player": "P.J. Washington",
+          "status": "QUESTIONABLE"
+        },
+        {
+          "team": "DAL",
+          "player": "Walter Clayton Jr.",
+          "status": "QUESTIONABLE"
+        }
+      ],
+      "source_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-21_12_30PM.pdf",
+        "https://www.nba.com/game/lac-vs-dal-0022600276",
+        "https://startin5.app/en/compare/clippers-vs-mavericks"
+      ]
+    },
+    {
+      "fixture": "MEM@MIN",
+      "away": "MEM",
+      "home": "MIN",
+      "tipoff_utc": "2026-11-22T01:00:00Z",
+      "is_nba_cup": false,
+      "cup_stage": "NONE",
+      "cup_group": null,
+      "initial_analyst_lean": "MEM",
+      "qualitative_confidence": "LOW",
+      "pregame_key_question": "Does Memphis's recent high-volume ball-movement and transition offense hold up against Minnesota's elite Gobert-led halfcourt defense without Edwards and DiVincenzo?",
+      "pregame_mechanism": "Memphis has scored 136 at WAS, 124 at CLE and 126 vs GSW across recent matches; its 15/35 threes vs GSW may not repeat but Coward/wing initiation shows multiple outlets. Grizzlies had won eight straight road games according to current preview. Minnesota, without Edwards and DiVincenzo, scored only 99 vs NYK and relies on Gobert shell and LaMelo/Ayo for creation. Lean toward MEM perimeter creation despite Minnesota rim protection.",
+      "opposing_evidence": "Minnesota defensive efficiency is elite and can force inefficient midrange possessions; 15 threes against depleted GSW isn't sustainable proof. Memphis Boozer/Grant/Pippen out, Jerome PROBABLE; one wounded roster attacking one of the best rim protections. A tight low-confidence side, not strong lock.",
+      "injury_statuses": [
+        {
+          "team": "MEM",
+          "player": "Cameron Boozer",
+          "status": "OUT"
+        },
+        {
+          "team": "MEM",
+          "player": "Jerami Grant",
+          "status": "OUT_SOURCE_PDF_CONTINUATION_VERIFY_TEAM"
+        },
+        {
+          "team": "MEM",
+          "player": "Scotty Pippen Jr.",
+          "status": "OUT_SOURCE_PDF_CONTINUATION_VERIFY_TEAM"
+        },
+        {
+          "team": "MEM",
+          "player": "Ty Jerome",
+          "status": "PROBABLE_SOURCE_PDF_CONTINUATION_VERIFY_TEAM"
+        },
+        {
+          "team": "MIN",
+          "player": "Anthony Edwards",
+          "status": "OUT"
+        },
+        {
+          "team": "MIN",
+          "player": "Donte DiVincenzo",
+          "status": "OUT"
+        },
+        {
+          "team": "MIN",
+          "player": "Jaylen Clark",
+          "status": "OUT"
+        }
+      ],
+      "source_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-21_12_30PM.pdf",
+        "https://www.nba.com/warriors/news/gameday-recap-20261119",
+        "https://www.herememphis.com/2026/11/21/memphis-grizzlies-timberwolves-preview-boozer-out/"
+      ]
+    },
+    {
+      "fixture": "NOP@SAS",
+      "away": "NOP",
+      "home": "SAS",
+      "tipoff_utc": "2026-11-22T01:00:00Z",
+      "is_nba_cup": false,
+      "cup_stage": "NONE",
+      "cup_group": null,
+      "initial_analyst_lean": "SAS",
+      "qualitative_confidence": "MEDIUM",
+      "pregame_key_question": "Can Wembanyama deter Zion's rim finishing while Fox/Castle consistently pull New Orleans help defenders out of position?",
+      "pregame_mechanism": "Wembanyama just scored 32/11 vs Clippers in 124–112 Spurs win with Castle 21/12 assists; Wembanyama's length can challenge Zion at the rim without gambling. NOP scored 120 at OKC but gave up 126 even when OKC had core defenders OUT. Spurs can stress that backline with Fox/Castle drives and Wemby interior/handoff gravity; NO is on second night of back-to-back whereas Spurs last played Thursday. Strong matchup advantage was identified before C.",
+      "opposing_evidence": "Zion's power and Yves Missi offensive boards can produce fouls, and New Orleans scored 120 at OKC. The official NOP game-specific report NOT YET SUBMITTED as of 12:30 ET, so Murphy/Murray availability cannot be asserted from last night's report. SAS Harper/Harris OUT.",
+      "injury_statuses": [
+        {
+          "team": "NOP",
+          "player": "TEAM",
+          "status": "NOT_YET_SUBMITTED_OFFICIAL_NOON_ET"
+        },
+        {
+          "team": "SAS",
+          "player": "Dylan Harper",
+          "status": "OUT"
+        },
+        {
+          "team": "SAS",
+          "player": "Tobias Harris",
+          "status": "OUT"
+        }
+      ],
+      "source_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-21_12_30PM.pdf",
+        "https://www.nba.com/game/nop-vs-okc-0022600048",
+        "https://www.sportsmole.co.uk/basketball/san-antonio-spurs/preview/new-orleans-pelicans-vs-san-antonio-spurs-player-props-injury-report-and-prediction--nba_609550.html"
+      ]
+    },
+    {
+      "fixture": "BOS@SAC",
+      "away": "BOS",
+      "home": "SAC",
+      "tipoff_utc": "2026-11-22T03:00:00Z",
+      "is_nba_cup": false,
+      "cup_stage": "NONE",
+      "cup_group": null,
+      "initial_analyst_lean": "BOS",
+      "qualitative_confidence": "LOW",
+      "pregame_key_question": "Can Boston's Paul George-led wing shotmaking and defense outlast Sabonis/Hunter's offensive rebounding if Tatum and White are rested or limited?",
+      "pregame_mechanism": "Kings are 1–14 but pushed Lakers to a 104–106 finish with Hunter 30 and Sabonis 19/16, showing viable two-creator offense. Boston 11–4 and can rely on Paul George wing creation, Queta rim support and scheme defense; Celtics are motivated to arrest a two-game skid but motivation is not a numeric input. On relative opponent talent Boston should still have more stable defense, but current availability is a major conditional.",
+      "opposing_evidence": "Tatum QUESTIONABLE rest, White QUESTIONABLE shoulder: if both out, Boston offensive creation can stall while Hunter and Sabonis pressure the glass. Sacramento is not helpless as Lakers near-upset shows. Kings report only Jayden Quaintance OUT in 12:30 ET edition.",
+      "injury_statuses": [
+        {
+          "team": "BOS",
+          "player": "Jayson Tatum",
+          "status": "QUESTIONABLE"
+        },
+        {
+          "team": "BOS",
+          "player": "Derrick White",
+          "status": "QUESTIONABLE"
+        },
+        {
+          "team": "SAC",
+          "player": "Jayden Quaintance",
+          "status": "OUT"
+        }
+      ],
+      "source_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-21_12_30PM.pdf",
+        "https://www.reuters.com/sports/basketball/rested-celtics-intent-halting-brief-skid-clash-vs-kings--flm-2026-11-21/",
+        "https://www.celticsblog.com/boston-celtics-news/150715/celtics-injury-report-sacramento-kings-jayson-tatum-derrick-white"
+      ]
+    }
+  ]
+}
