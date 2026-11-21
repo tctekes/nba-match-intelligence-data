@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - "research/build_legacy_replay.py"
+      - "research/evaluate_challengers.py"
       - ".github/workflows/challenger-research.yml"
   workflow_dispatch:
 permissions:
@@ -22,13 +23,17 @@ jobs:
           python-version: "3.12"
       - name: Reconstruct historical accepted games using original eight-field exclusion policy
         run: python -B research/build_legacy_replay.py
-      - name: Publish research-only input artifact (never data candidate)
+      - name: Install research-only linear algebra dependency
+        run: python -m pip install "numpy>=2.0,<3"
+      - name: Evaluate development-selected challengers on untouched holdout
+        run: python -B research/evaluate_challengers.py
+      - name: Publish isolated research dataset and audit report (never data candidate)
         run: |
           git config user.name "NBA MI research audit"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/datasets/historical_accepted_games_2023_2026.json
+          git add research/datasets/historical_accepted_games_2023_2026.json research/reports/form_challenger_v1.json research/reports/form_challenger_v1.md
           if ! git diff --cached --quiet; then
-            git commit -m "research: validated historical chronological replay dataset"
+            git commit -m "research: validated historical replay with isolated no-prior holdout comparison"
             git fetch origin main
             git rebase origin/main
             git push origin HEAD:main
