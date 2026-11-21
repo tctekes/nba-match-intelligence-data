@@ -65,6 +65,7 @@ jobs:
           python -B -m unittest -v test_static_snapshot
           python -B -m unittest -v test_accepted_candidate
           python -B -m unittest -v test_multi_source_recovery
+          python -B -m unittest -v test_transient_fetch
       - name: Validate complete NBA scores and all independent box fields, then exclude full disputed games
         if: steps.freshness.outputs.refresh == 'true'
         run: python -B tools/task08/build_accepted_candidate.py
