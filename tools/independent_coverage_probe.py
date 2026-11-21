@@ -14,7 +14,11 @@ import io
 import json
 import math
 import os
+import socket
+import ssl
+import time
 from pathlib import Path
+import urllib.error
 import urllib.parse
 import urllib.request
 from zoneinfo import ZoneInfo
@@ -32,12 +36,44 @@ def canonical(value):
     return ALIASES.get(v, v)
 
 
+# All retries are acquisition-only. The original independent final-score,
+# eight-stat parity and whole-game-exclusion gates run on the returned bytes.
+RETRYABLE_HTTP = frozenset((408, 425, 429, 500, 502, 503, 504))
+MAX_ACQUISITION_ATTEMPTS = 4
+
+
+def _transient_transport_error(exc):
+    """Retry only transient transport failures, never invalid source content."""
+    if isinstance(exc, urllib.error.HTTPError):
+        return exc.code in RETRYABLE_HTTP
+    if isinstance(exc, urllib.error.URLError):
+        reason = exc.reason
+        if isinstance(reason, ssl.SSLCertVerificationError):
+            return False
+        return isinstance(reason, (OSError, TimeoutError, ssl.SSLError))
+    return isinstance(exc, (ConnectionError, TimeoutError, ssl.SSLError))
+
+
 def get_bytes(url):
     req = urllib.request.Request(url, headers={"User-Agent": "NBA-Match-Intelligence-ReadOnly-Audit/1.0", "Accept": "text/csv,application/json"})
-    with urllib.request.urlopen(req, timeout=40) as res:
-        if res.status != 200:
-            raise ValueError("HTTP %s from %s" % (res.status, url))
-        return res.read()
+    for attempt in range(MAX_ACQUISITION_ATTEMPTS):
+        try:
+            with urllib.request.urlopen(req, timeout=40) as res:
+                if res.status != 200:
+                    # Refuse unexpected success codes / malformed server output.
+                    raise ValueError("HTTP %s from %s" % (res.status, url))
+                raw = res.read()
+                if not raw:
+                    raise ValueError("Empty upstream response from %s" % url)
+                return raw
+        except (urllib.error.URLError, ConnectionError, TimeoutError, ssl.SSLError) as exc:
+            if not _transient_transport_error(exc) or attempt == MAX_ACQUISITION_ATTEMPTS-1:
+                raise
+            delay = min(8.0, 2.0**attempt)
+            print("Transient source transport error; retry %d/%d after %.1fs (%s)" %
+                  (attempt+2, MAX_ACQUISITION_ATTEMPTS, delay, type(exc).__name__), flush=True)
+            time.sleep(delay)
+    raise AssertionError("Unreachable acquisition retry path")
 
 
 def integer(v):
