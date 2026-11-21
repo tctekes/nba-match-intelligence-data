@@ -36,6 +36,19 @@ No 2025–26 result was used to select a candidate.
 | margin_mae_difference | +0.0253 | [-0.0768, +0.1306] |
 | total_mae_difference | +0.2347 | [+0.1096, +0.3596] |
 
+## Exploratory pregame form-shift stress test (NOT model selection)
+
+At least one team had pregame absolute delta >=10 net rating pts/100 between most recent 5 and previous 5 league games; minimum 10 pregame games
+
+| Method | n | Accuracy | Brier | Total MAE |
+|---|---:|---:|---:|---:|
+| C reference | 504 | 68.85% | 0.2063 | 15.02 |
+| B_no_team_prior_k10 | 504 | 69.05% | 0.2066 | 15.41 |
+| Recent 5 only | 504 | 59.52% | 0.2325 | 15.68 |
+
+This last subgroup is exploratory and does NOT authorize promotion. It is not an injury/roster change dataset.
+
+
 Promotion threshold was set before reading holdout results. We only consider changing production if uncertainty and performance support it.
 No roster/injury labels were used; the result does not yet prove specific form-change responsiveness.
 Previous-year team prior is removed only if rho=0; a league-level prior remains for stabilization.

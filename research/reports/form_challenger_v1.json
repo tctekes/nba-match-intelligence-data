@@ -87,10 +87,10 @@
         "brier": 0.21164795089023875,
         "log_loss": 0.6099016064005058,
         "margin_mae": 11.120072287767726,
-        "total_mae": 15.082783241296184,
+        "total_mae": 15.082783241296188,
         "mean_p": 0.5616663923275053
       },
-      "validation_selection_score": 1.6191057671622362,
+      "validation_selection_score": 1.6191057671622364,
       "config": {
         "id": "B_no_team_prior_k10",
         "k_eff": 10,
@@ -106,10 +106,10 @@
         "brier": 0.21160768923895656,
         "log_loss": 0.6097142954116244,
         "margin_mae": 11.128171904050847,
-        "total_mae": 15.096833349053345,
+        "total_mae": 15.096833349053341,
         "mean_p": 0.5612502214310054
       },
-      "validation_selection_score": 1.6217217578601004,
+      "validation_selection_score": 1.6217217578601002,
       "config": {
         "id": "C_no_team_prior_k5",
         "k_eff": 5,
@@ -128,7 +128,7 @@
         "total_mae": 15.469445931753024,
         "mean_p": 0.5604015030874895
       },
-      "validation_selection_score": 1.7397891657582871,
+      "validation_selection_score": 1.739789165758287,
       "config": {
         "id": "D_no_team_prior_recent5_k5",
         "k_eff": 5,
@@ -147,7 +147,7 @@
       "brier": 0.20492603484584324,
       "log_loss": 0.5979228016024892,
       "margin_mae": 11.420007850001298,
-      "total_mae": 15.294182179220963,
+      "total_mae": 15.29418217922096,
       "mean_p": 0.5531935967544003
     },
     "selected_challenger": {
@@ -156,7 +156,7 @@
       "brier": 0.20479741597822299,
       "log_loss": 0.5973883823053413,
       "margin_mae": 11.445356545261232,
-      "total_mae": 15.528889048473978,
+      "total_mae": 15.528889048473973,
       "mean_p": 0.5535881334038538
     },
     "selected_subgroups": {
@@ -166,7 +166,7 @@
         "brier": 0.21585482490069854,
         "log_loss": 0.6201840965952382,
         "margin_mae": 11.292406764386671,
-        "total_mae": 14.393275373477389,
+        "total_mae": 14.393275373477383,
         "mean_p": 0.5528211393649942
       },
       "middle_10_19": {
@@ -175,7 +175,7 @@
         "brier": 0.19077321461118943,
         "log_loss": 0.5676402516590371,
         "margin_mae": 9.924560055242612,
-        "total_mae": 16.041351503559703,
+        "total_mae": 16.0413515035597,
         "mean_p": 0.5627677056921475
       },
       "late_20_plus": {
@@ -184,7 +184,7 @@
         "brier": 0.2052857277279924,
         "log_loss": 0.5985361111165097,
         "margin_mae": 11.72784271776772,
-        "total_mae": 15.63524271938446,
+        "total_mae": 15.635242719384454,
         "mean_p": 0.5521699843826338
       }
     },
@@ -195,7 +195,7 @@
         "brier": 0.2045369474702506,
         "log_loss": 0.5946321969001171,
         "margin_mae": 10.762856263875163,
-        "total_mae": 14.62917685647032,
+        "total_mae": 14.629176856470325,
         "mean_p": 0.5537198914164089
       },
       "middle_10_19": {
@@ -204,7 +204,7 @@
         "brier": 0.19366945044423514,
         "log_loss": 0.5732219829247499,
         "margin_mae": 9.959612435722468,
-        "total_mae": 15.595872016062618,
+        "total_mae": 15.59587201606262,
         "mean_p": 0.5577774186809321
       },
       "late_20_plus": {
@@ -213,7 +213,7 @@
         "brier": 0.20689079118873976,
         "log_loss": 0.6026478506772313,
         "margin_mae": 11.777904224205558,
-        "total_mae": 15.356192683221765,
+        "total_mae": 15.356192683221764,
         "mean_p": 0.5523310729326071
       }
     },
@@ -226,7 +226,7 @@
       "selected_minus_reference": [
         -0.00012861886762025013,
         0.025348695259933128,
-        0.23470686925301598
+        0.23470686925301087
       ],
       "date_cluster_95ci": [
         [
@@ -238,12 +238,57 @@
           0.13063283283009636
         ],
         [
-          0.10959415479813771,
-          0.3595979945474487
+          0.10959415479813478,
+          0.3595979945474434
         ]
       ],
       "dates": 164,
       "bootstrap_resamples": 4000
+    }
+  },
+  "form_shift_diagnostic": {
+    "definition": "At least one team had pregame absolute delta >=10 net rating pts/100 between most recent 5 and previous 5 league games; minimum 10 pregame games",
+    "exploratory_not_used_for_promotion": true,
+    "n": 504,
+    "direction_counts": {
+      "rising": 302,
+      "falling": 274
+    },
+    "model_c": {
+      "n": 504,
+      "accuracy": 0.6884920634920635,
+      "brier": 0.20627950566713893,
+      "log_loss": 0.6029431569305996,
+      "margin_mae": 11.505489196204405,
+      "total_mae": 15.022531251454236,
+      "mean_p": 0.5577842010747307
+    },
+    "selected_challenger": {
+      "n": 504,
+      "accuracy": 0.6904761904761905,
+      "brier": 0.20660076441071865,
+      "log_loss": 0.6028062218580507,
+      "margin_mae": 11.47776266095332,
+      "total_mae": 15.407092511542356,
+      "mean_p": 0.5570052156218306
+    },
+    "recent5_challenger": {
+      "n": 504,
+      "accuracy": 0.5952380952380952,
+      "brier": 0.23248049098261675,
+      "log_loss": 0.6562372905224246,
+      "margin_mae": 12.571401983376477,
+      "total_mae": 15.682870134650214,
+      "mean_p": 0.5587557134784984
+    },
+    "recent5_all_games": {
+      "n": 1222,
+      "accuracy": 0.6513911620294599,
+      "brier": 0.22102702144582462,
+      "log_loss": 0.6322732647938342,
+      "margin_mae": 12.055226661441415,
+      "total_mae": 15.640285964777432,
+      "mean_p": 0.5541075469249681
     }
   },
   "promotion_gate": "Must not be worse on winner Brier and total MAE; at least one improvement with date-cluster 95% CI entirely below zero",
