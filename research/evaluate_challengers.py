@@ -162,6 +162,30 @@ def phase(rows):
             if any(lo<=min(r["nh"],r["na"])<hi for r in rows) else None
             for name,lo,hi in specs}
 
+def pregame_form_shift_ids(games,minimum_net_shift=10):
+    """Exploratory diagnostic only; for each team use ONLY its prior games.
+    Compare most recent 5 vs previous 5 in net efficiency, pts per 100.
+    Selection and coefficients remain fixed before seeing holdout results.
+    """
+    team=collections.defaultdict(list)
+    flagged=set()
+    direction=collections.Counter()
+    for day,batch_it in __import__("itertools").groupby(games,key=lambda g:g["date"]):
+        batch=list(batch_it)
+        for g in batch:
+            for t in (g["home"],g["away"]):
+                rows=team[t]
+                if len(rows)<10:continue
+                recent=sum(p[0]-p[1] for p in rows[-5:])/5
+                older=sum(p[0]-p[1] for p in rows[-10:-5])/5
+                delta=recent-older
+                if abs(delta)>=minimum_net_shift:
+                    flagged.add(g["id"])
+                    direction["rising" if delta>0 else "falling"]+=1
+        for g in batch:add_game(team,g)
+    return flagged,dict(direction)
+
+
 def evaluate():
     raw=SRC.read_bytes()
     data=json.loads(raw)
@@ -193,6 +217,21 @@ def evaluate():
         out[conf["id"]]=predict(hold,coef)
     old=out["C_reference_reconstruction"];new=out[selected_id]
     oldsc=scores(old);newsc=scores(new)
+    # Form-shift sample is a diagnostic, not model selection. Its membership
+    # is based strictly on past completed same-season games as-of each date.
+    shifts,shift_directions=pregame_form_shift_ids(seasons[2026])
+    recent_conf=next(x for x in CONFIGS if x["id"]=="D_no_team_prior_recent5_k5")
+    recent_dev=features(seasons[2024],seasons[2023],recent_conf)+features(seasons[2025],seasons[2024],recent_conf)
+    recent_hold=predict(features(seasons[2026],seasons[2025],recent_conf),fit(recent_dev))
+    shift_stats={
+      "definition":"At least one team had pregame absolute delta >=10 net rating pts/100 between most recent 5 and previous 5 league games; minimum 10 pregame games",
+      "exploratory_not_used_for_promotion":True,
+      "n":len(shifts),"direction_counts":shift_directions,
+      "model_c":scores([r for r in old if r["g"]["id"] in shifts]),
+      "selected_challenger":scores([r for r in new if r["g"]["id"] in shifts]),
+      "recent5_challenger":scores([r for r in recent_hold if r["g"]["id"] in shifts]),
+      "recent5_all_games":scores(recent_hold)
+    }
     # This is a strict public-data replay/parity gate against the known
     # frozen Model C holdout values, not an implementation of the private model.
     parity=(abs(oldsc["accuracy"]-.6858)<.00015
@@ -217,6 +256,7 @@ def evaluate():
        "holdout":{"C_reproduction":oldsc,"selected_challenger":newsc,
                   "selected_subgroups":phase(new),"reference_subgroups":phase(old),
                   "difference_selected_minus_reference":ci},
+       "form_shift_diagnostic":shift_stats,
        "promotion_gate":"Must not be worse on winner Brier and total MAE; at least one improvement with date-cluster 95% CI entirely below zero",
        "verdict":verdict,
        "limitations":["Source historical source corrections do not reproduce pretip availability",
@@ -249,6 +289,13 @@ def evaluate():
     for idx,name in enumerate(ci["metrics"]):
         a,b=ci["date_cluster_95ci"][idx]
         lines.append(f"| {name} | {ci['selected_minus_reference'][idx]:+.4f} | [{a:+.4f}, {b:+.4f}] |")
+    lines.extend(["","## Exploratory pregame form-shift stress test (NOT model selection)","",
+         shift_stats["definition"],"",
+         "| Method | n | Accuracy | Brier | Total MAE |","|---|---:|---:|---:|---:|"])
+    for key,label in (("model_c","C reference"),("selected_challenger",selected_id),("recent5_challenger","Recent 5 only")):
+        sc=shift_stats[key]
+        lines.append(f"| {label} | {sc['n']} | {percent(sc['accuracy'])} | {sc['brier']:.4f} | {sc['total_mae']:.2f} |")
+    lines.extend(["","This last subgroup is exploratory and does NOT authorize promotion. It is not an injury/roster change dataset.",""])
     lines.extend(["","Promotion threshold was set before reading holdout results. We only consider changing production if uncertainty and performance support it.",
       "No roster/injury labels were used; the result does not yet prove specific form-change responsiveness.",
       "Previous-year team prior is removed only if rho=0; a league-level prior remains for stabilization.",
