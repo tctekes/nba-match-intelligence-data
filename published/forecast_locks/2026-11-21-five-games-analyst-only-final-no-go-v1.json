@@ -1,0 +1,372 @@
+{
+  "schema_version": "nba-independent-analyst-fail-closed-pregame-v1",
+  "status": "APPEND_ONLY_PRETIP_ANALYST_ONLY_SHADOW_MODEL_C_NO_GO",
+  "nba_local_date": "2026-11-21",
+  "created_at_utc": "2026-11-21T18:19:03.165Z",
+  "fixture_total": 6,
+  "pregame_covered": 5,
+  "already_started_excluded": [
+    {
+      "fixture": "MIL@PHI",
+      "tipoff_utc": "2026-11-21T18:00:00Z",
+      "exclusion": "Started at 21:00 TSİ before analysis, never issue a pregame prediction now."
+    }
+  ],
+  "first_view_file": "published/forecast_locks/2026-11-21-pre-model-independent-analyst-first-view-v1.json",
+  "first_view_commit": "d1b28141dd786547e3fa3bdd5a328a081d8348a4",
+  "first_view_at_utc": "2026-11-21T18:17:08.901Z",
+  "initial_vs_final_picks_changed": 0,
+  "model_c": {
+    "status": "NO_GO",
+    "reason": "Fresh accepted snapshot with completed NBA-local Nov20 mandatory, stale index only Nov19. One controlled normal Actions refresh run failed during independent eight-stat source fetch due TLSV1_ALERT_INTERNAL_ERROR, urllib.error.URLError, at tools/task08/build_accepted_candidate.py:98 compare_full_box_stats; python tests passed. Publish and SHA postgate skipped. A previous dated model snapshot is not a valid current forecast input. Do NOT claim 5 actual Python model outputs.",
+    "required_data_through_nba_date": "2026-11-20",
+    "stale_data_through_nba_date": "2026-11-19",
+    "stale_snapshot_path": "published/accepted_candidates/2026-11-19-accepted-228913b0a099.json",
+    "stale_snapshot_sha256": "228913b0a099c2444c573b80f7e36b76e590ee402ad240c71249ea5cf58e98f5",
+    "original_model_sha256": "b6efd52df74f540c3bda711cd37a372e1ae7cbdbda134579c4c43bc7ff1eafef",
+    "original_parameters_sha256": "259b0dcc561c2f0400b04d9b19aba59eef53973ba06075f5db97a73497d1c640",
+    "original_model_self_test": "8/8 PASS but inferencing NOT PERFORMED",
+    "controlled_refresh_run_id": 44934720377,
+    "controlled_refresh_url": "https://github.com/tctekes/nba-match-intelligence-data/actions/runs/44934720377",
+    "controlled_refresh_request_commit": "43f6f08f6aeeb0f07e15a7327d2dd0089035c58a",
+    "controlled_refresh_run_conclusion": "failure",
+    "upstream_error_type": "urllib.error.URLError: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error",
+    "quality_gate": "FAIL_CLOSED_STALE_SNAPSHOT"
+  },
+  "cup": {
+    "all": false,
+    "source": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced"
+  },
+  "official_injury_pdf": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-21_12_30PM.pdf",
+  "injury_edition": "2026-11-21 12:30 ET",
+  "analyst_grading": "Qualitative independent 4 choices plus one abstention, not a substituted numerical Model C forecast. Analyst confidence LOW/MEDIUM only, not implied mathematical odds.",
+  "market_verification_count": 0,
+  "ou_selection_count": 0,
+  "games": [
+    {
+      "fixture": "POR@NYK",
+      "away": "POR",
+      "home": "NYK",
+      "tipoff_utc": "2026-11-22T00:30:00Z",
+      "is_nba_cup": false,
+      "first_view_lean": null,
+      "first_view_confidence": "LOW",
+      "final_analyst_lean": null,
+      "final_analyst_confidence": "LOW",
+      "final_vs_first_view": "UNCHANGED",
+      "mechanism": "New York held Minnesota to 99 and won 102–99, showing halfcourt defense and Brunson control. Portland Lillard 33, Scoot Henderson 27, Holiday 22 in the Milwaukee win, providing real independent initiation if Avdija sits. New York Towns QUESTIONABLE illness, Anunoby DOUBTFUL calf; Portland Avdija QUESTIONABLE foot. The alternating missing-creator and wing-defense cases create an honest pretip abstention.",
+      "counterargument": "Knicks home and Brunson's late-game actions can target POR weak perimeter coverage, but if Towns and OG are limited while Avdija returns Portland has several ways to reverse the matchup. Portland is also on a long road stretch, not fresh.",
+      "injuries": [
+        {
+          "team": "POR",
+          "player": "Deni Avdija",
+          "status": "QUESTIONABLE"
+        },
+        {
+          "team": "POR",
+          "player": "Ja Morant",
+          "status": "OUT"
+        },
+        {
+          "team": "POR",
+          "player": "Shaedon Sharpe",
+          "status": "OUT"
+        },
+        {
+          "team": "NYK",
+          "player": "Karl-Anthony Towns",
+          "status": "QUESTIONABLE"
+        },
+        {
+          "team": "NYK",
+          "player": "OG Anunoby",
+          "status": "DOUBTFUL"
+        },
+        {
+          "team": "NYK",
+          "player": "Jordan Clarkson",
+          "status": "OUT"
+        }
+      ],
+      "source_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-21_12_30PM.pdf",
+        "https://www.nba.com/game/nyk-vs-por-0022600275",
+        "https://www.blazersedge.com/trail-blazers-injury-report/118709/portland-trail-blazers-deni-avdija-injury-report-new-york-knicks-nba-news-robert-williams-ja-morant"
+      ],
+      "frozen_model_c": {
+        "status": "NO_GO_STALE_ACCEPTED_SNAPSHOT_UPSTREAM_TLS_ERROR",
+        "winner": null,
+        "home_win_probability": null,
+        "winner_probability": null,
+        "expected_home_minus_away_margin": null,
+        "expected_full_game_total_including_ot": null,
+        "code_run_for_game": false
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED_AND_NO_MODEL_BASELINE",
+        "full_game_main_ot_line": null,
+        "bookmaker": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "direction": null,
+        "confidence": null,
+        "gradeable": false
+      }
+    },
+    {
+      "fixture": "LAC@DAL",
+      "away": "LAC",
+      "home": "DAL",
+      "tipoff_utc": "2026-11-22T01:00:00Z",
+      "is_nba_cup": false,
+      "first_view_lean": "DAL",
+      "first_view_confidence": "MEDIUM",
+      "final_analyst_lean": "DAL",
+      "final_analyst_confidence": "MEDIUM",
+      "final_vs_first_view": "UNCHANGED",
+      "mechanism": "Dallas Flagg delivered 33 and team won 116–94 over a depleted Warriors squad, breaking a three-game slide; Mavericks 6–2 at home entering game. Clippers 4–10 and have zero road wins in current preview; Garland and Brook Lopez scored 23 each against Spurs but Brandon Ingram and Bradley Beal OUT undermine creation depth. DAL Flagg/Irving secondary penetration plus defensive help opportunities is opponent-specific edge, not just records.",
+      "counterargument": "Clippers Garland/Lopez 2-man game can exploit the absent Lively rim defense, and P.J. Washington QUESTIONABLE reduces DAL weak-side rebounding/defense. GSW without Curry/Butler may overstate how good Dallas's last win was.",
+      "injuries": [
+        {
+          "team": "LAC",
+          "player": "Brandon Ingram",
+          "status": "OUT"
+        },
+        {
+          "team": "LAC",
+          "player": "Bradley Beal",
+          "status": "OUT"
+        },
+        {
+          "team": "LAC",
+          "player": "Jordan Miller",
+          "status": "OUT"
+        },
+        {
+          "team": "DAL",
+          "player": "Dereck Lively II",
+          "status": "OUT"
+        },
+        {
+          "team": "DAL",
+          "player": "P.J. Washington",
+          "status": "QUESTIONABLE"
+        },
+        {
+          "team": "DAL",
+          "player": "Walter Clayton Jr.",
+          "status": "QUESTIONABLE"
+        }
+      ],
+      "source_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-21_12_30PM.pdf",
+        "https://www.nba.com/game/lac-vs-dal-0022600276",
+        "https://startin5.app/en/compare/clippers-vs-mavericks"
+      ],
+      "frozen_model_c": {
+        "status": "NO_GO_STALE_ACCEPTED_SNAPSHOT_UPSTREAM_TLS_ERROR",
+        "winner": null,
+        "home_win_probability": null,
+        "winner_probability": null,
+        "expected_home_minus_away_margin": null,
+        "expected_full_game_total_including_ot": null,
+        "code_run_for_game": false
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED_AND_NO_MODEL_BASELINE",
+        "full_game_main_ot_line": null,
+        "bookmaker": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "direction": null,
+        "confidence": null,
+        "gradeable": false
+      }
+    },
+    {
+      "fixture": "MEM@MIN",
+      "away": "MEM",
+      "home": "MIN",
+      "tipoff_utc": "2026-11-22T01:00:00Z",
+      "is_nba_cup": false,
+      "first_view_lean": "MEM",
+      "first_view_confidence": "LOW",
+      "final_analyst_lean": "MEM",
+      "final_analyst_confidence": "LOW",
+      "final_vs_first_view": "UNCHANGED",
+      "mechanism": "Memphis has scored 136 at WAS, 124 at CLE and 126 vs GSW across recent matches; its 15/35 threes vs GSW may not repeat but Coward/wing initiation shows multiple outlets. Grizzlies had won eight straight road games according to current preview. Minnesota, without Edwards and DiVincenzo, scored only 99 vs NYK and relies on Gobert shell and LaMelo/Ayo for creation. Lean toward MEM perimeter creation despite Minnesota rim protection.",
+      "counterargument": "Minnesota defensive efficiency is elite and can force inefficient midrange possessions; 15 threes against depleted GSW isn't sustainable proof. Memphis Boozer/Grant/Pippen out, Jerome PROBABLE; one wounded roster attacking one of the best rim protections. A tight low-confidence side, not strong lock.",
+      "injuries": [
+        {
+          "team": "MEM",
+          "player": "Cameron Boozer",
+          "status": "OUT"
+        },
+        {
+          "team": "MEM",
+          "player": "Jerami Grant",
+          "status": "OUT_SOURCE_PDF_CONTINUATION_VERIFY_TEAM"
+        },
+        {
+          "team": "MEM",
+          "player": "Scotty Pippen Jr.",
+          "status": "OUT_SOURCE_PDF_CONTINUATION_VERIFY_TEAM"
+        },
+        {
+          "team": "MEM",
+          "player": "Ty Jerome",
+          "status": "PROBABLE_SOURCE_PDF_CONTINUATION_VERIFY_TEAM"
+        },
+        {
+          "team": "MIN",
+          "player": "Anthony Edwards",
+          "status": "OUT"
+        },
+        {
+          "team": "MIN",
+          "player": "Donte DiVincenzo",
+          "status": "OUT"
+        },
+        {
+          "team": "MIN",
+          "player": "Jaylen Clark",
+          "status": "OUT"
+        }
+      ],
+      "source_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-21_12_30PM.pdf",
+        "https://www.nba.com/warriors/news/gameday-recap-20261119",
+        "https://www.herememphis.com/2026/11/21/memphis-grizzlies-timberwolves-preview-boozer-out/"
+      ],
+      "frozen_model_c": {
+        "status": "NO_GO_STALE_ACCEPTED_SNAPSHOT_UPSTREAM_TLS_ERROR",
+        "winner": null,
+        "home_win_probability": null,
+        "winner_probability": null,
+        "expected_home_minus_away_margin": null,
+        "expected_full_game_total_including_ot": null,
+        "code_run_for_game": false
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED_AND_NO_MODEL_BASELINE",
+        "full_game_main_ot_line": null,
+        "bookmaker": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "direction": null,
+        "confidence": null,
+        "gradeable": false
+      }
+    },
+    {
+      "fixture": "NOP@SAS",
+      "away": "NOP",
+      "home": "SAS",
+      "tipoff_utc": "2026-11-22T01:00:00Z",
+      "is_nba_cup": false,
+      "first_view_lean": "SAS",
+      "first_view_confidence": "MEDIUM",
+      "final_analyst_lean": "SAS",
+      "final_analyst_confidence": "MEDIUM",
+      "final_vs_first_view": "UNCHANGED",
+      "mechanism": "Wembanyama just scored 32/11 vs Clippers in 124–112 Spurs win with Castle 21/12 assists; Wembanyama's length can challenge Zion at the rim without gambling. NOP scored 120 at OKC but gave up 126 even when OKC had core defenders OUT. Spurs can stress that backline with Fox/Castle drives and Wemby interior/handoff gravity; NO is on second night of back-to-back whereas Spurs last played Thursday. Strong matchup advantage was identified before C.",
+      "counterargument": "Zion's power and Yves Missi offensive boards can produce fouls, and New Orleans scored 120 at OKC. The official NOP game-specific report NOT YET SUBMITTED as of 12:30 ET, so Murphy/Murray availability cannot be asserted from last night's report. SAS Harper/Harris OUT.",
+      "injuries": [
+        {
+          "team": "NOP",
+          "player": "TEAM",
+          "status": "NOT_YET_SUBMITTED_OFFICIAL_NOON_ET"
+        },
+        {
+          "team": "SAS",
+          "player": "Dylan Harper",
+          "status": "OUT"
+        },
+        {
+          "team": "SAS",
+          "player": "Tobias Harris",
+          "status": "OUT"
+        }
+      ],
+      "source_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-21_12_30PM.pdf",
+        "https://www.nba.com/game/nop-vs-okc-0022600048",
+        "https://www.sportsmole.co.uk/basketball/san-antonio-spurs/preview/new-orleans-pelicans-vs-san-antonio-spurs-player-props-injury-report-and-prediction--nba_609550.html"
+      ],
+      "frozen_model_c": {
+        "status": "NO_GO_STALE_ACCEPTED_SNAPSHOT_UPSTREAM_TLS_ERROR",
+        "winner": null,
+        "home_win_probability": null,
+        "winner_probability": null,
+        "expected_home_minus_away_margin": null,
+        "expected_full_game_total_including_ot": null,
+        "code_run_for_game": false
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED_AND_NO_MODEL_BASELINE",
+        "full_game_main_ot_line": null,
+        "bookmaker": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "direction": null,
+        "confidence": null,
+        "gradeable": false
+      }
+    },
+    {
+      "fixture": "BOS@SAC",
+      "away": "BOS",
+      "home": "SAC",
+      "tipoff_utc": "2026-11-22T03:00:00Z",
+      "is_nba_cup": false,
+      "first_view_lean": "BOS",
+      "first_view_confidence": "LOW",
+      "final_analyst_lean": "BOS",
+      "final_analyst_confidence": "LOW",
+      "final_vs_first_view": "UNCHANGED",
+      "mechanism": "Kings are 1–14 but pushed Lakers to a 104–106 finish with Hunter 30 and Sabonis 19/16, showing viable two-creator offense. Boston 11–4 and can rely on Paul George wing creation, Queta rim support and scheme defense; Celtics are motivated to arrest a two-game skid but motivation is not a numeric input. On relative opponent talent Boston should still have more stable defense, but current availability is a major conditional.",
+      "counterargument": "Tatum QUESTIONABLE rest, White QUESTIONABLE shoulder: if both out, Boston offensive creation can stall while Hunter and Sabonis pressure the glass. Sacramento is not helpless as Lakers near-upset shows. Kings report only Jayden Quaintance OUT in 12:30 ET edition.",
+      "injuries": [
+        {
+          "team": "BOS",
+          "player": "Jayson Tatum",
+          "status": "QUESTIONABLE"
+        },
+        {
+          "team": "BOS",
+          "player": "Derrick White",
+          "status": "QUESTIONABLE"
+        },
+        {
+          "team": "SAC",
+          "player": "Jayden Quaintance",
+          "status": "OUT"
+        }
+      ],
+      "source_urls": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-21_12_30PM.pdf",
+        "https://www.reuters.com/sports/basketball/rested-celtics-intent-halting-brief-skid-clash-vs-kings--flm-2026-11-21/",
+        "https://www.celticsblog.com/boston-celtics-news/150715/celtics-injury-report-sacramento-kings-jayson-tatum-derrick-white"
+      ],
+      "frozen_model_c": {
+        "status": "NO_GO_STALE_ACCEPTED_SNAPSHOT_UPSTREAM_TLS_ERROR",
+        "winner": null,
+        "home_win_probability": null,
+        "winner_probability": null,
+        "expected_home_minus_away_margin": null,
+        "expected_full_game_total_including_ot": null,
+        "code_run_for_game": false
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED_AND_NO_MODEL_BASELINE",
+        "full_game_main_ot_line": null,
+        "bookmaker": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "direction": null,
+        "confidence": null,
+        "gradeable": false
+      }
+    }
+  ]
+}
