@@ -33,3 +33,17 @@ Follow the full-source manifest and the accepted candidate index. When fallback_
 ## Known incident (2026-11-15)
 
 Initial manual attempt `43758451415`: Task08 tests passed, but snapshot builder failed with `AssertionError: Missing completed game 401909985 (2026-11-15)`. It was checking a **current NBA-local day's partly completed schedule**, when the target snapshot was the previous fully closed date **2026-11-14**. A fail-closed fix limited the daily ESPN reference to closed NBA dates (through yesterday), preserving full-completed-day coverage and independent eight-box-field audit. Follow-up Actions run **43758700332** completed successfully and published NBA-local **2026-11-14** candidate: **188 raw, 186 accepted, 2 whole-game exclusions, 30 teams, 372 team GP, 376 independently checked team box rows**. This is an **experimental SHADOW snapshot, not production**. Do not weaken full-game rejection rules to paper over lag.
+
+## Incident 2026-11-21: GitHub schedule delay and transient ESPN TLS
+
+At 21:26 TSİ, neither the declared 20:23 nor 20:53 TSİ GitHub-native scheduled daily run had appeared in the repository Actions history. This is a scheduler delivery delay/nonappearance, not evidence that NBA research code changed the snapshot workflow. Research experiments on 2026-11-21 used separate research paths and their separate workflow.
+
+A user-authorized 21:17 TSİ path-triggered daily refresh (run 44934720377) failed during ESPN independent team-box summary acquisition with urllib.error.URLError wrapping [SSL: TLSV1_ALERT_INTERNAL_ERROR]. Its preflight and 26 established unit tests had passed. This was a transient upstream transport failure, not an indication of source-stat disagreement or Model C parameter corruption.
+
+Permanent fail-closed resilience change:
+- Shared tools/independent_coverage_probe.py get_bytes and tools/task08/cloud_capture_candidate.py acquire now retry ONLY explicitly transient transport errors / retryable HTTP 408,425,429,500,502,503,504; maximum FOUR attempts, delays 1/2/4 seconds; permanent HTTP errors, certificate verification errors, missing/invalid response and exhausted retries still fail closed.
+- tools/task08/build_accepted_candidate.py spaces ESPN live box requests at 0.12s to reduce burst load. The same ESPN scoreboard, full 8-field per-team, source-receipt, 30-team, full-game exclusion and candidate SHA checks still run.
+- tools/task08/test_transient_fetch.py adds 8 deterministic no-network tests for TLS recovery/exhaustion, 429, permanent HTTP errors, untrusted empty content, certificate failure and source capture retry.
+- End-to-end path-triggered Actions run 44935756165 PASSED. Accepted snapshot through 2026-11-20: 235 raw, 234 accepted, 1 whole-game exclusion, 30 teams, 468 GP, 470 ESPN team rows independently checked, SHA verified before commit. Frozen Model C, model parameters, old locks and production pointer untouched.
+
+This fixes transport fragility but does NOT guarantee GitHub-native scheduled jobs start exactly at their nominal cron time; GitHub schedule delays require separate operational monitoring. A green diagnostic/test run is NOT a substitute for checking published accepted_candidate_index.json freshness.
