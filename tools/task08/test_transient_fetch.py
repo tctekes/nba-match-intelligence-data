@@ -9,6 +9,7 @@ from unittest.mock import patch, MagicMock
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import independent_coverage_probe as source
+import cloud_capture_candidate as capture
 
 
 def response(body=b'{"events":[]}'):
@@ -58,6 +59,22 @@ class SourceRetryTests(unittest.TestCase):
                 source.get_bytes(self.URL)
             fetch.assert_called_once()
             sleep.assert_not_called()
+
+    def test_raw_capture_transient_tls_returns_original_bytes(self):
+        err=urllib.error.URLError(ssl.SSLError("tlsv1 alert internal error"))
+        with patch.object(capture.urllib.request,"urlopen",side_effect=[err,response(b"fresh csv")]) as fetch, patch.object(capture.time,"sleep") as sleep:
+            body,code=capture.acquire(self.URL)
+            self.assertEqual((body,code),(b"fresh csv",200))
+            self.assertEqual(fetch.call_count,2)
+            sleep.assert_called_once_with(1.0)
+
+    def test_raw_capture_exhausted_failure_remains_fail_closed(self):
+        err=urllib.error.URLError(ssl.SSLError("tlsv1 alert internal error"))
+        with patch.object(capture.urllib.request,"urlopen",side_effect=err) as fetch, patch.object(capture.time,"sleep") as sleep:
+            with self.assertRaises(urllib.error.URLError):
+                capture.acquire(self.URL)
+            self.assertEqual(fetch.call_count,4)
+            self.assertEqual([x.args[0] for x in sleep.call_args_list],[1.0,2.0,4.0])
 
     def test_empty_response_fails_not_retried(self):
         with patch.object(source.urllib.request,"urlopen",return_value=response(b"")) as fetch, patch.object(source.time,"sleep") as sleep:
