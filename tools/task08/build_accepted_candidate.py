@@ -115,7 +115,7 @@ def compare_full_box_stats(groups, ids):
         if discrepancies:
             excluded[k]={"espn_game_id":event_id,"date":k[0],
                          "teams":list(k[1]),"mismatches":discrepancies}
-        time.sleep(0.06)
+        time.sleep(0.12)  # Polite pacing; network TLS/429 retries in shared get_bytes
     if len(excluded)>LIMIT_EXCLUSIONS or len(excluded)>max(1,int(len(groups)*LIMIT_RATIO)):
         raise ValueError("Quarantine volume exceeds conservative safety cap")
     return excluded,verified_teams
