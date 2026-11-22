@@ -1,0 +1,403 @@
+{
+  "schema_version": "nba-shadow-postgame-retrospective-v1",
+  "status": "APPEND_ONLY_POSTGAME_SHADOW_NOT_PRODUCTION",
+  "nba_local_date": "2026-11-21",
+  "created_at_utc": "2026-11-22T06:29:42Z",
+  "source_read_order": "All three append-only pretip locks were read before searching postgame scores; exact pred and analyst decisions not revised.",
+  "lock_provenance": {
+    "frozen_model_lock": "published/forecast_locks/2026-11-21-five-games-frozen-model-c-after-recovery-shadow-v1.json",
+    "model_generated_at_utc": "2026-11-21T18:35:45Z",
+    "independent_first_view": "published/forecast_locks/2026-11-21-pre-model-independent-analyst-first-view-v1.json",
+    "independent_first_view_created_at_utc": "2026-11-21T18:17:08.901Z",
+    "independent_final_pretip": "published/forecast_locks/2026-11-21-five-games-analyst-only-final-no-go-v1.json",
+    "independent_final_created_at_utc": "2026-11-21T18:19:03.165Z",
+    "frozen_code_sha256": "b6efd52df74f540c3bda711cd37a372e1ae7cbdbda134579c4c43bc7ff1eafef",
+    "frozen_parameter_sha256": "259b0dcc561c2f0400b04d9b19aba59eef53973ba06075f5db97a73497d1c640",
+    "accepted_snapshot_path": "published/accepted_candidates/2026-11-20-accepted-5a3fcbc40a26.json",
+    "accepted_snapshot_sha256": "5a3fcbc40a26e98d878563b985a77a8e3fa533e9b7bbacf401c513d87faadc35",
+    "accepted_games": 234,
+    "excluded_games": 1
+  },
+  "scope": {
+    "nba_local_date": "2026-11-21",
+    "official_slate": 6,
+    "model_pregame_eligible": 5,
+    "excluded_started": "MIL@PHI",
+    "nba_cup_games": 0,
+    "ot_games": 0
+  },
+  "independent_outcome_verification": {
+    "quality": "FINAL scores reconciled against Reuters Nov22 game reports and independent LandOfBasketball/HoopMetrics Nov21 published final listing; first-party NBA game-page web cache returned stale PREGAME for Celtics in search results, therefore no unsupported first-party score claim made.",
+    "sources": [
+      "https://www.reuters.com/sports/basketball/mikal-bridges-game-winner-helps-knicks-survive-blown-lead-vs-blazers--flm-2026-11-22/",
+      "https://www.landofbasketball.com/results/2026_2027_nov_scores.htm",
+      "https://www.reuters.com/sports/basketball/mavericks-finish-strong-hold-off-clippers--flm-2026-11-22/",
+      "https://www.reuters.com/sports/basketball/timberwolves-deal-grizzlies-first-road-loss-this-season--flm-2026-11-22/",
+      "https://www.reuters.com/sports/basketball/victor-wembanyama-posts-50-points-19-rebounds-spurs-roll-pelicans--flm-2026-11-22/",
+      "https://www.reuters.com/sports/basketball/keegan-murray-plays-hero-lead-kings-past-celtics-first-home-win--flm-2026-11-22/",
+      "https://www.landofbasketball.com/box_scores/2026/1121BOSSAC.htm"
+    ]
+  },
+  "metrics": {
+    "model_c": {
+      "games": 5,
+      "correct_winners": 4,
+      "winner_accuracy": 0.8,
+      "home_win_brier": 0.2463294374230205,
+      "home_minus_away_margin_mae": 7.761246239174277,
+      "full_game_total_including_ot_mae": 27.064893897659893,
+      "signed_total_actual_minus_predicted": -27.064893897659893,
+      "all_totals_below_model": true,
+      "ot_count": 0
+    },
+    "analyst": {
+      "locked_picks": 4,
+      "correct_picks": 2,
+      "abstentions": 1,
+      "by_confidence": {
+        "MEDIUM": {
+          "n": 2,
+          "correct": 2
+        },
+        "LOW": {
+          "n": 2,
+          "correct": 0
+        }
+      },
+      "contrarian_picks": 1,
+      "contrarian_correct": 0,
+      "incremental_value_assessment": "Single model-opposing lean MEM@MIN lost; other two agreements correct, BOS agreement wrong, abstention POR@NYK. n too small to claim systematic incremental skill."
+    },
+    "market": {
+      "official_ou_eligible": 0,
+      "coverage": 0,
+      "win": null,
+      "loss": null,
+      "push": null,
+      "grade": "N/A",
+      "reason": "No pretip main full game including OT bookmaker same-line dual-price source verified. Never backfill."
+    }
+  },
+  "games": [
+    {
+      "fixture": "POR@NYK",
+      "away": "POR",
+      "home": "NYK",
+      "tipoff_utc": "2026-11-22T00:30:00Z",
+      "official_status": "FINAL",
+      "away_score": 96,
+      "home_score": 97,
+      "overtime_periods": 0,
+      "actual_winner": "NYK",
+      "actual_home_margin": 1,
+      "actual_full_game_total_including_ot": 193,
+      "model_c": {
+        "predicted_winner": "NYK",
+        "predicted_winner_probability": 0.6322004874196887,
+        "home_win_probability": 0.6322004874196887,
+        "expected_home_margin": 4.209055021593073,
+        "expected_full_game_total": 221.0274144128131,
+        "winner_correct": true,
+        "home_win_brier": 0.13527648145431456,
+        "margin_abs_error": 3.2090550215930733,
+        "total_abs_error": 28.0274144128131,
+        "total_signed_actual_minus_predicted": -28.0274144128131
+      },
+      "analyst": {
+        "first_view_lean": null,
+        "final_locked_pretip_lean": null,
+        "locked_confidence": "LOW",
+        "first_view_matches_final": true,
+        "relationship_to_model": "ABSTAIN",
+        "correct": null,
+        "pregame_mechanism": "New York held Minnesota to 99 and won 102–99, showing halfcourt defense and Brunson control. Portland Lillard 33, Scoot Henderson 27, Holiday 22 in the Milwaukee win, providing real independent initiation if Avdija sits. New York Towns QUESTIONABLE illness, Anunoby DOUBTFUL calf; Portland Avdija QUESTIONABLE foot. The alternating missing-creator and wing-defense cases create an honest pretip abstention.",
+        "pregame_counterargument": "Knicks home and Brunson's late-game actions can target POR weak perimeter coverage, but if Towns and OG are limited while Avdija returns Portland has several ways to reverse the matchup. Portland is also on a long road stretch, not fresh."
+      },
+      "cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      },
+      "market": {
+        "original_pretip_status": "MARKET_NOT_VERIFIED",
+        "eligible_market_quote": false,
+        "bookmaker": null,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "selected_direction": null,
+        "selected_grade": "N/A"
+      },
+      "result_source_urls": [
+        "https://www.reuters.com/sports/basketball/mikal-bridges-game-winner-helps-knicks-survive-blown-lead-vs-blazers--flm-2026-11-22/",
+        "https://www.landofbasketball.com/results/2026_2027_nov_scores.htm"
+      ]
+    },
+    {
+      "fixture": "LAC@DAL",
+      "away": "LAC",
+      "home": "DAL",
+      "tipoff_utc": "2026-11-22T01:00:00Z",
+      "official_status": "FINAL",
+      "away_score": 100,
+      "home_score": 110,
+      "overtime_periods": 0,
+      "actual_winner": "DAL",
+      "actual_home_margin": 10,
+      "actual_full_game_total_including_ot": 210,
+      "model_c": {
+        "predicted_winner": "DAL",
+        "predicted_winner_probability": 0.5713163445754209,
+        "home_win_probability": 0.5713163445754209,
+        "expected_home_margin": 2.231882983024938,
+        "expected_full_game_total": 228.4830570366715,
+        "winner_correct": true,
+        "home_win_brier": 0.18376967642817926,
+        "margin_abs_error": 7.7681170169750615,
+        "total_abs_error": 18.48305703667151,
+        "total_signed_actual_minus_predicted": -18.48305703667151
+      },
+      "analyst": {
+        "first_view_lean": "DAL",
+        "final_locked_pretip_lean": "DAL",
+        "locked_confidence": "MEDIUM",
+        "first_view_matches_final": true,
+        "relationship_to_model": "AGREES",
+        "correct": true,
+        "pregame_mechanism": "Dallas Flagg delivered 33 and team won 116–94 over a depleted Warriors squad, breaking a three-game slide; Mavericks 6–2 at home entering game. Clippers 4–10 and have zero road wins in current preview; Garland and Brook Lopez scored 23 each against Spurs but Brandon Ingram and Bradley Beal OUT undermine creation depth. DAL Flagg/Irving secondary penetration plus defensive help opportunities is opponent-specific edge, not just records.",
+        "pregame_counterargument": "Clippers Garland/Lopez 2-man game can exploit the absent Lively rim defense, and P.J. Washington QUESTIONABLE reduces DAL weak-side rebounding/defense. GSW without Curry/Butler may overstate how good Dallas's last win was."
+      },
+      "cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      },
+      "market": {
+        "original_pretip_status": "MARKET_NOT_VERIFIED",
+        "eligible_market_quote": false,
+        "bookmaker": null,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "selected_direction": null,
+        "selected_grade": "N/A"
+      },
+      "result_source_urls": [
+        "https://www.reuters.com/sports/basketball/mavericks-finish-strong-hold-off-clippers--flm-2026-11-22/",
+        "https://www.landofbasketball.com/results/2026_2027_nov_scores.htm"
+      ]
+    },
+    {
+      "fixture": "MEM@MIN",
+      "away": "MEM",
+      "home": "MIN",
+      "tipoff_utc": "2026-11-22T01:00:00Z",
+      "official_status": "FINAL",
+      "away_score": 95,
+      "home_score": 104,
+      "overtime_periods": 0,
+      "actual_winner": "MIN",
+      "actual_home_margin": 9,
+      "actual_full_game_total_including_ot": 199,
+      "model_c": {
+        "predicted_winner": "MIN",
+        "predicted_winner_probability": 0.64577271626286,
+        "home_win_probability": 0.64577271626286,
+        "expected_home_margin": 4.666275466755633,
+        "expected_full_game_total": 228.68542575447086,
+        "winner_correct": true,
+        "home_win_brier": 0.12547696854379226,
+        "margin_abs_error": 4.333724533244367,
+        "total_abs_error": 29.685425754470856,
+        "total_signed_actual_minus_predicted": -29.685425754470856
+      },
+      "analyst": {
+        "first_view_lean": "MEM",
+        "final_locked_pretip_lean": "MEM",
+        "locked_confidence": "LOW",
+        "first_view_matches_final": true,
+        "relationship_to_model": "CONTRARIAN",
+        "correct": false,
+        "pregame_mechanism": "Memphis has scored 136 at WAS, 124 at CLE and 126 vs GSW across recent matches; its 15/35 threes vs GSW may not repeat but Coward/wing initiation shows multiple outlets. Grizzlies had won eight straight road games according to current preview. Minnesota, without Edwards and DiVincenzo, scored only 99 vs NYK and relies on Gobert shell and LaMelo/Ayo for creation. Lean toward MEM perimeter creation despite Minnesota rim protection.",
+        "pregame_counterargument": "Minnesota defensive efficiency is elite and can force inefficient midrange possessions; 15 threes against depleted GSW isn't sustainable proof. Memphis Boozer/Grant/Pippen out, Jerome PROBABLE; one wounded roster attacking one of the best rim protections. A tight low-confidence side, not strong lock."
+      },
+      "cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      },
+      "market": {
+        "original_pretip_status": "MARKET_NOT_VERIFIED",
+        "eligible_market_quote": false,
+        "bookmaker": null,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "selected_direction": null,
+        "selected_grade": "N/A"
+      },
+      "result_source_urls": [
+        "https://www.reuters.com/sports/basketball/timberwolves-deal-grizzlies-first-road-loss-this-season--flm-2026-11-22/",
+        "https://www.landofbasketball.com/results/2026_2027_nov_scores.htm"
+      ]
+    },
+    {
+      "fixture": "NOP@SAS",
+      "away": "NOP",
+      "home": "SAS",
+      "tipoff_utc": "2026-11-22T01:00:00Z",
+      "official_status": "FINAL",
+      "away_score": 91,
+      "home_score": 114,
+      "overtime_periods": 0,
+      "actual_winner": "SAS",
+      "actual_home_margin": 23,
+      "actual_full_game_total_including_ot": 205,
+      "model_c": {
+        "predicted_winner": "SAS",
+        "predicted_winner_probability": 0.8866200255067482,
+        "home_win_probability": 0.8866200255067482,
+        "expected_home_margin": 15.98144088506944,
+        "expected_full_game_total": 233.24760194285702,
+        "winner_correct": true,
+        "home_win_brier": 0.012855018616090421,
+        "margin_abs_error": 7.018559114930561,
+        "total_abs_error": 28.247601942857017,
+        "total_signed_actual_minus_predicted": -28.247601942857017
+      },
+      "analyst": {
+        "first_view_lean": "SAS",
+        "final_locked_pretip_lean": "SAS",
+        "locked_confidence": "MEDIUM",
+        "first_view_matches_final": true,
+        "relationship_to_model": "AGREES",
+        "correct": true,
+        "pregame_mechanism": "Wembanyama just scored 32/11 vs Clippers in 124–112 Spurs win with Castle 21/12 assists; Wembanyama's length can challenge Zion at the rim without gambling. NOP scored 120 at OKC but gave up 126 even when OKC had core defenders OUT. Spurs can stress that backline with Fox/Castle drives and Wemby interior/handoff gravity; NO is on second night of back-to-back whereas Spurs last played Thursday. Strong matchup advantage was identified before C.",
+        "pregame_counterargument": "Zion's power and Yves Missi offensive boards can produce fouls, and New Orleans scored 120 at OKC. The official NOP game-specific report NOT YET SUBMITTED as of 12:30 ET, so Murphy/Murray availability cannot be asserted from last night's report. SAS Harper/Harris OUT."
+      },
+      "cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      },
+      "market": {
+        "original_pretip_status": "MARKET_NOT_VERIFIED",
+        "eligible_market_quote": false,
+        "bookmaker": null,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "selected_direction": null,
+        "selected_grade": "N/A"
+      },
+      "result_source_urls": [
+        "https://www.reuters.com/sports/basketball/victor-wembanyama-posts-50-points-19-rebounds-spurs-roll-pelicans--flm-2026-11-22/",
+        "https://www.landofbasketball.com/results/2026_2027_nov_scores.htm"
+      ]
+    },
+    {
+      "fixture": "BOS@SAC",
+      "away": "BOS",
+      "home": "SAC",
+      "tipoff_utc": "2026-11-22T03:00:00Z",
+      "official_status": "FINAL",
+      "away_score": 96,
+      "home_score": 97,
+      "overtime_periods": 0,
+      "actual_winner": "SAC",
+      "actual_home_margin": 1,
+      "actual_full_game_total_including_ot": 193,
+      "model_c": {
+        "predicted_winner": "BOS",
+        "predicted_winner_probability": 0.8799255889407501,
+        "home_win_probability": 0.12007441105924985,
+        "expected_home_margin": -15.47677550912832,
+        "expected_full_game_total": 223.88097034148697,
+        "winner_correct": false,
+        "home_win_brier": 0.774269042072726,
+        "margin_abs_error": 16.47677550912832,
+        "total_abs_error": 30.88097034148697,
+        "total_signed_actual_minus_predicted": -30.88097034148697
+      },
+      "analyst": {
+        "first_view_lean": "BOS",
+        "final_locked_pretip_lean": "BOS",
+        "locked_confidence": "LOW",
+        "first_view_matches_final": true,
+        "relationship_to_model": "AGREES",
+        "correct": false,
+        "pregame_mechanism": "Kings are 1–14 but pushed Lakers to a 104–106 finish with Hunter 30 and Sabonis 19/16, showing viable two-creator offense. Boston 11–4 and can rely on Paul George wing creation, Queta rim support and scheme defense; Celtics are motivated to arrest a two-game skid but motivation is not a numeric input. On relative opponent talent Boston should still have more stable defense, but current availability is a major conditional.",
+        "pregame_counterargument": "Tatum QUESTIONABLE rest, White QUESTIONABLE shoulder: if both out, Boston offensive creation can stall while Hunter and Sabonis pressure the glass. Sacramento is not helpless as Lakers near-upset shows. Kings report only Jayden Quaintance OUT in 12:30 ET edition."
+      },
+      "cup": {
+        "is_nba_cup": false,
+        "stage": "NONE"
+      },
+      "market": {
+        "original_pretip_status": "MARKET_NOT_VERIFIED",
+        "eligible_market_quote": false,
+        "bookmaker": null,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "selected_direction": null,
+        "selected_grade": "N/A"
+      },
+      "result_source_urls": [
+        "https://www.reuters.com/sports/basketball/keegan-murray-plays-hero-lead-kings-past-celtics-first-home-win--flm-2026-11-22/",
+        "https://www.landofbasketball.com/box_scores/2026/1121BOSSAC.htm"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "fixture": "BOS@SAC",
+      "type": "MAJOR_FAVORITE_UPSET_BRIER",
+      "pretip_known": "BOS Model C away win p 0.8799256, margin away by 15.48. Independent analyst BOS LOW; Tatum and White marked QUESTIONABLE pregame, not confirmed OUT. SAC had recently lost to Lakers by 2.",
+      "observed": "SAC 97 BOS 96, both Tatum and White sat, Boston 13/58 3P, SAC made 26/32 FT. Murray putback with 5 s gave lead. Boston led by 13 at halftime before losing third quarter 13-35.",
+      "plausible_mechanisms": "Absence of two creators and realized poor 3P shooting could have mattered; offensive rebounding and late-possession variance. The causal shares are not identified from one game; Model C has no player inputs by design.",
+      "judgement": "OBSERVED_UPSET_WITH_PRETIP_INJURY_RISK_NOT_PROVEN_MODEL_DEFECT",
+      "urls": [
+        "https://www.reuters.com/sports/basketball/keegan-murray-plays-hero-lead-kings-past-celtics-first-home-win--flm-2026-11-22/",
+        "https://www.landofbasketball.com/box_scores/2026/1121BOSSAC.htm"
+      ]
+    },
+    {
+      "fixture": "MEM@MIN",
+      "type": "PRETIP_CONTRARIAN_LEAN_INCORRECT",
+      "pretip_known": "Frozen C MIN 64.58%; independent analyst low-confidence Memphis contrarian based on Memphis recent scoring and MIN Edwards/DiVincenzo OUT; opposing pretip evidence included MIN DRtg 101.92 and rim defense.",
+      "observed": "MIN 104 MEM 95; Memphis was held to 95; McDaniels 25 and Dosunmu 19; Minnesota outscored Grizzlies 28-12 in second quarter and 27-16 in third. Boozer known OUT before match.",
+      "plausible_mechanisms": "Wolves defense and collective offense may explain observed margin; prior Memphis hot shooting regressed. Neither is proven to be predictable as a quantifiable signal; MIN defense strength was already in frozen Model C.",
+      "judgement": "ONE_INCORRECT_CONTRARIAN_NO_GENERALIZED_DISMISSAL",
+      "urls": [
+        "https://www.reuters.com/sports/basketball/timberwolves-deal-grizzlies-first-road-loss-this-season--flm-2026-11-22/",
+        "https://www.landofbasketball.com/results/2026_2027_nov_scores.htm"
+      ]
+    },
+    {
+      "fixture": "ALL_FIVE",
+      "type": "CONSISTENT_TOTAL_UNDERSHOOT",
+      "pretip_known": "Five pretip Model C totals range 221.03-233.25 (all full-game including OT), forecast mean 227.06. No validated full game O/U bookmaker market recorded; model totals not lines.",
+      "observed": "Final game totals 193,210,199,205,193; actual mean 200. All five landed lower than corresponding model total by 18.48-30.88 points, mean signed -27.06. No games went to OT.",
+      "plausible_mechanisms": "Lower shooting efficiency, pace/possessions, late injury lineup effects, game-level correlated scoring conditions, or ordinary variation; exact game-by-game attribution would require validated possessions/shot profile. No coefficient change supported by five games.",
+      "judgement": "RESEARCH_HYPOTHESIS_TRACK_FUTURE_TOTAL_SIGN_BIAS",
+      "urls": [
+        "https://www.landofbasketball.com/results/2026_2027_nov_scores.htm"
+      ]
+    },
+    {
+      "fixture": "NOP@SAS",
+      "type": "PREGAME_UNKNOWN_FINAL_OUT",
+      "pretip_known": "SAS Model C 88.66%; analyst SAS MEDIUM. Original pretip NOP official injury report NOT YET SUBMITTED, so no claim Zion OUT prior to lock.",
+      "observed": "Spurs won 114-91; Wembanyama 50 points, 19 rebounds, five blocks. Zion Williamson late scratch with left thigh contusion was reported postgame.",
+      "plausible_mechanisms": "Spurs matchup edge was visible pretip; Wembanyama 50 and Zion late scratch are postgame facts, not a demonstrated pretip advantage. Extra role and rest effects not identified.",
+      "judgement": "CORRECT_MODEL_AND_ANALYST; NO_HINDSIGHT_UPGRADE",
+      "urls": [
+        "https://www.reuters.com/sports/basketball/victor-wembanyama-posts-50-points-19-rebounds-spurs-roll-pelicans--flm-2026-11-22/",
+        "https://www.landofbasketball.com/results/2026_2027_nov_scores.htm"
+      ]
+    }
+  ],
+  "no_changes": {
+    "frozen_model_parameters": true,
+    "original_pretip_files": true,
+    "production_pointer": true,
+    "posttip_market_backfill": false
+  }
+}
