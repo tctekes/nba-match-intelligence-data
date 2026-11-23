@@ -1,0 +1,163 @@
+{
+  "schema_version": "nba-pretip-unverified-market-research-v1",
+  "status": "RESEARCH_ONLY_MARKET_NOT_VERIFIED",
+  "nba_local_date": "2026-11-23",
+  "recorded_at_utc": "2026-11-23T20:40:49Z",
+  "linked_frozen_forecast": "published/forecast_locks/2026-11-23-ten-games-frozen-model-c-analyst-shadow-v1.json",
+  "market_source_attempts": [
+    {
+      "url": "https://1xbet.mobi/en/line/basketball/13589-nba",
+      "status": "SEARCH_INDEX_ACCESSIBLE; DIRECT_PAGE_REOPEN_CACHE_MISS; no authenticated complete ten-game same-line receipt"
+    },
+    {
+      "url": "https://oddsbunch.com/en/sports/basketball?date=2026-11-24&market=totals",
+      "status": "SEARCH_INDEX_ACCESSIBLE; aggregating best prices from different bookmakers for opposing sides, unacceptable as single-book same-line; DIRECT_PAGE_REOPEN_CACHE_MISS"
+    },
+    {
+      "url": "https://www.statsinsider.com.au/news/pacers-vs-thunder-prediction-and-nba-tips-24-november-2026",
+      "status": "SEARCH_INDEX_FULL_ARTICLE_AND_PUBLISH_TIMESTAMP_SHOWN; DIRECT_REOPEN_CACHE_MISS; no independent bookmaker quote reproduction"
+    }
+  ],
+  "bet365_rule_url": "https://help.bet365.com/s/en-us/sportsrules/basketball",
+  "bet365_rule_description": "All pre-game bets include overtime unless otherwise stated.",
+  "provider_api_access": {
+    "HoopsAPI": "NOT_CONNECTED_REQUIRES_PRIVATE_KEY",
+    "TheOddsAPI": "NOT_CONNECTED_REQUIRES_PRIVATE_KEY"
+  },
+  "source_method": "Indexed Stats Insider named-bet365 article snippets search-returned, not direct authenticated API/page/bookmaker receipt; before tipoff. Candidate publication/fidelity cannot be validated consistently via direct page retrieval. 1xBet search result showed mixed regular-time markets. Do NOT call official main-line source.",
+  "market_candidates": [
+    {
+      "fixture": "MEM@CHA",
+      "attributed_bookmaker": "Bet365 (as reported by Stats Insider, not authenticated Bet365)",
+      "aggregator_article_url": "https://www.statsinsider.com.au/news/hornets-vs-grizzlies-prediction-and-nba-tips-24-november-2026",
+      "reported_line": 215.5,
+      "reported_over_decimal": 1.91,
+      "reported_under_decimal": 1.91,
+      "qualifies_for_official_pretip_lock": false,
+      "article_published_at_utc": null,
+      "bookmaker_quote_captured_at_utc": null,
+      "analyst_reviewed_direction": null,
+      "confidence": null
+    },
+    {
+      "fixture": "POR@PHI",
+      "attributed_bookmaker": "Bet365 (as reported by Stats Insider, not authenticated Bet365)",
+      "aggregator_article_url": "https://www.statsinsider.com.au/news/76ers-vs-trail-blazers-prediction-and-nba-tips-24-november-2026",
+      "reported_line": 231.5,
+      "reported_over_decimal": 1.91,
+      "reported_under_decimal": 1.91,
+      "qualifies_for_official_pretip_lock": false,
+      "article_published_at_utc": null,
+      "bookmaker_quote_captured_at_utc": null,
+      "analyst_reviewed_direction": null,
+      "confidence": null
+    },
+    {
+      "fixture": "OKC@IND",
+      "attributed_bookmaker": "Bet365 (as reported by Stats Insider, not authenticated Bet365)",
+      "aggregator_article_url": "https://www.statsinsider.com.au/news/pacers-vs-thunder-prediction-and-nba-tips-24-november-2026",
+      "reported_line": 221.5,
+      "reported_over_decimal": 1.91,
+      "reported_under_decimal": 1.91,
+      "qualifies_for_official_pretip_lock": false,
+      "article_published_at_utc": null,
+      "bookmaker_quote_captured_at_utc": null,
+      "analyst_reviewed_direction": null,
+      "confidence": null
+    },
+    {
+      "fixture": "MIL@TOR",
+      "attributed_bookmaker": "Bet365 (as reported by Stats Insider, not authenticated Bet365)",
+      "aggregator_article_url": "https://www.statsinsider.com.au/news/raptors-vs-bucks-prediction-and-nba-tips-24-november-2026",
+      "reported_line": 222.5,
+      "reported_over_decimal": 1.91,
+      "reported_under_decimal": 1.91,
+      "qualifies_for_official_pretip_lock": false,
+      "article_published_at_utc": null,
+      "bookmaker_quote_captured_at_utc": null,
+      "analyst_reviewed_direction": null,
+      "confidence": null
+    },
+    {
+      "fixture": "BKN@MIN",
+      "attributed_bookmaker": "Bet365 (as reported by Stats Insider, not authenticated Bet365)",
+      "aggregator_article_url": "https://www.statsinsider.com.au/news/timberwolves-vs-nets-prediction-and-nba-tips-24-november-2026",
+      "reported_line": 224.5,
+      "reported_over_decimal": 1.91,
+      "reported_under_decimal": 1.91,
+      "qualifies_for_official_pretip_lock": false,
+      "article_published_at_utc": null,
+      "bookmaker_quote_captured_at_utc": null,
+      "analyst_reviewed_direction": null,
+      "confidence": null
+    },
+    {
+      "fixture": "CLE@CHI",
+      "attributed_bookmaker": "Bet365 (as reported by Stats Insider, not authenticated Bet365)",
+      "aggregator_article_url": "https://www.statsinsider.com.au/news/bulls-vs-cavaliers-prediction-and-nba-tips-24-november-2026",
+      "reported_line": 240.5,
+      "reported_over_decimal": 1.91,
+      "reported_under_decimal": 1.91,
+      "qualifies_for_official_pretip_lock": false,
+      "article_published_at_utc": null,
+      "bookmaker_quote_captured_at_utc": null,
+      "analyst_reviewed_direction": null,
+      "confidence": null
+    },
+    {
+      "fixture": "PHX@NOP",
+      "attributed_bookmaker": "Bet365 (as reported by Stats Insider, not authenticated Bet365)",
+      "aggregator_article_url": "https://www.statsinsider.com.au/news/pelicans-vs-suns-prediction-and-nba-tips-24-november-2026",
+      "reported_line": 233.5,
+      "reported_over_decimal": 1.91,
+      "reported_under_decimal": 1.91,
+      "qualifies_for_official_pretip_lock": false,
+      "article_published_at_utc": null,
+      "bookmaker_quote_captured_at_utc": null,
+      "analyst_reviewed_direction": null,
+      "confidence": null
+    },
+    {
+      "fixture": "LAC@HOU",
+      "attributed_bookmaker": "Bet365 (as reported by Stats Insider, not authenticated Bet365)",
+      "aggregator_article_url": "https://www.statsinsider.com.au/news/rockets-vs-clippers-prediction-and-nba-tips-24-november-2026",
+      "reported_line": 223.5,
+      "reported_over_decimal": 1.91,
+      "reported_under_decimal": 1.91,
+      "qualifies_for_official_pretip_lock": false,
+      "article_published_at_utc": null,
+      "bookmaker_quote_captured_at_utc": null,
+      "analyst_reviewed_direction": null,
+      "confidence": null
+    },
+    {
+      "fixture": "UTA@LAL",
+      "attributed_bookmaker": "Bet365 (as reported by Stats Insider, not authenticated Bet365)",
+      "aggregator_article_url": "https://www.statsinsider.com.au/news/lakers-vs-jazz-prediction-and-nba-tips-24-november-2026",
+      "reported_line": 224.5,
+      "reported_over_decimal": 1.91,
+      "reported_under_decimal": 1.91,
+      "qualifies_for_official_pretip_lock": false,
+      "article_published_at_utc": null,
+      "bookmaker_quote_captured_at_utc": null,
+      "analyst_reviewed_direction": null,
+      "confidence": null
+    },
+    {
+      "fixture": "SAS@SAC",
+      "attributed_bookmaker": "Bet365 (as reported by Stats Insider, not authenticated Bet365)",
+      "aggregator_article_url": "https://www.statsinsider.com.au/news/kings-vs-spurs-prediction-and-nba-tips-24-november-2026",
+      "reported_line": 224.5,
+      "reported_over_decimal": 1.91,
+      "reported_under_decimal": 1.91,
+      "qualifies_for_official_pretip_lock": false,
+      "article_published_at_utc": null,
+      "bookmaker_quote_captured_at_utc": null,
+      "analyst_reviewed_direction": null,
+      "confidence": null
+    }
+  ],
+  "all_model_math_unchanged": true,
+  "official_ou_count": 0,
+  "policy": "Cannot backfill official totals or grade after results. Keep these quote candidates distinct from accepted market prices; require actual validated quoted bookmaker main line with same Over/Under decimal prices and UTC as-known-at-tip for future official use."
+}
