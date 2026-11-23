@@ -1,0 +1,73 @@
+{
+  "schema_version": "nba-pretip-player-status-receipt-addendum-v1",
+  "status": "APPEND_ONLY_PRETIP_CONTEXT_NOT_A_MODEL_CHANGE",
+  "nba_local_date": "2026-11-23",
+  "recorded_at_utc": "2026-11-23T20:40:49Z",
+  "original_frozen_lock": "published/forecast_locks/2026-11-23-ten-games-frozen-model-c-analyst-shadow-v1.json",
+  "original_lock_commit": "6789aff3e13983a88e83a6366c2392fb4ae52e2a",
+  "primary_injury_source": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-23_12_15PM.pdf",
+  "pdf_caveat": "12:15 ET official NBA game-specific report said OKC@IND not yet submitted. It is not evidence that every OKC player is active. We found separate subsequent pretip reporting below. No PDF image check possible: screenshot route cache miss.",
+  "updates": [
+    {
+      "fixture": "OKC@IND",
+      "tipoff_utc": "2026-11-24T00:30:00Z",
+      "scope": "Cross-verified pretip reporting after primary injury report",
+      "items": [
+        {
+          "team": "OKC",
+          "player": "Shai Gilgeous-Alexander",
+          "reported_status": "OFF_INJURY_REPORT_EXPECTED_TO_RETURN; NOT_VERIFIED_OFFICIAL_GAME_PDF",
+          "source_url": "https://staging-aws.sports.yahoo.com/articles/shai-gilgeous-alexander-off-injury-184557363.html",
+          "source_published_at_utc": "2026-11-23T18:45:00Z"
+        },
+        {
+          "team": "OKC",
+          "player": "Chet Holmgren",
+          "reported_status": "OUT_CONFIRMED_BY_SECONDARY_REPORT",
+          "source_url": "https://www.nba.com/stats/fantasynews?Team=timberwolves",
+          "source_published_at_utc": null
+        },
+        {
+          "team": "OKC",
+          "player": "Jalen Williams",
+          "reported_status": "OUT_CONFIRMED_BY_SECONDARY_REPORT",
+          "source_url": "https://staging-aws.sports.yahoo.com/articles/shai-gilgeous-alexander-off-injury-184557363.html",
+          "source_published_at_utc": null
+        }
+      ],
+      "analyst_original": "ABSTAIN",
+      "analyst_updated": "ABSTAIN",
+      "reason": "Shai expected return improves shot creation but Chet/Jalen outs and back-to-back still create uncertainty; no verified replacement minutes. No revision of analyst choice or numeric frozen baseline."
+    },
+    {
+      "fixture": "LAC@HOU",
+      "tipoff_utc": "2026-11-24T01:30:00Z",
+      "scope": "Source confirmation of listed/omitted player",
+      "items": [
+        {
+          "team": "LAC",
+          "player": "Brandon Ingram",
+          "reported_status": "OFF_INJURY_REPORT_EXPECTED_DEBUT; not a guarantee of minutes",
+          "source_url": "https://www.cbssports.com/fantasy/basketball/news/clippers-brandon-ingram-removed-from-injury-report/",
+          "source_published_at_utc": null
+        },
+        {
+          "team": "LAC",
+          "player": "Brandon Ingram",
+          "reported_status": "NBA team fantasy news confirms omitted from report",
+          "source_url": "https://www.nba.com/clippers/player/1627742/brandon_ingram",
+          "source_published_at_utc": null
+        }
+      ],
+      "analyst_original": "HOU_MEDIUM",
+      "analyst_updated": "HOU_MEDIUM",
+      "reason": "Potential returning shot creation was already explicitly included as a counterargument in initial pretip lock; no numerical override."
+    }
+  ],
+  "immutability": {
+    "frozen_model_forecast_unchanged": true,
+    "original_analyst_leans_unchanged": true,
+    "market_qualification_unchanged": true
+  },
+  "all_sources_read_as_indexed_web_content_with_direct_page_cache_miss": true
+}
