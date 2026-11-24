@@ -1,0 +1,234 @@
+{
+  "accepted_games": 247,
+  "bsl_completed_games": 248,
+  "core_fields_verified_per_team": 8,
+  "data_provenance": {
+    "boxscorelab_games_sha256": "472d30ab180cf07ef1ad22a19b895464877f9d20eb1264c08f09c2697284b770",
+    "boxscorelab_standings_sha256": "9b68d01a55d496eb49c431906dfc1cee977e97d5f8377e4e37e5a929f5dc2361",
+    "fallback": {
+      "fallback_source_shas": {},
+      "recovered": 0,
+      "source": "BoxScore Lab complete"
+    },
+    "fallback_limitations": "ESPN team turnovers verified against ESPN live, while player turnovers and seven other inputs are independently checked against NBA Stats release",
+    "independent_checks": "ESPN completed game dates, scores and eight live team box fields",
+    "source": "BoxScore Lab (CC BY 4.0) plus independently cross-checked complete-game release fallback"
+  },
+  "data_through_nba_date": "2026-11-22",
+  "excluded_game_receipts": [
+    {
+      "date": "2026-10-30",
+      "espn_game_id": "401909277",
+      "mismatches": {
+        "CHA": {
+          "turnovers": {
+            "bsl": 12,
+            "espn": 13
+          }
+        }
+      },
+      "teams": [
+        "CHA",
+        "WAS"
+      ]
+    }
+  ],
+  "excluded_games": 1,
+  "fallback_completed_games": 0,
+  "generated_at_utc": "2026-11-24T03:29:52.007410+00:00",
+  "independent_box_team_rows_checked": 496,
+  "metric_definitions": {
+    "drtg": "arithmetic mean of per-game 100*opp_points/P",
+    "gp": "accepted games per team",
+    "ortg": "arithmetic mean of per-game 100*points/P",
+    "pace": "arithmetic mean full-game P including OT",
+    "possessions": "P=0.5*sum_for_2_teams(FGA+0.44*FTA-OREB+TOV)"
+  },
+  "model": "Frozen Model C v0.1 (no parameter changes)",
+  "publication_status": "ACCEPTED_GAMES_EXPERIMENTAL_NOT_PRODUCTION",
+  "raw_completed_games": 248,
+  "schema_version": "nba-model-c-accepted-candidate-v1",
+  "season": "2026-27",
+  "teams": {
+    "ATL": {
+      "drtg": 107.49266568294614,
+      "n": 17,
+      "ortg": 110.67328566014433,
+      "pace": 105.55529411764708
+    },
+    "BKN": {
+      "drtg": 115.87679325698713,
+      "n": 15,
+      "ortg": 108.19223383506832,
+      "pace": 102.44933333333331
+    },
+    "BOS": {
+      "drtg": 103.60023364972226,
+      "n": 17,
+      "ortg": 112.73194831773395,
+      "pace": 98.61058823529409
+    },
+    "CHA": {
+      "drtg": 112.74546287940021,
+      "n": 14,
+      "ortg": 102.5025470543188,
+      "pace": 98.99
+    },
+    "CHI": {
+      "drtg": 116.28393833258447,
+      "n": 16,
+      "ortg": 108.94784790813587,
+      "pace": 107.16250000000001
+    },
+    "CLE": {
+      "drtg": 113.42867136824084,
+      "n": 17,
+      "ortg": 115.56603202187034,
+      "pace": 102.94588235294118
+    },
+    "DAL": {
+      "drtg": 110.66171071289322,
+      "n": 17,
+      "ortg": 110.64459516383738,
+      "pace": 101.64235294117645
+    },
+    "DEN": {
+      "drtg": 113.54205252841315,
+      "n": 15,
+      "ortg": 115.09076466896728,
+      "pace": 101.384
+    },
+    "DET": {
+      "drtg": 107.29400099141382,
+      "n": 16,
+      "ortg": 112.04286559226219,
+      "pace": 101.06125
+    },
+    "GSW": {
+      "drtg": 111.01184101698195,
+      "n": 17,
+      "ortg": 110.26751684668545,
+      "pace": 100.91294117647058
+    },
+    "HOU": {
+      "drtg": 110.66356133567805,
+      "n": 17,
+      "ortg": 118.35022311388069,
+      "pace": 99.88
+    },
+    "IND": {
+      "drtg": 111.97910294315092,
+      "n": 17,
+      "ortg": 108.21147567557905,
+      "pace": 103.07882352941175
+    },
+    "LAC": {
+      "drtg": 115.1033089254655,
+      "n": 15,
+      "ortg": 108.71264983980667,
+      "pace": 102.26933333333334
+    },
+    "LAL": {
+      "drtg": 110.69766210394198,
+      "n": 17,
+      "ortg": 116.67757734001337,
+      "pace": 102.7541176470588
+    },
+    "MEM": {
+      "drtg": 108.95364579787415,
+      "n": 17,
+      "ortg": 117.77363885705427,
+      "pace": 102.36117647058825
+    },
+    "MIA": {
+      "drtg": 113.83571701391442,
+      "n": 16,
+      "ortg": 115.20650800851757,
+      "pace": 104.95124999999999
+    },
+    "MIL": {
+      "drtg": 118.72234668417977,
+      "n": 17,
+      "ortg": 106.45696250941332,
+      "pace": 102.57176470588236
+    },
+    "MIN": {
+      "drtg": 101.58163314984526,
+      "n": 17,
+      "ortg": 111.02867318893205,
+      "pace": 103.47882352941177
+    },
+    "NOP": {
+      "drtg": 117.42097081810955,
+      "n": 18,
+      "ortg": 109.16998121599256,
+      "pace": 104.51777777777778
+    },
+    "NYK": {
+      "drtg": 105.05402777912,
+      "n": 17,
+      "ortg": 111.02310311710313,
+      "pace": 98.33058823529412
+    },
+    "OKC": {
+      "drtg": 107.29649430138825,
+      "n": 17,
+      "ortg": 110.61509226958039,
+      "pace": 102.05411764705883
+    },
+    "ORL": {
+      "drtg": 112.59750180916312,
+      "n": 16,
+      "ortg": 108.53314075224245,
+      "pace": 100.34375
+    },
+    "PHI": {
+      "drtg": 111.11001385050939,
+      "n": 17,
+      "ortg": 113.92924186934032,
+      "pace": 101.53999999999998
+    },
+    "PHX": {
+      "drtg": 113.44827758303033,
+      "n": 15,
+      "ortg": 112.5056340044971,
+      "pace": 101.096
+    },
+    "POR": {
+      "drtg": 107.81682903078254,
+      "n": 16,
+      "ortg": 113.6499073682147,
+      "pace": 102.26000000000002
+    },
+    "SAC": {
+      "drtg": 116.52691314984482,
+      "n": 16,
+      "ortg": 104.59902626569162,
+      "pace": 102.19500000000001
+    },
+    "SAS": {
+      "drtg": 103.82228265973966,
+      "n": 17,
+      "ortg": 115.60317316167277,
+      "pace": 101.5564705882353
+    },
+    "TOR": {
+      "drtg": 111.55685003810251,
+      "n": 16,
+      "ortg": 111.10615671046031,
+      "pace": 100.4375
+    },
+    "UTA": {
+      "drtg": 112.93451209682864,
+      "n": 18,
+      "ortg": 106.04133758311588,
+      "pace": 102.57333333333334
+    },
+    "WAS": {
+      "drtg": 114.865699044043,
+      "n": 17,
+      "ortg": 108.87456996646833,
+      "pace": 102.13529411764705
+    }
+  }
+}
