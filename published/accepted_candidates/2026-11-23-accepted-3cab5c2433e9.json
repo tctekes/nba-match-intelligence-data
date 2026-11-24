@@ -1,0 +1,250 @@
+{
+  "accepted_games": 256,
+  "bsl_completed_games": 258,
+  "core_fields_verified_per_team": 8,
+  "data_provenance": {
+    "boxscorelab_games_sha256": "7b71f8186b050bcc59f9b5f2fc0aded6d64c4baa5ca4b99dcf036c15d42130c6",
+    "boxscorelab_standings_sha256": "da87af8c88bce3b780d9f86d7ca01372627772ab9b4550cd0aa570268be09033",
+    "fallback": {
+      "fallback_source_shas": {},
+      "recovered": 0,
+      "source": "BoxScore Lab complete"
+    },
+    "fallback_limitations": "ESPN team turnovers verified against ESPN live, while player turnovers and seven other inputs are independently checked against NBA Stats release",
+    "independent_checks": "ESPN completed game dates, scores and eight live team box fields",
+    "source": "BoxScore Lab (CC BY 4.0) plus independently cross-checked complete-game release fallback"
+  },
+  "data_through_nba_date": "2026-11-23",
+  "excluded_game_receipts": [
+    {
+      "date": "2026-10-20",
+      "espn_game_id": "401909090",
+      "mismatches": {
+        "OKC": {
+          "turnovers": {
+            "bsl": 13,
+            "espn": 14
+          }
+        }
+      },
+      "teams": [
+        "OKC",
+        "SAS"
+      ]
+    },
+    {
+      "date": "2026-10-30",
+      "espn_game_id": "401909277",
+      "mismatches": {
+        "CHA": {
+          "turnovers": {
+            "bsl": 12,
+            "espn": 13
+          }
+        }
+      },
+      "teams": [
+        "CHA",
+        "WAS"
+      ]
+    }
+  ],
+  "excluded_games": 2,
+  "fallback_completed_games": 0,
+  "generated_at_utc": "2026-11-24T20:33:17.320162+00:00",
+  "independent_box_team_rows_checked": 516,
+  "metric_definitions": {
+    "drtg": "arithmetic mean of per-game 100*opp_points/P",
+    "gp": "accepted games per team",
+    "ortg": "arithmetic mean of per-game 100*points/P",
+    "pace": "arithmetic mean full-game P including OT",
+    "possessions": "P=0.5*sum_for_2_teams(FGA+0.44*FTA-OREB+TOV)"
+  },
+  "model": "Frozen Model C v0.1 (no parameter changes)",
+  "publication_status": "ACCEPTED_GAMES_EXPERIMENTAL_NOT_PRODUCTION",
+  "raw_completed_games": 258,
+  "schema_version": "nba-model-c-accepted-candidate-v1",
+  "season": "2026-27",
+  "teams": {
+    "ATL": {
+      "drtg": 107.49266568294614,
+      "n": 17,
+      "ortg": 110.67328566014433,
+      "pace": 105.55529411764708
+    },
+    "BKN": {
+      "drtg": 117.26944211197281,
+      "n": 16,
+      "ortg": 108.48412075764061,
+      "pace": 102.46999999999998
+    },
+    "BOS": {
+      "drtg": 103.60023364972226,
+      "n": 17,
+      "ortg": 112.73194831773395,
+      "pace": 98.61058823529409
+    },
+    "CHA": {
+      "drtg": 113.23238208575746,
+      "n": 15,
+      "ortg": 103.26190252602417,
+      "pace": 98.88799999999999
+    },
+    "CHI": {
+      "drtg": 115.81065512905124,
+      "n": 17,
+      "ortg": 109.73144460659377,
+      "pace": 106.72823529411765
+    },
+    "CLE": {
+      "drtg": 113.91980028011191,
+      "n": 18,
+      "ortg": 115.15892601357308,
+      "pace": 102.77000000000001
+    },
+    "DAL": {
+      "drtg": 110.66171071289322,
+      "n": 17,
+      "ortg": 110.64459516383738,
+      "pace": 101.64235294117645
+    },
+    "DEN": {
+      "drtg": 113.54205252841315,
+      "n": 15,
+      "ortg": 115.09076466896728,
+      "pace": 101.384
+    },
+    "DET": {
+      "drtg": 107.29400099141382,
+      "n": 16,
+      "ortg": 112.04286559226219,
+      "pace": 101.06125
+    },
+    "GSW": {
+      "drtg": 111.01184101698195,
+      "n": 17,
+      "ortg": 110.26751684668545,
+      "pace": 100.91294117647058
+    },
+    "HOU": {
+      "drtg": 110.34230795055085,
+      "n": 18,
+      "ortg": 118.27424706844772,
+      "pace": 99.84
+    },
+    "IND": {
+      "drtg": 112.33136711387424,
+      "n": 18,
+      "ortg": 109.0469410325012,
+      "pace": 102.98666666666665
+    },
+    "LAC": {
+      "drtg": 115.22076801112935,
+      "n": 16,
+      "ortg": 108.47317175003053,
+      "pace": 102.075
+    },
+    "LAL": {
+      "drtg": 109.88639577178564,
+      "n": 18,
+      "ortg": 116.38599835400727,
+      "pace": 102.47999999999998
+    },
+    "MEM": {
+      "drtg": 109.22804764965332,
+      "n": 18,
+      "ortg": 117.90006175248229,
+      "pace": 102.0888888888889
+    },
+    "MIA": {
+      "drtg": 113.83571701391442,
+      "n": 16,
+      "ortg": 115.20650800851757,
+      "pace": 104.95124999999999
+    },
+    "MIL": {
+      "drtg": 118.19502000414829,
+      "n": 18,
+      "ortg": 106.88439557693799,
+      "pace": 102.5188888888889
+    },
+    "MIN": {
+      "drtg": 102.20834378575523,
+      "n": 18,
+      "ortg": 112.5359232860335,
+      "pace": 103.44
+    },
+    "NOP": {
+      "drtg": 116.98713329469574,
+      "n": 19,
+      "ortg": 108.98353756915871,
+      "pace": 104.94631578947369
+    },
+    "NYK": {
+      "drtg": 105.05402777912,
+      "n": 17,
+      "ortg": 111.02310311710313,
+      "pace": 98.33058823529412
+    },
+    "OKC": {
+      "drtg": 108.87674782677078,
+      "n": 17,
+      "ortg": 111.25114563050543,
+      "pace": 101.67294117647059
+    },
+    "ORL": {
+      "drtg": 112.59750180916312,
+      "n": 16,
+      "ortg": 108.53314075224245,
+      "pace": 100.34375
+    },
+    "PHI": {
+      "drtg": 112.12017581953272,
+      "n": 18,
+      "ortg": 113.8287957722221,
+      "pace": 101.39888888888886
+    },
+    "PHX": {
+      "drtg": 112.95948222947527,
+      "n": 16,
+      "ortg": 112.29766049629396,
+      "pace": 101.81875000000001
+    },
+    "POR": {
+      "drtg": 108.07002803610192,
+      "n": 17,
+      "ortg": 114.57008512849202,
+      "pace": 102.06823529411767
+    },
+    "SAC": {
+      "drtg": 117.20287814504667,
+      "n": 17,
+      "ortg": 104.99705582218398,
+      "pace": 101.83529411764707
+    },
+    "SAS": {
+      "drtg": 104.04925782712888,
+      "n": 17,
+      "ortg": 117.46392468517877,
+      "pace": 100.86117647058825
+    },
+    "TOR": {
+      "drtg": 111.70943284320573,
+      "n": 17,
+      "ortg": 110.99582198888109,
+      "pace": 100.5070588235294
+    },
+    "UTA": {
+      "drtg": 112.85528280709573,
+      "n": 19,
+      "ortg": 105.5178391905902,
+      "pace": 102.32315789473685
+    },
+    "WAS": {
+      "drtg": 114.865699044043,
+      "n": 17,
+      "ortg": 108.87456996646833,
+      "pace": 102.13529411764705
+    }
+  }
+}
