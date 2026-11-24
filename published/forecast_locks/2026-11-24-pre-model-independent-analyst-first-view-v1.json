@@ -1,0 +1,116 @@
+{
+  "schema_version": "nba-analyst-independent-first-view-v1",
+  "status": "IMMUTABLE_BEFORE_MODEL_PRETIP_SHADOW_FIRST_VIEW",
+  "nba_local_date": "2026-11-24",
+  "created_at_utc": "2026-11-24T20:33:23Z",
+  "model_outputs_not_consulted": true,
+  "market_not_consulted_for_selection": true,
+  "injury_pdf_screenshot": "FAILED_CACHE_MISS; extracted explicit team rows plus team preview",
+  "cup_source_url": "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios?lid=ndpayr36q5id",
+  "games": [
+    {
+      "away": "DET",
+      "home": "ORL",
+      "tipoff_utc": "2026-11-25T00:00:00Z",
+      "cup_group": "East A",
+      "lean": "DET",
+      "confidence": "LOW",
+      "reason": "Detroit 10-6 vs Orlando 7-9; Cade probable and Orlando Banchero out limits self creation. Duren absence weakens DET rim finishing/rebounding; Duncan Robinson out reduces spacing. Orlando 3-0 Cup and can clinch at home; two recent Detroit losses, so weak lean rather than strong pick.",
+      "injuries": [
+        [
+          "DET",
+          "Cade Cunningham",
+          "PROBABLE"
+        ],
+        [
+          "DET",
+          "Jalen Duren",
+          "OUT"
+        ],
+        [
+          "DET",
+          "Duncan Robinson",
+          "OUT"
+        ],
+        [
+          "ORL",
+          "Paolo Banchero",
+          "OUT"
+        ],
+        [
+          "ORL",
+          "Jonathan Isaac",
+          "OUT"
+        ]
+      ],
+      "sources": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-24_01_00PM.pdf",
+        "https://www.nba.com/magic/news/orlando-magic-detroit-pistons-game-preview-injury-report-20261124",
+        "https://www.nba.com/game/0022600052?resume=true"
+      ],
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY"
+    },
+    {
+      "away": "BOS",
+      "home": "WAS",
+      "tipoff_utc": "2026-11-25T01:00:00Z",
+      "cup_group": "East C",
+      "lean": "BOS",
+      "confidence": "LOW",
+      "reason": "Boston 11-6 vs Washington 7-11, Boston 2-0 Cup; Tatum and White not listed in 13:00 official report (not guarantee active). Washington three straight wins including 116-96 Orlando, Boston losing streak; Boston Mitchell Robinson OUT, potential rebounding risk. Prefer Boston overall but recent counterevidence substantial.",
+      "injuries": [
+        [
+          "BOS",
+          "Mitchell Robinson",
+          "OUT"
+        ],
+        [
+          "WAS",
+          "Tre Mann",
+          "QUESTIONABLE"
+        ],
+        [
+          "WAS",
+          "Tristan Vukcevic",
+          "OUT"
+        ]
+      ],
+      "sources": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-24_01_00PM.pdf",
+        "https://www.reuters.com/sports/basketball/celtics-bring-losing-skid-into-nba-cup-matchup-vs-streaking-wizards--flm-2026-11-24/",
+        "https://www.nba.com/news/starting-5-november-24-2026"
+      ],
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY"
+    },
+    {
+      "away": "DAL",
+      "home": "DEN",
+      "tipoff_utc": "2026-11-25T03:00:00Z",
+      "cup_group": "West A",
+      "lean": "DEN",
+      "confidence": "MEDIUM",
+      "reason": "Denver home, Jokic creation vs Dallas missing Lively, PJ Washington questionable, Dallas must defend Jokic handoffs and interior passing. NBA notes Denver 6-1 clutch, small sample; Flagg two Cup games 27 pts,9.5 reb,6.5 ast, counterargument. Both undefeated in group, Denver clinches with win; Denver full injury status not established from extracted report.",
+      "injuries": [
+        [
+          "DAL",
+          "Dereck Lively II",
+          "OUT"
+        ],
+        [
+          "DAL",
+          "P.J. Washington",
+          "QUESTIONABLE"
+        ]
+      ],
+      "sources": [
+        "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-24_01_00PM.pdf",
+        "https://www.nba.com/news/starting-5-november-24-2026",
+        "https://www.nba.com/nuggets/news/nuggets-look-to-clinch-emirates-nba-cup-group-with-win-over-mavericks"
+      ],
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY"
+    }
+  ]
+}
