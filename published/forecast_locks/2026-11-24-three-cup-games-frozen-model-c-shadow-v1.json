@@ -1,0 +1,195 @@
+{
+  "schema_version": "nba-locked-shadow-forecast-v1",
+  "status": "LOCKED_PREGAME_SHADOW_NOT_PRODUCTION",
+  "nba_local_date": "2026-11-24",
+  "generated_at_utc": "2026-11-24T20:35:35Z",
+  "analyst_reviewed_at_utc": "2026-11-24T20:35:35Z",
+  "first_analyst_path": "published/forecast_locks/2026-11-24-pre-model-independent-analyst-first-view-v1.json",
+  "first_analyst_commit": "1e06d81126fcc140a55ab0cac7cbc0d667a6eced",
+  "first_analyst_created_at_utc": "2026-11-24T20:33:23Z",
+  "first_view_changed_count": 0,
+  "model": "Frozen Model C v0.1",
+  "model_file_sha256": "b6efd52df74f540c3bda711cd37a372e1ae7cbdbda134579c4c43bc7ff1eafef",
+  "parameter_file_sha256": "259b0dcc561c2f0400b04d9b19aba59eef53973ba06075f5db97a73497d1c640",
+  "current_snapshot_path": "published/accepted_candidates/2026-11-23-accepted-3cab5c2433e9.json",
+  "current_snapshot_sha256": "3cab5c2433e92516213a18035df118d49fac145f878e87186a75ec5eeb0d1412",
+  "data_through_nba_date": "2026-11-23",
+  "raw_completed_games": 258,
+  "accepted_games": 256,
+  "excluded_games": 2,
+  "verified_team_count": 30,
+  "accepted_gp_sum": 512,
+  "independent_box_team_rows_checked": 516,
+  "core_fields_verified_per_team": 8,
+  "fallback_completed_games": 0,
+  "independent_eight_box_fields": "PASS_WITH_WHOLE_GAME_EXCLUSIONS",
+  "daily_recovery_run_id": 45481952790,
+  "daily_recovery_commit": "91f50f53412e6ed02917988c2f24b24a0f320106",
+  "daily_recovery_status": "SUCCESS",
+  "production_pointer_advanced": false,
+  "model_execution": "Actual local Python original SHA-verified files, eight self-tests PASS; predict_html executed for each game. Exact 30-team rates transferred from SHA-verified indexed snapshot; GP 512 asserted. Previous league from frozen prior. No market input to model. As-of payload 20:35:00 UTC; lock observation 20:35:35 UTC.",
+  "schedule_source_url": "https://www.nba.com/news/emirates-nba-cup-key-dates-schedule?lid=74gx03jl1ngq",
+  "injury_source": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-24_01_00PM.pdf",
+  "injury_pdf_caveat": "Extracted explicit team rows; PDF screenshots cache miss; DET/ORL corroborated by official team preview. Denver complete injury status not verified in PDF. No independently verified replacement minutes or DARKO.",
+  "market_policy": "No official market receipt at primary lock. A later eligible pretip overlay may be appended only; never rewrite original.",
+  "games": [
+    {
+      "away": "DET",
+      "home": "ORL",
+      "tipoff_utc": "2026-11-25T00:00:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "East A",
+      "cup_context_source_url": "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios?lid=ndpayr36q5id",
+      "cup_context_checked_at_utc": "2026-11-24T20:35:35Z",
+      "cup_stakes_known_pretip": "ORL 3-0, DET 1-1, ORL clinches group with win",
+      "home_win_probability": 0.34474577071397283,
+      "predicted_winner": "DET",
+      "win_probability": 0.6552542292860272,
+      "expected_home_margin": -4.990362670746609,
+      "expected_full_game_total": 220.3401705603239,
+      "analyst_lean": {
+        "team": "DET",
+        "confidence": "LOW",
+        "rationale": "Detroit 10-6 vs Orlando 7-9; Cade probable and Orlando Banchero out limits self creation. Duren absence weakens DET rim finishing/rebounding; Duncan Robinson out reduces spacing. Orlando 3-0 Cup and can clinch at home; two recent Detroit losses, so weak lean rather than strong pick.",
+        "counterargument": "First view includes explicit opposing evidence; after model comparison no change of team or confidence.",
+        "injury_statuses": [
+          [
+            "DET",
+            "Cade Cunningham",
+            "PROBABLE"
+          ],
+          [
+            "DET",
+            "Jalen Duren",
+            "OUT"
+          ],
+          [
+            "DET",
+            "Duncan Robinson",
+            "OUT"
+          ],
+          [
+            "ORL",
+            "Paolo Banchero",
+            "OUT"
+          ],
+          [
+            "ORL",
+            "Jonathan Isaac",
+            "OUT"
+          ]
+        ],
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-24_01_00PM.pdf",
+          "https://www.nba.com/magic/news/orlando-magic-detroit-pistons-game-preview-injury-report-20261124",
+          "https://www.nba.com/game/0022600052?resume=true"
+        ],
+        "reviewed_at_utc": "2026-11-24T20:35:35Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "BOS",
+      "home": "WAS",
+      "tipoff_utc": "2026-11-25T01:00:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "East C",
+      "cup_context_source_url": "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios?lid=ndpayr36q5id",
+      "cup_context_checked_at_utc": "2026-11-24T20:35:35Z",
+      "cup_stakes_known_pretip": "BOS 2-0, WAS 2-1, group/wildcard contention",
+      "home_win_probability": 0.172639177211383,
+      "predicted_winner": "BOS",
+      "win_probability": 0.827360822788617,
+      "expected_home_margin": -12.176718118703029,
+      "expected_full_game_total": 222.02830704118438,
+      "analyst_lean": {
+        "team": "BOS",
+        "confidence": "LOW",
+        "rationale": "Boston 11-6 vs Washington 7-11, Boston 2-0 Cup; Tatum and White not listed in 13:00 official report (not guarantee active). Washington three straight wins including 116-96 Orlando, Boston losing streak; Boston Mitchell Robinson OUT, potential rebounding risk. Prefer Boston overall but recent counterevidence substantial.",
+        "counterargument": "First view includes explicit opposing evidence; after model comparison no change of team or confidence.",
+        "injury_statuses": [
+          [
+            "BOS",
+            "Mitchell Robinson",
+            "OUT"
+          ],
+          [
+            "WAS",
+            "Tre Mann",
+            "QUESTIONABLE"
+          ],
+          [
+            "WAS",
+            "Tristan Vukcevic",
+            "OUT"
+          ]
+        ],
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-24_01_00PM.pdf",
+          "https://www.reuters.com/sports/basketball/celtics-bring-losing-skid-into-nba-cup-matchup-vs-streaking-wizards--flm-2026-11-24/",
+          "https://www.nba.com/news/starting-5-november-24-2026"
+        ],
+        "reviewed_at_utc": "2026-11-24T20:35:35Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "DAL",
+      "home": "DEN",
+      "tipoff_utc": "2026-11-25T03:00:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West A",
+      "cup_context_source_url": "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios?lid=ndpayr36q5id",
+      "cup_context_checked_at_utc": "2026-11-24T20:35:35Z",
+      "cup_stakes_known_pretip": "DEN and DAL both 2-0, Denver clinches with win; Dallas clinches with win and Phoenix loss",
+      "home_win_probability": 0.6886268860510396,
+      "predicted_winner": "DEN",
+      "win_probability": 0.6886268860510396,
+      "expected_home_margin": 6.167533780936598,
+      "expected_full_game_total": 232.0258681630332,
+      "analyst_lean": {
+        "team": "DEN",
+        "confidence": "MEDIUM",
+        "rationale": "Denver home, Jokic creation vs Dallas missing Lively, PJ Washington questionable, Dallas must defend Jokic handoffs and interior passing. NBA notes Denver 6-1 clutch, small sample; Flagg two Cup games 27 pts,9.5 reb,6.5 ast, counterargument. Both undefeated in group, Denver clinches with win; Denver full injury status not established from extracted report.",
+        "counterargument": "First view includes explicit opposing evidence; after model comparison no change of team or confidence.",
+        "injury_statuses": [
+          [
+            "DAL",
+            "Dereck Lively II",
+            "OUT"
+          ],
+          [
+            "DAL",
+            "P.J. Washington",
+            "QUESTIONABLE"
+          ]
+        ],
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-24_01_00PM.pdf",
+          "https://www.nba.com/news/starting-5-november-24-2026",
+          "https://www.nba.com/nuggets/news/nuggets-look-to-clinch-emirates-nba-cup-group-with-win-over-mavericks"
+        ],
+        "reviewed_at_utc": "2026-11-24T20:35:35Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    }
+  ]
+}
