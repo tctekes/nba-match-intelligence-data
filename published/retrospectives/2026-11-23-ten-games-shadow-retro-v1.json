@@ -1,0 +1,625 @@
+{
+  "schema_version": "nba-match-intelligence-retrospective-v1",
+  "status": "APPEND_ONLY_POSTGAME_SHADOW_NOT_PRODUCTION",
+  "nba_local_date": "2026-11-23",
+  "created_at_utc": "2026-11-24T13:05:18Z",
+  "source_read_order": "Original immutable pretip Model C and qualitative analyst lock, pretip availability addendum, and O/U fail-closed pretip research were read before independent scores were queried.",
+  "lock_references": {
+    "forecast": "published/forecast_locks/2026-11-23-ten-games-frozen-model-c-analyst-shadow-v1.json",
+    "availability_addendum": "published/forecast_locks/2026-11-23-2340tsi-availability-source-addendum-v1.json",
+    "market_source_audit": "published/context_notes/2026-11-23-pretip-ou-source-candidates-not-verified-v1.json",
+    "model_generated_at_utc": "2026-11-23T20:35:28Z",
+    "analyst_reviewed_at_utc": "2026-11-23T20:36:52Z",
+    "original_snapshot_path": "published/accepted_candidates/2026-11-22-accepted-f842ee530963.json",
+    "original_snapshot_sha256": "f842ee5309639171a1e89af1d754115ea39e8bc10131b003873abe2572542732",
+    "model_file_sha256": "b6efd52df74f540c3bda711cd37a372e1ae7cbdbda134579c4c43bc7ff1eafef",
+    "parameter_file_sha256": "259b0dcc561c2f0400b04d9b19aba59eef53973ba06075f5db97a73497d1c640",
+    "original_recovery_run_id": 45260549586
+  },
+  "scope": {
+    "original_nba_slate": 10,
+    "locked_model_pretip_games": 10,
+    "excluded_started_games": 0,
+    "cup_games": 0,
+    "ot_games": 1
+  },
+  "outcome_verification": {
+    "method": "Crosschecked 10 dated final score pairs against indexed AmericanBball and Latescratch score lists and Reuters Nov24 NBA roundup; named NBA.com game blueprint/pages and AP/CBS/Reuters individual game coverage substantiate major games. Phoenix-New Orleans OT checked with NBA Pelicans postgame official recap.",
+    "full_night_sources": [
+      "https://americanbball.com/games/season/81/2026-27",
+      "https://latescratch.com/",
+      "https://www.reuters.com/sports/nba-roundup-tyler-herro-nets-32-bucks-top-raptors-end-13-game-skid--flm-2026-11-24/"
+    ],
+    "overtime_source": "https://www.nba.com/pelicans/news/suns-123-pelicans-119-ot-jordan-poole-28-points-postgame-wrap",
+    "note": "NBA.com schedule score shell sometimes shows pregame cached; relied instead on explicitly FINAL updated score recaps and independently date-scoped completed score lists. No postgame market lines were used for grading."
+  },
+  "metrics": {
+    "model_c": {
+      "n": 10,
+      "correct_winners": 6,
+      "winner_accuracy": 0.6,
+      "home_win_brier": 0.23041541436359642,
+      "home_minus_away_margin_mae": 8.37885287602041,
+      "full_game_total_including_ot_mae": 13.720981654410611,
+      "signed_total_actual_minus_expected": 3.023509658589211,
+      "mean_expected_total": 229.17649034141078,
+      "mean_actual_total": 232.2,
+      "overtime_games": 1
+    },
+    "analyst": {
+      "picks": 7,
+      "correct": 5,
+      "abstentions": 3,
+      "contrarians": 0,
+      "contrarian_correct": 0,
+      "by_confidence": {
+        "MEDIUM": {
+          "selections": 5,
+          "correct": 4
+        },
+        "LOW": {
+          "selections": 2,
+          "correct": 1
+        }
+      },
+      "model_correct_on_analyst_selections": 5,
+      "model_correct_on_abstained": 1,
+      "incremental_value_assessment": "No locked counterlean (all seven chosen picks agree with Model C), so no analyst vs model winner predictive value shown; abstentions can be assessed as coverage policy over larger predeclared sample. 3 abstentions avoided 2 losses plus 1 correct model pick."
+    },
+    "market": {
+      "official_ou_coverage": 0,
+      "graded_n": 0,
+      "win": null,
+      "loss": null,
+      "push": null,
+      "grade": "N/A",
+      "reason": "Original timestamped pretip market research explicitly reported 0/10 independently verified same-bookmaker full-game incl OT main lines+dual decimal prices. Historical/closing quoted totals in public sources are not eligible to backfill."
+    }
+  },
+  "games": [
+    {
+      "fixture": "MEM@CHA",
+      "away": "MEM",
+      "home": "CHA",
+      "tipoff_utc": "2026-11-24T00:00:00Z",
+      "final_status": "FINAL",
+      "away_score": 117,
+      "home_score": 111,
+      "overtime_periods": 0,
+      "actual_winner": "MEM",
+      "actual_home_minus_away_margin": -6,
+      "actual_full_game_including_ot_total": 228,
+      "cup_stage": "NONE",
+      "is_nba_cup": false,
+      "model_c": {
+        "predicted_winner": "MEM",
+        "winner_probability": 0.6340594324063745,
+        "home_win_probability": 0.3659405675936255,
+        "expected_home_margin": -4.271243951426456,
+        "expected_full_game_total": 224.4790955427214,
+        "winner_correct": true,
+        "home_win_brier": 0.13391249901074478,
+        "margin_absolute_error": 1.728756048573544,
+        "total_absolute_error": 3.52090445727859,
+        "total_actual_minus_expected": 3.52090445727859
+      },
+      "analyst": {
+        "locked_lean": "MEM",
+        "confidence": "MEDIUM",
+        "classification": "AGREES_WITH_MODEL",
+        "correct": true,
+        "pretip_reason": "MEM 17GP ORtg 117.77/DRtg 108.95 vs CHA 14GP ORtg 102.50/DRtg 112.75; MEM has stronger offense and defense. Charlotte Kon Knueppel, Dennis Schroder, Grayson Allen confirmed OUT; Memphis still has initiation depth.",
+        "pretip_counterargument": "MEM Cameron Boozer, Jerami Grant, GG Jackson and Scotty Pippen Jr confirmed OUT. Charlotte Brandon Miller PROBABLE; Memphis recent shooting/perimeter creation vs MIN regressed, so cannot treat streak as stable."
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "official_verified": false,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "selected_direction": null,
+        "grade": "N/A"
+      },
+      "result_source_urls": [
+        "https://latescratch.com/",
+        "https://www.reuters.com/sports/nba-roundup-tyler-herro-nets-32-bucks-top-raptors-end-13-game-skid--flm-2026-11-24/"
+      ]
+    },
+    {
+      "fixture": "POR@PHI",
+      "away": "POR",
+      "home": "PHI",
+      "tipoff_utc": "2026-11-24T00:00:00Z",
+      "final_status": "FINAL",
+      "away_score": 128,
+      "home_score": 111,
+      "overtime_periods": 0,
+      "actual_winner": "POR",
+      "actual_home_minus_away_margin": -17,
+      "actual_full_game_including_ot_total": 239,
+      "cup_stage": "NONE",
+      "is_nba_cup": false,
+      "model_c": {
+        "predicted_winner": "PHI",
+        "winner_probability": 0.5185180328281314,
+        "home_win_probability": 0.5185180328281314,
+        "expected_home_margin": 0.5758435198600649,
+        "expected_full_game_total": 227.80287488551173,
+        "winner_correct": false,
+        "home_win_brier": 0.2688609503679551,
+        "margin_absolute_error": 17.575843519860065,
+        "total_absolute_error": 11.197125114488273,
+        "total_actual_minus_expected": 11.197125114488273
+      },
+      "analyst": {
+        "locked_lean": null,
+        "confidence": "LOW",
+        "classification": "ABSTAIN",
+        "correct": null,
+        "pretip_reason": "PHI 17GP ORtg 113.93/DRtg 111.11 vs POR 16GP 113.65/107.82; PHI home edge offsets Portland's stronger defense. Frozen model essentially toss-up PHI 51.85%.",
+        "pretip_counterargument": "Joel Embiid QUESTIONABLE (illness). Portland Ja Morant, Shaedon Sharpe OUT, but its available wing offense still matters. Jaylen Brown PROBABLE for PHI. Unknown rotational minutes and margin +0.58 give no robust independent edge."
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "official_verified": false,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "selected_direction": null,
+        "grade": "N/A"
+      },
+      "result_source_urls": [
+        "https://www.nba.com/game/por-vs-phi-0022600288",
+        "https://www.inquirer.com/sixers/sixers-blazers-score-lebron-james-jaylen-brown-deni-avdija-20261123.html"
+      ]
+    },
+    {
+      "fixture": "OKC@IND",
+      "away": "OKC",
+      "home": "IND",
+      "tipoff_utc": "2026-11-24T00:30:00Z",
+      "final_status": "FINAL",
+      "away_score": 120,
+      "home_score": 125,
+      "overtime_periods": 0,
+      "actual_winner": "IND",
+      "actual_home_minus_away_margin": 5,
+      "actual_full_game_including_ot_total": 245,
+      "cup_stage": "NONE",
+      "is_nba_cup": false,
+      "model_c": {
+        "predicted_winner": "OKC",
+        "winner_probability": 0.7307218290289941,
+        "home_win_probability": 0.26927817097100587,
+        "expected_home_margin": -7.757231791445364,
+        "expected_full_game_total": 223.57525999822585,
+        "winner_correct": false,
+        "home_win_brier": 0.5339543914194784,
+        "margin_absolute_error": 12.757231791445363,
+        "total_absolute_error": 21.424740001774154,
+        "total_actual_minus_expected": 21.424740001774154
+      },
+      "analyst": {
+        "locked_lean": null,
+        "confidence": "LOW",
+        "classification": "ABSTAIN",
+        "correct": null,
+        "pretip_reason": "OKC 17GP DRtg 107.30 and ORtg 110.62 vs IND 17GP DRtg 111.98 and ORtg 108.21; OKC stronger two-way baseline, leading to 73.07% model view.",
+        "pretip_counterargument": "Official matchup-specific OKC and IND injury reports NOT YET SUBMITTED at 12:15PM ET. Reuters describes OKC as injury-riddled, and both teams played yesterday (back-to-back); no names upgraded to confirmed OUT from this unsubmitted injury source. Large unquantified uncertainty requires independent analyst abstention."
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "official_verified": false,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "selected_direction": null,
+        "grade": "N/A"
+      },
+      "result_source_urls": [
+        "https://www.nba.com/game/okc-vs-ind-0022600289/blueprint",
+        "https://www.cbssports.com/nba/news/pascal-siakam-pacers-hold-off-thunder-to-snap-four-game-skid/"
+      ]
+    },
+    {
+      "fixture": "MIL@TOR",
+      "away": "MIL",
+      "home": "TOR",
+      "tipoff_utc": "2026-11-24T00:30:00Z",
+      "final_status": "FINAL",
+      "away_score": 116,
+      "home_score": 111,
+      "overtime_periods": 0,
+      "actual_winner": "MIL",
+      "actual_home_minus_away_margin": -5,
+      "actual_full_game_including_ot_total": 227,
+      "cup_stage": "NONE",
+      "is_nba_cup": false,
+      "model_c": {
+        "predicted_winner": "TOR",
+        "winner_probability": 0.8081297079766778,
+        "home_win_probability": 0.8081297079766778,
+        "expected_home_margin": 11.173276423872501,
+        "expected_full_game_total": 227.7472720017233,
+        "winner_correct": false,
+        "home_win_brier": 0.6530736249144706,
+        "margin_absolute_error": 16.1732764238725,
+        "total_absolute_error": 0.747272001723303,
+        "total_actual_minus_expected": -0.747272001723303
+      },
+      "analyst": {
+        "locked_lean": "TOR",
+        "confidence": "MEDIUM",
+        "classification": "AGREES_WITH_MODEL",
+        "correct": false,
+        "pretip_reason": "Toronto 16GP 111.11/111.56 compares strongly with Milwaukee 17GP ORtg 106.46/DRtg 118.72. Milwaukee defensive weakness creates a real two-sided Raptors advantage.",
+        "pretip_counterargument": "Toronto RJ Barrett and Kawhi Leonard OUT, reducing potential wing production; do not infer high game-point margin from team averages. MIL Ousmane Dieng QUESTIONABLE; unknown bench minutes."
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "official_verified": false,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "selected_direction": null,
+        "grade": "N/A"
+      },
+      "result_source_urls": [
+        "https://www.nba.com/game/0022600290",
+        "https://www.reuters.com/sports/basketball/tyler-herro-scores-32-bucks-snap-13-game-losing-streak--flm-2026-11-24/"
+      ]
+    },
+    {
+      "fixture": "BKN@MIN",
+      "away": "BKN",
+      "home": "MIN",
+      "tipoff_utc": "2026-11-24T00:30:00Z",
+      "final_status": "FINAL",
+      "away_score": 116,
+      "home_score": 142,
+      "overtime_periods": 0,
+      "actual_winner": "MIN",
+      "actual_home_minus_away_margin": 26,
+      "actual_full_game_including_ot_total": 258,
+      "cup_stage": "NONE",
+      "is_nba_cup": false,
+      "model_c": {
+        "predicted_winner": "MIN",
+        "winner_probability": 0.8789299372910727,
+        "home_win_probability": 0.8789299372910727,
+        "expected_home_margin": 15.403810765855997,
+        "expected_full_game_total": 223.12044917508027,
+        "winner_correct": true,
+        "home_win_brier": 0.014657960084343585,
+        "margin_absolute_error": 10.596189234144003,
+        "total_absolute_error": 34.87955082491973,
+        "total_actual_minus_expected": 34.87955082491973
+      },
+      "analyst": {
+        "locked_lean": "MIN",
+        "confidence": "MEDIUM",
+        "classification": "AGREES_WITH_MODEL",
+        "correct": true,
+        "pretip_reason": "Minnesota 17GP DRtg 101.58 is among strongest in this accepted snapshot, Brooklyn 15GP ORtg 108.19/DRtg 115.88. MIN has a two-sided strength gap even with 17GP current sample.",
+        "pretip_counterargument": "MIN Anthony Edwards and Donte DiVincenzo confirmed OUT; offensive creation risk remains (no validated replacement MPG). Brooklyn home-on-road profile may understate variance; favorable matchup is not a guaranteed 15-point spread."
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "official_verified": false,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "selected_direction": null,
+        "grade": "N/A"
+      },
+      "result_source_urls": [
+        "https://www.nba.com/game/bkn-vs-min-0022600291/blueprint",
+        "https://www.reuters.com/sports/basketball/sharpshooting-wolves-cruise-easy-win-over-nets--flm-2026-11-24/"
+      ]
+    },
+    {
+      "fixture": "CLE@CHI",
+      "away": "CLE",
+      "home": "CHI",
+      "tipoff_utc": "2026-11-24T01:00:00Z",
+      "final_status": "FINAL",
+      "away_score": 108,
+      "home_score": 122,
+      "overtime_periods": 0,
+      "actual_winner": "CHI",
+      "actual_home_minus_away_margin": 14,
+      "actual_full_game_including_ot_total": 230,
+      "cup_stage": "NONE",
+      "is_nba_cup": false,
+      "model_c": {
+        "predicted_winner": "CLE",
+        "winner_probability": 0.6896004928754109,
+        "home_win_probability": 0.31039950712458914,
+        "expected_home_margin": -6.202847410368602,
+        "expected_full_game_total": 241.95264236291555,
+        "winner_correct": false,
+        "home_win_brier": 0.4755488397740097,
+        "margin_absolute_error": 20.2028474103686,
+        "total_absolute_error": 11.952642362915554,
+        "total_actual_minus_expected": -11.952642362915554
+      },
+      "analyst": {
+        "locked_lean": "CLE",
+        "confidence": "LOW",
+        "classification": "AGREES_WITH_MODEL",
+        "correct": false,
+        "pretip_reason": "CLE 17GP ORtg 115.57 vs CHI 16GP DRtg 116.28; Bulls pace 107.16 and CLE offense create high-scoring opportunities. CLE's two-way accepted sample is better than CHI.",
+        "pretip_counterargument": "CLE Evan Mobley OUT (big defense/verticality role); Chicago played Denver to 151-145 yesterday and plays on back-to-back, but one hot-scoring game is not stable form. CHI official game-specific injury report NOT YET SUBMITTED. Pace + shooting variance lowers directional certainty."
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "official_verified": false,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "selected_direction": null,
+        "grade": "N/A"
+      },
+      "result_source_urls": [
+        "https://www.nba.com/game/cle-vs-chi-0022600292/blueprint",
+        "https://basketball.realgm.com/nba/boxscore/2026-11-23/Cleveland-at-Chicago/530803"
+      ]
+    },
+    {
+      "fixture": "PHX@NOP",
+      "away": "PHX",
+      "home": "NOP",
+      "tipoff_utc": "2026-11-24T01:00:00Z",
+      "final_status": "FINAL_OT",
+      "away_score": 123,
+      "home_score": 119,
+      "overtime_periods": 1,
+      "actual_winner": "PHX",
+      "actual_home_minus_away_margin": -4,
+      "actual_full_game_including_ot_total": 242,
+      "cup_stage": "NONE",
+      "is_nba_cup": false,
+      "model_c": {
+        "predicted_winner": "PHX",
+        "winner_probability": 0.6263467751450797,
+        "home_win_probability": 0.3736532248549203,
+        "expected_home_margin": -4.014072287709233,
+        "expected_full_game_total": 233.74435754341258,
+        "winner_correct": true,
+        "home_win_brier": 0.13961673244448164,
+        "margin_absolute_error": 0.014072287709232967,
+        "total_absolute_error": 8.255642456587424,
+        "total_actual_minus_expected": 8.255642456587424
+      },
+      "analyst": {
+        "locked_lean": null,
+        "confidence": "LOW",
+        "classification": "ABSTAIN",
+        "correct": null,
+        "pretip_reason": "Phoenix 15GP ORtg 112.51/DRtg 113.45 vs NOP 18GP ORtg 109.17/DRtg 117.42; Phoenix two-way edge, model PHX 62.63%. NOP higher pace 104.52 contributes score uncertainty.",
+        "pretip_counterargument": "PHX Mark Williams OUT reduces rim protection; NOP Zion Williamson and Trey Murphy III PROBABLE (not confirmed active), Dejounte Murray OUT. Against a weak rim protector NOP penetration may threaten PHX's favorable average; independent side uncertain."
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "official_verified": false,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "selected_direction": null,
+        "grade": "N/A"
+      },
+      "result_source_urls": [
+        "https://www.nba.com/pelicans/news/suns-123-pelicans-119-ot-jordan-poole-28-points-postgame-wrap",
+        "https://www.cbssports.com/nba/gametracker/recap/NBA_20261123_PHO%40NO/"
+      ]
+    },
+    {
+      "fixture": "LAC@HOU",
+      "away": "LAC",
+      "home": "HOU",
+      "tipoff_utc": "2026-11-24T01:30:00Z",
+      "final_status": "FINAL",
+      "away_score": 104,
+      "home_score": 116,
+      "overtime_periods": 0,
+      "actual_winner": "HOU",
+      "actual_home_minus_away_margin": 12,
+      "actual_full_game_including_ot_total": 220,
+      "cup_stage": "NONE",
+      "is_nba_cup": false,
+      "model_c": {
+        "predicted_winner": "HOU",
+        "winner_probability": 0.7934866902627419,
+        "home_win_probability": 0.7934866902627419,
+        "expected_home_margin": 10.45969965422719,
+        "expected_full_game_total": 230.3325206473585,
+        "winner_correct": true,
+        "home_win_brier": 0.04264774709863671,
+        "margin_absolute_error": 1.5403003457728097,
+        "total_absolute_error": 10.332520647358507,
+        "total_actual_minus_expected": -10.332520647358507
+      },
+      "analyst": {
+        "locked_lean": "HOU",
+        "confidence": "MEDIUM",
+        "classification": "AGREES_WITH_MODEL",
+        "correct": true,
+        "pretip_reason": "Houston 17GP ORtg 118.35 is strongest among tonight's teams, LAC 15GP DRtg 115.10. HOU also has better defense (110.66 vs 115.10). Strong offensive mismatch supports home favorite.",
+        "pretip_counterargument": "LAC Bradley Beal and Jordan Miller OUT; Brandon Ingram not listed as OUT in official 12:15 report and separate sources suggest return, so analyst must not assume absent. Clipper creation could improve, but minutes not confirmed."
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "official_verified": false,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "selected_direction": null,
+        "grade": "N/A"
+      },
+      "result_source_urls": [
+        "https://www.reuters.com/sports/nba-roundup-tyler-herro-nets-32-bucks-top-raptors-end-13-game-skid--flm-2026-11-24/",
+        "https://latescratch.com/"
+      ]
+    },
+    {
+      "fixture": "UTA@LAL",
+      "away": "UTA",
+      "home": "LAL",
+      "tipoff_utc": "2026-11-24T03:00:00Z",
+      "final_status": "FINAL",
+      "away_score": 94,
+      "home_score": 109,
+      "overtime_periods": 0,
+      "actual_winner": "LAL",
+      "actual_home_minus_away_margin": 15,
+      "actual_full_game_including_ot_total": 203,
+      "cup_stage": "NONE",
+      "is_nba_cup": false,
+      "model_c": {
+        "predicted_winner": "LAL",
+        "winner_probability": 0.8266833613705675,
+        "home_win_probability": 0.8266833613705675,
+        "expected_home_margin": 12.139919778156514,
+        "expected_full_game_total": 233.45492496710963,
+        "winner_correct": true,
+        "home_win_brier": 0.030038657225805284,
+        "margin_absolute_error": 2.8600802218434858,
+        "total_absolute_error": 30.454924967109633,
+        "total_actual_minus_expected": -30.454924967109633
+      },
+      "analyst": {
+        "locked_lean": "LAL",
+        "confidence": "MEDIUM",
+        "classification": "AGREES_WITH_MODEL",
+        "correct": true,
+        "pretip_reason": "LAL 17GP ORtg 116.68/DRtg 110.70 vs UTA 18GP ORtg 106.04/DRtg 112.93; Lakers offense and defense favorable at home, with Utah on back-to-back.",
+        "pretip_counterargument": "LAL Austin Reaves OUT a major initiation/spacing risk; Utah official game-specific report NOT YET SUBMITTED at 12:15PM ET. Do not declare individual Utah outs or underestimate unknown high-variance perimeter shooting."
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "official_verified": false,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "selected_direction": null,
+        "grade": "N/A"
+      },
+      "result_source_urls": [
+        "https://www.nba.com/jazz/news/cold-shooting-sinks-utah-jazz-in-loss-to-lakers-key-takeaways",
+        "https://www.latimes.com/sports/lakers/story/2026-11-23/los-angeles-lakers-defeat-utah-jazz-luka-doncic"
+      ]
+    },
+    {
+      "fixture": "SAS@SAC",
+      "away": "SAS",
+      "home": "SAC",
+      "tipoff_utc": "2026-11-24T03:00:00Z",
+      "final_status": "FINAL",
+      "away_score": 123,
+      "home_score": 107,
+      "overtime_periods": 0,
+      "actual_winner": "SAS",
+      "actual_home_minus_away_margin": -16,
+      "actual_full_game_including_ot_total": 230,
+      "cup_stage": "NONE",
+      "is_nba_cup": false,
+      "model_c": {
+        "predicted_winner": "SAS",
+        "winner_probability": 0.8911756401533251,
+        "home_win_probability": 0.10882435984667496,
+        "expected_home_margin": -16.339931476614478,
+        "expected_full_game_total": 225.55550629004907,
+        "winner_correct": true,
+        "home_win_brier": 0.011842741296038602,
+        "margin_absolute_error": 0.33993147661447765,
+        "total_absolute_error": 4.444493709950933,
+        "total_actual_minus_expected": 4.444493709950933
+      },
+      "analyst": {
+        "locked_lean": "SAS",
+        "confidence": "LOW",
+        "classification": "AGREES_WITH_MODEL",
+        "correct": true,
+        "pretip_reason": "SAS 17GP ORtg 115.60/DRtg 103.82 vs SAC 16GP ORtg 104.60/DRtg 116.53; model's largest matchup strength gap, driven by two-way edge.",
+        "pretip_counterargument": "Victor Wembanyama and De'Aaron Fox both QUESTIONABLE not OUT in official 12:15 report; Dylan Harper and Tobias Harris OUT. Substitution minutes and rim protection/shot creation could shift drastically if both stars sit. Sacramento's prior Boston upset supports variance but is not a new stable ability estimate."
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "official_verified": false,
+        "main_full_game_ot_line": null,
+        "over_decimal": null,
+        "under_decimal": null,
+        "selected_direction": null,
+        "grade": "N/A"
+      },
+      "result_source_urls": [
+        "https://www.cbssports.com/nba/news/stephon-castle-short-handed-spurs-top-kings-to-stay-8-0-on-road/",
+        "https://www.cbsnews.com/sacramento/news/spurs-123-107-win-over-kings/"
+      ]
+    }
+  ],
+  "selective_review": [
+    {
+      "fixture": "MIL@TOR",
+      "pretip_known": "Model Toronto 80.81% (expected home +11.17), analyst Toronto MEDIUM, Milwaukee 17 GP offense 106.46 defense 118.72, Toronto RJ Barrett and Kawhi Leonard confirmed OUT. Prediction explicitly warned Toronto wing-production limits.",
+      "observed": "Milwaukee 116 Toronto 111; Tyler Herro 32 points on 10/16 FG and 4/5 3PT, Myles Turner 27 points; Bucks ended 13-game losing streak. Model home-win Brier hit 0.6531.",
+      "hypotheses_and_opposition": "Unusual realized Milwaukee shot creation/efficiency and Toronto wing absences may contribute, but the 80% pregame favorite upset does not demonstrate a calibrated structural injury problem from one game; no causal allocation. Toronto offense scored 111, so cannot confidently assign outcome to Toronto wing creation alone.",
+      "verdict": "HIGH_PROBABILITY_UPSET_OBSERVED_CAUSE_NOT_PROVEN",
+      "urls": [
+        "https://www.nba.com/game/0022600290",
+        "https://www.reuters.com/sports/basketball/tyler-herro-scores-32-bucks-snap-13-game-losing-streak--flm-2026-11-24/"
+      ]
+    },
+    {
+      "fixture": "OKC@IND",
+      "pretip_known": "Model OKC 73.07% away favorite, independent analyst abstained because neither team had submitted matchup-specific injury report at checked 12:15 ET, OKC core injury uncertainty and back-to-back. Later addendum said SGA expected to return; did not upgrade unverified official statuses.",
+      "observed": "Indiana 125 Oklahoma City 120, Shai Gilgeous-Alexander scored 38. Indiana hit 15/37 from deep and Pascal Siakam and Kelly Oubre Jr scored 20 each; one balanced short-handed OKC upset.",
+      "hypotheses_and_opposition": "Thunder's understrength frontcourt or Indiana perimeter efficiency might contribute; strong SGA 38 is counterevidence to simple 'OKC lost because Shai absent' storyline. Exact size of causal player availability/shooting signal is not established.",
+      "verdict": "MODEL_MISSED_ANALYST_ABSTENTION_LEGITIMATE_NOT_WINNER_CREDIT",
+      "urls": [
+        "https://www.nba.com/game/okc-vs-ind-0022600289/blueprint",
+        "https://www.cbssports.com/nba/news/pascal-siakam-pacers-hold-off-thunder-to-snap-four-game-skid/"
+      ]
+    },
+    {
+      "fixture": "BKN@MIN",
+      "pretip_known": "Model MIN 87.89%, model expected full total 223.12, analyst MIN MEDIUM despite Edwards and DiVincenzo confirmed OUT. Minnesota defense strong relative to Brooklyn.",
+      "observed": "Minnesota 142 Brooklyn 116, full-game total 258, +34.88 above model (largest absolute total error). Jaden McDaniels 34 pts on 12/16 shooting including 4/4 three; Dosunmu 23.",
+      "hypotheses_and_opposition": "Minnesota player hot shooting and defensive matchup likely contribute to realized 142, but not evidence that McDaniels' exceptional shooting should have been anticipated or that frozen total model must change. Win correct, margin forecast +15.40 vs actual +26.",
+      "verdict": "CORRECT_WINNER_LARGE_TOTAL_RESIDUAL",
+      "urls": [
+        "https://www.nba.com/game/bkn-vs-min-0022600291/blueprint",
+        "https://www.reuters.com/sports/basketball/sharpshooting-wolves-cruise-easy-win-over-nets--flm-2026-11-24/"
+      ]
+    },
+    {
+      "fixture": "UTA@LAL",
+      "pretip_known": "LAL 82.67%, full-game total 233.45, Austin Reaves OUT, Utah injury report earlier NOT_YET_SUBMITTED; no one-side presumed healthy.",
+      "observed": "LAL 109 UTA 94, 203 combined, 30.45 below model. Jazz official recap notes tired back-to-back Utah cold shooting; 6/32 three-point per postgame stats.",
+      "hypotheses_and_opposition": "Lower realized shotmaking and game pace could explain much of total reduction; do not infer model intentionally predicted a high-scoring result from unknown opponent availability. Spurs and Minnesota outcomes demonstrate signed totals varied on same slate.",
+      "verdict": "CORRECT_WINNER_LARGE_NEGATIVE_TOTAL_RESIDUAL",
+      "urls": [
+        "https://www.nba.com/jazz/news/cold-shooting-sinks-utah-jazz-in-loss-to-lakers-key-takeaways",
+        "https://www.latimes.com/sports/lakers/story/2026-11-23/los-angeles-lakers-defeat-utah-jazz-luka-doncic"
+      ]
+    },
+    {
+      "fixture": "SAS@SAC",
+      "pretip_known": "SAS high 89.12% but analyst LOW due Wembanyama and Fox QUESTIONABLE, not OUT. Model expected away by 16.34.",
+      "observed": "Both Wembanyama and Fox were OUT; Spurs still won 123-107 with Stephon Castle 28 points 11 assists 8 rebounds, Luke Kornet 18 points 11 rebounds per contemporary recap. Actual home minus away −16, very close to frozen prediction −16.34.",
+      "hypotheses_and_opposition": "Winner and margin right despite outs is not proof injuries don't matter; substitute production for one game can vary. No validated exact player-minute causal effect or repeated comparable sample.",
+      "verdict": "MODEL_CORRECT_WITH_UNVERIFIED_PREGAME_STAR_STATUS; NO_HINDSIGHT_CREDIT",
+      "urls": [
+        "https://www.cbssports.com/nba/news/stephon-castle-short-handed-spurs-top-kings-to-stay-8-0-on-road/",
+        "https://www.cbsnews.com/sacramento/news/spurs-123-107-win-over-kings/"
+      ]
+    }
+  ],
+  "guardrails": {
+    "frozen_model_unchanged": true,
+    "original_pretip_locks_unchanged": true,
+    "production_pointer_untouched": true,
+    "no_postgame_pretip_quote_backfill": true,
+    "no_new_calibration_or_structural_diagnosis": true
+  }
+}
