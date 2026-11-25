@@ -1,0 +1,272 @@
+{
+  "schema_version": "nba-analyst-independent-first-view-v1",
+  "status": "IMMUTABLE_BEFORE_MODEL_PRETIP_SHADOW_FIRST_VIEW",
+  "nba_local_date": "2026-11-25",
+  "created_at_utc": "2026-11-25T20:08:32Z",
+  "model_outputs_not_consulted": true,
+  "market_not_used_for_selection": true,
+  "injury_pdf_caveat": "05:15 ET extracted text; all five screenshots cache miss; later 14:00 edition inaccessible. Not complete latest injury status; no unlabelled continuation attribution except Edwards corroborated from prior report.",
+  "schedule_source_url": "https://hotlinesports.com/nba/tv-guide?date=2026-11-25",
+  "cup_source_url": "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios",
+  "stats_source_url": "https://hoopsgraph.com/?day=2026-11-25",
+  "injury_source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-25_05_15AM.pdf",
+  "games": [
+    {
+      "away": "MIA",
+      "home": "PHI",
+      "tipoff_utc": "2026-11-25T22:00:00Z",
+      "cup_group": "East B",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "lean": null,
+      "confidence": "LOW",
+      "reason": "Miami seven wins and comparable net rating; Giannis Q, Embiid doubtful; home advantage and unresolved creation/rim matchup make side uncertain.",
+      "injuries": [
+        [
+          "MIA",
+          "Giannis Antetokounmpo",
+          "QUESTIONABLE"
+        ],
+        [
+          "PHI",
+          "Joel Embiid",
+          "DOUBTFUL"
+        ]
+      ]
+    },
+    {
+      "away": "CHI",
+      "home": "CHA",
+      "tipoff_utc": "2026-11-26T00:00:00Z",
+      "cup_group": "East C",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "lean": "CHI",
+      "confidence": "LOW",
+      "reason": "CHI net -6.3 vs CHA -10.7 in dated independent team snapshot; both defenses weak, Charlotte home and Chicago Powell OUT/Smith Q limit confidence.",
+      "injuries": [
+        [
+          "CHI",
+          "Norman Powell",
+          "OUT"
+        ],
+        [
+          "CHI",
+          "Jalen Smith",
+          "QUESTIONABLE"
+        ],
+        [
+          "CHA",
+          "Grayson Allen",
+          "QUESTIONABLE"
+        ]
+      ]
+    },
+    {
+      "away": "CLE",
+      "home": "NYK",
+      "tipoff_utc": "2026-11-26T00:30:00Z",
+      "cup_group": "East B",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "lean": "NYK",
+      "confidence": "LOW",
+      "reason": "NYK net +6.2 vs CLE +1.3, home and Mobley OUT weaken CLE interior defense. NYK Anunoby OUT, Towns/Hart/McBride Q counter; close if Knicks rotation depleted.",
+      "injuries": [
+        [
+          "CLE",
+          "Evan Mobley",
+          "OUT"
+        ],
+        [
+          "NYK",
+          "OG Anunoby",
+          "OUT"
+        ],
+        [
+          "NYK",
+          "Karl-Anthony Towns",
+          "QUESTIONABLE"
+        ],
+        [
+          "NYK",
+          "Josh Hart",
+          "QUESTIONABLE"
+        ],
+        [
+          "NYK",
+          "Miles McBride",
+          "QUESTIONABLE"
+        ]
+      ]
+    },
+    {
+      "away": "MIN",
+      "home": "OKC",
+      "tipoff_utc": "2026-11-26T00:30:00Z",
+      "cup_group": "West B",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "lean": "MIN",
+      "confidence": "LOW",
+      "reason": "Minnesota net +10.6 vs OKC +3.0; OKC Holmgren and Jalen Williams OUT reduce interior and secondary creation. Minnesota Edwards and DiVincenzo out; OKC home and Shai creation are counterpoints. Edwards continuation page attribution supported by prior dated report.",
+      "injuries": [
+        [
+          "MIN",
+          "Anthony Edwards",
+          "OUT"
+        ],
+        [
+          "MIN",
+          "Donte DiVincenzo",
+          "OUT"
+        ],
+        [
+          "OKC",
+          "Chet Holmgren",
+          "OUT"
+        ],
+        [
+          "OKC",
+          "Jalen Williams",
+          "OUT"
+        ],
+        [
+          "OKC",
+          "Cason Wallace",
+          "OUT"
+        ]
+      ]
+    },
+    {
+      "away": "LAC",
+      "home": "MEM",
+      "tipoff_utc": "2026-11-26T01:00:00Z",
+      "cup_group": "West B",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "lean": "MEM",
+      "confidence": "MEDIUM",
+      "reason": "MEM net +9.0 vs LAC -6.9, home, much stronger two-way season profile. MEM Boozer/Grant/Pippen out reduce depth; LAC Beal out, but returning creators may improve offense; no verified minute projection.",
+      "injuries": [
+        [
+          "LAC",
+          "Bradley Beal",
+          "OUT"
+        ],
+        [
+          "MEM",
+          "Cameron Boozer",
+          "OUT"
+        ],
+        [
+          "MEM",
+          "Jerami Grant",
+          "OUT"
+        ],
+        [
+          "MEM",
+          "Scotty Pippen Jr.",
+          "OUT"
+        ]
+      ]
+    },
+    {
+      "away": "BKN",
+      "home": "MIL",
+      "tipoff_utc": "2026-11-26T01:00:00Z",
+      "cup_group": "East A",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "lean": null,
+      "confidence": "LOW",
+      "reason": "Both poor net ratings (-9.1 BKN, -11.7 MIL), Bucks home and recent Toronto win but one game insufficient. No complete MIL injury section in extracted report; abstain.",
+      "injuries": [
+        [
+          "BKN",
+          "Nolan Traore",
+          "OUT"
+        ]
+      ]
+    },
+    {
+      "away": "PHX",
+      "home": "HOU",
+      "tipoff_utc": "2026-11-26T01:30:00Z",
+      "cup_group": "West A",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "lean": "HOU",
+      "confidence": "MEDIUM",
+      "reason": "HOU net +8.2 vs PHX -0.8, Houston home and Phoenix Mark Williams OUT weakens rim protection. Suns 8-2 recent form is meaningful counterevidence; not a guarantee of spread.",
+      "injuries": [
+        [
+          "PHX",
+          "Mark Williams",
+          "OUT"
+        ]
+      ]
+    },
+    {
+      "away": "SAC",
+      "home": "GSW",
+      "tipoff_utc": "2026-11-26T03:00:00Z",
+      "cup_group": "West C",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "lean": "GSW",
+      "confidence": "LOW",
+      "reason": "GSW net -0.8 vs SAC -12.5 and home. Curry, Butler and Moody OUT weaken creation substantially; SAC has beaten Boston, and high-variance perimeter scoring remains risk.",
+      "injuries": [
+        [
+          "GSW",
+          "Stephen Curry",
+          "OUT"
+        ],
+        [
+          "GSW",
+          "Jimmy Butler III",
+          "OUT"
+        ],
+        [
+          "GSW",
+          "Moses Moody",
+          "OUT"
+        ]
+      ]
+    },
+    {
+      "away": "SAS",
+      "home": "POR",
+      "tipoff_utc": "2026-11-26T03:00:00Z",
+      "cup_group": "West C",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "lean": "SAS",
+      "confidence": "LOW",
+      "reason": "SAS net +12.4 vs POR +6.7; POR Morant/Sharpe OUT, but Wembanyama and Fox QUESTIONABLE, Portland home and strong defensive profile. No guarantee either star plays.",
+      "injuries": [
+        [
+          "SAS",
+          "Victor Wembanyama",
+          "QUESTIONABLE"
+        ],
+        [
+          "SAS",
+          "De'Aaron Fox",
+          "QUESTIONABLE"
+        ],
+        [
+          "POR",
+          "Ja Morant",
+          "OUT"
+        ],
+        [
+          "POR",
+          "Shaedon Sharpe",
+          "OUT"
+        ]
+      ]
+    }
+  ]
+}
