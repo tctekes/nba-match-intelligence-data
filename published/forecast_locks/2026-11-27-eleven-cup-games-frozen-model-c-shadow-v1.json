@@ -1,0 +1,593 @@
+{
+  "schema_version": "nba-locked-shadow-forecast-v1",
+  "status": "LOCKED_PREGAME_SHADOW_NOT_PRODUCTION",
+  "nba_local_date": "2026-11-27",
+  "generated_at_utc": "2026-11-27T19:21:53.508970+00:00",
+  "first_analyst_path": "published/forecast_locks/2026-11-27-pre-model-independent-analyst-first-view-v1.json",
+  "first_analyst_commit": "755872f663276745f487ec236a26d7f05f5059a2",
+  "first_view_changed_count": 0,
+  "model": "Frozen Model C v0.1",
+  "model_file_sha256": "b6efd52df74f540c3bda711cd37a372e1ae7cbdbda134579c4c43bc7ff1eafef",
+  "parameter_file_sha256": "259b0dcc561c2f0400b04d9b19aba59eef53973ba06075f5db97a73497d1c640",
+  "current_snapshot_path": "published/accepted_candidates/2026-11-25-accepted-ef9872de593b.json",
+  "current_snapshot_sha256": "ef9872de593b53d83a16fe440dcf6f595a3a09797f26b4f475f27b521d345ada",
+  "data_through_nba_date": "2026-11-25",
+  "no_games_nov26": true,
+  "raw_completed_games": 270,
+  "accepted_games": 269,
+  "excluded_games": 1,
+  "verified_team_count": 30,
+  "accepted_gp_sum": 538,
+  "independent_box_team_rows_checked": 540,
+  "core_fields_verified_per_team": 8,
+  "fallback_completed_games": 9,
+  "fallback_caveat": "Seven full fields and player TOV independent NBA Stats; ESPN team TOV decomposition/live ESPN only.",
+  "daily_refresh_run_id": 45921007595,
+  "production_pointer_advanced": false,
+  "model_execution": "Actual Python SHA matched, 8/8 self tests PASS, exact team inputs transcribed from independently raw-SHA-verified JSON; no market input.",
+  "games": [
+    {
+      "away": "MIA",
+      "home": "NYK",
+      "tipoff_utc": "2026-11-28T00:00:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "East B",
+      "cup_context_source_url": "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios",
+      "cup_stakes_known_pretip": "NYK needs win and help; Miami conditional advancement",
+      "home_win_probability": 0.7006699407467649,
+      "predicted_winner": "NYK",
+      "win_probability": 0.7006699407467649,
+      "expected_home_margin": 6.608763563894041,
+      "expected_full_game_total": 227.2175769841506,
+      "analyst_lean": {
+        "team": "NYK",
+        "confidence": "LOW",
+        "rationale": "NYK DRtg105.00 vs MIA113.87, home, six wins. Giannis probable and NYK Towns Q/Drummond OUT create interior risk.",
+        "injury_statuses": [
+          [
+            "MIA",
+            "Giannis Antetokounmpo",
+            "PROBABLE"
+          ],
+          [
+            "NYK",
+            "Karl-Anthony Towns",
+            "QUESTIONABLE"
+          ],
+          [
+            "NYK",
+            "Andre Drummond",
+            "OUT"
+          ],
+          [
+            "NYK",
+            "OG Anunoby",
+            "DOUBTFUL"
+          ]
+        ],
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-27_12_00PM.pdf",
+          "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios"
+        ],
+        "reviewed_at_utc": "2026-11-27T19:06:00Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "PHI",
+      "home": "IND",
+      "tipoff_utc": "2026-11-28T00:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "East B",
+      "cup_context_source_url": "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios",
+      "cup_stakes_known_pretip": "PHI clinches with win",
+      "home_win_probability": 0.39204832432997927,
+      "predicted_winner": "PHI",
+      "win_probability": 0.6079516756700207,
+      "expected_home_margin": -3.409013928407333,
+      "expected_full_game_total": 229.25673299064024,
+      "analyst_lean": {
+        "team": "PHI",
+        "confidence": "LOW",
+        "rationale": "PHI ORtg113.86 vs IND109.05, Haliburton OUT; Brown OUT Embiid Q, road risk and Siakam creation.",
+        "injury_statuses": [
+          [
+            "PHI",
+            "Jaylen Brown",
+            "OUT"
+          ],
+          [
+            "PHI",
+            "Joel Embiid",
+            "QUESTIONABLE"
+          ],
+          [
+            "IND",
+            "Tyrese Haliburton",
+            "OUT"
+          ]
+        ],
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-27_12_00PM.pdf",
+          "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios"
+        ],
+        "reviewed_at_utc": "2026-11-27T19:06:00Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "BKN",
+      "home": "TOR",
+      "tipoff_utc": "2026-11-28T00:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "East A",
+      "cup_context_source_url": "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios",
+      "cup_stakes_known_pretip": "Both conditional advancement; BKN not eliminated",
+      "home_win_probability": 0.7788640799964662,
+      "predicted_winner": "TOR",
+      "win_probability": 0.7788640799964662,
+      "expected_home_margin": 9.783562919400204,
+      "expected_full_game_total": 225.17025297871143,
+      "analyst_lean": {
+        "team": "TOR",
+        "confidence": "LOW",
+        "rationale": "TOR defense111.71 vs BKN116.15, home; Barrett and Kawhi OUT, Nets beat MIL, Randle threat.",
+        "injury_statuses": [
+          [
+            "TOR",
+            "RJ Barrett",
+            "OUT"
+          ],
+          [
+            "TOR",
+            "Kawhi Leonard",
+            "OUT"
+          ],
+          [
+            "BKN",
+            "Nolan Traore",
+            "OUT"
+          ],
+          [
+            "BKN",
+            "Moritz Wagner",
+            "OUT"
+          ]
+        ],
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-27_12_00PM.pdf",
+          "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios"
+        ],
+        "reviewed_at_utc": "2026-11-27T19:06:00Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "MIL",
+      "home": "DET",
+      "tipoff_utc": "2026-11-28T00:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "East A",
+      "cup_context_source_url": "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios",
+      "cup_stakes_known_pretip": "MIL eliminated; DET advancement stakes",
+      "home_win_probability": 0.883676088103016,
+      "predicted_winner": "DET",
+      "win_probability": 0.883676088103016,
+      "expected_home_margin": 15.756407810469106,
+      "expected_full_game_total": 223.7242808853936,
+      "analyst_lean": {
+        "team": "DET",
+        "confidence": "LOW",
+        "rationale": "DET defense106.30 vs MIL117.52; DET beat ORL without key creators, but Cade/Duren/Robinson out and Herro threat.",
+        "injury_statuses": [
+          [
+            "DET",
+            "Cade Cunningham",
+            "OUT"
+          ],
+          [
+            "DET",
+            "Jalen Duren",
+            "OUT"
+          ],
+          [
+            "DET",
+            "Duncan Robinson",
+            "OUT"
+          ]
+        ],
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-27_12_00PM.pdf",
+          "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios"
+        ],
+        "reviewed_at_utc": "2026-11-27T19:06:00Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "ATL",
+      "home": "BOS",
+      "tipoff_utc": "2026-11-28T01:00:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "East C",
+      "cup_context_source_url": "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios",
+      "cup_stakes_known_pretip": "Winner group",
+      "home_win_probability": 0.7180964689711321,
+      "predicted_winner": "BOS",
+      "win_probability": 0.7180964689711321,
+      "expected_home_margin": 7.2657538037167795,
+      "expected_full_game_total": 222.1155127696429,
+      "analyst_lean": {
+        "team": "BOS",
+        "confidence": "MEDIUM",
+        "rationale": "BOS defense103.94 vs ATL107.49, home; McCollum/Landale OUT, but ATL positive net and Robinson Q.",
+        "injury_statuses": [
+          [
+            "ATL",
+            "CJ McCollum",
+            "OUT"
+          ],
+          [
+            "ATL",
+            "Jock Landale",
+            "OUT"
+          ],
+          [
+            "BOS",
+            "Mitchell Robinson",
+            "QUESTIONABLE"
+          ]
+        ],
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-27_12_00PM.pdf",
+          "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios"
+        ],
+        "reviewed_at_utc": "2026-11-27T19:06:00Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "MEM",
+      "home": "MIN",
+      "tipoff_utc": "2026-11-28T01:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West B",
+      "cup_context_source_url": "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios",
+      "cup_stakes_known_pretip": "Winner group; MIN conditional wildcard if loss",
+      "home_win_probability": 0.6623286578396415,
+      "predicted_winner": "MIN",
+      "win_probability": 0.6623286578396415,
+      "expected_home_margin": 5.2349230677405885,
+      "expected_full_game_total": 226.90900412621315,
+      "analyst_lean": {
+        "team": null,
+        "confidence": "LOW",
+        "rationale": "MEM offense117.89 vs MIN defense102.37, MIN home; Edwards/DiVincenzo OUT and Ball Q; MEM injuries too. No side.",
+        "injury_statuses": [
+          [
+            "MIN",
+            "Anthony Edwards",
+            "OUT"
+          ],
+          [
+            "MIN",
+            "Donte DiVincenzo",
+            "OUT"
+          ],
+          [
+            "MIN",
+            "LaMelo Ball",
+            "QUESTIONABLE"
+          ],
+          [
+            "MEM",
+            "Cameron Boozer",
+            "OUT"
+          ],
+          [
+            "MEM",
+            "Jerami Grant",
+            "OUT"
+          ],
+          [
+            "MEM",
+            "Scotty Pippen Jr.",
+            "OUT"
+          ]
+        ],
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-27_12_00PM.pdf",
+          "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios"
+        ],
+        "reviewed_at_utc": "2026-11-27T19:06:00Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "DAL",
+      "home": "PHX",
+      "tipoff_utc": "2026-11-28T02:00:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West A",
+      "cup_context_source_url": "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios",
+      "cup_stakes_known_pretip": "DAL clinched, seeding at stake; PHX eliminated",
+      "home_win_probability": 0.5891462394972221,
+      "predicted_winner": "PHX",
+      "win_probability": 0.5891462394972221,
+      "expected_home_margin": 2.800789321280433,
+      "expected_full_game_total": 225.82642405347391,
+      "analyst_lean": {
+        "team": "DAL",
+        "confidence": "LOW",
+        "rationale": "DAL defense109.93 vs PHX113.19, beat DEN; Lively OUT and Phoenix home, clinched DAL may have different urgency; rotation unverified.",
+        "injury_statuses": [
+          [
+            "DAL",
+            "Dereck Lively II",
+            "OUT"
+          ],
+          [
+            "PHX",
+            "Mark Williams",
+            "OUT"
+          ]
+        ],
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-27_12_00PM.pdf",
+          "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios"
+        ],
+        "reviewed_at_utc": "2026-11-27T19:06:00Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "GSW",
+      "home": "POR",
+      "tipoff_utc": "2026-11-28T02:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West C",
+      "cup_context_source_url": "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios",
+      "cup_stakes_known_pretip": "Both 2–1; linked to LAL@SAS",
+      "home_win_probability": 0.6695620331540351,
+      "predicted_winner": "POR",
+      "win_probability": 0.6695620331540351,
+      "expected_home_margin": 5.487590092853128,
+      "expected_full_game_total": 225.30458293586534,
+      "analyst_lean": {
+        "team": "POR",
+        "confidence": "MEDIUM",
+        "rationale": "POR net+6.41 vs GSW+0.33, home, GSW missing creators; POR Morant/Sharpe OUT and GSW 20 threes last game counter.",
+        "injury_statuses": [
+          [
+            "GSW",
+            "Stephen Curry",
+            "OUT"
+          ],
+          [
+            "GSW",
+            "Jimmy Butler III",
+            "OUT"
+          ],
+          [
+            "GSW",
+            "Moses Moody",
+            "OUT"
+          ],
+          [
+            "GSW",
+            "Kristaps Porzingis",
+            "OUT"
+          ],
+          [
+            "POR",
+            "Ja Morant",
+            "OUT"
+          ],
+          [
+            "POR",
+            "Shaedon Sharpe",
+            "OUT"
+          ]
+        ],
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-27_12_00PM.pdf",
+          "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios"
+        ],
+        "reviewed_at_utc": "2026-11-27T19:06:00Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "NOP",
+      "home": "LAC",
+      "tipoff_utc": "2026-11-28T02:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West B",
+      "cup_context_source_url": "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios",
+      "cup_stakes_known_pretip": "Both eliminated",
+      "home_win_probability": 0.638227385044198,
+      "predicted_winner": "LAC",
+      "win_probability": 0.638227385044198,
+      "expected_home_margin": 4.411167895592423,
+      "expected_full_game_total": 234.5667156058502,
+      "analyst_lean": {
+        "team": null,
+        "confidence": "LOW",
+        "rationale": "Both negative net near -8; NOP Murray OUT Mathurin doubtful, LAC Beal OUT. No strong side.",
+        "injury_statuses": [
+          [
+            "NOP",
+            "Dejounte Murray",
+            "OUT"
+          ],
+          [
+            "NOP",
+            "Bennedict Mathurin",
+            "DOUBTFUL"
+          ],
+          [
+            "LAC",
+            "Bradley Beal",
+            "OUT"
+          ]
+        ],
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-27_12_00PM.pdf",
+          "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios"
+        ],
+        "reviewed_at_utc": "2026-11-27T19:06:00Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "LAL",
+      "home": "SAS",
+      "tipoff_utc": "2026-11-28T02:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West C",
+      "cup_context_source_url": "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios",
+      "cup_stakes_known_pretip": "Both 2–1; linked to GSW@POR",
+      "home_win_probability": 0.7022669838371416,
+      "predicted_winner": "SAS",
+      "win_probability": 0.7022669838371416,
+      "expected_home_margin": 6.668024704187368,
+      "expected_full_game_total": 229.5692174812332,
+      "analyst_lean": {
+        "team": "SAS",
+        "confidence": "LOW",
+        "rationale": "SAS defense104.76 vs LAL109.89, home; Wembanyama scored44 last game, Fox Q; LAL offense116.39 strong.",
+        "injury_statuses": [
+          [
+            "SAS",
+            "De'Aaron Fox",
+            "QUESTIONABLE"
+          ],
+          [
+            "SAS",
+            "Dylan Harper",
+            "QUESTIONABLE"
+          ],
+          [
+            "LAL",
+            "Austin Reaves",
+            "QUESTIONABLE"
+          ]
+        ],
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-27_12_00PM.pdf",
+          "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios"
+        ],
+        "reviewed_at_utc": "2026-11-27T19:06:00Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    },
+    {
+      "away": "DEN",
+      "home": "UTA",
+      "tipoff_utc": "2026-11-28T02:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West A",
+      "cup_context_source_url": "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios",
+      "cup_stakes_known_pretip": "DEN conditional wildcard; UTA eliminated",
+      "home_win_probability": 0.30396374899059825,
+      "predicted_winner": "DEN",
+      "win_probability": 0.6960362510094018,
+      "expected_home_margin": -6.437836664052187,
+      "expected_full_game_total": 233.32005055295153,
+      "analyst_lean": {
+        "team": "DEN",
+        "confidence": "MEDIUM",
+        "rationale": "UTA offense105.52 vs DEN113.99; Markkanen/Jackson OUT weaken Utah. Denver defense113.68 and road are counter.",
+        "injury_statuses": [
+          [
+            "UTA",
+            "Lauri Markkanen",
+            "OUT"
+          ],
+          [
+            "UTA",
+            "Jaren Jackson Jr.",
+            "OUT"
+          ],
+          [
+            "UTA",
+            "Jusuf Nurkic",
+            "QUESTIONABLE"
+          ]
+        ],
+        "source_urls": [
+          "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-27_12_00PM.pdf",
+          "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios"
+        ],
+        "reviewed_at_utc": "2026-11-27T19:06:00Z"
+      },
+      "market_status": "MARKET_NOT_VERIFIED",
+      "market_line": null,
+      "over_decimal": null,
+      "under_decimal": null,
+      "selected_direction": null,
+      "ou_confidence": null
+    }
+  ]
+}
