@@ -1,0 +1,368 @@
+{
+  "schema_version": "nba-analyst-independent-first-view-v1",
+  "status": "IMMUTABLE_BEFORE_MODEL_PRETIP_SHADOW_FIRST_VIEW",
+  "nba_local_date": "2026-11-27",
+  "created_at_utc": "2026-11-27T19:06:00Z",
+  "model_outputs_not_consulted": true,
+  "historical_table_already_in_conversation_not_deliberately_used": true,
+  "injury_source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-27_12_00PM.pdf",
+  "injury_caveat": "Noon ET report extracted text; screenshots failed; not complete latest report; no DARKO or replacement minutes verified.",
+  "cup_source_url": "https://www.nba.com/news/emirates-nba-cup-2026-clinching-scenarios",
+  "schedule_source_url": "https://www.nba.com/games?date=2026-11-27",
+  "games": [
+    {
+      "away": "MIA",
+      "home": "NYK",
+      "tipoff_utc": "2026-11-28T00:00:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "East B",
+      "lean": "NYK",
+      "confidence": "LOW",
+      "reason": "NYK DRtg105.00 vs MIA113.87, home, six wins. Giannis probable and NYK Towns Q/Drummond OUT create interior risk.",
+      "stakes": "NYK needs win and help; Miami conditional advancement",
+      "injuries": [
+        [
+          "MIA",
+          "Giannis Antetokounmpo",
+          "PROBABLE"
+        ],
+        [
+          "NYK",
+          "Karl-Anthony Towns",
+          "QUESTIONABLE"
+        ],
+        [
+          "NYK",
+          "Andre Drummond",
+          "OUT"
+        ],
+        [
+          "NYK",
+          "OG Anunoby",
+          "DOUBTFUL"
+        ]
+      ]
+    },
+    {
+      "away": "PHI",
+      "home": "IND",
+      "tipoff_utc": "2026-11-28T00:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "East B",
+      "lean": "PHI",
+      "confidence": "LOW",
+      "reason": "PHI ORtg113.86 vs IND109.05, Haliburton OUT; Brown OUT Embiid Q, road risk and Siakam creation.",
+      "stakes": "PHI clinches with win",
+      "injuries": [
+        [
+          "PHI",
+          "Jaylen Brown",
+          "OUT"
+        ],
+        [
+          "PHI",
+          "Joel Embiid",
+          "QUESTIONABLE"
+        ],
+        [
+          "IND",
+          "Tyrese Haliburton",
+          "OUT"
+        ]
+      ]
+    },
+    {
+      "away": "BKN",
+      "home": "TOR",
+      "tipoff_utc": "2026-11-28T00:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "East A",
+      "lean": "TOR",
+      "confidence": "LOW",
+      "reason": "TOR defense111.71 vs BKN116.15, home; Barrett and Kawhi OUT, Nets beat MIL, Randle threat.",
+      "stakes": "Both conditional advancement; BKN not eliminated",
+      "injuries": [
+        [
+          "TOR",
+          "RJ Barrett",
+          "OUT"
+        ],
+        [
+          "TOR",
+          "Kawhi Leonard",
+          "OUT"
+        ],
+        [
+          "BKN",
+          "Nolan Traore",
+          "OUT"
+        ],
+        [
+          "BKN",
+          "Moritz Wagner",
+          "OUT"
+        ]
+      ]
+    },
+    {
+      "away": "MIL",
+      "home": "DET",
+      "tipoff_utc": "2026-11-28T00:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "East A",
+      "lean": "DET",
+      "confidence": "LOW",
+      "reason": "DET defense106.30 vs MIL117.52; DET beat ORL without key creators, but Cade/Duren/Robinson out and Herro threat.",
+      "stakes": "MIL eliminated; DET advancement stakes",
+      "injuries": [
+        [
+          "DET",
+          "Cade Cunningham",
+          "OUT"
+        ],
+        [
+          "DET",
+          "Jalen Duren",
+          "OUT"
+        ],
+        [
+          "DET",
+          "Duncan Robinson",
+          "OUT"
+        ]
+      ]
+    },
+    {
+      "away": "ATL",
+      "home": "BOS",
+      "tipoff_utc": "2026-11-28T01:00:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "East C",
+      "lean": "BOS",
+      "confidence": "MEDIUM",
+      "reason": "BOS defense103.94 vs ATL107.49, home; McCollum/Landale OUT, but ATL positive net and Robinson Q.",
+      "stakes": "Winner group",
+      "injuries": [
+        [
+          "ATL",
+          "CJ McCollum",
+          "OUT"
+        ],
+        [
+          "ATL",
+          "Jock Landale",
+          "OUT"
+        ],
+        [
+          "BOS",
+          "Mitchell Robinson",
+          "QUESTIONABLE"
+        ]
+      ]
+    },
+    {
+      "away": "MEM",
+      "home": "MIN",
+      "tipoff_utc": "2026-11-28T01:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West B",
+      "lean": null,
+      "confidence": "LOW",
+      "reason": "MEM offense117.89 vs MIN defense102.37, MIN home; Edwards/DiVincenzo OUT and Ball Q; MEM injuries too. No side.",
+      "stakes": "Winner group; MIN conditional wildcard if loss",
+      "injuries": [
+        [
+          "MIN",
+          "Anthony Edwards",
+          "OUT"
+        ],
+        [
+          "MIN",
+          "Donte DiVincenzo",
+          "OUT"
+        ],
+        [
+          "MIN",
+          "LaMelo Ball",
+          "QUESTIONABLE"
+        ],
+        [
+          "MEM",
+          "Cameron Boozer",
+          "OUT"
+        ],
+        [
+          "MEM",
+          "Jerami Grant",
+          "OUT"
+        ],
+        [
+          "MEM",
+          "Scotty Pippen Jr.",
+          "OUT"
+        ]
+      ]
+    },
+    {
+      "away": "DAL",
+      "home": "PHX",
+      "tipoff_utc": "2026-11-28T02:00:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West A",
+      "lean": "DAL",
+      "confidence": "LOW",
+      "reason": "DAL defense109.93 vs PHX113.19, beat DEN; Lively OUT and Phoenix home, clinched DAL may have different urgency; rotation unverified.",
+      "stakes": "DAL clinched, seeding at stake; PHX eliminated",
+      "injuries": [
+        [
+          "DAL",
+          "Dereck Lively II",
+          "OUT"
+        ],
+        [
+          "PHX",
+          "Mark Williams",
+          "OUT"
+        ]
+      ]
+    },
+    {
+      "away": "GSW",
+      "home": "POR",
+      "tipoff_utc": "2026-11-28T02:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West C",
+      "lean": "POR",
+      "confidence": "MEDIUM",
+      "reason": "POR net+6.41 vs GSW+0.33, home, GSW missing creators; POR Morant/Sharpe OUT and GSW 20 threes last game counter.",
+      "stakes": "Both 2–1; linked to LAL@SAS",
+      "injuries": [
+        [
+          "GSW",
+          "Stephen Curry",
+          "OUT"
+        ],
+        [
+          "GSW",
+          "Jimmy Butler III",
+          "OUT"
+        ],
+        [
+          "GSW",
+          "Moses Moody",
+          "OUT"
+        ],
+        [
+          "GSW",
+          "Kristaps Porzingis",
+          "OUT"
+        ],
+        [
+          "POR",
+          "Ja Morant",
+          "OUT"
+        ],
+        [
+          "POR",
+          "Shaedon Sharpe",
+          "OUT"
+        ]
+      ]
+    },
+    {
+      "away": "NOP",
+      "home": "LAC",
+      "tipoff_utc": "2026-11-28T02:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West B",
+      "lean": null,
+      "confidence": "LOW",
+      "reason": "Both negative net near -8; NOP Murray OUT Mathurin doubtful, LAC Beal OUT. No strong side.",
+      "stakes": "Both eliminated",
+      "injuries": [
+        [
+          "NOP",
+          "Dejounte Murray",
+          "OUT"
+        ],
+        [
+          "NOP",
+          "Bennedict Mathurin",
+          "DOUBTFUL"
+        ],
+        [
+          "LAC",
+          "Bradley Beal",
+          "OUT"
+        ]
+      ]
+    },
+    {
+      "away": "LAL",
+      "home": "SAS",
+      "tipoff_utc": "2026-11-28T02:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West C",
+      "lean": "SAS",
+      "confidence": "LOW",
+      "reason": "SAS defense104.76 vs LAL109.89, home; Wembanyama scored44 last game, Fox Q; LAL offense116.39 strong.",
+      "stakes": "Both 2–1; linked to GSW@POR",
+      "injuries": [
+        [
+          "SAS",
+          "De'Aaron Fox",
+          "QUESTIONABLE"
+        ],
+        [
+          "SAS",
+          "Dylan Harper",
+          "QUESTIONABLE"
+        ],
+        [
+          "LAL",
+          "Austin Reaves",
+          "QUESTIONABLE"
+        ]
+      ]
+    },
+    {
+      "away": "DEN",
+      "home": "UTA",
+      "tipoff_utc": "2026-11-28T02:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West A",
+      "lean": "DEN",
+      "confidence": "MEDIUM",
+      "reason": "UTA offense105.52 vs DEN113.99; Markkanen/Jackson OUT weaken Utah. Denver defense113.68 and road are counter.",
+      "stakes": "DEN conditional wildcard; UTA eliminated",
+      "injuries": [
+        [
+          "UTA",
+          "Lauri Markkanen",
+          "OUT"
+        ],
+        [
+          "UTA",
+          "Jaren Jackson Jr.",
+          "OUT"
+        ],
+        [
+          "UTA",
+          "Jusuf Nurkic",
+          "QUESTIONABLE"
+        ]
+      ]
+    }
+  ]
+}
