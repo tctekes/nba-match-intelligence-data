@@ -1,0 +1,1025 @@
+{
+  "schema_version": "nba-shadow-postgame-retrospective-v1",
+  "status": "APPEND_ONLY_POSTGAME_SHADOW_NOT_PRODUCTION",
+  "nba_local_date": "2026-11-27",
+  "created_at_utc": "2026-11-28T08:50:00Z",
+  "original_forecast": "published/forecast_locks/2026-11-27-eleven-cup-games-frozen-model-c-shadow-v1.json",
+  "original_first_view": "published/forecast_locks/2026-11-27-pre-model-independent-analyst-first-view-v1.json",
+  "historical_lock": "published/forecast_locks/2026-11-27-historical-performance-refinement-v1.json",
+  "original_forecast_commit": "791ad31c5c823c21321930f24668b0b0c76a3eb6",
+  "original_first_view_commit": "755872f663276745f487ec236a26d7f05f5059a2",
+  "historical_commit": "83206131150043b261964e57ec3b9f6ee12a7a3b",
+  "original_snapshot_sha256": "ef9872de593b53d83a16fe440dcf6f595a3a09797f26b4f475f27b521d345ada",
+  "model_sha256": "b6efd52df74f540c3bda711cd37a372e1ae7cbdbda134579c4c43bc7ff1eafef",
+  "params_sha256": "259b0dcc561c2f0400b04d9b19aba59eef53973ba06075f5db97a73497d1c640",
+  "source_urls": [
+    "https://www.nba.com/games?date=2026-11-27",
+    "https://www.4basketball.com/scores/nba/",
+    "https://nba.statz.ai/nba/results",
+    "https://www.statshawk.ai/nba/2026",
+    "https://www.nba.com/celtics/news/gamerecap-keys-20261127-atlbos",
+    "https://www.reuters.com/sports/basketball/hawks-edge-celtics-claim-east-group-c-nba-cup--flm-2026-11-28/",
+    "https://www.nba.com/game/mia-vs-nyk-0022600064",
+    "https://www.reuters.com/sports/basketball/cooper-flagg-scores-34-mavericks-rally-past-suns--flm-2026-11-28/",
+    "https://sports.yahoo.com/nba/articles/johnson-helps-hawks-close-nba-034448007.html"
+  ],
+  "source_verification": "All 11 finals agree across independent indexed score lists; statshawk labels OT separately and none of Nov27 finals OT. Some direct page requests cache miss, indexed source evidence used. Full injury/rotation audit not completed; original noon report caveat retained.",
+  "metrics": {
+    "model_c": {
+      "n": 11,
+      "correct": 6,
+      "accuracy": 0.5454545454545454,
+      "home_win_brier": 0.24600636708150328,
+      "margin_mae": 9.329802414742538,
+      "total_mae": 17.9982137603751,
+      "signed_total_actual_minus_expected": -17.9982137603751,
+      "below_model_total": 11
+    },
+    "analyst": {
+      "n": 9,
+      "model_correct": 6,
+      "analyst_selected": 9,
+      "analyst_correct": 7,
+      "coverage": 0.8181818181818182,
+      "by_confidence": {
+        "LOW": {
+          "n": 6,
+          "model_correct": 4,
+          "analyst_selected": 6,
+          "analyst_correct": 5
+        },
+        "MEDIUM": {
+          "n": 3,
+          "model_correct": 2,
+          "analyst_selected": 3,
+          "analyst_correct": 2
+        },
+        "HIGH": {
+          "n": 0,
+          "model_correct": 0,
+          "analyst_selected": 0,
+          "analyst_correct": 0
+        }
+      },
+      "by_relationship": {
+        "AGREE": {
+          "n": 8,
+          "model_correct": 6,
+          "analyst_selected": 8,
+          "analyst_correct": 6
+        },
+        "OPPOSE": {
+          "n": 1,
+          "model_correct": 0,
+          "analyst_selected": 1,
+          "analyst_correct": 1
+        },
+        "ABSTAIN": {
+          "n": 2,
+          "model_correct": 0,
+          "analyst_selected": 0,
+          "analyst_correct": 0
+        }
+      }
+    },
+    "historical": {
+      "top1": {
+        "n": 1,
+        "model_correct": 0,
+        "analyst_selected": 1,
+        "analyst_correct": 0
+      },
+      "top3": {
+        "n": 3,
+        "model_correct": 2,
+        "analyst_selected": 3,
+        "analyst_correct": 2
+      },
+      "remaining5": {
+        "n": 5,
+        "model_correct": 4,
+        "analyst_selected": 5,
+        "analyst_correct": 4
+      },
+      "all_ranked": {
+        "n": 8,
+        "model_correct": 6,
+        "analyst_selected": 8,
+        "analyst_correct": 6
+      },
+      "note": "Top3 descriptive evaluation of pretip ranking, not separately predeclared selection cutoff or calibrated forecast."
+    },
+    "market": {
+      "n": 0,
+      "grade": "N/A"
+    },
+    "bins": [
+      {
+        "lower_inclusive_pct": 55,
+        "upper_exclusive_pct": 60,
+        "n": 1,
+        "model_correct": 0,
+        "analyst_selected": 1,
+        "analyst_correct": 1,
+        "combinations": [
+          {
+            "relationship": "OPPOSE",
+            "confidence": "LOW",
+            "n": 1,
+            "model_correct": 0,
+            "analyst_selected": 1,
+            "analyst_correct": 1
+          }
+        ]
+      },
+      {
+        "lower_inclusive_pct": 60,
+        "upper_exclusive_pct": 65,
+        "n": 2,
+        "model_correct": 1,
+        "analyst_selected": 1,
+        "analyst_correct": 1,
+        "combinations": [
+          {
+            "relationship": "AGREE",
+            "confidence": "LOW",
+            "n": 1,
+            "model_correct": 1,
+            "analyst_selected": 1,
+            "analyst_correct": 1
+          },
+          {
+            "relationship": "ABSTAIN",
+            "confidence": "LOW",
+            "n": 1,
+            "model_correct": 0,
+            "analyst_selected": 0,
+            "analyst_correct": 0
+          }
+        ]
+      },
+      {
+        "lower_inclusive_pct": 65,
+        "upper_exclusive_pct": 70,
+        "n": 3,
+        "model_correct": 2,
+        "analyst_selected": 2,
+        "analyst_correct": 2,
+        "combinations": [
+          {
+            "relationship": "AGREE",
+            "confidence": "MEDIUM",
+            "n": 2,
+            "model_correct": 2,
+            "analyst_selected": 2,
+            "analyst_correct": 2
+          },
+          {
+            "relationship": "ABSTAIN",
+            "confidence": "LOW",
+            "n": 1,
+            "model_correct": 0,
+            "analyst_selected": 0,
+            "analyst_correct": 0
+          }
+        ]
+      },
+      {
+        "lower_inclusive_pct": 70,
+        "upper_exclusive_pct": 75,
+        "n": 3,
+        "model_correct": 1,
+        "analyst_selected": 3,
+        "analyst_correct": 1,
+        "combinations": [
+          {
+            "relationship": "AGREE",
+            "confidence": "LOW",
+            "n": 2,
+            "model_correct": 1,
+            "analyst_selected": 2,
+            "analyst_correct": 1
+          },
+          {
+            "relationship": "AGREE",
+            "confidence": "MEDIUM",
+            "n": 1,
+            "model_correct": 0,
+            "analyst_selected": 1,
+            "analyst_correct": 0
+          }
+        ]
+      },
+      {
+        "lower_inclusive_pct": 75,
+        "upper_exclusive_pct": 80,
+        "n": 1,
+        "model_correct": 1,
+        "analyst_selected": 1,
+        "analyst_correct": 1,
+        "combinations": [
+          {
+            "relationship": "AGREE",
+            "confidence": "LOW",
+            "n": 1,
+            "model_correct": 1,
+            "analyst_selected": 1,
+            "analyst_correct": 1
+          }
+        ]
+      },
+      {
+        "lower_inclusive_pct": 85,
+        "upper_exclusive_pct": 90,
+        "n": 1,
+        "model_correct": 1,
+        "analyst_selected": 1,
+        "analyst_correct": 1,
+        "combinations": [
+          {
+            "relationship": "AGREE",
+            "confidence": "LOW",
+            "n": 1,
+            "model_correct": 1,
+            "analyst_selected": 1,
+            "analyst_correct": 1
+          }
+        ]
+      }
+    ]
+  },
+  "games": [
+    {
+      "fixture": "MIA@NYK",
+      "away": "MIA",
+      "home": "NYK",
+      "tipoff_utc": "2026-11-28T00:00:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "East B",
+      "pretip_cup_stakes": "NYK needs win and help; Miami conditional advancement",
+      "final_status": "FINAL",
+      "away_score": 108,
+      "home_score": 105,
+      "overtime_periods": 0,
+      "actual_winner": "MIA",
+      "actual_home_margin": -3,
+      "actual_full_game_total": 213,
+      "model_c": {
+        "predicted_winner": "NYK",
+        "win_probability": 0.7006699407467649,
+        "home_win_probability": 0.7006699407467649,
+        "probability_bin_lower_pct": 70,
+        "expected_home_margin": 6.608763563894041,
+        "expected_full_game_total": 227.2175769841506,
+        "winner_correct": false,
+        "home_win_brier": 0.4909383658660751,
+        "margin_absolute_error": 9.60876356389404,
+        "total_absolute_error": 14.217576984150611,
+        "signed_total_actual_minus_expected": -14.217576984150611
+      },
+      "analyst": {
+        "locked_lean": "NYK",
+        "confidence": "LOW",
+        "relationship": "AGREE",
+        "correct": false,
+        "pretip_rationale": "NYK DRtg105.00 vs MIA113.87, home, six wins. Giannis probable and NYK Towns Q/Drummond OUT create interior risk.",
+        "pretip_injuries": [
+          [
+            "MIA",
+            "Giannis Antetokounmpo",
+            "PROBABLE"
+          ],
+          [
+            "NYK",
+            "Karl-Anthony Towns",
+            "QUESTIONABLE"
+          ],
+          [
+            "NYK",
+            "Andre Drummond",
+            "OUT"
+          ],
+          [
+            "NYK",
+            "OG Anunoby",
+            "DOUBTFUL"
+          ]
+        ]
+      },
+      "historical": {
+        "rank": 8,
+        "exact_combination": {
+          "correct": 1,
+          "n": 2,
+          "historical_accuracy": 0.5
+        },
+        "correct": false
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "PHI@IND",
+      "away": "PHI",
+      "home": "IND",
+      "tipoff_utc": "2026-11-28T00:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "East B",
+      "pretip_cup_stakes": "PHI clinches with win",
+      "final_status": "FINAL",
+      "away_score": 111,
+      "home_score": 87,
+      "overtime_periods": 0,
+      "actual_winner": "PHI",
+      "actual_home_margin": -24,
+      "actual_full_game_total": 198,
+      "model_c": {
+        "predicted_winner": "PHI",
+        "win_probability": 0.6079516756700207,
+        "home_win_probability": 0.39204832432997927,
+        "probability_bin_lower_pct": 60,
+        "expected_home_margin": -3.409013928407333,
+        "expected_full_game_total": 229.25673299064024,
+        "winner_correct": true,
+        "home_win_brier": 0.1537018886099446,
+        "margin_absolute_error": 20.590986071592667,
+        "total_absolute_error": 31.256732990640245,
+        "signed_total_actual_minus_expected": -31.256732990640245
+      },
+      "analyst": {
+        "locked_lean": "PHI",
+        "confidence": "LOW",
+        "relationship": "AGREE",
+        "correct": true,
+        "pretip_rationale": "PHI ORtg113.86 vs IND109.05, Haliburton OUT; Brown OUT Embiid Q, road risk and Siakam creation.",
+        "pretip_injuries": [
+          [
+            "PHI",
+            "Jaylen Brown",
+            "OUT"
+          ],
+          [
+            "PHI",
+            "Joel Embiid",
+            "QUESTIONABLE"
+          ],
+          [
+            "IND",
+            "Tyrese Haliburton",
+            "OUT"
+          ]
+        ]
+      },
+      "historical": {
+        "rank": 3,
+        "exact_combination": {
+          "correct": 3,
+          "n": 4,
+          "historical_accuracy": 0.75
+        },
+        "correct": true
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "BKN@TOR",
+      "away": "BKN",
+      "home": "TOR",
+      "tipoff_utc": "2026-11-28T00:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "East A",
+      "pretip_cup_stakes": "Both conditional advancement; BKN not eliminated",
+      "final_status": "FINAL",
+      "away_score": 100,
+      "home_score": 124,
+      "overtime_periods": 0,
+      "actual_winner": "TOR",
+      "actual_home_margin": 24,
+      "actual_full_game_total": 224,
+      "model_c": {
+        "predicted_winner": "TOR",
+        "win_probability": 0.7788640799964662,
+        "home_win_probability": 0.7788640799964662,
+        "probability_bin_lower_pct": 75,
+        "expected_home_margin": 9.783562919400204,
+        "expected_full_game_total": 225.17025297871143,
+        "winner_correct": true,
+        "home_win_brier": 0.048901095115809284,
+        "margin_absolute_error": 14.216437080599796,
+        "total_absolute_error": 1.1702529787114315,
+        "signed_total_actual_minus_expected": -1.1702529787114315
+      },
+      "analyst": {
+        "locked_lean": "TOR",
+        "confidence": "LOW",
+        "relationship": "AGREE",
+        "correct": true,
+        "pretip_rationale": "TOR defense111.71 vs BKN116.15, home; Barrett and Kawhi OUT, Nets beat MIL, Randle threat.",
+        "pretip_injuries": [
+          [
+            "TOR",
+            "RJ Barrett",
+            "OUT"
+          ],
+          [
+            "TOR",
+            "Kawhi Leonard",
+            "OUT"
+          ],
+          [
+            "BKN",
+            "Nolan Traore",
+            "OUT"
+          ],
+          [
+            "BKN",
+            "Moritz Wagner",
+            "OUT"
+          ]
+        ]
+      },
+      "historical": {
+        "rank": 2,
+        "exact_combination": {
+          "correct": 1,
+          "n": 1,
+          "historical_accuracy": 1
+        },
+        "correct": true
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "MIL@DET",
+      "away": "MIL",
+      "home": "DET",
+      "tipoff_utc": "2026-11-28T00:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "East A",
+      "pretip_cup_stakes": "MIL eliminated; DET advancement stakes",
+      "final_status": "FINAL",
+      "away_score": 98,
+      "home_score": 113,
+      "overtime_periods": 0,
+      "actual_winner": "DET",
+      "actual_home_margin": 15,
+      "actual_full_game_total": 211,
+      "model_c": {
+        "predicted_winner": "DET",
+        "win_probability": 0.883676088103016,
+        "home_win_probability": 0.883676088103016,
+        "probability_bin_lower_pct": 85,
+        "expected_home_margin": 15.756407810469106,
+        "expected_full_game_total": 223.7242808853936,
+        "winner_correct": true,
+        "home_win_brier": 0.013531252479017293,
+        "margin_absolute_error": 0.7564078104691063,
+        "total_absolute_error": 12.724280885393597,
+        "signed_total_actual_minus_expected": -12.724280885393597
+      },
+      "analyst": {
+        "locked_lean": "DET",
+        "confidence": "LOW",
+        "relationship": "AGREE",
+        "correct": true,
+        "pretip_rationale": "DET defense106.30 vs MIL117.52; DET beat ORL without key creators, but Cade/Duren/Robinson out and Herro threat.",
+        "pretip_injuries": [
+          [
+            "DET",
+            "Cade Cunningham",
+            "OUT"
+          ],
+          [
+            "DET",
+            "Jalen Duren",
+            "OUT"
+          ],
+          [
+            "DET",
+            "Duncan Robinson",
+            "OUT"
+          ]
+        ]
+      },
+      "historical": {
+        "rank": 6,
+        "exact_combination": {
+          "correct": 1,
+          "n": 2,
+          "historical_accuracy": 0.5
+        },
+        "correct": true
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "ATL@BOS",
+      "away": "ATL",
+      "home": "BOS",
+      "tipoff_utc": "2026-11-28T01:00:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "East C",
+      "pretip_cup_stakes": "Winner group",
+      "final_status": "FINAL",
+      "away_score": 87,
+      "home_score": 86,
+      "overtime_periods": 0,
+      "actual_winner": "ATL",
+      "actual_home_margin": -1,
+      "actual_full_game_total": 173,
+      "model_c": {
+        "predicted_winner": "BOS",
+        "win_probability": 0.7180964689711321,
+        "home_win_probability": 0.7180964689711321,
+        "probability_bin_lower_pct": 70,
+        "expected_home_margin": 7.2657538037167795,
+        "expected_full_game_total": 222.1155127696429,
+        "winner_correct": false,
+        "home_win_brier": 0.5156625387488081,
+        "margin_absolute_error": 8.26575380371678,
+        "total_absolute_error": 49.11551276964289,
+        "signed_total_actual_minus_expected": -49.11551276964289
+      },
+      "analyst": {
+        "locked_lean": "BOS",
+        "confidence": "MEDIUM",
+        "relationship": "AGREE",
+        "correct": false,
+        "pretip_rationale": "BOS defense103.94 vs ATL107.49, home; McCollum/Landale OUT, but ATL positive net and Robinson Q.",
+        "pretip_injuries": [
+          [
+            "ATL",
+            "CJ McCollum",
+            "OUT"
+          ],
+          [
+            "ATL",
+            "Jock Landale",
+            "OUT"
+          ],
+          [
+            "BOS",
+            "Mitchell Robinson",
+            "QUESTIONABLE"
+          ]
+        ]
+      },
+      "historical": {
+        "rank": 1,
+        "exact_combination": {
+          "correct": 6,
+          "n": 6,
+          "historical_accuracy": 1
+        },
+        "correct": false
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "MEM@MIN",
+      "away": "MEM",
+      "home": "MIN",
+      "tipoff_utc": "2026-11-28T01:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West B",
+      "pretip_cup_stakes": "Winner group; MIN conditional wildcard if loss",
+      "final_status": "FINAL",
+      "away_score": 114,
+      "home_score": 109,
+      "overtime_periods": 0,
+      "actual_winner": "MEM",
+      "actual_home_margin": -5,
+      "actual_full_game_total": 223,
+      "model_c": {
+        "predicted_winner": "MIN",
+        "win_probability": 0.6623286578396415,
+        "home_win_probability": 0.6623286578396415,
+        "probability_bin_lower_pct": 65,
+        "expected_home_margin": 5.2349230677405885,
+        "expected_full_game_total": 226.90900412621315,
+        "winner_correct": false,
+        "home_win_brier": 0.43867925099566085,
+        "margin_absolute_error": 10.234923067740588,
+        "total_absolute_error": 3.909004126213148,
+        "signed_total_actual_minus_expected": -3.909004126213148
+      },
+      "analyst": {
+        "locked_lean": null,
+        "confidence": "LOW",
+        "relationship": "ABSTAIN",
+        "correct": null,
+        "pretip_rationale": "MEM offense117.89 vs MIN defense102.37, MIN home; Edwards/DiVincenzo OUT and Ball Q; MEM injuries too. No side.",
+        "pretip_injuries": [
+          [
+            "MIN",
+            "Anthony Edwards",
+            "OUT"
+          ],
+          [
+            "MIN",
+            "Donte DiVincenzo",
+            "OUT"
+          ],
+          [
+            "MIN",
+            "LaMelo Ball",
+            "QUESTIONABLE"
+          ],
+          [
+            "MEM",
+            "Cameron Boozer",
+            "OUT"
+          ],
+          [
+            "MEM",
+            "Jerami Grant",
+            "OUT"
+          ],
+          [
+            "MEM",
+            "Scotty Pippen Jr.",
+            "OUT"
+          ]
+        ]
+      },
+      "historical": {
+        "rank": null,
+        "exact_combination": null,
+        "correct": null
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "DAL@PHX",
+      "away": "DAL",
+      "home": "PHX",
+      "tipoff_utc": "2026-11-28T02:00:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West A",
+      "pretip_cup_stakes": "DAL clinched, seeding at stake; PHX eliminated",
+      "final_status": "FINAL",
+      "away_score": 113,
+      "home_score": 109,
+      "overtime_periods": 0,
+      "actual_winner": "DAL",
+      "actual_home_margin": -4,
+      "actual_full_game_total": 222,
+      "model_c": {
+        "predicted_winner": "PHX",
+        "win_probability": 0.5891462394972221,
+        "home_win_probability": 0.5891462394972221,
+        "probability_bin_lower_pct": 55,
+        "expected_home_margin": 2.800789321280433,
+        "expected_full_game_total": 225.82642405347391,
+        "winner_correct": false,
+        "home_win_brier": 0.3470932915137182,
+        "margin_absolute_error": 6.800789321280433,
+        "total_absolute_error": 3.8264240534739145,
+        "signed_total_actual_minus_expected": -3.8264240534739145
+      },
+      "analyst": {
+        "locked_lean": "DAL",
+        "confidence": "LOW",
+        "relationship": "OPPOSE",
+        "correct": true,
+        "pretip_rationale": "DAL defense109.93 vs PHX113.19, beat DEN; Lively OUT and Phoenix home, clinched DAL may have different urgency; rotation unverified.",
+        "pretip_injuries": [
+          [
+            "DAL",
+            "Dereck Lively II",
+            "OUT"
+          ],
+          [
+            "PHX",
+            "Mark Williams",
+            "OUT"
+          ]
+        ]
+      },
+      "historical": {
+        "rank": null,
+        "exact_combination": null,
+        "correct": null
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "GSW@POR",
+      "away": "GSW",
+      "home": "POR",
+      "tipoff_utc": "2026-11-28T02:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West C",
+      "pretip_cup_stakes": "Both 2–1; linked to LAL@SAS",
+      "final_status": "FINAL",
+      "away_score": 94,
+      "home_score": 116,
+      "overtime_periods": 0,
+      "actual_winner": "POR",
+      "actual_home_margin": 22,
+      "actual_full_game_total": 210,
+      "model_c": {
+        "predicted_winner": "POR",
+        "win_probability": 0.6695620331540351,
+        "home_win_probability": 0.6695620331540351,
+        "probability_bin_lower_pct": 65,
+        "expected_home_margin": 5.487590092853128,
+        "expected_full_game_total": 225.30458293586534,
+        "winner_correct": true,
+        "home_win_brier": 0.10918924993329503,
+        "margin_absolute_error": 16.51240990714687,
+        "total_absolute_error": 15.30458293586534,
+        "signed_total_actual_minus_expected": -15.30458293586534
+      },
+      "analyst": {
+        "locked_lean": "POR",
+        "confidence": "MEDIUM",
+        "relationship": "AGREE",
+        "correct": true,
+        "pretip_rationale": "POR net+6.41 vs GSW+0.33, home, GSW missing creators; POR Morant/Sharpe OUT and GSW 20 threes last game counter.",
+        "pretip_injuries": [
+          [
+            "GSW",
+            "Stephen Curry",
+            "OUT"
+          ],
+          [
+            "GSW",
+            "Jimmy Butler III",
+            "OUT"
+          ],
+          [
+            "GSW",
+            "Moses Moody",
+            "OUT"
+          ],
+          [
+            "GSW",
+            "Kristaps Porzingis",
+            "OUT"
+          ],
+          [
+            "POR",
+            "Ja Morant",
+            "OUT"
+          ],
+          [
+            "POR",
+            "Shaedon Sharpe",
+            "OUT"
+          ]
+        ]
+      },
+      "historical": {
+        "rank": 5,
+        "exact_combination": {
+          "correct": 2,
+          "n": 4,
+          "historical_accuracy": 0.5
+        },
+        "correct": true
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "NOP@LAC",
+      "away": "NOP",
+      "home": "LAC",
+      "tipoff_utc": "2026-11-28T02:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West B",
+      "pretip_cup_stakes": "Both eliminated",
+      "final_status": "FINAL",
+      "away_score": 105,
+      "home_score": 104,
+      "overtime_periods": 0,
+      "actual_winner": "NOP",
+      "actual_home_margin": -1,
+      "actual_full_game_total": 209,
+      "model_c": {
+        "predicted_winner": "LAC",
+        "win_probability": 0.638227385044198,
+        "home_win_probability": 0.638227385044198,
+        "probability_bin_lower_pct": 60,
+        "expected_home_margin": 4.411167895592423,
+        "expected_full_game_total": 234.5667156058502,
+        "winner_correct": false,
+        "home_win_brier": 0.4073341950203549,
+        "margin_absolute_error": 5.411167895592423,
+        "total_absolute_error": 25.56671560585019,
+        "signed_total_actual_minus_expected": -25.56671560585019
+      },
+      "analyst": {
+        "locked_lean": null,
+        "confidence": "LOW",
+        "relationship": "ABSTAIN",
+        "correct": null,
+        "pretip_rationale": "Both negative net near -8; NOP Murray OUT Mathurin doubtful, LAC Beal OUT. No strong side.",
+        "pretip_injuries": [
+          [
+            "NOP",
+            "Dejounte Murray",
+            "OUT"
+          ],
+          [
+            "NOP",
+            "Bennedict Mathurin",
+            "DOUBTFUL"
+          ],
+          [
+            "LAC",
+            "Bradley Beal",
+            "OUT"
+          ]
+        ]
+      },
+      "historical": {
+        "rank": null,
+        "exact_combination": null,
+        "correct": null
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "LAL@SAS",
+      "away": "LAL",
+      "home": "SAS",
+      "tipoff_utc": "2026-11-28T02:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West C",
+      "pretip_cup_stakes": "Both 2–1; linked to GSW@POR",
+      "final_status": "FINAL",
+      "away_score": 96,
+      "home_score": 99,
+      "overtime_periods": 0,
+      "actual_winner": "SAS",
+      "actual_home_margin": 3,
+      "actual_full_game_total": 195,
+      "model_c": {
+        "predicted_winner": "SAS",
+        "win_probability": 0.7022669838371416,
+        "home_win_probability": 0.7022669838371416,
+        "probability_bin_lower_pct": 70,
+        "expected_home_margin": 6.668024704187368,
+        "expected_full_game_total": 229.5692174812332,
+        "winner_correct": true,
+        "home_win_brier": 0.08864494891343291,
+        "margin_absolute_error": 3.668024704187368,
+        "total_absolute_error": 34.56921748123321,
+        "signed_total_actual_minus_expected": -34.56921748123321
+      },
+      "analyst": {
+        "locked_lean": "SAS",
+        "confidence": "LOW",
+        "relationship": "AGREE",
+        "correct": true,
+        "pretip_rationale": "SAS defense104.76 vs LAL109.89, home; Wembanyama scored44 last game, Fox Q; LAL offense116.39 strong.",
+        "pretip_injuries": [
+          [
+            "SAS",
+            "De'Aaron Fox",
+            "QUESTIONABLE"
+          ],
+          [
+            "SAS",
+            "Dylan Harper",
+            "QUESTIONABLE"
+          ],
+          [
+            "LAL",
+            "Austin Reaves",
+            "QUESTIONABLE"
+          ]
+        ]
+      },
+      "historical": {
+        "rank": 7,
+        "exact_combination": {
+          "correct": 1,
+          "n": 2,
+          "historical_accuracy": 0.5
+        },
+        "correct": true
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "grade": "N/A"
+      }
+    },
+    {
+      "fixture": "DEN@UTA",
+      "away": "DEN",
+      "home": "UTA",
+      "tipoff_utc": "2026-11-28T02:30:00Z",
+      "is_nba_cup": true,
+      "cup_stage": "GROUP_PLAY",
+      "cup_group": "West A",
+      "pretip_cup_stakes": "DEN conditional wildcard; UTA eliminated",
+      "final_status": "FINAL",
+      "away_score": 120,
+      "home_score": 107,
+      "overtime_periods": 0,
+      "actual_winner": "DEN",
+      "actual_home_margin": -13,
+      "actual_full_game_total": 227,
+      "model_c": {
+        "predicted_winner": "DEN",
+        "win_probability": 0.6960362510094018,
+        "home_win_probability": 0.30396374899059825,
+        "probability_bin_lower_pct": 65,
+        "expected_home_margin": -6.437836664052187,
+        "expected_full_game_total": 233.32005055295153,
+        "winner_correct": true,
+        "home_win_brier": 0.09239396070041941,
+        "margin_absolute_error": 6.562163335947813,
+        "total_absolute_error": 6.320050552951528,
+        "signed_total_actual_minus_expected": -6.320050552951528
+      },
+      "analyst": {
+        "locked_lean": "DEN",
+        "confidence": "MEDIUM",
+        "relationship": "AGREE",
+        "correct": true,
+        "pretip_rationale": "UTA offense105.52 vs DEN113.99; Markkanen/Jackson OUT weaken Utah. Denver defense113.68 and road are counter.",
+        "pretip_injuries": [
+          [
+            "UTA",
+            "Lauri Markkanen",
+            "OUT"
+          ],
+          [
+            "UTA",
+            "Jaren Jackson Jr.",
+            "OUT"
+          ],
+          [
+            "UTA",
+            "Jusuf Nurkic",
+            "QUESTIONABLE"
+          ]
+        ]
+      },
+      "historical": {
+        "rank": 4,
+        "exact_combination": {
+          "correct": 2,
+          "n": 4,
+          "historical_accuracy": 0.5
+        },
+        "correct": true
+      },
+      "market": {
+        "status": "MARKET_NOT_VERIFIED",
+        "grade": "N/A"
+      }
+    }
+  ],
+  "review": [
+    "BOS: total 173 vs expected 222.12; Boston shot 28% first half, 26 turnovers per AP recap, lost 87–86. Jalen Johnson 24/12. Close result does not invalidate model or prove historical group failure.",
+    "MIA: Giannis 22 points and 23 rebounds; Adebayo 25, Miami won 108–105. Pregame interior matchup risk materialized; no isolated causal claim.",
+    "DAL: Flagg 34/8/7, Dallas overcame 21-point deficit, won 113–109; clinched home court despite already qualifying. Contrarian correct, narrow win not proof of stable edge."
+  ],
+  "guardrails": {
+    "model_unchanged": true,
+    "old_locks_unchanged": true,
+    "production_pointer_untouched": true,
+    "market_backfill": false,
+    "historical_rates_not_probabilities": true
+  }
+}
