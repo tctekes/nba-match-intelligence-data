@@ -1,0 +1,234 @@
+{
+  "accepted_games": 269,
+  "bsl_completed_games": 270,
+  "core_fields_verified_per_team": 8,
+  "data_provenance": {
+    "boxscorelab_games_sha256": "0e3319672b6b6aa27e70ad855841568b735b37bb89e7777b59cfcebc8c3361c4",
+    "boxscorelab_standings_sha256": "0ec86006dd6a040054ce8a142d3fefb137544eab9cb9c46a9af3ece5b47435ab",
+    "fallback": {
+      "fallback_source_shas": {},
+      "recovered": 0,
+      "source": "BoxScore Lab complete"
+    },
+    "fallback_limitations": "ESPN team turnovers verified against ESPN live, while player turnovers and seven other inputs are independently checked against NBA Stats release",
+    "independent_checks": "ESPN completed game dates, scores and eight live team box fields",
+    "source": "BoxScore Lab (CC BY 4.0) plus independently cross-checked complete-game release fallback"
+  },
+  "data_through_nba_date": "2026-11-25",
+  "excluded_game_receipts": [
+    {
+      "date": "2026-10-30",
+      "espn_game_id": "401909277",
+      "mismatches": {
+        "CHA": {
+          "turnovers": {
+            "bsl": 12,
+            "espn": 13
+          }
+        }
+      },
+      "teams": [
+        "CHA",
+        "WAS"
+      ]
+    }
+  ],
+  "excluded_games": 1,
+  "fallback_completed_games": 0,
+  "generated_at_utc": "2026-11-28T00:35:20.736925+00:00",
+  "independent_box_team_rows_checked": 540,
+  "metric_definitions": {
+    "drtg": "arithmetic mean of per-game 100*opp_points/P",
+    "gp": "accepted games per team",
+    "ortg": "arithmetic mean of per-game 100*points/P",
+    "pace": "arithmetic mean full-game P including OT",
+    "possessions": "P=0.5*sum_for_2_teams(FGA+0.44*FTA-OREB+TOV)"
+  },
+  "model": "Frozen Model C v0.1 (no parameter changes)",
+  "publication_status": "ACCEPTED_GAMES_EXPERIMENTAL_NOT_PRODUCTION",
+  "raw_completed_games": 270,
+  "schema_version": "nba-model-c-accepted-candidate-v1",
+  "season": "2026-27",
+  "teams": {
+    "ATL": {
+      "drtg": 107.49266568294614,
+      "n": 17,
+      "ortg": 110.67328566014433,
+      "pace": 105.55529411764708
+    },
+    "BKN": {
+      "drtg": 116.14993353082912,
+      "n": 17,
+      "ortg": 108.29841493271155,
+      "pace": 102.2505882352941
+    },
+    "BOS": {
+      "drtg": 103.94043170882563,
+      "n": 18,
+      "ortg": 113.35307457569479,
+      "pace": 99.00555555555553
+    },
+    "CHA": {
+      "drtg": 113.4945812080315,
+      "n": 16,
+      "ortg": 104.01007488241456,
+      "pace": 98.4025
+    },
+    "CHI": {
+      "drtg": 115.77854430123008,
+      "n": 18,
+      "ortg": 110.15900701967979,
+      "pace": 105.86111111111111
+    },
+    "CLE": {
+      "drtg": 114.4250636338762,
+      "n": 19,
+      "ortg": 114.57814739701122,
+      "pace": 102.51684210526317
+    },
+    "DAL": {
+      "drtg": 109.92578919866527,
+      "n": 18,
+      "ortg": 110.92771436255423,
+      "pace": 101.75555555555555
+    },
+    "DEN": {
+      "drtg": 113.67947054168361,
+      "n": 16,
+      "ortg": 113.9860370932062,
+      "pace": 101.5275
+    },
+    "DET": {
+      "drtg": 106.3043054837816,
+      "n": 17,
+      "ortg": 111.88767270900551,
+      "pace": 100.70823529411764
+    },
+    "GSW": {
+      "drtg": 110.8205688445258,
+      "n": 18,
+      "ortg": 111.14982323739862,
+      "pace": 100.98777777777778
+    },
+    "HOU": {
+      "drtg": 110.04930950565246,
+      "n": 19,
+      "ortg": 118.20006561834107,
+      "pace": 99.80947368421053
+    },
+    "IND": {
+      "drtg": 112.33136711387424,
+      "n": 18,
+      "ortg": 109.0469410325012,
+      "pace": 102.98666666666665
+    },
+    "LAC": {
+      "drtg": 115.36419904339516,
+      "n": 17,
+      "ortg": 107.93021395874273,
+      "pace": 101.82000000000001
+    },
+    "LAL": {
+      "drtg": 109.88639577178564,
+      "n": 18,
+      "ortg": 116.38599835400727,
+      "pace": 102.47999999999998
+    },
+    "MEM": {
+      "drtg": 108.70251299957359,
+      "n": 19,
+      "ortg": 117.88737932128049,
+      "pace": 101.86000000000001
+    },
+    "MIA": {
+      "drtg": 113.87362766131957,
+      "n": 17,
+      "ortg": 114.73910907111109,
+      "pace": 104.48117647058822
+    },
+    "MIL": {
+      "drtg": 117.5177622004482,
+      "n": 19,
+      "ortg": 106.42931140091652,
+      "pace": 102.32000000000001
+    },
+    "MIN": {
+      "drtg": 102.36692368765121,
+      "n": 19,
+      "ortg": 112.5166611355079,
+      "pace": 103.29789473684211
+    },
+    "NOP": {
+      "drtg": 116.98713329469574,
+      "n": 19,
+      "ortg": 108.98353756915871,
+      "pace": 104.94631578947369
+    },
+    "NYK": {
+      "drtg": 105.00236691910764,
+      "n": 18,
+      "ortg": 111.7173642773548,
+      "pace": 98.31
+    },
+    "OKC": {
+      "drtg": 108.41625894279896,
+      "n": 19,
+      "ortg": 110.7630677068391,
+      "pace": 101.92526315789475
+    },
+    "ORL": {
+      "drtg": 112.40968326608875,
+      "n": 17,
+      "ortg": 107.47055467044386,
+      "pace": 100.03294117647059
+    },
+    "PHI": {
+      "drtg": 111.86441530653666,
+      "n": 19,
+      "ortg": 113.8630801010421,
+      "pace": 101.16526315789471
+    },
+    "PHX": {
+      "drtg": 113.18920677576622,
+      "n": 17,
+      "ortg": 111.85517090812851,
+      "pace": 101.66823529411765
+    },
+    "POR": {
+      "drtg": 108.10005800713388,
+      "n": 18,
+      "ortg": 114.51079903361713,
+      "pace": 102.07555555555558
+    },
+    "SAC": {
+      "drtg": 117.6998866858509,
+      "n": 18,
+      "ortg": 105.13993838277217,
+      "pace": 101.85888888888888
+    },
+    "SAS": {
+      "drtg": 104.75514564586875,
+      "n": 19,
+      "ortg": 115.91218692603927,
+      "pace": 101.27578947368421
+    },
+    "TOR": {
+      "drtg": 111.70943284320573,
+      "n": 17,
+      "ortg": 110.99582198888109,
+      "pace": 100.5070588235294
+    },
+    "UTA": {
+      "drtg": 112.85528280709573,
+      "n": 19,
+      "ortg": 105.5178391905902,
+      "pace": 102.32315789473685
+    },
+    "WAS": {
+      "drtg": 115.36828359498668,
+      "n": 18,
+      "ortg": 108.92174934130804,
+      "pace": 102.33444444444444
+    }
+  }
+}
